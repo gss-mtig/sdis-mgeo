@@ -1,0 +1,40 @@
+site_name: Infraestructuras de datos espaciales y estándares de geoservicios
+site_url: https://gss-mtig.github.io/sdis-mgeo-20-21/
+site_description: Infraestructuras de datos espaciales y estándares de geoservicios.
+site_author: sdis-mgeo
+theme:
+  name: 'material'
+  language: 'es'
+  highlightjs: true
+
+markdown_extensions:
+  - codehilite:
+      linenums: True
+  - admonition
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - footnotes
+repo_url: "https://github.com/gss-mtig/sdis-mgeo-20-21"
+
+nav:
+- Home: index.md
+- 1. Introducción a las IDE's: 1_introduccion_a_las_ides.md
+- 2. Estándares OCG: 2_estandares_OCG.md
+- 3. Conceptos Vector Tiles: 3_conceptos_vector_tiles.md
+- 4. Visualización con Kepler.gl: 4_visualizacion_kepler.md
+- 5. Herramientas de visualización de datos: 5_herramientas_visualizacion_datos.md
+- 6. Conceptos básicos de Geoservicios: 6_conceptos_geoservicios.md
+- 7. Ejemplo servicio WMS: 7_ejemplo_servicio_wms.md
+- 8. Consideraciones sobre servicios Open data: 8_consideraciones_servicios_opendata.md
+- 9. Ejemplo servicio bicing Barcelona: 9_ejemplo_servicio_bicing_bcn.md
+- 10. Ejemplo servicio bicing Barcelona (VectorTiles): 10_ejemplo_servicio_bicing_bcn_vt.md
+- 11. Consideraciones sobre servicios de Sensores: 11_consideraciones_servicios_realtime_sensores.md
+- 12. Ejemplo Sentilo ACA: 13_ejemplo_sentilo_aca.md
+- 13. Geoservicios realtime: 14_geoservicios_realtime.md
+- 14. Herramientas de visualización geoservicios: 15_herramientas_visualizacion_geoservicios.md
+- 15. Ejemplo Mobility: 16_ejemplo_mobility.md
+- 16. Ejemplo servicio realtime para compartir la ubicación: 17_ejemplo_geoservicio_realtime.md
+- 17. Ejemplo GTFS: 18_ejemplo_gtfs.md
+
+plugins:
+    - search
