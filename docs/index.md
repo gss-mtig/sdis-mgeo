@@ -16,7 +16,7 @@ Temario:
     * Otras IDES
 
 * [Estándares OCG](https://gss-mtig.github.io/gss-mtig-19-20/2_estandares_OCG/)
-* [Conceptos Vector-Tiles](https://gss-mtig.github.io/gss-mtig-19-20/3_conceptos_vector_tiles/)
+* [Estándares ISO](https://gss-mtig.github.io/gss-mtig-19-20/3_estandares_ISO/)
 * [Visualización con Kepler.gl](https://gss-mtig.github.io/gss-mtig-19-20/4_visualizacion_kepler/)
 * [Herramientas de visualización de datos](https://gss-mtig.github.io/gss-mtig-19-20/5_herramientas_visualizacion_datos/)
 * [Conceptos básicos de Geoservicios](https://gss-mtig.github.io/gss-mtig-19-20/6_conceptos_geoservicios/)

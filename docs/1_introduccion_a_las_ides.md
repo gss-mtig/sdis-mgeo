@@ -35,13 +35,12 @@ Otros países iniciaron los primeros pasos con los mismos objetivos. Los países
 
 Existen varias definiciones para describir IDE, pero una de las mas utilizada y extendida es la elaborada por la Federal Geographic Data Committee (FGDC) que la define como: *Una Infraestructura de Datos Espaciales (IDE) se puede definir como un conjunto de tecnologías, políticas, estándares y recursos humanos necesarios para a adquirir, procesar, almacenar, distribuir y mejorar la utilización de la información geográfica - Federal Geographic Data Committee (FGDC)*
 
-Una IDE (Infraestructura de Datos Espaciales) es un sistema informático
-integrado por un conjunto de recursos (catálogos, servidores, programas,
-datos, aplicaciones, páginas Web,...) dedicados a gestionar Información
-geográfica disponibles en Internet, que cumpla una serie de condiciones de
-interoperabilidad. [^2]
+Una IDE (Infraestructura de Datos Espaciales) es un sistema informático integrado por un conjunto de recursos (catálogos, servidores, programas, datos, aplicaciones, páginas Web,...) dedicados a gestionar Información geográfica disponibles en Internet, que cumpla una serie de condiciones de interoperabilidad. [^2]
 
 A partir de estas definiciones podemos vislumbrar que una IDE no es solo una implementación tecnológica sino que comprende una parte muy importante de comunicación, no precisamente entre servidor-servidor, sino entre Institución—Instituciones, departamento—departamento, en definitiva persona—persona para establecer los marcos de colaboración para compartir, describir y acceder a los datos geográficos.
+
+![visión global IDE](img/ides.png)
+*Visión global IDE*
 
 ### Comparación
 
