@@ -1,0 +1,1447 @@
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Infraestructuras de datos espaciales y estándares de geoservicios.">
+      
+      
+        <link rel="canonical" href="https://gss-mtig.github.io/sdis-mgeo-20-21/2_estandares_OCG/">
+      
+      
+        <meta name="author" content="sdis-mgeo">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>2. Estándares OCG - Infraestructuras de datos espaciales y estándares de geoservicios</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#estandares-ocg" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Cabecera">
+    <a href="https://gss-mtig.github.io/sdis-mgeo-20-21/" title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-header-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Infraestructuras de datos espaciales y estándares de geoservicios
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              2. Estándares OCG
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/gss-mtig/sdis-mgeo-20-21/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://gss-mtig.github.io/sdis-mgeo-20-21/" title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Infraestructuras de datos espaciales y estándares de geoservicios
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/gss-mtig/sdis-mgeo-20-21/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../1_introduccion_a_las_ides/" title="1. Introducción a las IDE's" class="md-nav__link">
+      1. Introducción a las IDE's
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2. Estándares OCG
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="2. Estándares OCG" class="md-nav__link md-nav__link--active">
+      2. Estándares OCG
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-ogc" class="md-nav__link">
+    Qué es OGC?
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué es OGC?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interoperabilidad" class="md-nav__link">
+    Interoperabilidad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estandares-ogc" class="md-nav__link">
+    Estándares OGC
+  </a>
+  
+    <nav class="md-nav" aria-label="Estándares OGC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wms" class="md-nav__link">
+    WMS
+  </a>
+  
+    <nav class="md-nav" aria-label="WMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-peticiones-wms" class="md-nav__link">
+    Tipos de peticiones WMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcapabilities" class="md-nav__link">
+    GetCapabilities
+  </a>
+  
+    <nav class="md-nav" aria-label="GetCapabilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametros-del-getcapabilities" class="md-nav__link">
+    Parámetros del GetCapabilities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspectos-practicos" class="md-nav__link">
+    Aspectos prácticos
+  </a>
+  
+    <nav class="md-nav" aria-label="Aspectos prácticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tamano-maximo-de-la-imagen" class="md-nav__link">
+    Tamaño máximo de la imágen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onlineresource" class="md-nav__link">
+    OnlineResource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer" class="md-nav__link">
+    Layer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfeatureinfo" class="md-nav__link">
+    GetFeatureInfo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmap" class="md-nav__link">
+    GetMap
+  </a>
+  
+    <nav class="md-nav" aria-label="GetMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametros-del-getmap" class="md-nav__link">
+    Parámetros del GetMap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfeatureinfo_1" class="md-nav__link">
+    GetFeatureInfo
+  </a>
+  
+    <nav class="md-nav" aria-label="GetFeatureInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametros-del-getfeatureinfo" class="md-nav__link">
+    Parámetros del GetFeatureInfo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlegendgraphic" class="md-nav__link">
+    GetLegendGraphic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspector-practicos-wms" class="md-nav__link">
+    Aspector prácticos WMS
+  </a>
+  
+    <nav class="md-nav" aria-label="Aspector prácticos WMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principales-diferencias-entre-las-versiones-111-y-130" class="md-nav__link">
+    Principales diferencias entre las versiones 1.1.1 y 1.3.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemas-comunes" class="md-nav__link">
+    Problemas comunes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmts" class="md-nav__link">
+    WMTS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wfs" class="md-nav__link">
+    WFS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sld" class="md-nav__link">
+    SLD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sos" class="md-nav__link">
+    SOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gml" class="md-nav__link">
+    GML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csw" class="md-nav__link">
+    CSW
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otros-estandares-ogc" class="md-nav__link">
+    Otros estándares OGC
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../3_estandares_ISO/" title="3. Estándares ISO" class="md-nav__link">
+      3. Estándares ISO
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../4_visualizacion_kepler/" title="4. Visualización con Kepler.gl" class="md-nav__link">
+      4. Visualización con Kepler.gl
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../5_herramientas_visualizacion_datos/" title="5. Herramientas de visualización de datos" class="md-nav__link">
+      5. Herramientas de visualización de datos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../6_conceptos_geoservicios/" title="6. Conceptos básicos de Geoservicios" class="md-nav__link">
+      6. Conceptos básicos de Geoservicios
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../7_ejemplo_servicio_wms/" title="7. Ejemplo servicio WMS" class="md-nav__link">
+      7. Ejemplo servicio WMS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../8_consideraciones_servicios_opendata/" title="8. Consideraciones sobre servicios Open data" class="md-nav__link">
+      8. Consideraciones sobre servicios Open data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../9_ejemplo_servicio_bicing_bcn/" title="9. Ejemplo servicio bicing Barcelona" class="md-nav__link">
+      9. Ejemplo servicio bicing Barcelona
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../10_ejemplo_servicio_bicing_bcn_vt/" title="10. Ejemplo servicio bicing Barcelona (VectorTiles)" class="md-nav__link">
+      10. Ejemplo servicio bicing Barcelona (VectorTiles)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../11_consideraciones_servicios_realtime_sensores/" title="11. Consideraciones sobre servicios de Sensores" class="md-nav__link">
+      11. Consideraciones sobre servicios de Sensores
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../13_ejemplo_sentilo_aca/" title="12. Ejemplo Sentilo ACA" class="md-nav__link">
+      12. Ejemplo Sentilo ACA
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../14_geoservicios_realtime/" title="13. Geoservicios realtime" class="md-nav__link">
+      13. Geoservicios realtime
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../15_herramientas_visualizacion_geoservicios/" title="14. Herramientas de visualización geoservicios" class="md-nav__link">
+      14. Herramientas de visualización geoservicios
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../16_ejemplo_mobility/" title="15. Ejemplo Mobility" class="md-nav__link">
+      15. Ejemplo Mobility
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../17_ejemplo_geoservicio_realtime/" title="16. Ejemplo servicio realtime para compartir la ubicación" class="md-nav__link">
+      16. Ejemplo servicio realtime para compartir la ubicación
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../18_ejemplo_gtfs/" title="17. Ejemplo GTFS" class="md-nav__link">
+      17. Ejemplo GTFS
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-ogc" class="md-nav__link">
+    Qué es OGC?
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué es OGC?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interoperabilidad" class="md-nav__link">
+    Interoperabilidad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estandares-ogc" class="md-nav__link">
+    Estándares OGC
+  </a>
+  
+    <nav class="md-nav" aria-label="Estándares OGC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wms" class="md-nav__link">
+    WMS
+  </a>
+  
+    <nav class="md-nav" aria-label="WMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-peticiones-wms" class="md-nav__link">
+    Tipos de peticiones WMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcapabilities" class="md-nav__link">
+    GetCapabilities
+  </a>
+  
+    <nav class="md-nav" aria-label="GetCapabilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametros-del-getcapabilities" class="md-nav__link">
+    Parámetros del GetCapabilities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspectos-practicos" class="md-nav__link">
+    Aspectos prácticos
+  </a>
+  
+    <nav class="md-nav" aria-label="Aspectos prácticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tamano-maximo-de-la-imagen" class="md-nav__link">
+    Tamaño máximo de la imágen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onlineresource" class="md-nav__link">
+    OnlineResource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer" class="md-nav__link">
+    Layer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfeatureinfo" class="md-nav__link">
+    GetFeatureInfo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmap" class="md-nav__link">
+    GetMap
+  </a>
+  
+    <nav class="md-nav" aria-label="GetMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametros-del-getmap" class="md-nav__link">
+    Parámetros del GetMap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfeatureinfo_1" class="md-nav__link">
+    GetFeatureInfo
+  </a>
+  
+    <nav class="md-nav" aria-label="GetFeatureInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametros-del-getfeatureinfo" class="md-nav__link">
+    Parámetros del GetFeatureInfo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlegendgraphic" class="md-nav__link">
+    GetLegendGraphic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspector-practicos-wms" class="md-nav__link">
+    Aspector prácticos WMS
+  </a>
+  
+    <nav class="md-nav" aria-label="Aspector prácticos WMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principales-diferencias-entre-las-versiones-111-y-130" class="md-nav__link">
+    Principales diferencias entre las versiones 1.1.1 y 1.3.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemas-comunes" class="md-nav__link">
+    Problemas comunes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmts" class="md-nav__link">
+    WMTS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wfs" class="md-nav__link">
+    WFS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sld" class="md-nav__link">
+    SLD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sos" class="md-nav__link">
+    SOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gml" class="md-nav__link">
+    GML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csw" class="md-nav__link">
+    CSW
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otros-estandares-ogc" class="md-nav__link">
+    Otros estándares OGC
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/gss-mtig/sdis-mgeo-20-21/edit/master/docs/2_estandares_OCG.md" title="Editar esta página" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="estandares-ocg">Estándares OCG</h1>
+<h2 id="que-es-ogc">Qué es OGC?</h2>
+<p>El OGC (Open Geospatial Consortium fué creada en 1994 y está formada por más de 500 empresas, agencias gubernamentales y universidades. Es una organización internacional sin ánimo de lucro comprometida con la elaboración de estándares abiertos e interoperables de calidad para la comunidad geoespacial global. </p>
+<p>Estos estándares se elaboran a través de un proceso de consenso y están disponibles de forma gratuita para que cualquier persona pueda utilizarlos para mejorar el intercambio de los datos geoespaciales del mundo.</p>
+<p>Estas especificaciones tienen como objetivo, fomentar la interoperabilidad geoespacial. El éxito de estas especificaciones radica en el hecho de que son impulsadas y creadas por las mismas empresas, que después las implementan en sus productos comerciales. </p>
+<h3 id="interoperabilidad">Interoperabilidad</h3>
+<p>Se puede definir la interoperabilidad como la habilidad de dos o más sistemas para intercambiar información y poderla utilizar, sin ningún esfuerzo por parte del usuario. Las modalidades de interoperatividad dependen de los agentes que interaccionan. Dicho de otra manera, los datos producidos en un entorno operativo tienen que poder ser leídos e interpretados por otro entorno sin que el usuario tenga que hacer una conversión de formatos.</p>
+<p>La interoperabilidad permite:</p>
+<ul>
+<li>
+<p>Acceder a más y mejor información (topográficos, ortoimágenes, callejeros, catastro, medio ambiente...), sin tener que disponer de un software específico o directamente desde el navegador. Esto permite que el usuario pueda acceder a cartografía de varias fuentes, con arquitecturas diferentes, de una forma fácil y transparente.</p>
+</li>
+<li>
+<p>Facilita el acceso a geoservicios.</p>
+</li>
+</ul>
+<h2 id="estandares-ogc">Estándares OGC</h2>
+<p>Un estándar es un modelo, un patrón que tiene como finalidad la fijación de unas normas comunes para garantizar la homogeneidad en el proceso de producción. Pero para que tenga éxito tiene que tener un uso mayoritario. </p>
+<p><img alt="estandares" src="../img/standards.png" />
+<em>Estándares</em></p>
+<p>Para conseguir que, tanto la documentación de los datos como la creación de servicios sea comprensible y accesible para todo el mundo, es decir, para hacer que todos “hablemos el mismo idioma”, se han diseñado estándares de metadatos y de servicios que pretenden poner en común los puntos de vista de los diferentes productores. Por lo tanto, la estandarización consiste en hacer que, tanto la documentación de datos como la creación de geoservicios, así como su acceso, se hagan conforme a unas norma previamente establecidas. </p>
+<p>Los estándares de la OGC son documentos de carácter técnico dónde se describen las interfaces de comunicación entre servidores y la forma de implementarlos.</p>
+<p>En estas especificaciones no se menciona ni la arquitectura, plataforma o lenguajes de programación a utilizar. </p>
+<p>Los documentos, antes de ser consideradas como una OpenGIS Implementation Specification, son elaborados y probados por diferentes grupos de trabajo dentro de OGC y finalmente sometidas a votación.</p>
+<p>Los servicios de cartografía online o web de OGC (OWS) son estándares de OGC creados para su uso en aplicaciones de la World Wide Web (WWW). Estos permiten formular petiones al servidor para: enviar preguntas, obtener datos vectoriales o ráster, hacer geoprocesos, etc.   </p>
+<p>Todos los estándares creados por OGC se pueden consultar en <a href="https://www.ogc.org/docs/is">https://www.ogc.org/docs/is</a></p>
+<p><img alt="Evolución de servicios OWS" src="../img/ows.png" />
+<em>Evolución de servicios OWS</em></p>
+<h3 id="wms">WMS</h3>
+<p>La intención de WMS (Web Map Service) es la de permitir la superposición visual de información geográfica compleja y distribuida en diferentes servidores. Un cliente puede hacer peticiones a otros servidores también basados en esta especificación para descubrir información geográfica deseada. Una vez encontrada el cliente puede recurrir a ella de forma simultánea y puede visualizar diferentes datos geográficos de diferentes servidores en un mismo entorno.</p>
+<p>Cada petición está compuesta por unos parámetros concretos definidos por la especificación WMS y que es entendida por todos los servidores de mapas que cumplen con la especificación.</p>
+<p>Por lo tanto, cuando se dice que un Servidor de Mapas es estándar y cumple con WMS, significa que es capaz de dar respuesta a estas peticiones.</p>
+<p>El estándar WMS proporciona una interfaz HTTP simple para solicitar imágenes de mapas georegistrados desde una o más bases de datos geoespaciales distribuidas. </p>
+<h4 id="tipos-de-peticiones-wms">Tipos de peticiones WMS</h4>
+<h4 id="getcapabilities">GetCapabilities</h4>
+<p>Nos permite descubrir cuales son las capacidades del servidor. Como respuesta va a obtener un archivo en formato xml dónde podremos saber cuales son las características del servicio, las versiones de WMS soportadas por el servidor, las operaciones que soporta, cual es su sistema de referencia, sus coordenadas, que formato de imagen soporta y metadatos de las capas de información que contiene.</p>
+<h5 id="parametros-del-getcapabilities">Parámetros del GetCapabilities</h5>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Obligatoriedad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VERSION</td>
+<td>Obligatorio</td>
+<td>Versión de la especificación OGC (1.0.0, 1.1.0, 1.1.1, 1.3.0)</td>
+</tr>
+<tr>
+<td>SERVICE</td>
+<td>Obligatorio</td>
+<td>Tipo de servicio al que va dirigida la petición (<strong>WMS</strong>)</td>
+</tr>
+<tr>
+<td>REQUEST</td>
+<td>Obligatorio</td>
+<td>Nombre de la operación (<strong>GetCapabilities</strong>)</td>
+</tr>
+<tr>
+<td>LANGUAGE</td>
+<td>Opcional</td>
+<td>Se obtiene el fichero de salida en el idioma solicidado</td>
+</tr>
+<tr>
+<td>FORMAT</td>
+<td>Opcional</td>
+<td>Formato de salida del metadato del servicio.   (Por defecto text/xml)</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplos: </p>
+<p><a href="http://www.ign.es/wms-inspire/ign-base?VERSION=1.3.0&amp;REQUEST=GetCapabilities&amp;SERVICE=WMS">http://www.ign.es/wms-inspire/ign-base?VERSION=1.3.0&amp;REQUEST=GetCapabilities&amp;SERVICE=WMS</a></p>
+<p><a href="http://geoserveis.icc.cat/icc_bt5m/wms/service?REQUEST=GetCapabilities&amp;SERVICE=WMS">http://geoserveis.icc.cat/icc_bt5m/wms/service?REQUEST=GetCapabilities&amp;SERVICE=WMS</a></p>
+<h5 id="aspectos-practicos">Aspectos prácticos</h5>
+<h6 id="tamano-maximo-de-la-imagen">Tamaño máximo de la imágen</h6>
+<p>Si se pide una imagen mayor que el tamaño máximo permitodo retornará un error</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;Service&gt;</span>
+    <span class="nt">&lt;Name&gt;</span>icc_bt5m<span class="nt">&lt;/Name&gt;</span>
+    <span class="nt">&lt;Title&gt;</span>
+    ICC - Base topogràfica de Catalunya 1:5 000 (BT-5M) - Capes WMS 96dpi (píxel 0,26458333 mm)
+    <span class="nt">&lt;/Title&gt;</span>
+    ...
+    <span class="nt">&lt;MaxWidth&gt;</span>2048<span class="nt">&lt;/MaxWidth&gt;</span>
+    <span class="nt">&lt;MaxHeight&gt;</span>2048<span class="nt">&lt;/MaxHeight&gt;</span>
+<span class="nt">&lt;/Service&gt;</span>
+</code></pre></div>
+
+<h6 id="onlineresource">OnlineResource</h6>
+<p>En algunos software de escritorio utiliza esta url para hacer las peticiones de las operaciones GetMap.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;GetMap&gt;</span>
+    <span class="nt">&lt;Format&gt;</span>image/jp2;subtype=&quot;gmljp2&quot;<span class="nt">&lt;/Format&gt;</span>
+    <span class="nt">&lt;Format&gt;</span>image/gif<span class="nt">&lt;/Format&gt;</span>
+    <span class="nt">&lt;Format&gt;</span>image/png<span class="nt">&lt;/Format&gt;</span>
+    <span class="nt">&lt;Format&gt;</span>image/bmp<span class="nt">&lt;/Format&gt;</span>
+    <span class="nt">&lt;Format&gt;</span>image/jpeg<span class="nt">&lt;/Format&gt;</span>
+    <span class="nt">&lt;Format&gt;</span>image/tiff<span class="nt">&lt;/Format&gt;</span>
+    <span class="nt">&lt;DCPType&gt;</span>
+        <span class="nt">&lt;HTTP&gt;</span>
+            <span class="nt">&lt;Get&gt;</span>
+                <span class="nt">&lt;OnlineResource</span> <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="na">xlink:href=</span><span class="s">&quot;http://shagrat.icc.cat/lizardtech/iserv/ows&quot;</span> <span class="na">xlink:type=</span><span class="s">&quot;simple&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/Get&gt;</span>
+        <span class="nt">&lt;/HTTP&gt;</span>
+    <span class="nt">&lt;/DCPType&gt;</span>
+<span class="nt">&lt;/GetMap&gt;</span>
+</code></pre></div>
+
+<h6 id="layer">Layer</h6>
+<p>El atributo queryable indica si la capa es consultable (1 =  consultable, 0 = no consultable)</p>
+<p>Name es indentificador de la capa. Es el valor que se debe usar en el parámetro LAYERS de las peticiones GetMap</p>
+<p>Title es nombre descriptivo de la capa</p>
+<p>LegendURL hace referencia a una url de una imagen externa que contiene la leyenda de la capa</p>
+<p>Min y Max(ScaleDenominator) factor de escala. Limita la visualización de la capa a estas escalas. Si se pide una capa fuera de esa escala retorna en blanco.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;Layer</span> <span class="na">queryable=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Name&gt;</span>02_ALTI_PA<span class="nt">&lt;/Name&gt;</span>
+    <span class="nt">&lt;Title&gt;</span>[BT5M] (02) (x) ALTIMETRIA: talussos, marges (àrees)<span class="nt">&lt;/Title&gt;</span>
+    <span class="nt">&lt;Abstract&gt;</span>02_ALTI_PA<span class="nt">&lt;/Abstract&gt;</span>
+    <span class="nt">&lt;CRS&gt;</span>EPSG:25831<span class="nt">&lt;/CRS&gt;</span>
+    <span class="nt">&lt;CRS&gt;</span>EPSG:4326<span class="nt">&lt;/CRS&gt;</span>
+    <span class="nt">&lt;BoundingBox</span> <span class="na">CRS=</span><span class="s">&quot;EPSG:25831&quot;</span> <span class="na">minx=</span><span class="s">&quot;254904.96&quot;</span> <span class="na">miny=</span><span class="s">&quot;4484796.89&quot;</span> <span class="na">maxx=</span><span class="s">&quot;530907.30&quot;</span> <span class="na">maxy=</span><span class="s">&quot;4749795.10&quot;</span><span class="nt">/&gt;</span>
+    ...
+    <span class="nt">&lt;Style&gt;</span>
+    ...
+    <span class="nt">&lt;LegendURL</span> <span class="na">width=</span><span class="s">&quot;328&quot;</span> <span class="na">height=</span><span class="s">&quot;64&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Format&gt;</span>image/png<span class="nt">&lt;/Format&gt;</span>
+        <span class="nt">&lt;OnlineResource</span> <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="na">xlink:href=</span><span class="s">&quot;http://geoserveis.icc.cat/icc_bt5m/wms/service?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=02_ALTI_PA&quot;</span> <span class="na">xlink:type=</span><span class="s">&quot;simple&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/LegendURL&gt;</span>
+    <span class="nt">&lt;/Style&gt;</span>
+    <span class="nt">&lt;MinScaleDenominator&gt;</span>472.470238<span class="nt">&lt;/MinScaleDenominator&gt;</span>
+    <span class="nt">&lt;MaxScaleDenominator&gt;</span>7087.053571<span class="nt">&lt;/MaxScaleDenominator&gt;</span>
+<span class="nt">&lt;/Layer&gt;</span>
+</code></pre></div>
+
+<h6 id="getfeatureinfo">GetFeatureInfo</h6>
+<p>Formatos de salida de la consulta</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;GetFeatureInfo&gt;</span>
+    <span class="nt">&lt;Format&gt;</span>application/vnd.esri.wms_raw_xml<span class="nt">&lt;/Format&gt;</span>
+    <span class="nt">&lt;Format&gt;</span>application/vnd.esri.wms_featureinfo_xml<span class="nt">&lt;/Format&gt;</span>
+    <span class="nt">&lt;Format&gt;</span>application/vnd.ogc.wms_xml<span class="nt">&lt;/Format&gt;</span>
+    <span class="nt">&lt;Format&gt;</span>text/xml<span class="nt">&lt;/Format&gt;</span>
+    <span class="nt">&lt;Format&gt;</span>text/html<span class="nt">&lt;/Format&gt;</span>
+    <span class="nt">&lt;Format&gt;</span>text/plain<span class="nt">&lt;/Format&gt;</span>
+    <span class="nt">&lt;DCPType&gt;</span>
+        <span class="nt">&lt;HTTP&gt;</span>
+            <span class="nt">&lt;Get&gt;</span>
+                <span class="nt">&lt;OnlineResource</span> <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="na">xlink:type=</span><span class="s">&quot;simple&quot;</span> <span class="na">xlink:href=</span><span class="s">&quot;http://geoserveis.icc.cat/icc_bt5m/wms/service?&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/Get&gt;</span>
+        <span class="nt">&lt;/HTTP&gt;</span>
+    <span class="nt">&lt;/DCPType&gt;</span>
+<span class="nt">&lt;/GetFeatureInfo&gt;</span>
+</code></pre></div>
+
+<h4 id="getmap">GetMap</h4>
+<p>Petición GetMap devolverá un mapa en formato imagen, ya sea un PNG, JPEG, GIF, etc.</p>
+<h5 id="parametros-del-getmap">Parámetros del GetMap</h5>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Obligatoriedad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VERSION</td>
+<td>Obligatorio</td>
+<td>Versión de la especificación OGC (1.0.0, 1.1.0, 1.1.1, 1.3.0)</td>
+</tr>
+<tr>
+<td>SERVICE</td>
+<td>Obligatorio</td>
+<td>Tipo de servicio al que va dirigida la petición (<strong>WMS</strong>)</td>
+</tr>
+<tr>
+<td>REQUEST</td>
+<td>Obligatorio</td>
+<td>Nombre de la operación (<strong>GetMap</strong>)</td>
+</tr>
+<tr>
+<td>LAYERS</td>
+<td>Obligatorio</td>
+<td>Lista de nombres de las capas separadas por coma</td>
+</tr>
+<tr>
+<td>FORMAT</td>
+<td>Obligatorio</td>
+<td>Formato de salida de la imagen.  (image/png, image/jpeg, ...)</td>
+</tr>
+<tr>
+<td>STYLES</td>
+<td>Obligatorio</td>
+<td>Lista de estilos separados por coma. Si no hay estilo se puede dejar en blanco</td>
+</tr>
+<tr>
+<td>SRS o CRS</td>
+<td>Obligatorio</td>
+<td>Código ESPG del sistema de referencia</td>
+</tr>
+<tr>
+<td>BBOX</td>
+<td>Obligatorio</td>
+<td>Caja de coordenadas del mapa (minx,miny,maxx,maxy)</td>
+</tr>
+<tr>
+<td>WIDTH</td>
+<td>Obligatorio</td>
+<td>Número píxeles del ancho de la imágen</td>
+</tr>
+<tr>
+<td>HEIGHT</td>
+<td>Obligatorio</td>
+<td>Número píxeles del alto de la imágen</td>
+</tr>
+<tr>
+<td>TRANSPARENT</td>
+<td>Opcional</td>
+<td>Indica si el fondo del mapa debe ser transparente (true ,false)</td>
+</tr>
+<tr>
+<td>BGCOLOR</td>
+<td>Opcional</td>
+<td>Color de fondo para la imagen del mapa. El valor está en la formato RRGGBB hexadecimal</td>
+</tr>
+<tr>
+<td>SLD</td>
+<td>Opcional</td>
+<td>Una URL que hace referencia a un archivo XML StyledLayerDescriptor que controla el estilo de las capas de mapa</td>
+</tr>
+<tr>
+<td>EXCEPTIONS</td>
+<td>Opcional</td>
+<td>Formato excepciones</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo: <a href="http://www.ign.es/wms-inspire/ign-base?SERVICE=WMS&amp;REQUEST=GetMap&amp;VERSION=1.3.0&amp;LAYERS=IGNBaseTodo&amp;STYLES=&amp;FORMAT=image/png&amp;BGCOLOR=0xFFFFFF&amp;TRANSPARENT=TRUE&amp;SRS=EPSG:4258&amp;BBOX=26.4764705882353,-19,44.5235294117647,5&amp;WIDTH=1020&amp;HEIGHT=767">http://www.ign.es/wms-inspire/ign-base?SERVICE=WMS&amp;REQUEST=GetMap&amp;VERSION=1.3.0&amp;LAYERS=IGNBaseTodo&amp;STYLES=&amp;FORMAT=image/png&amp;BGCOLOR=0xFFFFFF&amp;TRANSPARENT=TRUE&amp;SRS=EPSG:4258&amp;BBOX=26.4764705882353,-19,44.5235294117647,5&amp;WIDTH=1020&amp;HEIGHT=767</a></p>
+<h4 id="getfeatureinfo_1">GetFeatureInfo</h4>
+<p>Petición GetFeatureInfo sirve para mostrar los atributos de los objetos del mapa, vuelve la información en formato de tabla o XML. Si una capa está marcada como “consultable” (queryable), se puede solicitar datos sobre una coordenada de la imagen del mapa.</p>
+<h5 id="parametros-del-getfeatureinfo">Parámetros del GetFeatureInfo</h5>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Obligatoriedad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VERSION</td>
+<td>Obligatorio</td>
+<td>Versión de la especificación OGC (1.0.0, 1.1.0, 1.1.1, 1.3.0)</td>
+</tr>
+<tr>
+<td>SERVICE</td>
+<td>Obligatorio</td>
+<td>Tipo de servicio al que va dirigida la petición (<strong>WMS</strong>)</td>
+</tr>
+<tr>
+<td>REQUEST</td>
+<td>Obligatorio</td>
+<td>Nombre de la operación (<strong>GetFeatureInfo</strong>)</td>
+</tr>
+<tr>
+<td>LAYERS</td>
+<td>Obligatorio</td>
+<td>Lista de nombres de las capas separadas por coma</td>
+</tr>
+<tr>
+<td>FORMAT</td>
+<td>Obligatorio</td>
+<td>Formato de salida de la imagen.  (image/png, image/jpeg, ...)</td>
+</tr>
+<tr>
+<td>STYLES</td>
+<td>Obligatorio</td>
+<td>Lista de estilos separados por coma. Si no hay estilo se puede dejar en blanco</td>
+</tr>
+<tr>
+<td>SRS o CRS</td>
+<td>Obligatorio</td>
+<td>Código ESPG del sistema de referencia</td>
+</tr>
+<tr>
+<td>BBOX</td>
+<td>Obligatorio</td>
+<td>Caja de coordenadas del mapa (minx,miny,maxx,maxy)</td>
+</tr>
+<tr>
+<td>WIDTH</td>
+<td>Obligatorio</td>
+<td>Número píxeles del ancho de la imágen</td>
+</tr>
+<tr>
+<td>HEIGHT</td>
+<td>Obligatorio</td>
+<td>Número píxeles del alto de la imágen</td>
+</tr>
+<tr>
+<td>QUERY_LAYERS</td>
+<td>Obligatorio</td>
+<td>Lista de nombres de las capas que se quieren consultar separadas por coma</td>
+</tr>
+<tr>
+<td>X o I</td>
+<td>Obligatorio</td>
+<td>Valor del píxel a consultar</td>
+</tr>
+<tr>
+<td>Y o J</td>
+<td>Obligatorio</td>
+<td>Valor del píxel a consultar</td>
+</tr>
+<tr>
+<td>INFO_FORMAT</td>
+<td>Opcional</td>
+<td>Formato de la respuesta (por defecto text/xml)</td>
+</tr>
+<tr>
+<td>FEATURE_COUNT</td>
+<td>Opcional</td>
+<td>Número máximo de elementos a devolver</td>
+</tr>
+<tr>
+<td>EXCEPTIONS</td>
+<td>Opcional</td>
+<td>Formato excepciones</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<p><a href="http://geoserveis.icc.cat/icgc_bm5m/wms/service?REQUEST=GetFeatureInfo&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYERS=10_MUNICIPI_PC&amp;QUERY_LAYERS=10_MUNICIPI_PC&amp;INFO_FORMAT=text/html&amp;STYLES=&amp;SRS=EPSG:25831&amp;BBOX=257904,4484796,680304,4907196&amp;WIDTH=768&amp;HEIGHT=768&amp;X=295&amp;Y=580">http://geoserveis.icc.cat/icgc_bm5m/wms/service?REQUEST=GetFeatureInfo&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYERS=10_MUNICIPI_PC&amp;QUERY_LAYERS=10_MUNICIPI_PC&amp;INFO_FORMAT=text/html&amp;STYLES=&amp;SRS=EPSG:25831&amp;BBOX=257904,4484796,680304,4907196&amp;WIDTH=768&amp;HEIGHT=768&amp;X=295&amp;Y=580</a></p>
+<h4 id="getlegendgraphic">GetLegendGraphic</h4>
+<p>Petición que devuelve una imagen de la imagen de la leyenda del mapa de una capa, proporcionando una guía visual de los elementos del mapa.</p>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Obligatoriedad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VERSION</td>
+<td>Obligatorio</td>
+<td>Versión de la especificación OGC (1.0.0, 1.1.0, 1.1.1, 1.3.0)</td>
+</tr>
+<tr>
+<td>SERVICE</td>
+<td>Obligatorio</td>
+<td>Tipo de servicio al que va dirigida la petición (<strong>WMS</strong>)</td>
+</tr>
+<tr>
+<td>REQUEST</td>
+<td>Obligatorio</td>
+<td>Nombre de la operación (<strong>GetLegendGraphic</strong>)</td>
+</tr>
+<tr>
+<td>LAYER</td>
+<td>Obligatorio</td>
+<td>Nombre de la capa</td>
+</tr>
+<tr>
+<td>FORMAT</td>
+<td>Obligatorio</td>
+<td>Formato de salida de la imagen.  (image/png, image/jpeg, ...)</td>
+</tr>
+<tr>
+<td>WIDTH</td>
+<td>Opcional</td>
+<td>Número píxeles del ancho de la imágen</td>
+</tr>
+<tr>
+<td>HEIGHT</td>
+<td>Opcional</td>
+<td>Número píxeles del alto de la imágen</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<p><a href="http://wms.guifi.net/cgi-bin/mapserv?map=/home/guifi/maps.guifi.net/guifimaps/GMap.map&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=Nodes&amp;format=image/png&amp;STYLE=default">http://wms.guifi.net/cgi-bin/mapserv?map=/home/guifi/maps.guifi.net/guifimaps/GMap.map&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=Nodes&amp;format=image/png&amp;STYLE=default</a></p>
+<h4 id="aspector-practicos-wms">Aspector prácticos WMS</h4>
+<h5 id="principales-diferencias-entre-las-versiones-111-y-130">Principales diferencias entre las versiones 1.1.1 y 1.3.0</h5>
+<ul>
+<li>En la operación GetMap, el parámetro SRS se llama CRS en 1.3.0</li>
+<li>En la operación GetFeatureInfo, los parámetros X e Y se llaman I y J en 1.3.0.</li>
+<li>En 1.1.1, los sistemas de coordenadas geográficas especificados con el espacio de nombres EPSG se definen para tener un orden de ejes de longitud / latitud. En 1.3.0 el orden es la latitud / longitud.</li>
+</ul>
+<p>Por ejemplo, considere la solicitud WMS 1.1 utilizando el SRS WGS84 (EPSG: 4326):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">server/wms?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=epsg:4326&amp;BBOX=-180,-90,180,90&amp;...</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>La solicitud equivalente WMS 1.3.0 es:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">server/wms?VERSION=1.3.0&amp;REQUEST=GetMap&amp;CRS=epsg:4326&amp;BBOX=-90,-180,90,180&amp;...</span>
+</code></pre></div>
+</td></tr></table>
+
+<h5 id="problemas-comunes">Problemas comunes</h5>
+<ul>
+<li>Tamaño de la imagen (pantallas grandes y/o de mucha resolución)</li>
+<li>Capas no visibles por el control de escala</li>
+<li>Capas no consultables</li>
+<li>Formato de salida del GetFeatureInfo</li>
+<li>No están pensados para peticiones teseladas (velocidad) </li>
+<li>No tienen caché. Las imágenes se generan al vuelo </li>
+<li>Lista restringida de SRS soportados</li>
+<li>En software de escritorio el onlineResource (QGis tiene la opción de ignorar el onlineResource )</li>
+<li>Modificar el estilo (SLD poco soportado)</li>
+<li>SLD difícil de entender y hacer  </li>
+</ul>
+<h2 id="wmts">WMTS</h2>
+<h2 id="wfs">WFS</h2>
+<h2 id="sld">SLD</h2>
+<h2 id="sos">SOS</h2>
+<h2 id="gml">GML</h2>
+<h2 id="csw">CSW</h2>
+<h2 id="otros-estandares-ogc">Otros estándares OGC</h2>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
+        
+          <a href="../1_introduccion_a_las_ides/" title="1. Introducción a las IDE's" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                1. Introducción a las IDE's
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../3_estandares_ISO/" title="3. Estándares ISO" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                3. Estándares ISO
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
