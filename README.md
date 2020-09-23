@@ -19,9 +19,9 @@
     * WMS
     * WMTS
     * WFS
+    * GML
     * SLD
     * SOS
-    * GML
     * CSW
     * Otros estándares OGC
 
