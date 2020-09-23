@@ -502,15 +502,91 @@ Ejemplos:
 http://servicios.idee.es/wms-inspire/hidrografia?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&SRS=EPSG:25830&FORMAT=image/png&BBOX=419685.23094987,4082028.7934849,582245.81538657,4201830.8601227&WIDTH=1247&HEIGHT=919&LAYERS=HY.Network
 
 *Petición con SLD*
-http://servicios.idee.es/wms-inspire/hidrografia?VERSION=1.3.0&SERVICE=WMS&REQUEST=GetMap&CRS=EPSG:4258&FORMAT=image/png&BBOX=40.277646164396,-2.9977199809325,40.363845924834,-2.8768703715575&WIDTH=1408&HEIGHT=1004&SLD=https://direccionpublica/prueba.xml
+http://servicios.idee.es/wms-inspire/hidrografia?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&SRS=EPSG:25830&FORMAT=image/png&BBOX=419685.23094987,4082028.7934849,582245.81538657,4201830.8601227&WIDTH=1247&HEIGHT=919&SLD=http://betaserver.icgc.cat/dades/sld.xml
+
+http://servicios.idee.es/wms-inspire/hidrografia?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&SRS=EPSG:25830&FORMAT=image/png&BBOX=419685.23094987,4082028.7934849,582245.81538657,4201830.8601227&WIDTH=1247&HEIGHT=919&SLD_BODY=%3CStyledLayerDescriptor+version%3D%221.0.0%22+xmlns%3D%22http%3A%2F%2Fwww.opengis.net%2Fsld%22+xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchemainstance%22+xsi%3AschemaLocation%3D%22http%3A%2F%2Fschemas.opengis.net%2Fsld%2F1.0.0%2FStyledLayerDescriptor.xsd%22+xmlns%3Ase%3D%22http%3A%2F%2Fwww.opengis.net%2Fse%22+xmlns%3Abcn%3D%22http%3A%2F%2Fwww.ign.es%2Fbcn25%22%3E%3CNamedLayer%3E%3CName%3EHY.Network%3C%2FName%3E%3CUserStyle%3E%3CFeatureTypeStyle%3E%3Cse%3AFeatureTypeName%3EHY.Network%3C%2Fse%3AFeatureTypeName%3E%3CRule%3E%3CLineSymbolizer%3E%3CStroke%3E%3CCssParameter+name%3D%22stroke%22%3E%23ffaaff%3C%2FCssParameter%3E%3CCssParameter+name%3D%22strokewidth%22%3E5.0%3C%2FCssParameter%3E%3C%2FStroke%3E%3C%2FLineSymbolizer%3E%3C%2FRule%3E%3C%2FFeatureTypeStyle%3E%3C%2FUserStyle%3E%3C%2FNamedLayer%3E%3C%2FStyledLayerDescriptor%3E
 
 Se puede ver la especificación en [https://www.ogc.org/standards/sld](https://www.ogc.org/standards/sld)
 
 ## SOS
 
+El estandar SOS (Sensor Observation Service) es un servicio de datos. Define un interface estandarizado y operaciones para el acceso a observaciones desde sensores y sistemas de sensores que es consistente con todos los sistemas, incluyendo remoto, in-situ, fijos y sensores móviles. SOS proporciona resultados de consultas en el formato estandar de observación y medida (en inglés Observation and Mesurements, O&M) para modelizar observaciones de sensores y la especificación SensorML para modelizar sensores y sistemas sensor.
+
+Una observación es un evento cuyo resultado es una estimación del valor de alguna propiedad de la característica de interés, obtenida usando un procedimiento específico. 
+
+Las observaciones se definen por
+
+* eventTime – Cuando se tomó la medida
+* featureOfInterest – La entidad que se mide
+* observedProperty - La característica que se midió
+* procedure - cómo se midió
+
+Operaciones SOS requeridas incluyen: 
+* GetObservation - acceso a datos de observación y medida del sensor a través de una consulta espacio-temporal que se puede filtrar por un fenómeno 
+* GetCapabilities - Metadatos del servicio SOS 
+* DescribeSensor - información sobre los sensores, sus procesos y plataformas en SensorML
+
+Operaciones opcionales incluyen: 
+* GetResult 
+* GetFeatureOfInterest 
+* GetFeatureOfInterestTime 
+* DescribeFeatureofInterest 
+* DescribeObservationType
+* DescribeResultModel
+* Register Sensor
+* InsertObservation
+
+Algunos conceptos de interés para trabajar con sensores [^1]
+
+### Offering
+
+Los datos servidos por un servicio SOS se agrupan en diferentes offerings. Por ejemplo, un servicio SOS “meteo” podría tener los siguientes offerings: imágenes de satélite, datos de radar, medidas de estaciones meteorológicas, mapas de predicción, etc. Cada offering expone datos de un sensor o una red de sensores, descritos como un procedure.
+
+Se pueden considerarlos distintos Offerings como secciones co cajones que clasifican los diferentes datos según su origen o naturaleza.
+
+### Procedure
+
+Una procedure describe un sensor, una colección de sensores, or un proceso que produce un conjunto de observaciones. Proporciona metadatos sobre las entradas y salidas del sensor, datos de calibración y procesado, información de contacto, y la disponibilidad de datos (extensiones espacial y temporal), etc.
+
+Normalmente viene descrito en el formato SensorML.
+
+Se puede considerar una Procedure como una ficha de metadatos acerca del (los) sensor(es) o proceso(s) a cargo de generar los datos que ofrece el servicio.
+
+Un Offering está relacionado con una sola Procedure, mientras que una Procedure puede ser usada en diferentes Offerings. Por ejemplo, una Procedure podría ser una “Red de Estaciones Meteorológicas”, y ésta misma red de estaciones ser usada en diferentes Offerings, por ejemplo para diferentes períodos de tiempo. El Offerinf sería “Medidas de la Red de Estaciones Meteorológicas para el año 2015”.
+
+### Feature of Interest
+
+Cada observacion en un servicio SOS está ligada a una Feature Of Interest (FoI), que habitualmente determina el lugar donde el fenómeno observado tuvo lugar. Por ejemplo, para imágenes satélite, la FoI podría ser su footprint (polígono que determina el área fotografiada sobre la superficie de la tierra), o para una medición de temperatura, la FoI podría ser la ubicación del termómetro (punto).
+
+Las FoI pueden considerarse como el conjunto de lugares a los que están referidos los datos.
+
+### Observed Property
+
+La propiedad que se mide, tal que: Temperatura, Dirección del viento, Nubosidad, Número de vehículos... puede ser un valor numérico (una cantidad y una unidad de medida), lógico (toma los valores verdadero o falso), categórico (un valor de entre una lista: soleado, nublado, lluvioso), o descriptivo (un texto).
+
+### Observation
+
+Finalmente, una Observation es el valor que toma una Observed Property en un momento (Phenomenon Time) y un lugar (Feature Of Interest) dados. Por ejemplo: “La temperatura en Barcelona el 22/09/2015 a las 11:52 es de 23 grados centígrados”.
+
 Se puede ver la especificación en [https://www.ogc.org/standards/sos](https://www.ogc.org/standards/sos)
 
 ## CSW
+
+La especificación (CSW Catalog Service for the Web) establece cómo deben estructurarse e implementarse los servicios de catalogación y de búsqueda de metadatos geospaciales, estableciendo el subconjunto mínimo de metadatos que deben ser interrogables.
+
+#### Tipos de peticiones CSW
+
+Las operaciones que se definen en este estándar OGC son 7, siendo 4 obligatorias y 3 opcionales.
+
+| Operación       | Obligatoriedad | Descripción                                                                                                                                                                                                                                          |
+|-----------------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GetCapabilities | Obligatorio    | Solicitud de las características del CSW. Devuelve el documento Capabilities, en XML                                                                                                                                                                 |
+| DescribeRecord  | Opcional       | Permite realizar búsquedas de elementos del modelo de datos implementado en el servicio de catálogo. Con esta operación se pueden obtener las descripciones de todos los elementos del modelo datos o sólo de algunos                                |
+| GetDomain       | Opcional       | Permite a los usuarios consultar los valores permitidos de un parámetro o propiedad determinados. Se utiliza para obtener información acerca del rango de valores que puede poseer un elemento del registro de metadatos o un parámetro de consulta. |
+| GetRecords      | Obligatorio    | Envía una consulta(query) al catálogo y devuelve todos los registros de metadatos de los recursos catalogados que satisfacen los requisitos de la consulta                                                                                           |
+| GetRecordById   | Obligatorio    | Obtiene los registros de metadatos de los recursos catalogados mediante los identificadores de dichos registros de metadatos                                                                                                                         |
+| Harvest         | Opcional       | Esta operación indica la URI que apunta al recurso de metadatos a insertar o actualizar en el catálogo. El servicio de catálogo se encarga de analizarlo y de crear o modificar registros de metadatos en el catálogo                                |
+| Transaction     | Opcional       | Define una interfaz para crear, actualizar y borrar registros del catálogo de metadatos                                                                                                                                                              |
 
 Se puede ver la especificación en [https://www.ogc.org/standards/cat](https://www.ogc.org/standards/cat)
 
@@ -559,4 +635,6 @@ https://www.ogc.org/standards/
 
 https://www.idee.es/web/guest/rincon-del-desarrollador
 
+## Referencias
 
+[^1]: https://sensor-widgets.readthedocs.io/es/latest/sos.html#
