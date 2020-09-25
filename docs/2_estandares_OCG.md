@@ -594,7 +594,9 @@ Se puede ver la especificación en [https://www.ogc.org/standards/cat](https://w
 
 ### Web Map Context (WMC)
 
-Especifica como describir en un fichero XML, para crear un proyecto que contenga un mapa creado a partir de dos o más conexiones WMS.
+Especifica formato estandarizado para almacenar un contexto. Un contexto recoge la información necesaria para reproducir las condiciones de una determinada sesión de uso de un cliente, de tal forma que ese cliente pueda restablecerlas posteriormente. El contexto se almacena en un archivo XML. [^2]
+
+En el contexto se almacena información sobre las capas que forman el mapa representado por el cliente y los servidores de los que estas se obtienen, la región cubierta por el mapa, así como información adicional para anotar este mapa.
 
 Permite:
 * Crear vistas predefinidas, mapas temáticos
@@ -638,3 +640,4 @@ https://www.idee.es/web/guest/rincon-del-desarrollador
 ## Referencias
 
 [^1]: https://sensor-widgets.readthedocs.io/es/latest/sos.html#
+[^2]: https://github.com/volaya/libro-sig/releases/download/v3.0/Sistemas.de.Informacion.Geografica.pdf
