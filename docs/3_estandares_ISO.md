@@ -27,6 +27,7 @@ La Norma ISO 19115-2:2009 *"Información Geográfica Metadatos Extensión para i
 Una importante fuente de información utilizada en los Sistemas de Información Geográfica son las imágenes de satélite, orto-fotografías, modelos digitales, etc. Estos datos de tipo ráster y malla poseen características intrínsecas particulares, que deben quedar reflejadas mediante los metadatos. A pesar de que la norma ISO 19115 contiene algunos elementos destinados a documentar estetipo de información, éstos resultan escasos para documentar de forma correcta y completa la información ráster y por ese motivo se creo la ISO 19115-2.
 
 El objetivo de esta norma es definir los metadatos asociados a datos ráster y malla que van a contener información sobre: 
+
 * Las propiedades de los equipos de medición usados para adquirir los datos. 
 * La geometría de los procesos de medición empleados por los equipo.
 * Los procesos de producción usados para obtener los datos.
@@ -44,6 +45,7 @@ Esta Norma de Metadatos es de una gran complejidad e incluye una extensa serie d
 Aunque esta norma define un extenso número de elementos de metadatos, establece un “conjunto mínimo” de metadatos (el núcleo o Core), a considerar para todo el rango de aplicaciones de los metadatos (desde mapas en formato papel a datos en formato digital, comoimágenes satélite, modelos digitales del terreno, etc.). Con este conjunto se pretende establecerunos mínimos para facilitar el descubrimiento, el acceso, la transferencia y la utilización de los datos. Este núcleo está formado por elementos obligatorios y otros opcionales que usados todos ellos aumenta la interoperabilidad de los datos y permite a los usuarios entenderlos sin ambigüedades. Todo perfil que se defina a partir de esta norma debe estar formadocomo mínimo por los elementos definidos en dicho núcleo. 
 
 Principales elementos del Core de ISO 19115.
+
 * Título del Conjunto de Datos
 * Fecha de Referencia
 * Idioma del Conjunto de Datos
@@ -71,6 +73,7 @@ El estándar internacional ISO 19115 aporta la información necesaria para descr
 La ISO 19119 proporciona un entorno de trabajo para el desarrollo de software que permite a los usuarios el acceso y procesamiento de datos geográficos procedentes de diversas fuentes, a través de interfaces genéricos dentro de un entorno tecnológico abierto.
 
 La arquitectura de servicios geográficos especificada en ISO 19119 ha sido desarrollada para conseguir los siguientes propósitos:
+
 * Proporcionar un entorno de trabajo para permitir el desarrollo coordinado de servicios específicos.
 * Permitir la interoperabilidad entre servicios a través del uso de estándares de interfaces.
 * Facilitar el desarrollo de catálogos de servicio a través de la definición de metadatos de servicio.
