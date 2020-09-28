@@ -7,17 +7,9 @@ Temario:
 # [https://gss-mtig.github.io/sdis-mgeo-20-21/](https://gss-mtig.github.io/sdis-mgeo-20-21/)
 
 * [Introducción a las IDE's](https://gss-mtig.github.io/gss-mtig-19-20/1_introduccion_a_las_ides/)
-    * Antecedentes
-    * Qué es una IDE?
-    * Componentes de una IDE
-    * IDEC
-    * IDEE
-    * INSPIRE
-    * Otras IDES
-
 * [Estándares OCG](https://gss-mtig.github.io/gss-mtig-19-20/2_estandares_OCG/)
 * [Estándares ISO](https://gss-mtig.github.io/gss-mtig-19-20/3_estandares_ISO/)
-* [Visualización con Kepler.gl](https://gss-mtig.github.io/gss-mtig-19-20/4_visualizacion_kepler/)
+* [Metadatos](https://gss-mtig.github.io/gss-mtig-19-20/4_metadatos/)
 * [Herramientas de visualización de datos](https://gss-mtig.github.io/gss-mtig-19-20/5_herramientas_visualizacion_datos/)
 * [Conceptos básicos de Geoservicios](https://gss-mtig.github.io/gss-mtig-19-20/6_conceptos_geoservicios/)
 * [Ejemplo servicio WMS](https://gss-mtig.github.io/gss-mtig-19-20/7_ejemplo_servicio_wms/)

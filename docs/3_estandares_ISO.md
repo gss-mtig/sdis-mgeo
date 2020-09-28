@@ -37,7 +37,7 @@ La Norma ISO/TS 19115-3:2016 *"Información Geográfica Metadatos Parte 3 Implem
 
 Se aplica a diferentes niveles de información conjuntos de datos geográficos, series de conjunto de datos, fenómenos geográficos individuales, propiedades de los fenómenos, etc
 
-![alt text](img/iso_19115.png "Niveles de información")[^2]
+![Niveles de información](img/iso_19115.png "Niveles de información")[^2]
 Ejemplos prácticos de elemenentos a los que se puede aplicar la norma.
 
 Esta Norma de Metadatos es de una gran complejidad e incluye una extensa serie de elementos de metadatos, unos obligatorios y otros opcionales. El documento consta de 140 páginas, incluye un total de 409 ítems y define 27 listas controladas, mediante las que se definen los posibles valores válidos de ciertos campos.
@@ -90,9 +90,6 @@ La norma ISO 19115 proporciona una estructura para describir información geogr�
 ISO 19139 es una especificación técnica que desarrolla una implementación en XML (Esquema XML) del modelo de metadatos descrito por ISO 19115.
 
 Un archivo de intercambio de metadatos, acorde con el estándar ISO19115 y en formato XML, va a ser un documento XML que siga la sintaxis definida por la especificación técnica ISO 19139. Es decir, esta especificación técnica define un conjunto de esquemas en XML quevan a describir los metadatos asociados a cada nivel de información, permitiendo así su descripción, asegurando su validación y su posterior intercambio a través de archivos de metadatos.
-
-## Ejemplos de implementación de estándares
-
 
 ## Referencias
 

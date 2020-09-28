@@ -21,7 +21,7 @@ nav:
 - 1. Introducción a las IDE's: 1_introduccion_a_las_ides.md
 - 2. Estándares OCG: 2_estandares_OCG.md
 - 3. Estándares ISO: 3_estandares_ISO.md
-- 4. Visualización con Kepler.gl: 4_visualizacion_kepler.md
+- 4. Metadatos: 4_metadatos.md
 - 5. Herramientas de visualización de datos: 5_herramientas_visualizacion_datos.md
 - 6. Conceptos básicos de Geoservicios: 6_conceptos_geoservicios.md
 - 7. Ejemplo servicio WMS: 7_ejemplo_servicio_wms.md

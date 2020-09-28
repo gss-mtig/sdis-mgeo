@@ -31,11 +31,13 @@
     * ISO 19115
     * ISO 19119
     * ISO 19139
-    * Ejemplos de implementación de estándares
 
 * Metadatos
+    * Qué es un metadato
     * Qué es un catálogo de metadatos
+    * Herramientas para trabajar con metadatos
     * Creación de metadatos desde ArcGIS
+    * Creación de metadatos desde QGIS
     * Exportación desde ArcGIS e importación en GeoNetwork
 
 * Servidores de mapes
@@ -58,7 +60,6 @@
     * Práctica conectar servicios OGC con QGIS
     * Práctica conectar servicios OGC con Leaflet
     * ArcGIS Online
-
 
 ## Entorno
 
