@@ -37,7 +37,6 @@
     * Qué es un catálogo de metadatos
     * Herramientas para trabajar con metadatos
     * Creación de metadatos desde ArcGIS
-    * Creación de metadatos desde QGIS
     * Exportación desde ArcGIS e importación en GeoNetwork
 
 * Servidores de mapes
