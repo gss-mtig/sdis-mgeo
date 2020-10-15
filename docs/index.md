@@ -6,23 +6,12 @@ Temario:
 
 # [https://gss-mtig.github.io/sdis-mgeo-20-21/](https://gss-mtig.github.io/sdis-mgeo-20-21/)
 
-* [Introducción a las IDE's](https://gss-mtig.github.io/gss-mtig-19-20/1_introduccion_a_las_ides/)
-* [Estándares OCG](https://gss-mtig.github.io/gss-mtig-19-20/2_estandares_OCG/)
-* [Estándares ISO](https://gss-mtig.github.io/gss-mtig-19-20/3_estandares_ISO/)
-* [Metadatos](https://gss-mtig.github.io/gss-mtig-19-20/4_metadatos/)
-* [Herramientas de visualización de datos](https://gss-mtig.github.io/gss-mtig-19-20/5_herramientas_visualizacion_datos/)
-* [Conceptos básicos de Geoservicios](https://gss-mtig.github.io/gss-mtig-19-20/6_conceptos_geoservicios/)
-* [Ejemplo servicio WMS](https://gss-mtig.github.io/gss-mtig-19-20/7_ejemplo_servicio_wms/)
-* [Consideraciones sobre servicios Open data](https://gss-mtig.github.io/gss-mtig-19-20/8_consideraciones_servicios_opendata/)
-* [Ejemplo servicio bicing Barcelona](https://gss-mtig.github.io/gss-mtig-19-20/9_ejemplo_servicio_bicing_bcn/)
-* [Ejemplo servicio bicing Barcelona (VectorTiles)](https://gss-mtig.github.io/gss-mtig-19-20/10_ejemplo_servicio_bicing_bcn_vt/)
-* [Consideraciones sobre servicios de Sensores](https://gss-mtig.github.io/gss-mtig-19-20/11_consideraciones_servicios_realtime_sensores/)
-* [Ejemplo Sentilo ACA](https://gss-mtig.github.io/gss-mtig-19-20/13_ejemplo_sentilo_aca/)
-* [Geoservicios realtime](https://gss-mtig.github.io/gss-mtig-19-20/14_geoservicios_realtime/)
-* [Herramientas de visualización geoservicios](https://gss-mtig.github.io/gss-mtig-19-20/15_herramientas_visualizacion_geoservicios/)
-* [Ejemplo Mobility](https://gss-mtig.github.io/gss-mtig-19-20/16_ejemplo_mobility/)
-* [Ejemplo servicio realtime para compartir la ubicación](https://gss-mtig.github.io/gss-mtig-19-20/17_ejemplo_geoservicio_realtime/)
-* [Ejemplo GTFS](https://gss-mtig.github.io/gss-mtig-19-20/18_ejemplo_gtfs/)
+* [Introducción a las IDE's](https://gss-mtig.github.io/sdis-mgeo-20-21/introduccion_a_las_ides/)
+* [Estándares OCG](https://gss-mtig.github.io/sdis-mgeo-20-21/estandares_OCG/)
+* [Instalación de programas](https://gss-mtig.github.io/sdis-mgeo-20-21/instalacion_de_programas/)
+* [Clientes de mapas](https://gss-mtig.github.io/sdis-mgeo-20-21/clientes_de_mapa)
+* [Estándares ISO](https://gss-mtig.github.io/sdis-mgeo-20-21/estandares_ISO/)
+* [Metadatos](https://gss-mtig.github.io/sdis-mgeo-20-21/metadatos/)
 
 ## Autores
 
@@ -46,4 +35,3 @@ Temario:
     * CompartirIgual — Si remezcla, transforma o crea a partir del material, deberá difundir sus contribuciones bajo la misma licencia que el original.
     
     * No hay restricciones adicionales — No puede aplicar términos legales o medidas tecnológicas que legalmente restrinjan realizar aquello que la licencia permite.
-

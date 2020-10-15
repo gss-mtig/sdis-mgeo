@@ -25,6 +25,17 @@
     * CSW
     * Otros estándares OGC
 
+* Instalación de programas
+    * XAMPP
+    * GeoNetwork
+    * QGIS Server
+
+* Clientes de mapa
+    * Clientes web
+    * Práctica conectar servicios OGC con QGIS
+    * Práctica conectar servicios OGC con Leaflet
+    * ArcGIS Online
+
 * Estándares ISO
     * Qué es ISO?
     * Familia ISO19x
@@ -52,13 +63,6 @@
 * Servicios WMTS
     * Creación de teselas desde Geoserver
     * Creación de teselas desde ArcGIS Online
-
-* Clientes de mapa
-    * Clientes web
-    * Clientes desktop
-    * Práctica conectar servicios OGC con QGIS
-    * Práctica conectar servicios OGC con Leaflet
-    * ArcGIS Online
 
 ## Entorno
 
