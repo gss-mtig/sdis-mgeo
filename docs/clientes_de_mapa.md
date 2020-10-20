@@ -267,7 +267,28 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
 
 ## Práctica conectar servicios OGC con ArcGIS Online
 
+Abrimos la página de ArcGIS Online https://uab.maps.arcgis.com/home/index.html he iniciamos la sesión con nuestra cuenta.
 
+En el menú seleccionamos **Mapa** para crear un nuevo mapa
+
+Dentro del menú del mapa seleccionamos *Agregar* -> *Agregar una capa desde la web* y se nos muestra una nueva ventana
+
+![ArcGis Online agregar desde URL](img/aol_add_url.png "ArcGis Online agregar desde URL")
+ArcGis Online agregar desde URL
+
+En esta nueva ventana seleccionar en el desplegable la opción de *Servicio web del WMS OGC*
+
+En el campo URL copiar la url del servicio WMS del ICGC https://geoserveis.icgc.cat/icc_mapesbase/wms/service?
+
+Presionar el botón de **Obtener Capas** para cargar las capas del servicio y seleccionar la capa de *Ortofoto de Catalunya 1:5000 vigent*
+
+![ArcGis Online agregar WMS](img/aol_add_wms_icgc.png "ArcGis Online agregar WMS")
+ArcGis Online agregar WMS
+
+Finalmente presionar el botón de *Agregar capa* para ver la capa en nuetro mapa
+
+![ArcGis Online capa WMS](img/aol_resultado_wms.png "ArcGis Online capa WMS")
+ArcGis Online capa WMS
 
 ## Referencias
 

@@ -12,6 +12,7 @@ Temario:
 * [Clientes de mapas](https://gss-mtig.github.io/sdis-mgeo-20-21/clientes_de_mapa)
 * [Estándares ISO](https://gss-mtig.github.io/sdis-mgeo-20-21/estandares_ISO/)
 * [Metadatos](https://gss-mtig.github.io/sdis-mgeo-20-21/metadatos/)
+* [Servidores de mapas](https://gss-mtig.github.io/sdis-mgeo-20-21/servidores_de_mapa/)
 
 ## Autores
 

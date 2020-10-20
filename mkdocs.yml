@@ -24,6 +24,7 @@ nav:
 - 4. Clientes de mapas: clientes_de_mapa.md
 - 5. Estándares ISO: estandares_ISO.md
 - 6. Metadatos: metadatos.md
+- 7. Servidores de mapas: servidores_de_mapa.md
 
 plugins:
     - search
