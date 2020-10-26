@@ -1,0 +1,895 @@
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Infraestructuras de datos espaciales y estándares de geoservicios.">
+      
+      
+        <link rel="canonical" href="https://gss-mtig.github.io/sdis-mgeo-20-21/clientes_de_mapa/">
+      
+      
+        <meta name="author" content="sdis-mgeo">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>4. Clientes de mapas - Infraestructuras de datos espaciales y estándares de geoservicios</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#clientes-de-mapas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Cabecera">
+    <a href="https://gss-mtig.github.io/sdis-mgeo-20-21/" title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-header-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Infraestructuras de datos espaciales y estándares de geoservicios
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              4. Clientes de mapas
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/gss-mtig/sdis-mgeo-20-21/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://gss-mtig.github.io/sdis-mgeo-20-21/" title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Infraestructuras de datos espaciales y estándares de geoservicios
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/gss-mtig/sdis-mgeo-20-21/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_a_las_ides/" title="1. Introducción a las IDE's" class="md-nav__link">
+      1. Introducción a las IDE's
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../estandares_OCG/" title="2. Estándares OCG" class="md-nav__link">
+      2. Estándares OCG
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../instalacion_de_programas/" title="3. Instalación de programas" class="md-nav__link">
+      3. Instalación de programas
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        4. Clientes de mapas
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="4. Clientes de mapas" class="md-nav__link md-nav__link--active">
+      4. Clientes de mapas
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clientes-web" class="md-nav__link">
+    Clientes web
+  </a>
+  
+    <nav class="md-nav" aria-label="Clientes web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mashup" class="md-nav__link">
+    Mashup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-conectar-servicios-ogc-con-qgis" class="md-nav__link">
+    Práctica conectar servicios OGC con QGIS
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica conectar servicios OGC con QGIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgis-visualizar-una-capa-wms" class="md-nav__link">
+    QGIS - Visualizar una capa WMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgis-visualizar-una-capa-xyz" class="md-nav__link">
+    QGIS - Visualizar una capa XYZ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-conectar-servicios-ogc-con-leaflet" class="md-nav__link">
+    Práctica conectar servicios OGC con Leaflet
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica conectar servicios OGC con Leaflet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leaflet-visualizar-una-capa-wms" class="md-nav__link">
+    Leaflet - Visualizar una capa WMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaflet-visualizar-una-capa-xyz" class="md-nav__link">
+    Leaflet - Visualizar una capa XYZ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-conectar-servicios-ogc-con-arcgis-online" class="md-nav__link">
+    Práctica conectar servicios OGC con ArcGIS Online
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../estandares_ISO/" title="5. Estándares ISO" class="md-nav__link">
+      5. Estándares ISO
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../metadatos/" title="6. Metadatos" class="md-nav__link">
+      6. Metadatos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../servidores_de_mapa/" title="7. Servidores de mapas" class="md-nav__link">
+      7. Servidores de mapas
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clientes-web" class="md-nav__link">
+    Clientes web
+  </a>
+  
+    <nav class="md-nav" aria-label="Clientes web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mashup" class="md-nav__link">
+    Mashup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-conectar-servicios-ogc-con-qgis" class="md-nav__link">
+    Práctica conectar servicios OGC con QGIS
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica conectar servicios OGC con QGIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgis-visualizar-una-capa-wms" class="md-nav__link">
+    QGIS - Visualizar una capa WMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgis-visualizar-una-capa-xyz" class="md-nav__link">
+    QGIS - Visualizar una capa XYZ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-conectar-servicios-ogc-con-leaflet" class="md-nav__link">
+    Práctica conectar servicios OGC con Leaflet
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica conectar servicios OGC con Leaflet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leaflet-visualizar-una-capa-wms" class="md-nav__link">
+    Leaflet - Visualizar una capa WMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaflet-visualizar-una-capa-xyz" class="md-nav__link">
+    Leaflet - Visualizar una capa XYZ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-conectar-servicios-ogc-con-arcgis-online" class="md-nav__link">
+    Práctica conectar servicios OGC con ArcGIS Online
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/gss-mtig/sdis-mgeo-20-21/edit/master/docs/clientes_de_mapa.md" title="Editar esta página" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="clientes-de-mapas">Clientes de mapas</h1>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>La mayorías de los conceptos son sacados del Libro libre SIG de Victor Olaya <a href="http://volaya.github.io/libro-sig/">http://volaya.github.io/libro-sig/</a></p>
+</div>
+<p>Un cliente es un elemento que utiliza los datos proporcionados por un servicio. Para ello, realiza una petición a la que el servicio responde enviando dichos datos, estos datos serán los que después se emplearán para realizar cualquier otra tarea, principalmente la representación de estos para que el usuario pueda visualizarlos. El cliente es, de este modo, el intermediario entre el usuario y los servicios y datos que el servidor ofrece. <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>El cliente debe disponer de capacidades para formular peticiones a servidores, así como para procesar las respuestas que estos devolverán. No obstante, estas capacidades pueden variar ampliamente de un cliente a otro, desde el mínimo necesario para simplemente representar los datos obtenidos del servidor hasta conjuntos de funcionalidades mucho más avanzadas pensadas para un uso intensivo de esos mismos datos.</p>
+<p>Distinguimos dos tipos de clientes en función de las capacidades que tengan: clientes ligeros y clientes pesados.</p>
+<ul>
+<li>
+<p><strong>Cliente ligero.</strong> Se denomina <em>ligero</em> por el tamaño relativamente reducido del programa en sí, lo cual va consecuentemente asociado a unas capacidades limitadas. Hablamos de clientes ligeros cuando nos referimos a <em>Web Mapping</em> y a clientes que se ejecutan sobre un navegador Web, los cuales son siempre sencillos en cuanto a sus funcionalidades. En el momento de la carga de la página Web que contiene al cliente, el navegador descarga toda la lógica del programa, lo cual hace necesario limitar el tamaño de este. No obstante, los clientes Web empiezan progresivamente a ampliar sus posibilidades, y en ello juegan un importante papel otros servicios distintos a los de mapas o los de datos, como pueden ser los de procesos. Estos permiten que las funcionalidades adicionales no se implementen en el propio cliente (y por tanto sin aumentar en exceso su tamaño y sin disminuir su «ligereza»), sino que sean accedidas también como servicios remotos. La evolución de la cartografía Web en esta dirección se dirige desde el Web Mapping al Web GIS.</p>
+</li>
+<li>
+<p><strong>Cliente pesado.</strong> A diferencia del cliente ligero, el cliente <em>pesado</em> es una aplicación individual que no se ejecuta sobre otra aplicación soporte como puede ser un navegador Web. Al ser un programa independiente, debe ocuparse de toda la lógica del proceso y de proveer todas las funcionalidades necesarias, por lo que su tamaño es generalmente mayor. Pese a ello, un cliente pesado no ha de ser necesariamente más potente y con más funcionalidades que uno ligero (aunque habitualmente lo es), ya que existen aplicaciones muy sencillas con capacidad para conectarse a servicios de mapas, que ofrecen poco más que un visor de cartografía. La diferencia no estriba en las capacidades del programa, sino en el enfoque a la hora de implementar este y el uso o no de otra aplicación «plataforma», generalmente en forma de un navegador Web. Los clientes pesados suelen permitir el uso de datos no procedentes directamente del acceso a servicios, tales como datos en ficheros locales, y no están pensados exclusivamente como clientes, sino como aplicaciones más amplias que además disponen de capacidades para aprovechar un determinado tipo de servicios. Dicho de otro modo, un cliente pesado tal y como un SIG de escritorio tiene utilidad aunque no se emplee como cliente de ningún servicio y no se disponga de conexión a red alguna, ya que puede alimentarse con datos locales y todas sus restantes funcionalidades (análisis, preparación de cartografía, etc.) pueden aprovecharse con dichos datos.</p>
+</li>
+</ul>
+<h2 id="clientes-web">Clientes web</h2>
+<p>Hablamos de un cliente Web cuando este se ejecuta sobre un navegador Web. Por lo tanto un cliente Web es un cliente <em>ligero</em>. En el ámbito de los SIG hablamos de <em>Web Mapping</em> o de <em>Web SIG</em>.</p>
+<p>La cartografía Web tiene ciertas limitaciones respecto al SIG de escritorio, ya que la Web tiene sus propias limitaciones. Un ejemplo de esto es la limitación impuesta por el propio navegador como marco de trabajo. Las propias ventajas que este aporta son también responsables de ciertas limitaciones, ya que en el desarrollo de una aplicación SIG Web no se tiene la misma libertad que al desarrollar una aplicación de escritorio.</p>
+<p>Otro aspecto problemático es la propia red, especialmente en lo que respecta a su fiabilidad y rendimiento. Todos los datos que el cliente emplea en una aplicación de cartografía Web provienen de la red, y por tanto existe una fuerte dependencia entre la aplicación y el funcionamiento tanto de esta como del servidor que a través de ella nos proporciona esos datos. El rendimiento de la red es más importante aún si cabe en el caso de trabajar con información geográfica, ya que los datos suelen ser voluminosos.</p>
+<h3 id="mashup">Mashup</h3>
+<p>Se conoce como <em>mashup</em> o <em>aplicación Web híbrida</em> a una aplicación que basa sus contenidos en los de otras páginas Web, integrándolos y creando una nueva página que ofrece un servicio distinto. Un mashup accede a los servicios que otras páginas proporcionan de forma pública dando un uso distinto a estos en un nuevo contexto.</p>
+<p>Los mashups existen en todos los ámbitos de las aplicaciones Web, pero es en el ámbito SIG donde han adquirido una mayor importancia y en el que proliferan en mayor medida. Es por esto que resulta de interés tratarlos con algo más de profundidad, pues el impacto que están teniendo en la popularización de las tecnologías SIG es muy elevado.</p>
+<p>Principales razones por las que los mashups con componente SIG son tan populares:</p>
+<ul>
+<li>
+<p>La mayoría de la información que encontramos en la Web puede georreferenciarse. Esto hace que una gran parte de los contenidos de una página Web puedan complementarse con algún tipo de elemento geográfico, principalmente un visor de cartografía en el que poder mostrar esa información georreferenciada con la que se trabaja.</p>
+</li>
+<li>
+<p>La información geográfica es de difícil acceso, especialmente a gran escala y por parte de usuarios o desarrolladores no especializados. Si el interés de añadir a cualquier página Web algún elemento de tipo SIG resulta claro, también es cierto que suelen necesitarse datos adicionales con que acompañar a los propios datos de la página. Es decir, si nuestra página Web recoge información sobre restaurantes en la zona, mostrar la localización de esos restaurantes enriquecerá el contenido, aunque para que esta funcionalidad sea verdaderamente útil deberemos contar con algún tipo de mapa base (cartografía de calles, fotografía aérea, etc.) que ayude al usuario a emplazar un restaurante dado o calcular la forma óptima de llegar hasta él.</p>
+</li>
+</ul>
+<p>Esta cartografía base implica un coste elevado, normalmente no asumible para un uso como este. Sin embargo, disponer de una cartografía base ofrecida por un proveedor que permita crear algún tipo de mashup sobre ella facilita que existan este tipo de servicios, como así lo atestigua el gran número de distintas aplicaciones Web que se desarrollan de este modo.</p>
+<p>Google Maps es el servicio más popular para la creación de mashups y el que ha supuesto una verdadera revolución en este sentido. Actualmente existen alternativas que le están ganando terreno a Google Maps, tales como; OpenStreetMap (OSM) como capa base y el desarrollo de librerías Web de mapas de Software Libre como OpenLayers o Leaflet.</p>
+<h2 id="practica-conectar-servicios-ogc-con-qgis">Práctica conectar servicios OGC con QGIS</h2>
+<h3 id="qgis-visualizar-una-capa-wms">QGIS - Visualizar una capa WMS</h3>
+<p>Utilizaremos el programa <strong>QGIS</strong> para visualizar servicios WMS.</p>
+<ol>
+<li>Abrir el <em>QGIS desktop</em> y crear un nuevo proyecto llamado <em>sdis_mgeo</em></li>
+<li>Presionar el botón de agregar WMS/WMTS del QGIS para desplegar el diálogo de añadir capa
+    <img alt="Add WMS" src="../img/qgis_add_wms.png" title="Add WMS" />
+    Add WMS</li>
+<li>En el diálogo de añadir capa presionar el botón de <em>nuevo</em> para desplegar el diálogo de crear una nueva conexión.</li>
+<li>
+<p>En el diálogo de crear conexión debemos rellenar el campo nombre con el nombre que queremos dar a esta conexión y el campo URL con la dirección del servicio WMS. Una vez rellenados los campos presionar el botón de Aceptar.
+    <img alt="WMS ICGC" src="../img/qgis_wms_icgc.png" title="WMS ICGC" />
+    WMS ICGC</p>
+<p>En este caso utilizaremos la url del servidor WMS del ICGC.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">http://geoserveis.icgc.cat/icc_mapesbase/wms/service?</span>
+</code></pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>En el diálogo de añadir capa presionar el botón de <em>conectar</em> para cargar el listado de capas del servicio.
+    <img alt="Listado de capas ICGC" src="../img/qgis_capas_wms_icgc.png" title="Listado de capas ICGC" />
+    Listado de capas ICGC</p>
+</li>
+<li>Seleccionar la(s) capa(s) que queremos cargar en nuestro mapa y presionamos el botón de Añadir. Nos debe cargar el servicio WMS en nuestro mapa.
+    <img alt="Visualizar WMS ICGC" src="../img/qgis_visualizar_wms.png" title="Visualizar WMS ICGC" />
+    Visualizar WMS ICGC</li>
+<li>Instalar el complemento <strong>QGIS Network Logger</strong> para ver las peticiones que hace el QGIS.</li>
+</ol>
+<h3 id="qgis-visualizar-una-capa-xyz">QGIS - Visualizar una capa XYZ</h3>
+<p>Utilizaremos el programa <strong>QGIS</strong> para visualizar servicios XYZ.</p>
+<ol>
+<li>Abrir el <em>QGIS desktop</em> y abrir el proyecto llamado <em>sdis_mgeo</em></li>
+<li>En el panel explorador del QGIS presionar con el botón derecho del mouse sobre <em>Tile Server (XYZ)</em> para desplegar el menú donde debemos seleccionar la opción de <em>New Connection...</em> que nos mostrará el diálogo de añadir nueva conexión.
+    <img alt="Add XYZ" src="../img/qgis_add_wmts.png" title="Add XYZ" />
+    Add XYZ</li>
+<li>
+<p>En el diálogo de añadir nueva conexión debemos escribir la URL de nuestro servicio y presionar el botón de Aceptar. Luego se desplegarán un dialogo donde debemos colocar el nombre que queremos dar a la conexión y presionamos Aceptar.
+    <img alt="XYZ OSM" src="../img/qgis_wmts_osm.png" title="XYZ OSM" />
+    XYZ OSM</p>
+<p>En este caso utilizaremos la url del servidor de teselas de OpenStreetMap.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">http://c.tile.osm.org/{z}/{x}/{y}.png</span>
+</code></pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>En el panel explorador ahora debe aparece la conexión definida. Para agregarla al mapa hacemos doble click sobre el nombre de la conexión.
+    <img alt="Visualizar XYZ OSM" src="../img/qgis_visualizar_wmts.png" title="Visualizar XYZ OSM" />
+    Visualizar XYZ OSM</p>
+</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio</p>
+<p>Agregar la capa WMTS de la ortofoto o topográfico del servicio WMTS del ICGC</p>
+<p><a href="http://geoserveis.icc.cat/icc_mapesmultibase/noutm/wmts/orto/GRID3857/{z}/{x}/{y}.jpeg">http://geoserveis.icc.cat/icc_mapesmultibase/noutm/wmts/orto/GRID3857/{z}/{x}/{y}.jpeg</a></p>
+</div>
+<h2 id="practica-conectar-servicios-ogc-con-leaflet">Práctica conectar servicios OGC con Leaflet</h2>
+<h3 id="leaflet-visualizar-una-capa-wms">Leaflet - Visualizar una capa WMS</h3>
+<p>Utilizaremos la librería <strong>Leaflet</strong> para crear un cliente <em>ligero</em> web donde visualizar servicios WMS.</p>
+<ol>
+<li>
+<p>Crear una carpeta llamada <em>visor</em> dentro del directorio htdocs del Xampp.</p>
+<p>C:\xampp\htdocs\visor</p>
+</li>
+<li>
+<p>Crear el archivo <em>wms.html</em> dentro de la carpeta visor. En este archivo crearemos la estructura básica del nuestro html y cargaremos la librería Leaflet. Para ello escribir los siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Visor simple con Leaflet<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+        <span class="p">#</span><span class="nn">mapid</span> <span class="p">{</span> <span class="k">height</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;</span> <span class="k">width</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mapid&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Agregar el código para crear el mapa. Debajo de donde cargamos la librería de Leaflet.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Visor simple con Leaflet<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+        <span class="p">#</span><span class="nn">mapid</span> <span class="p">{</span> <span class="k">height</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;</span> <span class="k">width</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mapid&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span class="hll">        <span class="c1">//Creamos el objeto mapa.</span>
+</span><span class="hll">        <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;mapid&#39;</span><span class="p">).</span><span class="nx">setView</span><span class="p">([</span><span class="mf">41.68</span><span class="p">,</span> <span class="mf">1.85</span><span class="p">],</span> <span class="mi">9</span><span class="p">);</span>
+</span><span class="hll">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Agregar la capa WMS.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Visor simple con Leaflet<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+        <span class="p">#</span><span class="nn">mapid</span> <span class="p">{</span> <span class="k">height</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;</span> <span class="k">width</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mapid&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="c1">//Creamos el objeto mapa.</span>
+        <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;mapid&#39;</span><span class="p">).</span><span class="nx">setView</span><span class="p">([</span><span class="mf">41.68</span><span class="p">,</span> <span class="mf">1.85</span><span class="p">],</span> <span class="mi">9</span><span class="p">);</span>
+<span class="hll">        <span class="kd">var</span> <span class="nx">wmsTopoIcgc</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nx">wms</span><span class="p">(</span><span class="s1">&#39;https://geoserveis.icgc.cat/icc_mapesbase/wms/service?&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class="hll">        <span class="nx">layers</span><span class="o">:</span> <span class="s1">&#39;mtc5m&#39;</span>
+</span><span class="hll">        <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+</span>    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Abrir el navegador y ver que nuestro visor está funcionando correctamente.</p>
+<p><a href="http://localhost/visor/wms.html">http://localhost/visor/wms.html</a></p>
+</li>
+</ol>
+<h3 id="leaflet-visualizar-una-capa-xyz">Leaflet - Visualizar una capa XYZ</h3>
+<p>Utilizaremos la librería <strong>Leaflet</strong> para crear un cliente <em>ligero</em> web donde visualizar servicios WMS.</p>
+<ol>
+<li>
+<p>Crear el archivo <em>xyz.html</em> dentro de la carpeta visor. En este archivo crearemos la estructura básica del nuestro html y cargaremos la librería Leaflet. Para ello escribir los siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Visor simple con Leaflet<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+        <span class="p">#</span><span class="nn">mapid</span> <span class="p">{</span> <span class="k">height</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;</span> <span class="k">width</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mapid&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Agregar el código para crear el mapa. Debajo de donde cargamos la librería de Leaflet.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Visor simple con Leaflet<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+        <span class="p">#</span><span class="nn">mapid</span> <span class="p">{</span> <span class="k">height</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;</span> <span class="k">width</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mapid&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span class="hll">        <span class="c1">//Creamos el objeto mapa.</span>
+</span><span class="hll">        <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;mapid&#39;</span><span class="p">).</span><span class="nx">setView</span><span class="p">([</span><span class="mf">41.68</span><span class="p">,</span> <span class="mf">1.85</span><span class="p">],</span> <span class="mi">9</span><span class="p">);</span>
+</span><span class="hll">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Agregar la capa XYZ</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Visor simple con Leaflet<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+        <span class="p">#</span><span class="nn">mapid</span> <span class="p">{</span> <span class="k">height</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;</span> <span class="k">width</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mapid&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="c1">//Creamos el objeto mapa.</span>
+        <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;mapid&#39;</span><span class="p">).</span><span class="nx">setView</span><span class="p">([</span><span class="mf">41.68</span><span class="p">,</span> <span class="mf">1.85</span><span class="p">],</span> <span class="mi">9</span><span class="p">);</span>
+<span class="hll">        <span class="kd">var</span> <span class="nx">wmtsOpenStreetMap</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;http://{s}.tile.osm.org/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class="hll">        <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; &lt;a href=&quot;http://osm.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt; contributors&#39;</span>
+</span><span class="hll">    <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+</span>    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Abrir el navegador y ver que nuestro visor está funcionando correctamente.</p>
+<p><a href="http://localhost/visor/xyz.html">http://localhost/visor/xyz.html</a></p>
+</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio</p>
+<p>Agregar sobre la capa de OpenStreetMap la capa Catastro del servicio WMS de la Dirección General del Catastro. Aplicar transparencia a la capa.</p>
+<p><a href="http://www.catastro.minhap.gob.es/esp/wms.asp">http://www.catastro.minhap.gob.es/esp/wms.asp</a></p>
+</div>
+<h2 id="practica-conectar-servicios-ogc-con-arcgis-online">Práctica conectar servicios OGC con ArcGIS Online</h2>
+<p>Abrimos la página de ArcGIS Online <a href="https://uab.maps.arcgis.com/home/index.html">https://uab.maps.arcgis.com/home/index.html</a> he iniciamos la sesión con nuestra cuenta.</p>
+<p>En el menú seleccionamos <strong>Mapa</strong> para crear un nuevo mapa</p>
+<p>Dentro del menú del mapa seleccionamos <em>Agregar</em> -&gt; <em>Agregar una capa desde la web</em> y se nos muestra una nueva ventana</p>
+<p><img alt="ArcGis Online agregar desde URL" src="../img/aol_add_url.png" title="ArcGis Online agregar desde URL" />
+ArcGis Online agregar desde URL</p>
+<p>En esta nueva ventana seleccionar en el desplegable la opción de <em>Servicio web del WMS OGC</em></p>
+<p>En el campo URL copiar la url del servicio WMS del ICGC <a href="https://geoserveis.icgc.cat/icc_mapesbase/wms/service">https://geoserveis.icgc.cat/icc_mapesbase/wms/service</a>?</p>
+<p>Presionar el botón de <strong>Obtener Capas</strong> para cargar las capas del servicio y seleccionar la capa de <em>Ortofoto de Catalunya 1:5000 vigent</em></p>
+<p><img alt="ArcGis Online agregar WMS" src="../img/aol_add_wms_icgc.png" title="ArcGis Online agregar WMS" />
+ArcGis Online agregar WMS</p>
+<p>Finalmente presionar el botón de <em>Agregar capa</em> para ver la capa en nuetro mapa</p>
+<p><img alt="ArcGis Online capa WMS" src="../img/aol_resultado_wms.png" title="ArcGis Online capa WMS" />
+ArcGis Online capa WMS</p>
+<h2 id="referencias">Referencias</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="http://volaya.github.io/libro-sig/">http://volaya.github.io/libro-sig/</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
+        
+          <a href="../instalacion_de_programas/" title="3. Instalación de programas" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                3. Instalación de programas
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../estandares_ISO/" title="5. Estándares ISO" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                5. Estándares ISO
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

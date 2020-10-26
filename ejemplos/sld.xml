@@ -1,7 +1,7 @@
 <StyledLayerDescriptor version="1.0.0"
     xmlns="http://www.opengis.net/sld"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd"
     xmlns:se="http://www.opengis.net/se"
     xmlns:bcn="http://www.ign.es/bcn25">
     <NamedLayer>
