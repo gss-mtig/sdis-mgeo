@@ -631,6 +631,16 @@ Servicio de publicación de procesos geoespaciales en la Web. Se entiende por pr
 
 Se puede ver la especificación en [https://www.ogc.org/standards/wps](https://www.ogc.org/standards/wps)
 
+!!! question "Ejercicio"
+    En un documento de texto poner:
+
+    * La url de una IDE
+    * Una captura de una búsqueda en el catálogo de la IDE de servicios WMS
+    * Seleccionar un servicio WMS del catálogo de la IDE
+        * Escribir la url del getCapabilities
+        * Escribir la url de una petición getMap
+        * Captura de la image retornada de la petición getMap
+
 ## Recursos 
 
 https://www.ogc.org/standards/
