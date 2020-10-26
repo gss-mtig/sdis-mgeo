@@ -150,6 +150,9 @@ Imagen con overview
 
 9. Crear un nuevo proyecto en blanco en el QGIS y cargar nuestro servicio WMS.
 
+!!! warning
+    Al agregar el servicio WMS seleccionar la opción de invertir la orientación de los ejes
+
 ![Qgis con nuestro WMS](img/qgis_server_wms_comarcas.png "Qgis con nuestro WMS")
 Qgis con nuestro WMS
 
