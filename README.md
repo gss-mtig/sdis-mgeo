@@ -55,14 +55,7 @@
     * Qué es un servidor de mapas?
     * Servidores de mapas estándar
     * Cómo preparar la geoinformación
-        * BBDD
-        * RAW data
-        * Pirámides cache
     * Práctica implementar un servidor de mapas
-
-* Servicios WMTS
-    * Creación de teselas desde Geoserver
-    * Creación de teselas desde ArcGIS Online
 
 ## Entorno
 
