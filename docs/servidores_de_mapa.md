@@ -146,15 +146,25 @@ Imagen con overview
 
 8. Comprobar que el QGIS Server está funcionando: abrir en el navegador http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
-8. Mirar el capabilities de nuestro servidor: abrir en el navegador http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&map=[RUTA_DE_ARCHIVO]/mun_com.qgs
+9. Mirar el capabilities de nuestro servidor: abrir en el navegador http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&map=[RUTA_DE_ARCHIVO]/mun_com.qgs
 
-9. Crear un nuevo proyecto en blanco en el QGIS y cargar nuestro servicio WMS.
+10. Crear un nuevo proyecto en blanco en el QGIS y cargar nuestro servicio WMS.
 
-!!! warning
-    Al agregar el servicio WMS seleccionar la opción de invertir la orientación de los ejes
+    !!! warning
+        Al agregar el servicio WMS seleccionar la opción de invertir la orientación de los ejes
 
-![Qgis con nuestro WMS](img/qgis_server_wms_comarcas.png "Qgis con nuestro WMS")
-Qgis con nuestro WMS
+    ![Qgis con nuestro WMS](img/qgis_server_wms_comarcas.png "Qgis con nuestro WMS")
+    Qgis con nuestro WMS
+
+11. Agregar el recurso a nuestro metadato
+
+    * Abrir el geonetwork
+    * Editar el metadato "municipio"
+    * Añadir una entrada en *Recursos asociados* -> *Recursos en línea*
+        * Protocolo seleccionar **OGC-WMS Servicio Web de Mapas (version 1.3.0)
+        * URL poner la url de nuestro servicio. Ejemplo: http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?VERSION=1.3.0&map=[RUTA_DE_ARCHIVO]/mun_com.qgs
+        * Seleccionar la capa de municipios
+        * Presionar el botón de Añadir recurso en línea
 
 !!! question "Ejercicio"
     Crear un visor con Leaflet.js con la capa de comarcas de nuestro WMS.
