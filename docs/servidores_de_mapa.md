@@ -166,6 +166,9 @@ Imagen con overview
         * Seleccionar la capa de municipios
         * Presionar el botón de Añadir recurso en línea
 
+    ![Añadir nuestro WMS al metadato](img/geonetwork_add_wms.png "Añadir nuestro WMS al metadato")
+    Añadir nuestro WMS al metadato
+
 !!! question "Ejercicio"
     Crear un visor con Leaflet.js con la capa de comarcas de nuestro WMS.
 
