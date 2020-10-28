@@ -1,0 +1,741 @@
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Infraestructuras de datos espaciales y estándares de geoservicios.">
+      
+      
+        <link rel="canonical" href="https://gss-mtig.github.io/sdis-mgeo-20-21/servidores_de_mapa/">
+      
+      
+        <meta name="author" content="sdis-mgeo">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>7. Servidores de mapas - Infraestructuras de datos espaciales y estándares de geoservicios</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#servidores-de-mapas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Cabecera">
+    <a href="https://gss-mtig.github.io/sdis-mgeo-20-21/" title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-header-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Infraestructuras de datos espaciales y estándares de geoservicios
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              7. Servidores de mapas
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/gss-mtig/sdis-mgeo-20-21/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://gss-mtig.github.io/sdis-mgeo-20-21/" title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Infraestructuras de datos espaciales y estándares de geoservicios
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/gss-mtig/sdis-mgeo-20-21/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_a_las_ides/" title="1. Introducción a las IDE's" class="md-nav__link">
+      1. Introducción a las IDE's
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../estandares_OCG/" title="2. Estándares OCG" class="md-nav__link">
+      2. Estándares OCG
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../instalacion_de_programas/" title="3. Instalación de programas" class="md-nav__link">
+      3. Instalación de programas
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../clientes_de_mapa/" title="4. Clientes de mapas" class="md-nav__link">
+      4. Clientes de mapas
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../estandares_ISO/" title="5. Estándares ISO" class="md-nav__link">
+      5. Estándares ISO
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../metadatos/" title="6. Metadatos" class="md-nav__link">
+      6. Metadatos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        7. Servidores de mapas
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="7. Servidores de mapas" class="md-nav__link md-nav__link--active">
+      7. Servidores de mapas
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-geoservicio" class="md-nav__link">
+    Qué es un geoservicio?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-servidor-de-mapas" class="md-nav__link">
+    Qué es un servidor de mapas?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servidores-de-mapas-estandar" class="md-nav__link">
+    Servidores de mapas estándar
+  </a>
+  
+    <nav class="md-nav" aria-label="Servidores de mapas estándar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#umn-mapserver" class="md-nav__link">
+    UMN Mapserver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geoserver" class="md-nav__link">
+    GeoServer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maproxy" class="md-nav__link">
+    Maproxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgis-server" class="md-nav__link">
+    QGIS Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-preparar-la-geoinformacion" class="md-nav__link">
+    Cómo preparar la geoinformación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-implementar-un-servidor-de-mapas" class="md-nav__link">
+    Práctica implementar un servidor de mapas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-geoservicio" class="md-nav__link">
+    Qué es un geoservicio?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-servidor-de-mapas" class="md-nav__link">
+    Qué es un servidor de mapas?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servidores-de-mapas-estandar" class="md-nav__link">
+    Servidores de mapas estándar
+  </a>
+  
+    <nav class="md-nav" aria-label="Servidores de mapas estándar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#umn-mapserver" class="md-nav__link">
+    UMN Mapserver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geoserver" class="md-nav__link">
+    GeoServer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maproxy" class="md-nav__link">
+    Maproxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgis-server" class="md-nav__link">
+    QGIS Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-preparar-la-geoinformacion" class="md-nav__link">
+    Cómo preparar la geoinformación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-implementar-un-servidor-de-mapas" class="md-nav__link">
+    Práctica implementar un servidor de mapas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/gss-mtig/sdis-mgeo-20-21/edit/master/docs/servidores_de_mapa.md" title="Editar esta página" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="servidores-de-mapas">Servidores de mapas</h1>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>La mayorías de los conceptos son sacados del Libro libre SIG de Victor Olaya <a href="http://volaya.github.io/libro-sig/">http://volaya.github.io/libro-sig/</a></p>
+</div>
+<h2 id="que-es-un-geoservicio">Qué es un geoservicio?</h2>
+<p>Un geoservicio es un servidor que ofrece algún servicio relacionado con el ámbito SIG, su principal función es acceder a información geoespacial existente en diferentes formatos y servir dicha información a clientes a través de protocolos estándares.</p>
+<p>El servidor es el elemento encargado de ofrecer el servicio como tal, respondiendo a las peticiones del cliente. A medida que los clientes se hacen más complejos y presentan mayor número de funcionalidades, también los servidores deben ser capaces de proporcionar servicios más elaborados.</p>
+<p>Las capacidades fundamentales a las que responden los servidores dentro del ámbito SIG pueden dividirse en los siguientes grupos: <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<ul>
+<li><strong>Servir representaciones de los datos.</strong> Los servicios de cartografía Web, tanto en sus orígenes como en la actualidad, son eminentemente gráficos, y en última instancia lo que la aplicación Web correspondiente va a hacer es mostrarnos algún tipo de imagen con un mapa formado a partir de una serie de datos geográficos. Ejemplo WMS</li>
+</ul>
+<p>El servidor puede responder directamente a este tipo de necesidades, preparando una imagen a partir de los datos geográficos de los que dispone. En el caso de que estos sean ya imágenes —por ejemplo, imágenes de satélite u ortofotos—, bastará servir estas, transmitiendo una versión escalada de las dimensiones exactas que el cliente necesite para representar en pantalla. En caso de que los datos sean de tipo vectorial, o bien ráster sin una forma de representación implícita —por ejemplo, un Modelo Digital del Terreno— es necesario emplear algún método para asignarles dicha representación. Este puede ser asignado por defecto por el servidor, que establecerá una simbología fija, o bien ofrecer un servicio más complejo en el que el cliente no solo pide una representación gráfica de una serie de datos para una zona dada, sino que además puede especificar cómo crear esa representación (vía SLD).</p>
+<ul>
+<li><strong>Servir los datos directamente.</strong> Una opción más flexible que lo anterior es que el servidor provea directamente los datos geográficos y sea después el cliente quien los utilice como corresponda, bien sea simplemente representándolos —en cuyo caso debería ser el propio cliente quien establezca la simbología, ya que esta tarea ya no queda en manos del servidor— o bien trabajando con ellos de cualquier otra forma, como por ejemplo analizándolos. Ejemplo WFS, Vector Tiles</li>
+</ul>
+<p>Aunque las posibilidades son mayores en este caso, se requieren por parte del cliente unas capacidades mayores, ya que mientras que representar una imagen es algo sumamente sencillo desde el punto de vista técnico, crear esta a partir de los datos geográficos es más complejo.</p>
+<ul>
+<li>
+<p><strong>Servir consultas.</strong> Un paso más allá en la funcionalidad que puede ofrecer el servidor es responder a preguntas realizadas por el cliente relativas a los datos, ya sean estas relativas a la parte espacial de dichos datos, o bien a su componente temática. El servidor puede ofrecer como respuesta conjuntos reducidos de los datos de los que dispone, o valores que describan a estos. Estas consultas pueden ser útiles, por ejemplo, para establecer filtros previos cuando se dispone de un conjunto amplio de orígenes de datos. Un cliente Web puede obtener datos de distintos servidores, y puede consultar si, para un zona dada, estos servidores disponen de información, sin más que consultar la extensión cubierta por los datos de cada uno de ellos y comprobar si se interseca con la región de interés. En función de la respuesta, puede o no realizarse posteriormente el acceso a los datos en sí. Ejemplo CSW</p>
+</li>
+<li>
+<p><strong>Servir procesos.</strong> Por último, un servidor puede ofrecer nuevos datos, espaciales o no espaciales, resultantes de algún tipo de proceso o cálculo a partir de datos espaciales. En este caso, el proceso constituye en sí el servicio ofrecido por el servidor, y el cliente debe definir los parámetros de entrada de este y los posibles parámetros de ajuste que resulten necesarios. Los datos con los que se trabaja pueden ser proporcionados por el cliente, incorporándolos a su propia petición, o bien pueden residir en el propio servidor. En este último caso, el servidor ofrece tanto los datos, como la posibilidad de extraer resultados a partir de ellos, es decir, los datos y una herramienta para explotarlos. También pueden emplearse datos en un servidor distinto, a los que el servidor de procesos puede acceder si estos están disponibles, convirtiéndose en cliente de ese segundo servidor. Ejemplo WPS</p>
+</li>
+</ul>
+<p>Las posibilidades que estos servicios brindan son muy numerosas. Por una parte, pueden añadirse funcionalidades avanzadas a interfaces Web, llevando a estas las capacidades propias de los SIG de escritorio. Por otra, la difusión de algoritmos de análisis geográfico resulta más sencilla, pudiendo ofrecerse estos a todo tipo de usuarios sin necesidad de ningún software especializado. Y por último, en ciertos casos pueden rebajarse los tiempos de proceso, ya que, en el caso de operaciones complejas, la mayor potencia del servidor respecto al cliente puede resultar en un mayor rendimiento. El reparto de tareas entre varios servidores (computación distribuida) es otra de las posibilidades que pueden a su vez ampliar la eficiencia de los procesos.</p>
+<h2 id="que-es-un-servidor-de-mapas">Qué es un servidor de mapas?</h2>
+<p>Es un servidor que principalmente provee cartografía a través de la red tanto en modo vectorial como en ráster.</p>
+<h2 id="servidores-de-mapas-estandar">Servidores de mapas estándar</h2>
+<p>Son servidores de mapas que cumplen los estándares OGC de WMS y/o WFS. </p>
+<p>El listado completo de servidores de mapas que cumplen con los estándares de la OGC se puede ver en: <a href="http://www.opengeospatial.org/resource/products/compliant">http://www.opengeospatial.org/resource/products/compliant</a></p>
+<p>Algunos software de servidores de mapas son:</p>
+<h3 id="umn-mapserver">UMN Mapserver</h3>
+<p>Es un servidor de código abierto programado en C/C++, permite compartir y editar datos geoespaciales. Originalmente fue desarrollado por la Universidad de Minnesota (UMN) y por eso también se le conoce como Minnesota MapServer para diferenciarlo del producto comercial “map server” de Autodesk. Implementa las especificaciones Web Map Service (WMS) (cliente/servidor), Web Feature Service no-transaccional (WFS) (cliente/servidor), Web Map Context (WMC), Web Coverage Service(WCS), Filter Encoding, Styled Layer Descriptor (SLD), Geography Markup Language (GML), Sensor Observation Service (SOS), Observations and Measurements (OM).</p>
+<p><a href="http://www.mapserver.org/">http://www.mapserver.org/</a></p>
+<p><strong>Principales características</strong></p>
+<ul>
+<li>Proporciona una API (MapScript) que permite acceder a las funcionalidades de MapServer desde diferentes lenguajes de programación como PHP, Java, Python, Perl, Ruby y .NET (C#).</li>
+<li>Soporta múltiples formatos de entrada (vectorial/ráster) y salida ya que usa GDAL/OGR.</li>
+<li>Soporta fuentes TrueType (útil para el etiquetado de elementos).</li>
+<li>Configuración “al vuelo” vía parámetros GET pasados por URL.</li>
+<li>Configuración basada en el fichero mapfile .map.</li>
+<li>Incluye la posibilidad de usar una plantilla HTML MapServer para generar una página web.</li>
+<li>Es multiplataforma</li>
+<li>Incluye un componente de cacheado MapCache para generar pirámides de teselas (tiles) con la finalidad de acelerar y optimizar la respuesta a la hora de servir mapas. Soporta el estándar WMTS, también soporta otras salidas como TMS, VirtualEarth/Bing y peticiones Google Maps.</li>
+<li>Incluye un componente TinyOWS que da soporte para edición de datos a través del protocolo WFS transactional (WFS-T).</li>
+<li>Mapbox Vector Tile (MVT)</li>
+</ul>
+<h3 id="geoserver">GeoServer</h3>
+<p>Es un servidor de código abierto programado en Java, permite compartir y editar datos geoespaciales. GeoServer sirve de implementación de referencia del estándar Web Feature Service (WFS) de la OGC, también implementa las especificaciones Web Map Service (WMS) y Web Coverage Service(WCS).</p>
+<p><a href="http://geoserver.org/">http://geoserver.org/</a></p>
+<p><strong>Principales características</strong></p>
+<ul>
+<li>Fácil utilización y administración a través de una herramienta de administración web. No es necesario tocar archivos de configuración.</li>
+<li>Soporte para edición de datos a través del protocolo WFS transactional (WFS-T).</li>
+<li>Al ser programado en Java está basado en servlets (JEE), puede funcionar en cualquier contenedor de servlets. Es multiplataforma.</li>
+<li>Es compatible para ser usado con extensiones.</li>
+<li>Incluye integrado un cliente OpenLayers que permite visualizar las capas de datos.</li>
+<li>Incluye un componente de cacheado GeoWebCache para generar pirámides de teselas (tiles) con la finalidad de acelerar y optimizar la respuesta a la hora de servir mapas. Soporta los estándares WMS-C y WMTS, también soporta otras salidas como TMS, Google Maps KML, Virtual Earth.</li>
+<li>Hay formatos y opciones de publicación adicionales disponibles como extensiones, incluido el Servicio de procesamiento web (WPS) y el Servicio de mosaicos de mapas web (WMTS).</li>
+<li>Produce mosaicos vectoriales en tres formatos: GeoJSON, TopoJSON y MapBox Vector (MVT)</li>
+</ul>
+<h3 id="maproxy">Maproxy</h3>
+<p>Es un proxy de código abierto para datos geoespaciales. Almacena en caché, acelera y transforma los datos de los servicios de mapas existentes y sirve a cualquier cliente GIS de escritorio o web.</p>
+<p><a href="https://mapproxy.org">https://mapproxy.org</a></p>
+<p>MapProxy no es sólo una solución de caché de mosaico, también ofrece muchas características nuevas e innovadoras como soporte completo para clientes WMS.</p>
+<p><strong>Principales características</strong></p>
+<ul>
+<li>Sirve como cache de teselas</li>
+<li>Reprojecta WMS y teselas a otros SRS</li>
+<li>Guardar teselas identicas sólo una vez (Ej. teselas del mar)</li>
+<li>Permite manipular las bandas de las imagenes para crear imagenes de otros colores (Ej. escala de grises)</li>
+<li>Permite pregenerar caches (Seeding) de areas determinadas</li>
+<li>Combina múltiples capas y servicios</li>
+</ul>
+<h3 id="qgis-server">QGIS Server</h3>
+<p>Es una implementación de código abierto WMS 1.3, WFS 1.0.0, WFS 1.1.0 y WCS 1.1.1 que, además, implementa características cartográficas avanzadas para mapeo temático. QGIS Server es una aplicación FastCGI / CGI (Common Gateway Interface) escrita en C ++ que funciona junto con un servidor web (por ejemplo, Apache, Nginx). Tiene compatibilidad con el complemento Python, lo que permite un desarrollo e implementación rápidos y eficientes de nuevas funciones.</p>
+<p><a href="https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/server/index.html">https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/server/index.html</a></p>
+<p><strong>Principales características</strong></p>
+<ul>
+<li>QGIS Server utiliza QGIS como back-end para la lógica GIS y para la representación de mapas. Además, la biblioteca Qt se utiliza para gráficos y para programación C ++ independiente de la plataforma. A diferencia de otro software WMS, el QGIS Server utiliza reglas cartográficas como lenguaje de configuración, tanto para la configuración del servidor como para las reglas cartográficas definidas por el usuario.</li>
+<li>Como QGIS Desktop y QGIS Server utilizan las mismas bibliotecas de visualización, los mapas que se publican en la web tienen el mismo aspecto que en el GIS de escritorio.</li>
+</ul>
+<h3 id="como-preparar-la-geoinformacion">Cómo preparar la geoinformación</h3>
+<p>Antes de publicar la información es importante preparar la misma, ya que esto permitirá crear servicios de mejor calidad, ya sea mejorando su rendimiento y/o creando creando un servicio útil y atractivo para los usuarios.</p>
+<p>Los principales servidores de mapas pueden consumir la información de diferentes fuentes como por ejemplo:</p>
+<ul>
+<li><em>Bases de datos</em>: cargar la información en una base de datos geográfica es muy recomendable ya sea tanto para trabajar con la misma como para su publicación. Ya que permite hacer operaciónes sobre la información y permite de una forma sencilla seleccionar que datos o atributos queremos publicar sin tener que duplicar la información</li>
+<li><em>RAW data</em>: en algunos casos queremos publicar los datos en el formato de origen y sin procesar. Por ejemplo imágenes de satelite. Se puede publicar el archivo original o se puede publicar una imágen creada a partir de una combinación de bandas.</li>
+<li><em>Pirámides cache</em>: Generar pirámides de cache permite mejorar el rendimiento de nuestro servicio ya que para cada petición no tiene que procesar la información y generar la respuesta sino que ya tiene la respuesta generada en cache y sirve directamente esta respuesta.</li>
+<li><em>Generalizar la información</em>: preparar la información para su visualización dependiendo de la escala. Por ejemplo generar los overview de imágenes (esto sirve para generar imágenes de menor resolución)</li>
+</ul>
+<p>Ejemplo</p>
+<p><img alt="Imagen sin overview" src="../img/mapaMosaico.png" title="Imagen sin overview" />
+Imagen sin overview</p>
+<p><img alt="Imagen con overview" src="../img/mapaMosaicoOverview.png" title="Imagen con overview" />
+Imagen con overview</p>
+<h2 id="practica-implementar-un-servidor-de-mapas">Práctica implementar un servidor de mapas</h2>
+<ol>
+<li>
+<p>Abrir un nuevo proyecto en QGIS</p>
+</li>
+<li>
+<p>Cargar la capa de municipios que nos descargarmos del ICGC.</p>
+</li>
+<li>
+<p>Generar la capa de comarcas a partir de la capa de municipios.</p>
+</li>
+<li>
+<p>Dar estilo a ambas capas.</p>
+</li>
+<li>
+<p>Guardar el proyecto con el nombre mun_com.qgs</p>
+</li>
+<li>
+<p>Modificar las propiedes del proyecto. En la pestaña de Servidor de QGIS</p>
+<ul>
+<li>Seleccionar la casilla de Capacidades del servicio</li>
+<li>Capacidades WMTS -&gt; Seleccionar las casilla de publicado, png y jpeg para las capas</li>
+<li>Capacidades WFS -&gt; Seleccionar las casilla de publicado para las capas</li>
+</ul>
+<p><img alt="Propiedades del proyecto" src="../img/qgis_server_project_properties.png" title="Propiedades del proyecto" />
+Propiedades del proyecto</p>
+</li>
+<li>
+<p>Arrancar el Apache desde el panel de control del XAMPP</p>
+</li>
+<li>
+<p>Comprobar que el QGIS Server está funcionando: abrir en el navegador <a href="http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetCapabilities">http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetCapabilities</a></p>
+</li>
+<li>
+<p>Mirar el capabilities de nuestro servidor: abrir en el navegador <a href="http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetCapabilities&amp;map=[RUTA_DE_ARCHIVO]/mun_com.qgs">http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetCapabilities&amp;map=[RUTA_DE_ARCHIVO]/mun_com.qgs</a></p>
+</li>
+<li>
+<p>Crear un nuevo proyecto en blanco en el QGIS y cargar nuestro servicio WMS.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Al agregar el servicio WMS seleccionar la opción de invertir la orientación de los ejes</p>
+</div>
+<p><img alt="Qgis con nuestro WMS" src="../img/qgis_server_wms_comarcas.png" title="Qgis con nuestro WMS" />
+Qgis con nuestro WMS</p>
+</li>
+<li>
+<p>Agregar el recurso a nuestro metadato</p>
+<ul>
+<li>Abrir el geonetwork</li>
+<li>Editar el metadato "municipio"</li>
+<li>Añadir una entrada en <em>Recursos asociados</em> -&gt; <em>Recursos en línea</em><ul>
+<li>Protocolo seleccionar **OGC-WMS Servicio Web de Mapas (version 1.3.0)</li>
+<li>URL poner la url de nuestro servicio. Ejemplo: <a href="http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?VERSION=1.3.0&amp;map=[RUTA_DE_ARCHIVO]/mun_com.qgs">http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?VERSION=1.3.0&amp;map=[RUTA_DE_ARCHIVO]/mun_com.qgs</a></li>
+<li>Seleccionar la capa de municipios</li>
+<li>Presionar el botón de Añadir recurso en línea</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Añadir nuestro WMS al metadato" src="../img/geonetwork_add_wms.png" title="Añadir nuestro WMS al metadato" />
+Añadir nuestro WMS al metadato</p>
+</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio</p>
+<p>Crear un visor con Leaflet.js con la capa de comarcas de nuestro WMS.</p>
+</div>
+<h2 id="referencias">Referencias</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="http://volaya.github.io/libro-sig/">http://volaya.github.io/libro-sig/</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
+        
+          <a href="../metadatos/" title="6. Metadatos" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                6. Metadatos
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

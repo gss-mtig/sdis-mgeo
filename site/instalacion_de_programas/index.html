@@ -1,0 +1,639 @@
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Infraestructuras de datos espaciales y estándares de geoservicios.">
+      
+      
+        <link rel="canonical" href="https://gss-mtig.github.io/sdis-mgeo-20-21/instalacion_de_programas/">
+      
+      
+        <meta name="author" content="sdis-mgeo">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>3. Instalación de programas - Infraestructuras de datos espaciales y estándares de geoservicios</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#instalacion-de-programas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Cabecera">
+    <a href="https://gss-mtig.github.io/sdis-mgeo-20-21/" title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-header-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Infraestructuras de datos espaciales y estándares de geoservicios
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              3. Instalación de programas
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/gss-mtig/sdis-mgeo-20-21/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://gss-mtig.github.io/sdis-mgeo-20-21/" title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Infraestructuras de datos espaciales y estándares de geoservicios
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/gss-mtig/sdis-mgeo-20-21/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_a_las_ides/" title="1. Introducción a las IDE's" class="md-nav__link">
+      1. Introducción a las IDE's
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../estandares_OCG/" title="2. Estándares OCG" class="md-nav__link">
+      2. Estándares OCG
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        3. Instalación de programas
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="3. Instalación de programas" class="md-nav__link md-nav__link--active">
+      3. Instalación de programas
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#xamp" class="md-nav__link">
+    XAMP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgis-server" class="md-nav__link">
+    QGIS Server
+  </a>
+  
+    <nav class="md-nav" aria-label="QGIS Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-el-apache" class="md-nav__link">
+    Configurar el Apache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geonetwork" class="md-nav__link">
+    Geonetwork
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../clientes_de_mapa/" title="4. Clientes de mapas" class="md-nav__link">
+      4. Clientes de mapas
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../estandares_ISO/" title="5. Estándares ISO" class="md-nav__link">
+      5. Estándares ISO
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../metadatos/" title="6. Metadatos" class="md-nav__link">
+      6. Metadatos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../servidores_de_mapa/" title="7. Servidores de mapas" class="md-nav__link">
+      7. Servidores de mapas
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#xamp" class="md-nav__link">
+    XAMP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgis-server" class="md-nav__link">
+    QGIS Server
+  </a>
+  
+    <nav class="md-nav" aria-label="QGIS Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-el-apache" class="md-nav__link">
+    Configurar el Apache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geonetwork" class="md-nav__link">
+    Geonetwork
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/gss-mtig/sdis-mgeo-20-21/edit/master/docs/instalacion_de_programas.md" title="Editar esta página" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="instalacion-de-programas">Instalación de programas</h1>
+<h2 id="xamp">XAMP</h2>
+<p>XAMPP es una distribución de Apache fácil de instalar que contiene MariaDB, PHP y Perl. Simplemente descarga y ejecuta el instalador. ¡Es así de fácil!</p>
+<p>Descargar la última version de XAMPP desde <a href="https://www.apachefriends.org/download.html">https://www.apachefriends.org/download.html</a></p>
+<p><img alt="Descarga XAMPP" src="../img/xampp_descarga.png" title="Descarga XAMPP" />
+Descarga XAMPP</p>
+<p>Ejecutar el archivo descargado.</p>
+<p>En el formulario seleccionar todos los componentes</p>
+<p><img alt="Componentes XAMPP" src="../img/xampp_componentes.png" title="Componentes XAMPP" />
+Componentes XAMPP</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Debido a que en los ordenadores de la UAB no se permite instalar software de forma permanente se debe instalar el XAMPP en la unidad de trabajo.</p>
+</div>
+<p>Siguiente -&gt; Siguiente para el resto de opciones del asistente.</p>
+<h2 id="qgis-server">QGIS Server</h2>
+<p>Descargar el instalador OsGeo4W que es una distribución binaria que contiene un gran número programas geoespaciales de código abierto para entornos Windows (desde Windows 10 hasta XP). OSGeo4W incluye QGIS, GDAL/OGR, GRASS, SAGA así como muchos otros paquetes (más de 150).</p>
+<p>El primer paso es acceder a la <a href="https://qgis.org/es/site/forusers/download.html">sección de descargas de la página web de QGIS</a> y seleccionar la opción de OSGeo4W Instalador en red (64 bit).</p>
+<p><img alt="Descarga OSGeo4W" src="../img/qgis_sever_descarga.png" title="Descarga OSGeo4W" />
+Descarga OSGeo4W</p>
+<p>Para personalizar nuestra instalación seleccionaremos la opción <strong>Advanced Install</strong>.</p>
+<p><img alt="Instalación OSGeo4W" src="../img/qgis_server_advanced_install.png" title="Instalación OSGeo4W" />
+Instalación OSGeo4W</p>
+<p>La siguiente ventana nos pide seleccionar una fuente de descarga. Lo normal es descargar e instalar los programas en el momento en el que lanzamos el instalador, por lo que seleccionaremos la opción <strong>Install from Internet</strong>.</p>
+<p>A continuación se nos pide seleccionar el destino de la instalación, instalar los programas para todos los usuarios y opcionalmente crear un icono en el escritorio de nuestro PC.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Debido a que en los ordenadores de la UAB no se permite instalar software de forma permanente se debe instalar el en la unidad de trabajo.</p>
+</div>
+<p>Siguiente -&gt; Siguiente para el resto de opciones del asistente hasta llegar a la ventana <strong>Select Packages</strong>. Desde esta ventana podemos seleccionar qué programas queremos descargar e instalar:</p>
+<p>Despliega la categoría <strong>Web</strong> y pincha sobre <em>qgis-server: QGIS Server</em></p>
+<p><img alt="Selección QGIS Server" src="../img/qgis_server_select_qgis_server.png" title="Selección QGIS Server" />
+Selección QGIS Server</p>
+<p>Siguiente -&gt; Siguiente para el resto de opciones del asistente.</p>
+<h3 id="configurar-el-apache">Configurar el Apache</h3>
+<p>Editar el archivo <em>httpd.conf</em>. En el caso del XAMPP lo hacemos desde el panel de control.</p>
+<p><img alt="Apache config file" src="../img/xampp_config_qgis_server.png" title="Apache config file" />
+Apache config file</p>
+<p>Se abre el archivo <em>httpd.conf</em> con el editor de texto y debemos cambiar lo siguiente</p>
+<p><strong>ScriptAlias</strong></p>
+<p>Cambiar la línea:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">ScriptAlias /cgi-bin/ &quot;C:/xampp/cgi-bin/&quot;</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>por:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">ScriptAlias /cgi-bin/ &quot;c:/OSGeo4W64/apps/qgis/bin/&quot;</span>
+</code></pre></div>
+</td></tr></table>
+
+<p><strong>QGIS Server configuration</strong></p>
+<p>Cambiar la líneas:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">&lt;Directory &quot;C:/xampp/cgi-bin&quot;</span>
+<span class="err">    AllowOverride None</span>
+<span class="err">    Options None</span>
+<span class="err">    Require all granted</span>
+<span class="err">&lt;/Directory&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>por:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nt">&lt;Directory</span> <span class="err">&quot;c:/OSGeo4W64/apps/qgis/bin&quot;</span><span class="nt">&gt;</span>
+    SetHandler cgi-script
+    AllowOverride None
+    Options ExecCGI
+    Order allow,deny
+    Allow from all
+    Require all granted
+<span class="nt">&lt;/Directory&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<p><strong>Cgi handler</strong></p>
+<p>Cambiar la línea:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">AddHandler cgi-script .cgi .pl .asp</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>por:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">AddHandler cgi-script .cgi .pl .exe</span>
+</code></pre></div>
+</td></tr></table>
+
+<p><strong>Variables</strong></p>
+<p>Al final del archivo escribir:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">SetEnv GDAL_DATA &quot;C:\OSGeo4W64\share\gdal&quot;</span>
+<span class="err">SetEnv QGIS_AUTH_DB_DIR_PATH &quot;C:\OSGeo4W64\apps\qgis\resources&quot;</span>
+<span class="err">SetEnv PYTHONHOME &quot;C:\OSGeo4W64\apps\Python37&quot;</span>
+<span class="err">SetEnv PATH &quot;C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\qgis\bin;C:\OSGeo4W64\apps\Qt5\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem&quot;</span>
+<span class="err">SetEnv QGIS_PREFIX_PATH &quot;C:\OSGeo4W64\apps\qgis&quot;</span>
+<span class="err">SetEnv QT_PLUGIN_PATH &quot;C:\OSGeo4W64\apps\qgis\qtplugins;C:\OSGeo4W64\apps\Qt5\plugins&quot;</span>
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="test">Test</h3>
+<p>Reiniciar el Apache y abrir una petición GetCapabilities a nuestro servidor</p>
+<p>Abrir en el navegador <a href="http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetCapabilities">http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetCapabilities</a></p>
+<p>Deberíamos ver un XML de un WMS Capabilities</p>
+<h2 id="geonetwork">Geonetwork</h2>
+<p>GeoNetwork es una aplicación de catálogo para administrar recursos referenciados espacialmente. Proporciona potentes funciones de búsqueda y edición de metadatos, así como un visor de mapas web interactivo. Actualmente se utiliza en numerosas iniciativas de infraestructura de datos espaciales en todo el mundo.</p>
+<p>Para descargar el Geonetwork abrimos la página <a href="https://geonetwork-opensource.org/downloads.html">https://geonetwork-opensource.org/downloads.html</a> y seleccionamos la versión <a href="https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v3.10.4/">v3.10.4 (Current release)</a>. En la página de descarga seleccionamos el <strong>geonetwork.war</strong></p>
+<p><img alt="Descarga Geonetwork" src="../img/geonetwork_descarga.png" title="Descarga Geonetwork" />
+Descarga Geonetwork</p>
+<p>Lo siguiente que debemos hacer es mover el archivo descargado geonetwork.war dentro de la carpeta del tomcat. Para ello ubicamos la carpeta <strong>tomcat/webapps</strong> (<em>C:\xampp\tomcat\webapps</em>) dentro de la carpeta de instalación del XAMPP y copiamos el archivo geonetwork.war en esta carpeta</p>
+<p>Abrimos el panel de control del XAMPP e iniciamos el Tomcat. Se abre una nueva ventana del terminal donde vemos el proceso de despliegue de la aplicación de Geonetwork dentro del Tomcat.</p>
+<p><img alt="Desplegar Geonetwork" src="../img/geonetwork_desplegar.png" title="Descarga Desplegar" />
+Desplegar Geonetwork</p>
+<p>Abrir el navegador y escribir <a href="http://localhost:8080/geonetwork/">http://localhost:8080/geonetwork/</a> y se debería ver la pantalla de inicio de Geonetwork</p>
+<p><img alt="Pantalla inicio Geonetwork" src="../img/geonetwork_inicio.png" title="Pantalla inicio Geonetwork" />
+Pantalla inicio Geonetwork</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
+        
+          <a href="../estandares_OCG/" title="2. Estándares OCG" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                2. Estándares OCG
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../clientes_de_mapa/" title="4. Clientes de mapas" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                4. Clientes de mapas
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
