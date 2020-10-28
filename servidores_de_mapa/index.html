@@ -634,14 +634,28 @@ Propiedades del proyecto</p>
 </li>
 <li>
 <p>Crear un nuevo proyecto en blanco en el QGIS y cargar nuestro servicio WMS.</p>
-</li>
-</ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Al agregar el servicio WMS seleccionar la opción de invertir la orientación de los ejes</p>
 </div>
 <p><img alt="Qgis con nuestro WMS" src="../img/qgis_server_wms_comarcas.png" title="Qgis con nuestro WMS" />
 Qgis con nuestro WMS</p>
+</li>
+<li>
+<p>Agregar el recurso a nuestro metadato</p>
+<ul>
+<li>Abrir el geonetwork</li>
+<li>Editar el metadato "municipio"</li>
+<li>Añadir una entrada en <em>Recursos asociados</em> -&gt; <em>Recursos en línea</em><ul>
+<li>Protocolo seleccionar **OGC-WMS Servicio Web de Mapas (version 1.3.0)</li>
+<li>URL poner la url de nuestro servicio. Ejemplo: <a href="http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?VERSION=1.3.0&amp;map=[RUTA_DE_ARCHIVO]/mun_com.qgs">http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?VERSION=1.3.0&amp;map=[RUTA_DE_ARCHIVO]/mun_com.qgs</a></li>
+<li>Seleccionar la capa de municipios</li>
+<li>Presionar el botón de Añadir recurso en línea</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 <div class="admonition question">
 <p class="admonition-title">Ejercicio</p>
 <p>Crear un visor con Leaflet.js con la capa de comarcas de nuestro WMS.</p>
