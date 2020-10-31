@@ -1,0 +1,1164 @@
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Infraestructuras de datos espaciales y estándares de geoservicios.">
+      
+      
+        <link rel="canonical" href="https://gss-mtig.github.io/sdis-mgeo-20-21/metadatos/">
+      
+      
+        <meta name="author" content="sdis-mgeo">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>6. Metadatos - Infraestructuras de datos espaciales y estándares de geoservicios</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#metadatos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Cabecera">
+    <a href="https://gss-mtig.github.io/sdis-mgeo-20-21/" title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-header-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Infraestructuras de datos espaciales y estándares de geoservicios
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              6. Metadatos
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/gss-mtig/sdis-mgeo-20-21/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://gss-mtig.github.io/sdis-mgeo-20-21/" title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Infraestructuras de datos espaciales y estándares de geoservicios
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/gss-mtig/sdis-mgeo-20-21/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_a_las_ides/" title="1. Introducción a las IDE's" class="md-nav__link">
+      1. Introducción a las IDE's
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../estandares_OCG/" title="2. Estándares OCG" class="md-nav__link">
+      2. Estándares OCG
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../instalacion_de_programas/" title="3. Instalación de programas" class="md-nav__link">
+      3. Instalación de programas
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../clientes_de_mapa/" title="4. Clientes de mapas" class="md-nav__link">
+      4. Clientes de mapas
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../estandares_ISO/" title="5. Estándares ISO" class="md-nav__link">
+      5. Estándares ISO
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        6. Metadatos
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="6. Metadatos" class="md-nav__link md-nav__link--active">
+      6. Metadatos
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-metadato" class="md-nav__link">
+    Qué es un metadato
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué es un metadato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utilidad-de-los-metadatos" class="md-nav__link">
+    Utilidad de los metadatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-de-creacion-de-metadatos" class="md-nav__link">
+    Proceso de creación de metadatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-de-los-metadatos" class="md-nav__link">
+    Contenido de los metadatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#granularidad-de-los-metadatos" class="md-nav__link">
+    Granularidad de los metadatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-metadatos" class="md-nav__link">
+    Ejemplos de metadatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perfiles-de-metadatos" class="md-nav__link">
+    Perfiles de metadatos
+  </a>
+  
+    <nav class="md-nav" aria-label="Perfiles de metadatos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-perfiles-de-metadatos" class="md-nav__link">
+    Ejemplos de perfiles de metadatos
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de perfiles de metadatos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perfil-idec" class="md-nav__link">
+    Perfil IDEC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nucleo-espanol-de-metadatos-nem" class="md-nav__link">
+    Núcleo español de metadatos (NEM)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspire" class="md-nav__link">
+    INSPIRE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-catalogo-de-metadatos" class="md-nav__link">
+    Qué es un catálogo de metadatos
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué es un catálogo de metadatos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-catalogos-de-metadatos" class="md-nav__link">
+    Ejemplos de catálogos de metadatos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-para-trabajar-con-metadatos" class="md-nav__link">
+    Herramientas para trabajar con metadatos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-metadatos-desde-arcgis" class="md-nav__link">
+    Creación de metadatos desde ArcGIS
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de metadatos desde ArcGIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elegir-un-estilo-de-metadatos" class="md-nav__link">
+    Elegir un estilo de metadatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargar-la-capa-de-informacion-y-el-metadato-correspondiete" class="md-nav__link">
+    Descargar la capa de información y el metadato correspondiete.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cargar-la-capa-en-arcgis-e-importar-el-metadato" class="md-nav__link">
+    Cargar la capa en ArcGis e importar el metadato
+  </a>
+  
+    <nav class="md-nav" aria-label="Cargar la capa en ArcGis e importar el metadato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cargar-la-capa" class="md-nav__link">
+    Cargar la capa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importar-el-metadato" class="md-nav__link">
+    Importar el metadato
+  </a>
+  
+    <nav class="md-nav" aria-label="Importar el metadato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completar-la-informacion-que-falta-por-rellenar" class="md-nav__link">
+    Completar la información que falta por rellenar
+  </a>
+  
+    <nav class="md-nav" aria-label="Completar la información que falta por rellenar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    Resource
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exportacion-desde-arcgis-e-importacion-en-geonetwork" class="md-nav__link">
+    Exportación desde ArcGIS e importación en GeoNetwork
+  </a>
+  
+    <nav class="md-nav" aria-label="Exportación desde ArcGIS e importación en GeoNetwork">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exportar-el-metadato" class="md-nav__link">
+    Exportar el metadato
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importacion-en-geonetwork" class="md-nav__link">
+    Importación en GeoNetwork
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agregar-la-imagen-de-la-vista-previa" class="md-nav__link">
+    Agregar la imagen de la vista previa
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../servidores_de_mapa/" title="7. Servidores de mapas" class="md-nav__link">
+      7. Servidores de mapas
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-metadato" class="md-nav__link">
+    Qué es un metadato
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué es un metadato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utilidad-de-los-metadatos" class="md-nav__link">
+    Utilidad de los metadatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-de-creacion-de-metadatos" class="md-nav__link">
+    Proceso de creación de metadatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-de-los-metadatos" class="md-nav__link">
+    Contenido de los metadatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#granularidad-de-los-metadatos" class="md-nav__link">
+    Granularidad de los metadatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-metadatos" class="md-nav__link">
+    Ejemplos de metadatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perfiles-de-metadatos" class="md-nav__link">
+    Perfiles de metadatos
+  </a>
+  
+    <nav class="md-nav" aria-label="Perfiles de metadatos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-perfiles-de-metadatos" class="md-nav__link">
+    Ejemplos de perfiles de metadatos
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de perfiles de metadatos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perfil-idec" class="md-nav__link">
+    Perfil IDEC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nucleo-espanol-de-metadatos-nem" class="md-nav__link">
+    Núcleo español de metadatos (NEM)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspire" class="md-nav__link">
+    INSPIRE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-catalogo-de-metadatos" class="md-nav__link">
+    Qué es un catálogo de metadatos
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué es un catálogo de metadatos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-catalogos-de-metadatos" class="md-nav__link">
+    Ejemplos de catálogos de metadatos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-para-trabajar-con-metadatos" class="md-nav__link">
+    Herramientas para trabajar con metadatos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-metadatos-desde-arcgis" class="md-nav__link">
+    Creación de metadatos desde ArcGIS
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de metadatos desde ArcGIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elegir-un-estilo-de-metadatos" class="md-nav__link">
+    Elegir un estilo de metadatos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargar-la-capa-de-informacion-y-el-metadato-correspondiete" class="md-nav__link">
+    Descargar la capa de información y el metadato correspondiete.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cargar-la-capa-en-arcgis-e-importar-el-metadato" class="md-nav__link">
+    Cargar la capa en ArcGis e importar el metadato
+  </a>
+  
+    <nav class="md-nav" aria-label="Cargar la capa en ArcGis e importar el metadato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cargar-la-capa" class="md-nav__link">
+    Cargar la capa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importar-el-metadato" class="md-nav__link">
+    Importar el metadato
+  </a>
+  
+    <nav class="md-nav" aria-label="Importar el metadato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completar-la-informacion-que-falta-por-rellenar" class="md-nav__link">
+    Completar la información que falta por rellenar
+  </a>
+  
+    <nav class="md-nav" aria-label="Completar la información que falta por rellenar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    Resource
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exportacion-desde-arcgis-e-importacion-en-geonetwork" class="md-nav__link">
+    Exportación desde ArcGIS e importación en GeoNetwork
+  </a>
+  
+    <nav class="md-nav" aria-label="Exportación desde ArcGIS e importación en GeoNetwork">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exportar-el-metadato" class="md-nav__link">
+    Exportar el metadato
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importacion-en-geonetwork" class="md-nav__link">
+    Importación en GeoNetwork
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agregar-la-imagen-de-la-vista-previa" class="md-nav__link">
+    Agregar la imagen de la vista previa
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/gss-mtig/sdis-mgeo-20-21/edit/master/docs/metadatos.md" title="Editar esta página" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="metadatos">Metadatos</h1>
+<h2 id="que-es-un-metadato">Qué es un metadato</h2>
+<p>El término «metadatos» no tiene una definición única. Según la definición más difundida de metadatos es que son «datos sobre datos». También hay muchas declaraciones como «informaciones sobre datos», «datos sobre informaciones» e «informaciones sobre informaciones».</p>
+<p><img alt="Metagato" src="../img/metagato.jpg" title="Metagato" />
+Metagato</p>
+<p>Los metadatos (del griego μετα, meta, 'después de, más allá de' y latín datum, 'lo que se da', «dato»​), literalmente «sobre datos», son datos que describen otros datos. En general, un grupo de metadatos se refiere a un grupo de datos que describen el contenido informativo de un objeto al que se denomina recurso.​ El concepto de metadatos es análogo al uso de índices para localizar objetos en vez de datos. <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>Por ejemplo, en una biblioteca se usan fichas que especifican autores, títulos, casas editoriales y lugares para buscar libros. Así, los metadatos ayudan a ubicar datos.</p>
+<p>Surge así el concepto de metadatos. Literalmente, los metadatos son «datos acerca de los datos», y su misión es explicar el significado de los datos. Es decir, ayudan a los usuarios de los datos a entender mejor el significado que estos tienen y la información que guardan. Los metadatos son un documento adicional que acompaña a los datos, y que permite una mejor gestión y una utilización más precisa de ellos. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>Los metadatos son utilizados muy a menudo. Cuando alguien entra en una biblioteca, puede ir a buscar el cajón dónde hay las fichas de los libros (si no está informatizada), o bien puede ir a buscar al catálogo electrónico de la biblioteca. Ambas soluciones utilizan metadatos. Imaginad que entráis en un Supermercado y veis que no hay ningún producto que tenga etiquetas. ¿Cómo sabríamos qué estamos comprando? Las etiquetas nos informan del contenido del envase, por lo tanto son metadatos.</p>
+<p>Hay que pensar en los metadatos espaciales como una leyenda, mucho más detallada que la del mapa en papel, que describe la gente que ha producido los datos, las fuentes documentales utilizadas en la producción, los atributos que hay asociados a los datos, la fecha de publicación, el sistema de referencia, la frecuencia de mantenimiento...</p>
+<p>Es importante utilizar estándares para la creación de metadatos, porque aportan un lenguaje común a la hora de describir los datos. El estándar internacional ISO 19115 es el que actualmente se está imponiendo frente a todos los otros en el proceso de describir la información geográfica existente y el ISO 19119 para describir servicios. Este estándar está atado a la ISO 19139, que da las pautas para la implementación del ISO 19115.</p>
+<p>Un ejemplo de metadato global de una capa puede ser el nombre de su autor o la fecha en la que ese dato ha sido creado. El sistema de referencia en el que se expresan las coordenadas de cada entidad recogida es un tipo de metadato relativo a la componente espacial. Y en lo referente a la componente temática, los metadatos pueden recoger las unidades en las que se recoge una variable asociada a cada entidad, o bien almacenar cualquier otro valor que permita una mejor interpretación de esa variable.</p>
+<h3 id="utilidad-de-los-metadatos">Utilidad de los metadatos</h3>
+<p>En algunos casos, incluso si carecemos de metadatos, resulta posible interpretar correctamente los datos, como sucede si trabajamos con un Modelo Digital de Elevaciones (MDE) y valores de elevación en metros. Es fácil saber que los valores de elevación se encuentran en esas unidades aplicando cierta lógica, y procesarlos correspondientemente aunque no exista un dato explicito que así nos los indique. </p>
+<p>En otras circunstancias, los metadatos son necesarios, pues contienen información que no puede inferirse directamente desde los propios datos. Si varias capas están en sistemas de coordenadas distintos y deseamos aplicar las transformaciones correspondientes para unificarlos en uno único y procesarlas de manera conjunta, estas transformaciones no se pueden llevar a cabo si no conocemos el sistema de origen del que partimos en cada capa. En este supuesto, el trabajo con los datos viene condicionado a que existan los metadatos correspondientes.</p>
+<p>Los metadatos:</p>
+<ul>
+<li><em>Ayudan a ordenar y a mantener la inversión en los datos</em>. Los usuarios potenciales de los datos podrán no utilizar los datos porque no conocen las características de los mismos.</li>
+<li><em>Ayudan a la transferencia de los datos</em>. Aportan información sobre el formato del archivo, el volumen en megabytes, la localización de los datos, etc. lo cual permite a un usuario procesar correctamente los datos.</li>
+<li><em>Se pueden utilizar para permitir la distribución en línea de los datos</em>. Podrán incorporar direcciones para descargar archivos, ya sea gratuitamente o previo pago, mediante unas descripciones de cómo realizar estos procesos.</li>
+<li><em>Facilitan la búsqueda de datos en múltiples bases de datos</em>. Unos metadatos estándares permiten a un usuario hacer una consulta, que es redirigida a los diferentes catálogos de metadatos grabados en el servidor principal. El resultado es un listado de metadatos procedentes de diferentes servidores.</li>
+<li><em>Pueden ayudar a evitar el uso erróneo de los datos</em>. Incluyen unas descripciones de cómo hay que utilizar estos datos y para qué finalidad y objetivos fueron creados.</li>
+</ul>
+<h3 id="proceso-de-creacion-de-metadatos">Proceso de creación de metadatos</h3>
+<p>La creación de los metadatos no es tarea de un único grupo de profesionales ni se lleva a cabo en un único momento dentro del ciclo de vida de los datos. Por el contrario, distintas entidades o grupos pueden crear o editar los metadatos, y pueden hacerlo a lo largo de todo el tiempo de existencia de dichos datos.</p>
+<p>En resumen, los metadatos pueden ser creados o modificados en los siguientes puntos dentro de la vida de los datos:</p>
+<ul>
+<li>Cuando se crean los datos.</li>
+<li>Cuando se organizan o catalogan los datos.</li>
+<li>Cuando se modifican o editan los datos.</li>
+<li>Cuando se archivan o descatalogan los datos.</li>
+</ul>
+<p>Durante este proceso de descripción de los datos es importante seguir unos pasos básicos:</p>
+<ul>
+<li><em>Organizar la información</em>; es importante saber qué tenemos y como está estructurado.</li>
+<li><em>Redactar el metadato</em>; hay que tener presente que lo pueden leer usuarios no expertos, por lo que tiene que ser redactada de forma clara y sencilla. Si por eso el texto tiene que ser más largo, no hay problema. El título es muy importante por localizar la información. Habría que incluir Qué, Dónde, Cuándo, Quién y Escala.</li>
+<li><em>Revisar el metadato</em>; entregar el documento a otro para que se lo lea. Si sólo hay la persona que los ha redactado, que los deje una temporada y los vuelva a leer.</li>
+</ul>
+<p>La elaboración de estos metadatos se hace sobre la base de unos estándares internacionales, que especifican qué información se tiene que dar en cada apartado. De esta manera, todo el mundo describe los datos del mismo modo.</p>
+<p>Un vez creados y revisados los metadatos son importados a un servidor de catálogo y se utilizan para localizar, evaluar y acceder a la información geográfica disponible.</p>
+<p>En circunstancias ideales, todo dato debería tener asociados unos metadatos, y estos últimos deberían crearse siempre que se creen dichos datos y actualizarse siempre que estos se modifiquen. La realidad, sin embargo, es que una gran parte de los datos geográficos que existen no tiene metadatos asociados, o bien estos no son lo suficientemente detallados.</p>
+<h3 id="contenido-de-los-metadatos">Contenido de los metadatos</h3>
+<p>Los valores que pueden incorporarse a los metadatos son muy abundantes, tantos como tipos distintos de información se considere necesario registrar respecto a un dato geográfico particular.</p>
+<p>Las características de los metadatos asociados a los datos dependerán directamente de estos y de algunos factores como los siguientes:</p>
+<ul>
+<li>El tipo de dato y, en particular, el modelo de representación empleado. Los datos vectoriales tendrán asociados unos metadatos distintos que los correspondientes a datos ráster. </li>
+<li>La organización, entidad o individuo responsable de la creación de los datos y el uso que se pretende dar a estos.</li>
+<li>El elemento al que se asocian los metadatos. Como veremos en el siguiente apartado, podemos asociar metadatos a un juego de capas, una capa o una entidad aislada dentro de una capa.</li>
+<li>El estándar empleado para crear los metadatos.</li>
+</ul>
+<p>Algunos de los elementos comunes que se incorporan a los metadatos geográficos son los siguientes:</p>
+<ul>
+<li><strong>Información de identificación.</strong> Este tipo de información permite identificar de forma única un dato geográfico y distinguirlo de otros. Esta información ayuda a catalogar los datos, e incluye el nombre, palabras claves, una descripción básica o la ya mencionada extensión geográfica de los datos. </li>
+<li><strong>Información sobre la calidad de los datos.</strong> La información sobre la calidad de los datos puede incluir, entre otros elementos, aquellos relativos a la completitud de estos, los procesos que se han empleado en su creación y mantenimiento, o las operaciones de validación y verificación a las que se han sometido.</li>
+<li><strong>Información sobre la representación del dato espacial.</strong> Se incluyen en este grupo la precisión y exactitud de los datos, la escala de trabajo o la resolución en el caso de capas ráster. Este tipo de metadatos están también íntimamente ligados con la calidad de los datos.</li>
+<li><strong>Información sobre la componente no espacial.</strong> Información relacionada con los atributos que acompañan a las capas vectoriales, o bien relativas a las variables que se recogen en capas ráster. Esto incluye explicaciones sobre el significado de los nombres de cada uno de los atributos, el rango de valores válidos para cada uno de ellos o los métodos empleados para recoger estos datos.</li>
+<li><strong>Información sobre la distribución.</strong> Esta información sirve para definir el acceso a los datos y las posibilidades de distribución de estos, especificando quiénes pueden acceder a ellos y quiénes no, o en qué condiciones pueden hacerlo. También puede recoger elementos como la fecha en que fueron publicados los datos o bien cuándo fueron puestos a disposición del público.</li>
+</ul>
+<h3 id="granularidad-de-los-metadatos">Granularidad de los metadatos</h3>
+<p>Habitualmente, los metadatos están asociados a un conjunto de datos al completo. Este conjunto de datos que sirve como unidad a la hora de crear metadatos coincide en general con la idea de capa en un SIG. Es decir, cada capa tiene asociado un bloque de metadatos.</p>
+<p>Esto no quiere decir, no obstante, que no puedan registrarse metadatos a un nivel distinto. Dependiendo del tipo de datos con los que se trabaje, puede resultar de interés o incluso necesario asociar metadatos a unidades distintas.</p>
+<p>Algunos metadatos como el sistema de coordenadas serán compartidos por todos los elementos de una capa, y por tanto es lógico en su caso emplear la capa como unidad básica en lo que a metadatos se refiere. Otro metadatos, sin embargo, hacen referencia a elementos particulares dentro de la capa.</p>
+<p>Se podría llegar a crear metadatos con una granularidad muy grande a nivel de elemento. Por ejemplo en una capa vectorial se podrían identificar los siguientes datos:</p>
+<ul>
+<li>Quién ha creado ese elemento.</li>
+<li>Quién ha modificado ese elemento.</li>
+<li>Cuándo fue creado originalmente.</li>
+<li>Cuándo ha sido modificado por ultima vez.</li>
+<li>Cuántas veces ha sido modificado.</li>
+<li>Una descripción del objeto real que este elemento representa. </li>
+</ul>
+<p>También podemos encontrar el caso opuesto, en el que varias capas comparten los mismos metadatos, y por tanto estos pueden asociarse a escala de toda una familia de datos. Ese es el caso cuando se tiene un conjunto de capas generadas por una misma entidad y para un mismo fin, las cuales cubren una amplia zona geográfica y debido a ello se encuentran divididas horizontalmente. Estas circunstancias se dan de forma habitual en series de datos de carácter nacional o autonómico, y conforman una de las situaciones en las que el registro de metadatos puede hacerse para toda la serie en su conjunto, al menos para algunos de esos metadatos.</p>
+<h3 id="ejemplos-de-metadatos">Ejemplos de metadatos</h3>
+<p>La mejor forma de entender el contenido de los metadatos es ver algunos sencillos ejemplos reales.</p>
+<p><a href="http://www.idee.es/csw-inspire-idee/srv/spa/catalog.search#/metadata/spaJEXtmexTerminosMunicipales">http://www.idee.es/csw-inspire-idee/srv/spa/catalog.search#/metadata/spaJEXtmexTerminosMunicipales</a></p>
+<p><a href="https://ide.cat/geonetwork/srv/cat/catalog.search#/metadata/base-municipal-5k-v2r1">https://ide.cat/geonetwork/srv/cat/catalog.search#/metadata/base-municipal-5k-v2r1</a></p>
+<p>En ellas pueden verse verse los metadatos con un formato de página Web sencilla compuesta de una lista de apartados y campos, así como su valores correspondientes.</p>
+<p>Si se comparan los campos y apartados que aparecen en ambas páginas, puede verse que no coinciden completamente. Eso es debido a que esos metadatos han sido generados por distintos organismos, que no utilizan una única metodología.</p>
+<h3 id="perfiles-de-metadatos">Perfiles de metadatos</h3>
+<p>Con el objetivo de formalizar y homogeneizar los metadatos, los organismos responsables de las IDEs redactan unas guías que definen las directrices (requisitos y recomendaciones) a seguir a la hora de generar metadatos, de acuerdo a los estándares de metadatos de conjuntos de datos (ISO 19115) y de servicios (ISO 19119). Entre otros, fijan el contenido de información mínimo y obligatorio que han de incluir, así como los posibles contenidos opcionales. Estos documentos se conocen como Perfiles de metadatos.</p>
+<h4 id="ejemplos-de-perfiles-de-metadatos">Ejemplos de perfiles de metadatos</h4>
+<h5 id="perfil-idec">Perfil IDEC</h5>
+<p><a href="http://www.cartocat.cat/geoportal/cas/documentacio/manuals/Perfil_IDEC_v4.0_cas.pdf">http://www.cartocat.cat/geoportal/cas/documentacio/manuals/Perfil_IDEC_v4.0_cas.pdf</a></p>
+<h5 id="nucleo-espanol-de-metadatos-nem">Núcleo español de metadatos (NEM)</h5>
+<p><a href="https://idee.es/resources/presentaciones/JIDEE05/sesion_04_02.pdf">https://idee.es/resources/presentaciones/JIDEE05/sesion_04_02.pdf</a></p>
+<h5 id="inspire">INSPIRE</h5>
+<p><a href="https://inspire.ec.europa.eu/documents/inspire-metadata-implementing-rules-technical-guidelines-based-en-iso-19115-and-en-iso-1">https://inspire.ec.europa.eu/documents/inspire-metadata-implementing-rules-technical-guidelines-based-en-iso-19115-and-en-iso-1</a></p>
+<h2 id="que-es-un-catalogo-de-metadatos">Qué es un catálogo de metadatos</h2>
+<p>El catálogo de metadatos, es quizá la pieza más importante dentro de una IDE y se trataría de un registro, que contendría el inventario de la información geográfica disponible en el territorio “administrado” por la IDE.</p>
+<p>El proceso para implementar un catálogo puede resultar tedioso y poco gratificante pero es parte importante en el éxito de una IDE.</p>
+<p>Básicamente implica identificar y convencer a todos los posibles productores de datos cartográficos, llámese departamento, agencia, empresa o incluso universidad que haga un inventario de toda su información geográfica y la describa siguiendo una ficha estándar. Esto es lo que se llama, crear metadatos.</p>
+<p>Estos metadatos, que son ficheros con codificación XML que siguen el estándar ISO 19115, son cargados dentro del catálogo de metadatos para poder ser interrogados por todos los usuarios.</p>
+<p>Cabe decir que la confección del metadato no es tarea fácil y que en el se describen campos como por ejemplo: creador de la cartografía, fecha de creación, fecha revisión, accesibilidad, formatos de la información, calidad, distribución o caja de coordenadas de la información descrita.</p>
+<p>Una particularidad de los catálogos de metadatos, es que permiten ser interrogados espacialmente (ej. Dime toda la información geográfica existente que intercepte con el trazado de este rio) y algunos de ellos, por ejemplo el de la IDEC, van más allá de un simple repositorio de metadatos y permiten registrar plantillas de transformación entre móldelos de datos geográficos, peticiones a objetos geográficos o estilos de representación cartográficas, todos ellos utilizados como parte de lo geoservicios distribuidos.</p>
+<p>Una vez descrita e inventariada la información geográfica se les pide a los entes integrantes de la IDE que permitan la visualización, básicamente a través de un navegador web, de la información descrita. Para ello se utilizan los servidores de mapas.</p>
+<h3 id="ejemplos-de-catalogos-de-metadatos">Ejemplos de catálogos de metadatos</h3>
+<p><a href="https://ide.cat/geonetwork/srv/cat/catalog.search#/home">https://ide.cat/geonetwork/srv/cat/catalog.search#/home</a></p>
+<p><a href="http://www.idee.es/csw-inspire-idee/srv/spa/catalog.search#/home">http://www.idee.es/csw-inspire-idee/srv/spa/catalog.search#/home</a></p>
+<h2 id="herramientas-para-trabajar-con-metadatos">Herramientas para trabajar con metadatos</h2>
+<p><strong>Editores de texto.</strong> Los metadatos pueden almacenarse en un fichero de texto plano, y por tanto pueden editarse con cualquier programa que permita la creación y edición de tales ficheros. Lo habitual en este caso es disponer de un fichero plantilla que contenga los distintos campos que se han de registrar para cada conjunto de datos geográficos, y la creación del metadato consiste simplemente en apoyarse en esa plantilla y a continuación de cada nombre de campo añadir el valor correspondiente.</p>
+<p><strong>Editores de metadatos.</strong> Herramientas más elaboradas que presenten una interfaz gráfica con distintas cajas de texto o listas desplegables. Estas aplicaciones, además de ser más agradables para el usuario, permiten incorporar elementos de validación en el proceso, evitando que en algún campo se introduzcan valores incorrectos o avisando al usuario en caso de que un campo presente un valor sospechoso.</p>
+<p><strong>Utilidades.</strong> Existen aplicaciones que no se emplean directamente para introducir los valores de los metadatos, pero que pueden intervenir en el proceso. Entre ellas están aquellas que chequean y validan los metadatos o las que lo preprocesan dándole un formato adecuado según unas reglas establecidas de antemano. </p>
+<p><strong>Herramientas de creación automática de metadatos.</strong> Algunos de los valores que se incorporan a los metadatos pueden extraerse de los propios datos. Por ello, el proceso de creación de metadatos puede automatizarse en cierta medida, y existen aplicaciones específicamente diseñada para realizar esa tarea.</p>
+<p>Para facilitar la tarea de creación y edición de metadatos existen en el mercado diversos editores de metadatos de libre acceso. Estos editores permiten editar metadatos en un entorno amigable al usuario, ocultando la complejidad que puede suponer su edición manual y proporcionando la conformidad a los estándares aplicables.</p>
+<h2 id="creacion-de-metadatos-desde-arcgis">Creación de metadatos desde ArcGIS</h2>
+<p>Como ya se ha comentado anteriormente la creación de metadatos de forma manual es un proceso complejo y largo por lo que la mejor forma de crearlos es mediante algún editor de metadatados. </p>
+<p>En este caso utilizaremos el editor de metadatos que tiene integrado ArcGIS para generar un metadato mediante un ejemplo de un conjunto de datos de los límites municipales de Catalunya. </p>
+<h3 id="elegir-un-estilo-de-metadatos">Elegir un estilo de metadatos</h3>
+<p>La información disponible para ver y editar en la pestaña Descripción está determinada por el estilo de metadatos seleccionado. <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<p>Abra el cuadro de diálogo <strong>Opciones</strong> para la aplicación ArcGIS for Desktop. </p>
+<ul>
+<li>En ArcMap, haga clic en <strong>Personalizar</strong> &gt; <strong>Opciones de ArcMap</strong>.</li>
+<li>En ArcCatalog, haga clic en <strong>Personalizar</strong> &gt; <strong>Opciones de ArcCatalog</strong>.</li>
+</ul>
+<p>Haga clic en la pestaña <strong>Metadatos</strong>.</p>
+<p>En el desplegable seleccionar el estilo de metadato que se desea crear en este caso <em>INSPIRE Metadata Directive</em></p>
+<h3 id="descargar-la-capa-de-informacion-y-el-metadato-correspondiete">Descargar la capa de información y el metadato correspondiete.</h3>
+<p>Ir a la web de la <a href="https://ide.cat/">Infraestructura de Dades Espacials de Catalunya (IDEC)</a></p>
+<p>En el catálogo de metadatos buscar <em>limits</em></p>
+<p>Seleccionar el primer resultado <strong>Base municipal de Catalunya 1:5 000 v2.1 (BM-5M)</strong></p>
+<p><img alt="Resultado de búsqueda" src="../img/idec_limits.png" title="Resultado de búsqueda" />
+Resultado de búsqueda </p>
+<p>Al seleccionar el metadato nos abre una página con el <a href="https://ide.cat/geonetwork/srv/cat/catalog.search#/metadata/base-municipal-5k-v2r1">detalle del metadato</a>.</p>
+<p>Para descagar los datos ir al apartado de <strong>Descàrregues i enllaços</strong> del metadato y presionar el botón de <em>Obrir enllaç</em> que aparece junto a <strong>Descàrrega SHP</strong></p>
+<p>Para descagar el metadato ir al apartade de <strong>Informació de la metadada</strong> y presionar el enlace <strong>Descarregar metadata</strong></p>
+<h3 id="cargar-la-capa-en-arcgis-e-importar-el-metadato">Cargar la capa en ArcGis e importar el metadato</h3>
+<h4 id="cargar-la-capa">Cargar la capa</h4>
+<p>Dentro del archivo (zip) de datos descargado hay varios shapefile. Seleccionaremos el archivo llamado <em>bm5mv21sh0tpm1_20200601_0.shp</em></p>
+<p>Cargarmos el shapefile dentro de nuestra geodatabase podemos llamarla <strong>municipios</strong> (tambien se puede cargar el shapefile directamente). Y luego cargamos la capa en el mapa.</p>
+<p>Una vez cargada la capa de municipios en el mapa presionamos con el botón derecho sobre la capa y vamos a <em>Data</em> &gt; <em>View Item Description...</em>. Esto nos abre una ventana nueva con el metadato de la capa.</p>
+<p><img alt="Ver metadato de la capa" src="../img/arcgis_view_description.png" title="Ver metadato de la capa" />
+Ver metadato de la capa</p>
+<p>Podemos ver que en el metadato ya hay algunos datos extraidos automaticamente de la información de la capa, pero vemos que faltan muchos otros datos.</p>
+<p>Si presionamos el botón de editar nos muestra el formulario de edición del metadato y nos indica todos los campos que faltan por rellenar para cumplir con el estilo de metadato seleccionado.</p>
+<p><img alt="Editor metadatos" src="../img/arcgis_metadata_editor.png" title="Editor metadatos" />
+Editor metadatos</p>
+<h4 id="importar-el-metadato">Importar el metadato</h4>
+<p>Abrimos el ArcCatalog y buscamos la capa de municipios hacemos click con el botón derecho y seleccionamos <em>Item Description...</em>. Esto nos habre una nueva ventana donde podemos ver el metadato pero a diferencia de la ventana que se desplega al ver la descripcion de la capa directamente en el mapa nos muestra más opciónes no solo la de impresión y edición sino que tambíen podemos validar, exportar o importar el metadato. </p>
+<p>Presionamos el botón de <em>Importar</em> y nos muestra el formulario de importación. En el campo de Source Metadata seleccionamos el archivo xml descargado de la IDEC. En el import type seleccionamos la opción <strong>FROM_ISO19139</strong> y en el Target Metadata dejamos nuestra capa. Presionamos OK.</p>
+<p>Una vez terminado el proceso podemos ver que se han rellenado muchos de los campos del metadato.</p>
+<p><img alt="Importar metadato" src="../img/arcgis_importar_metadato.png" title="Importar metadato" />
+Importar metadato</p>
+<h5 id="completar-la-informacion-que-falta-por-rellenar">Completar la información que falta por rellenar</h5>
+<h6 id="overview">Overview</h6>
+<ul>
+<li><strong>Citation</strong> -&gt; New Identifier -&gt; Code = bm5mv21sh0tpm1_20200601_0</li>
+</ul>
+<h6 id="metadata">Metadata</h6>
+<ul>
+<li><strong>Datails</strong> -&gt; Language = Spanish; Castilian</li>
+<li><strong>Contacts</strong> -&gt; Unitat de Delimitacó Territorial i de Grans Obres (Unknown) -&gt; Role = Point of Contact</li>
+</ul>
+<h6 id="resource">Resource</h6>
+<ul>
+<li><strong>Datails</strong> -&gt; Language = Spanish; Castilian</li>
+<li><strong>Points of Contacts</strong> -&gt; Unitat de Delimitacó Territorial i de Grans Obres (Unknown) -&gt; Role = Point of Contact</li>
+<li><strong>Constraints</strong> -&gt; Legal Constraints -&gt; Access Connstraints = Licence</li>
+<li><strong>Quality</strong> -&gt; Scope Level = Dataset</li>
+<li><strong>Distribution</strong> -&gt; Distributor -&gt; Unitat de Delimitacó Territorial i de Grans Obres (Unknown) -&gt; Role = Point of Contact</li>
+<li>
+<p><strong>Fields</strong> -&gt; Details: municipios</p>
+<ul>
+<li><em>Entity Type</em> -&gt; Definition = Polígonos de límites municipales</li>
+<li><em>Entity Type</em> -&gt; Definition Source = ICGC</li>
+<li>Attribute:CODIMUNI -&gt; Definition = Código INE municipal</li>
+<li>Attribute:CODIMUNI -&gt; Definition Source = INE</li>
+<li>Attribute:CODIMUNI -&gt; New Unrepresentable Domain = Cada registro tiene un código único</li>
+</ul>
+</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 1pt</p>
+<p>Completar la información del resto de campos del metadato</p>
+</div>
+<h2 id="exportacion-desde-arcgis-e-importacion-en-geonetwork">Exportación desde ArcGIS e importación en GeoNetwork</h2>
+<h3 id="exportar-el-metadato">Exportar el metadato</h3>
+<p>Abrimos el ArcCatalog y buscamos la capa de municipios hacemos click con el botón derecho y seleccionamos <em>Item Description...</em>. Esto nos habre una nueva ventana donde podemos ver el metadato y varias opciones.</p>
+<p>Presionamos el botón de <em>Export</em> dejamos las opciones de Source Metadata y Translator que nos poner por defecto y seleccionamos el archivo de salida (opcional). Presionamos el botón de <strong>OK</strong>.</p>
+<p>Una vez finalizado el proceso cerramos la ventana desplegada por el proceso de exportación y la ventana del metadato.</p>
+<h3 id="importacion-en-geonetwork">Importación en GeoNetwork</h3>
+<p>Abrimos en nuetro navegador el GeoNetwork <a href="http://localhost:8080/geonetwork">http://localhost:8080/geonetwork</a>.</p>
+<p>Nos identificamos como administrador en el GeoNetwork</p>
+<p>En el menú de <em>Contribuir</em> seleccionar la opción de <strong>Importar nuevas entradas</strong>. Nos muestra un formulario que rellenaremos con los siguientes valores:</p>
+<ol>
+<li>Seleccionar <em>Upload a file from your computer</em> y seleccionar el archivo exportado desde ArcGIS.</li>
+<li><em>Tipo de Entrada</em> seleccionar Metadato</li>
+<li><em>Procesando identificador de la entrada</em> seleccionar Generar UUID para el metadato importado</li>
+<li><em>Asignar a categoría</em> seleccionar Conjunto de datos</li>
+<li>Presionar el botón de Importar </li>
+</ol>
+<p><img alt="Importar metadato GeoNetwork" src="../img/geonetwork_import_metadata.png" title="Importar metadato GeoNetwork" />
+Importar metadato GeoNetwork</p>
+<p>En el menú seleccionamos la opción de Buscar y vemos que nos aparece nuestro metadato.</p>
+<h3 id="agregar-la-imagen-de-la-vista-previa">Agregar la imagen de la vista previa</h3>
+<p>Presionamos el botón de editar que aparece en el metadato y nos muestra el formulario de edicón de metadatos.</p>
+<p>En el apartado de <em>Visión de Conjunto</em> seleccionar una imagen descriptiva del conjuto de datos.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Esta imagen se puede generar desde el ArcGIS o con una captura de pantalla</p>
+</div>
+<p>Una vez cargada la imagen pesionar el botón de <em>Guardar y cerrar</em></p>
+<p>Volvemos a la pantalla de Buscar y vemos que ahora aparece la imagen en nuestro metadato.</p>
+<p><img alt="Metadato con imagen" src="../img/geonetwork_metadata_image.png" title="Metadato con imagen" />
+Metadato con imagen</p>
+<h2 id="referencias">Referencias</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://es.wikipedia.org/wiki/Metadatos">https://es.wikipedia.org/wiki/Metadatos</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="http://volaya.github.io/libro-sig/chapters/Metadatos.html">http://volaya.github.io/libro-sig/chapters/Metadatos.html</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://desktop.arcgis.com/es/arcmap/10.3/manage-data/metadata/what-is-metadata.htm">https://desktop.arcgis.com/es/arcmap/10.3/manage-data/metadata/what-is-metadata.htm</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
+        
+          <a href="../estandares_ISO/" title="5. Estándares ISO" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                5. Estándares ISO
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../servidores_de_mapa/" title="7. Servidores de mapas" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                7. Servidores de mapas
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
