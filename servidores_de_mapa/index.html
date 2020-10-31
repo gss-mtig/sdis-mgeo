@@ -367,6 +367,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#practica-publicar-una-imagen-georefenciada" class="md-nav__link">
+    Práctica publicar una imagen georefenciada
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#referencias" class="md-nav__link">
     Referencias
   </a>
@@ -468,6 +475,13 @@
         <li class="md-nav__item">
   <a href="#practica-implementar-un-servidor-de-mapas" class="md-nav__link">
     Práctica implementar un servidor de mapas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-publicar-una-imagen-georefenciada" class="md-nav__link">
+    Práctica publicar una imagen georefenciada
   </a>
   
 </li>
@@ -659,8 +673,57 @@ Añadir nuestro WMS al metadato</p>
 </li>
 </ol>
 <div class="admonition question">
-<p class="admonition-title">Ejercicio</p>
+<p class="admonition-title">Ejercicio 2 pts</p>
 <p>Crear un visor con Leaflet.js con la capa de comarcas de nuestro WMS.</p>
+</div>
+<h2 id="practica-publicar-una-imagen-georefenciada">Práctica publicar una imagen georefenciada</h2>
+<ol>
+<li>
+<p>Abrir el proyecto con el nombre mun_com.qgs generado en la práctica anterior</p>
+</li>
+<li>
+<p>Abrir el catálogo de la IDEC <a href="https://ide.cat/geonetwork/srv/cat/catalog.search#/home">https://ide.cat/geonetwork/srv/cat/catalog.search#/home</a></p>
+</li>
+<li>
+<p>Buscar <strong>Trullás</strong> y seleccionar el <em>Mapa geológico y topográfico de la provincia de Barcelona: región segunda ó del río Noya al mar detallada / geologia por el canónigo Dr. D. Jaime Almera, topografia por Eduardo Brossa, litografiado por E. Brossa y Trullás</em></p>
+</li>
+<li>
+<p>Abrir el metadato</p>
+<p><img alt="Metadato geológico Trullás" src="../img/idec_trullas.png" title="Metadato geológico Trullás" />
+Metadato geológico Trullás</p>
+</li>
+<li>
+<p>Abrir el enlace de la Cartoteca y descargar la imagen en Alta resolución</p>
+<p><img alt="Descarga imagen Trullás" src="../img/cartotega_trullas_hdi.png" title="Descarga imagen Trullás" />
+Descarga imagen Trullás</p>
+</li>
+<li>
+<p>Abrir el enlace del Georeferencer y descargar el ESRI World file</p>
+<p><img alt="Descarga world file Trullás" src="../img/cartoteca_trullas_jgw.png" title="Descarga world file Trullás" />
+Descarga Descarga world file Trullás</p>
+</li>
+<li>
+<p>Renombrar el archivo world file descargado a <strong>catalunya_2181_full.jgw</strong></p>
+</li>
+<li>
+<p>Agregar la imagen descargada al proyecto de QGIS y definir el Sistema de coordenadas de la capa como <strong>WGS 84</strong> <em>(EPSG:4326)</em></p>
+<p><img alt="Definir el SRS de la imagen" src="../img/qgis_definir_srs_trullas.png" title="Definir el SRS de la imagen" />
+Definir el SRS de la imagen</p>
+</li>
+<li>
+<p>Guardar el proyecto</p>
+</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio imagen 2 pts</p>
+<ul>
+<li>Agregar la capa de la imagen al visor creado en el ejercicio anterior. (0,5 pt)</li>
+<li>Agregar transparencia a la capa (0,5 pt)</li>
+</ul>
+<p><strong>Extra</strong> 
+Agregar el control de capa de Leaflet <a href="https://leafletjs.com/reference-1.7.1.html#control-layers">https://leafletjs.com/reference-1.7.1.html#control-layers</a> para poder activar y desactivar la capa de la imagen. (1 pt)</p>
+<p><img alt="Ejemplo resultado ejercicio" src="../img/resultado_ejercicio_wms.png" title="Ejemplo resultado ejercicio" />
+Ejemplo resultado ejercicio</p>
 </div>
 <h2 id="referencias">Referencias</h2>
 <div class="footnote">
