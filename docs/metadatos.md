@@ -250,7 +250,7 @@ Importar metadato
     * Attribute:CODIMUNI -> Definition Source = INE
     * Attribute:CODIMUNI -> New Unrepresentable Domain = Cada registro tiene un código único
 
-!!! question "Ejercicio"
+!!! question "Ejercicio 1pt"
     Completar la información del resto de campos del metadato
 
 ## Exportación desde ArcGIS e importación en GeoNetwork

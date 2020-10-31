@@ -84,7 +84,7 @@ Utilizaremos el programa **QGIS** para visualizar servicios XYZ.
     ![Visualizar XYZ OSM](img/qgis_visualizar_wmts.png "Visualizar XYZ OSM")
     Visualizar XYZ OSM
     
-!!! question "Ejercicio"
+!!! question "Ejercicio 0,5 pt"
     Agregar la capa WMTS de la ortofoto o topográfico del servicio WMTS del ICGC
 
     http://geoserveis.icc.cat/icc_mapesmultibase/noutm/wmts/orto/GRID3857/{z}/{x}/{y}.jpeg
@@ -260,8 +260,9 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
     http://localhost/visor/xyz.html
 
 
-!!! question "Ejercicio"
-    Agregar sobre la capa de OpenStreetMap la capa Catastro del servicio WMS de la Dirección General del Catastro. Aplicar transparencia a la capa.
+!!! question "Ejercicio 1 pt"
+    * Agregar sobre la capa de OpenStreetMap la capa Catastro del servicio WMS de la Dirección General del Catastro. (0,5 pt)
+    * Aplicar transparencia a la capa. (0,5 pt)
 
     http://www.catastro.minhap.gob.es/esp/wms.asp
 

@@ -169,8 +169,51 @@ Imagen con overview
     ![Añadir nuestro WMS al metadato](img/geonetwork_add_wms.png "Añadir nuestro WMS al metadato")
     Añadir nuestro WMS al metadato
 
-!!! question "Ejercicio"
+!!! question "Ejercicio 2 pts"
     Crear un visor con Leaflet.js con la capa de comarcas de nuestro WMS.
+
+## Práctica publicar una imagen georefenciada
+
+1. Abrir el proyecto con el nombre mun_com.qgs generado en la práctica anterior
+
+2. Abrir el catálogo de la IDEC https://ide.cat/geonetwork/srv/cat/catalog.search#/home
+
+3. Buscar **Trullás** y seleccionar el *Mapa geológico y topográfico de la provincia de Barcelona: región segunda ó del río Noya al mar detallada / geologia por el canónigo Dr. D. Jaime Almera, topografia por Eduardo Brossa, litografiado por E. Brossa y Trullás*
+
+4. Abrir el metadato
+
+    ![Metadato geológico Trullás](img/idec_trullas.png "Metadato geológico Trullás")
+    Metadato geológico Trullás
+
+5. Abrir el enlace de la Cartoteca y descargar la imagen en Alta resolución
+
+    ![Descarga imagen Trullás](img/cartotega_trullas_hdi.png "Descarga imagen Trullás")
+    Descarga imagen Trullás
+
+
+6. Abrir el enlace del Georeferencer y descargar el ESRI World file
+
+    ![Descarga world file Trullás](img/cartoteca_trullas_jgw.png "Descarga world file Trullás")
+    Descarga Descarga world file Trullás
+
+7. Renombrar el archivo world file descargado a **catalunya_2181_full.jgw**
+
+8. Agregar la imagen descargada al proyecto de QGIS y definir el Sistema de coordenadas de la capa como **WGS 84** *(EPSG:4326)*
+
+    ![Definir el SRS de la imagen](img/qgis_definir_srs_trullas.png "Definir el SRS de la imagen")
+    Definir el SRS de la imagen
+
+9. Guardar el proyecto
+
+!!! question "Ejercicio imagen 2 pts"
+    * Agregar la capa de la imagen al visor creado en el ejercicio anterior. (0,5 pt)
+    * Agregar transparencia a la capa (0,5 pt)
+
+    **Extra** 
+    Agregar el control de capa de Leaflet https://leafletjs.com/reference-1.7.1.html#control-layers para poder activar y desactivar la capa de la imagen. (1 pt)
+
+    ![Ejemplo resultado ejercicio](img/resultado_ejercicio_wms.png "Ejemplo resultado ejercicio")
+    Ejemplo resultado ejercicio
 
 ## Referencias
 

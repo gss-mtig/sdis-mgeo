@@ -631,15 +631,15 @@ Servicio de publicación de procesos geoespaciales en la Web. Se entiende por pr
 
 Se puede ver la especificación en [https://www.ogc.org/standards/wps](https://www.ogc.org/standards/wps)
 
-!!! question "Ejercicio"
+!!! question "Ejercicio 3,5 pts"
     En un documento de texto poner:
 
-    * La url de una IDE
-    * Una captura de una búsqueda en el catálogo de la IDE de servicios WMS
+    * La url de una IDE (0,5 pt)
+    * Una captura de una búsqueda en el catálogo de la IDE de servicios WMS (0,5 pt)
     * Seleccionar un servicio WMS del catálogo de la IDE
-        * Escribir la url del getCapabilities
-        * Escribir la url de una petición getMap
-        * Captura de la image retornada de la petición getMap
+        * Escribir la url del getCapabilities (1 pt)
+        * Escribir la url de una petición getMap (1 pt)
+        * Captura de la image retornada de la petición getMap (0,5 pt)
 
 ## Recursos 
 
