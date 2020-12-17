@@ -169,9 +169,6 @@ Imagen con overview
     ![Añadir nuestro WMS al metadato](img/geonetwork_add_wms.png "Añadir nuestro WMS al metadato")
     Añadir nuestro WMS al metadato
 
-!!! question "Ejercicio 2 pts"
-    Crear un visor con Leaflet.js con la capa de comarcas de nuestro WMS.
-
 ## Práctica publicar una imagen georefenciada
 
 1. Abrir el proyecto con el nombre mun_com.qgs generado en la práctica anterior
@@ -205,7 +202,8 @@ Imagen con overview
 
 9. Guardar el proyecto
 
-!!! question "Ejercicio imagen 2 pts"
+!!! question "Ejercicio imagen 4 pts"
+    * Crear un visor con Leaflet.js con la capa de comarcas de nuestro WMS. (2 pt)
     * Agregar la capa de la imagen al visor creado en el ejercicio anterior. (0,5 pt)
     * Agregar transparencia a la capa (0,5 pt)
 
