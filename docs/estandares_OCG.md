@@ -639,7 +639,7 @@ Se puede ver la especificación en [https://www.ogc.org/standards/wps](https://w
     * Seleccionar un servicio WMS del catálogo de la IDE
         * Escribir la url del getCapabilities (1 pt)
         * Escribir la url de una petición getMap (1 pt)
-        * Captura de la image retornada de la petición getMap (0,5 pt)
+        * Captura de la imagen retornada de la petición getMap (0,5 pt)
 
 ## Recursos 
 
