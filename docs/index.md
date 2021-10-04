@@ -1,18 +1,18 @@
-# Infraestructuras de datos espaciales y estándares de geoservicios 2020-2021
+# Infraestructuras de datos espaciales y estándares de geoservicios
 
 Materiales para el curso sobre Infraestructuras de datos espaciales y estándares de geoservicios (SDIS) del Màster en Geoinformació de la UAB
 
 Temario:
 
-# [https://gss-mtig.github.io/sdis-mgeo-20-21/](https://gss-mtig.github.io/sdis-mgeo-20-21/)
+# [https://gss-mtig.github.io/sdis-mgeo/](https://gss-mtig.github.io/sdis-mgeo/)
 
-* [Introducción a las IDE's](https://gss-mtig.github.io/sdis-mgeo-20-21/introduccion_a_las_ides/)
-* [Estándares OCG](https://gss-mtig.github.io/sdis-mgeo-20-21/estandares_OCG/)
-* [Instalación de programas](https://gss-mtig.github.io/sdis-mgeo-20-21/instalacion_de_programas/)
-* [Clientes de mapas](https://gss-mtig.github.io/sdis-mgeo-20-21/clientes_de_mapa)
-* [Estándares ISO](https://gss-mtig.github.io/sdis-mgeo-20-21/estandares_ISO/)
-* [Metadatos](https://gss-mtig.github.io/sdis-mgeo-20-21/metadatos/)
-* [Servidores de mapas](https://gss-mtig.github.io/sdis-mgeo-20-21/servidores_de_mapa/)
+* [Introducción a las IDE's](https://gss-mtig.github.io/sdis-mgeo/introduccion_a_las_ides/)
+* [Estándares OCG](https://gss-mtig.github.io/sdis-mgeo/estandares_OCG/)
+* [Instalación de programas](https://gss-mtig.github.io/sdis-mgeo/instalacion_de_programas/)
+* [Clientes de mapas](https://gss-mtig.github.io/sdis-mgeo/clientes_de_mapa)
+* [Estándares ISO](https://gss-mtig.github.io/sdis-mgeo/estandares_ISO/)
+* [Metadatos](https://gss-mtig.github.io/sdis-mgeo/metadatos/)
+* [Servidores de mapas](https://gss-mtig.github.io/sdis-mgeo/servidores_de_mapa/)
 
 ## Autores
 
