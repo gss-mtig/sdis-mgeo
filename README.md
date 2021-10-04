@@ -1,6 +1,6 @@
-# SDIS-mgeo-20-21
+# SDIS-mgeo
 
-[https://gss-mtig.github.io/sdis-mgeo-20-21/](https://gss-mtig.github.io/sdis-mgeo-20-21/)
+[https://gss-mtig.github.io/sdis-mgeo/](https://gss-mtig.github.io/sdis-mgeo/)
 
 ## Temario
 
