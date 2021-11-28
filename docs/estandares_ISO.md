@@ -14,6 +14,9 @@ Para la creación de metadatos (tanto de datos como de servicios), ISO ha creado
 
 Los servicios de catálogo que defiende OGC están basados en especificaciones estándar de implementación y en estándares internacionales (desarrollados por ISO), para garantizar las búsquedas distribuidas en diferentes bases de datos.
 
+
+![Estandares IDEs](img/estandares_ides.png "Estandares IDEs")
+*Algunos de los estandares más importantes de las IDEs (Basado en Smits et al., 2002)*
 ### ISO 19115 (Metadatos)
 
 Esta norma internacional proporciona un modelo y establece un conjunto común de terminología, definiciones y procedimientos de aplicación para los metadatos. Mediante la definición de elementos de metadatos se va a poder describir la información sobre la identificación, la extensión, la calidad, el modelo espacial y temporal, la referencia espacial y la distribución de los datos geográficos.
@@ -38,7 +41,7 @@ La Norma ISO/TS 19115-3:2016 *"Información Geográfica Metadatos Parte 3 Implem
 Se aplica a diferentes niveles de información conjuntos de datos geográficos, series de conjunto de datos, fenómenos geográficos individuales, propiedades de los fenómenos, etc
 
 ![Niveles de información](img/iso_19115.png "Niveles de información")[^2]
-Ejemplos prácticos de elemenentos a los que se puede aplicar la norma.
+*Ejemplos prácticos de elemenentos a los que se puede aplicar la norma.*
 
 Esta Norma de Metadatos es de una gran complejidad e incluye una extensa serie de elementos de metadatos, unos obligatorios y otros opcionales. El documento consta de 140 páginas, incluye un total de 409 ítems y define 27 listas controladas, mediante las que se definen los posibles valores válidos de ciertos campos.
 

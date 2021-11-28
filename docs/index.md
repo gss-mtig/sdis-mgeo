@@ -7,7 +7,16 @@ Temario:
 # [https://gss-mtig.github.io/sdis-mgeo/](https://gss-mtig.github.io/sdis-mgeo/)
 
 * [Introducción a las IDE's](https://gss-mtig.github.io/sdis-mgeo/introduccion_a_las_ides/)
+    * [INSPIRE](https://gss-mtig.github.io/sdis-mgeo/inspire/)
 * [Estándares OCG](https://gss-mtig.github.io/sdis-mgeo/estandares_OCG/)
+    * [WMS](https://gss-mtig.github.io/sdis-mgeo/wms/)
+    * [WMTS](https://gss-mtig.github.io/sdis-mgeo/wmts/)
+    * [WFS](https://gss-mtig.github.io/sdis-mgeo/wfs/)
+    * [GML](https://gss-mtig.github.io/sdis-mgeo/gml/)
+    * [SLD](https://gss-mtig.github.io/sdis-mgeo/sld/)
+    * [SOS](https://gss-mtig.github.io/sdis-mgeo/sos/)
+    * [CSW](https://gss-mtig.github.io/sdis-mgeo/csw/)
+    * [API](https://gss-mtig.github.io/sdis-mgeo/api/)
 * [Instalación de programas](https://gss-mtig.github.io/sdis-mgeo/instalacion_de_programas/)
 * [Clientes de mapas](https://gss-mtig.github.io/sdis-mgeo/clientes_de_mapa)
 * [Estándares ISO](https://gss-mtig.github.io/sdis-mgeo/estandares_ISO/)
@@ -16,7 +25,7 @@ Temario:
 
 ## Autores
 
-* Wladimir Szczerban (alias Bolo) *@bolosig*, [geostarter](http://betaportal.icgc.cat) (ICGC)
+* Wladimir Szczerban (alias Bolo) *@bolosig*, [MapTiler](http://maptiler.com) (Departamento de Geografía UAB)
 * Victor Pascual Ayats  *@sfggeogis*, [geostarter](http://betaportal.icgc.cat) (ICGC)
 * Ignacio Ferrero (Departamento de Geografía UAB)
 

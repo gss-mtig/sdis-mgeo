@@ -19,7 +19,19 @@ repo_url: "https://github.com/gss-mtig/sdis-mgeo"
 nav:
 - Home: index.md
 - 1. Introducción a las IDE's: introduccion_a_las_ides.md
+- Iniciativas:
+  - 1.1. INSPIRE: inspire.md
 - 2. Estándares OCG: estandares_OCG.md
+- Estándares OCG:
+  - 2.1. WMS: wms.md
+  - 2.2. WMTS: wmts.md
+  - 2.3. WFS: wfs.md 
+  - 2.4. GML: gml.md
+  - 2.5. SLD: sld.md
+  - 2.6. SOS: sos.md
+  - 2.7. CSW: csw.md
+  - 2.8. API: api.md
+  - 2.9. Otros: otros.md       
 - 3. Instalación de programas: instalacion_de_programas.md
 - 4. Clientes de mapas: clientes_de_mapa.md
 - 5. Estándares ISO: estandares_ISO.md
