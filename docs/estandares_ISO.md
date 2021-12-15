@@ -45,7 +45,7 @@ Se aplica a diferentes niveles de información conjuntos de datos geográficos, 
 
 Esta Norma de Metadatos es de una gran complejidad e incluye una extensa serie de elementos de metadatos, unos obligatorios y otros opcionales. El documento consta de 140 páginas, incluye un total de 409 ítems y define 27 listas controladas, mediante las que se definen los posibles valores válidos de ciertos campos.
 
-Aunque esta norma define un extenso número de elementos de metadatos, establece un “conjunto mínimo” de metadatos (el núcleo o Core), a considerar para todo el rango de aplicaciones de los metadatos (desde mapas en formato papel a datos en formato digital, comoimágenes satélite, modelos digitales del terreno, etc.). Con este conjunto se pretende establecerunos mínimos para facilitar el descubrimiento, el acceso, la transferencia y la utilización de los datos. Este núcleo está formado por elementos obligatorios y otros opcionales que usados todos ellos aumenta la interoperabilidad de los datos y permite a los usuarios entenderlos sin ambigüedades. Todo perfil que se defina a partir de esta norma debe estar formadocomo mínimo por los elementos definidos en dicho núcleo. 
+Aunque esta norma define un extenso número de elementos de metadatos, establece un “conjunto mínimo” de metadatos (el núcleo o Core), a considerar para todo el rango de aplicaciones de los metadatos (desde mapas en formato papel a datos en formato digital, como imágenes satélite, modelos digitales del terreno, etc.). Con este conjunto se pretende establecer unos mínimos para facilitar el descubrimiento, el acceso, la transferencia y la utilización de los datos. Este núcleo está formado por elementos obligatorios y otros opcionales que usados todos ellos aumenta la interoperabilidad de los datos y permite a los usuarios entenderlos sin ambigüedades. Todo perfil que se defina a partir de esta norma debe estar formado como mínimo por los elementos definidos en dicho núcleo.
 
 Principales elementos del Core de ISO 19115.
 
@@ -55,7 +55,7 @@ Principales elementos del Core de ISO 19115.
 * Resumen descriptivo
 * Fecha de los Metadatos
 * Categoría del tema
-* Parte responsable del Conjunto de Datos
+* Parte responsable del Conjunto de Datos 
 * Resolución espacial del conjunto de datos
 * Formato de Distribución
 * Extensión vertical y temporal

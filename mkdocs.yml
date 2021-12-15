@@ -34,9 +34,10 @@ nav:
   - 2.9. Otros: otros.md       
 - 3. Instalación de programas: instalacion_de_programas.md
 - 4. Clientes de mapas: clientes_de_mapa.md
-- 5. Estándares ISO: estandares_ISO.md
-- 6. Metadatos: metadatos.md
-- 7. Servidores de mapas: servidores_de_mapa.md
+- 5. Metadatos: metadatos.md
+- 6. Estándares ISO: estandares_ISO.md
+- 7. Creación de Metadatos: creacion_metadatos.md
+- 8. Servidores de mapas: servidores_de_mapa.md
 
 plugins:
     - search

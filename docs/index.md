@@ -19,8 +19,9 @@ Temario:
     * [API](https://gss-mtig.github.io/sdis-mgeo/api/)
 * [Instalación de programas](https://gss-mtig.github.io/sdis-mgeo/instalacion_de_programas/)
 * [Clientes de mapas](https://gss-mtig.github.io/sdis-mgeo/clientes_de_mapa)
-* [Estándares ISO](https://gss-mtig.github.io/sdis-mgeo/estandares_ISO/)
 * [Metadatos](https://gss-mtig.github.io/sdis-mgeo/metadatos/)
+* [Estándares ISO](https://gss-mtig.github.io/sdis-mgeo/estandares_ISO/)
+* [Creación de Metadatos](https://gss-mtig.github.io/sdis-mgeo/creacion_metadatos/)
 * [Servidores de mapas](https://gss-mtig.github.io/sdis-mgeo/servidores_de_mapa/)
 
 ## Autores
