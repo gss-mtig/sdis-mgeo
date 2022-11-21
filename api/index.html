@@ -9,14 +9,13 @@
         <meta name="description" content="Infraestructuras de datos espaciales y estándares de geoservicios.">
       
       
-      
         <meta name="author" content="sdis-mgeo">
       
       
         <link rel="canonical" href="https://gss-mtig.github.io/sdis-mgeo/api/">
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.1">
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
     
     
       
@@ -24,26 +23,31 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1655a90d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.815d1a91.min.css">
         
       
+      
+
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+
+    
     
     
   </head>
@@ -55,8 +59,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
-      
   
+    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -64,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ogc-api-features" class="md-skip">
+        <a href="#ogc-api" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -73,18 +77,19 @@
       
     </div>
     
+    
       
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="https://gss-mtig.github.io/sdis-mgeo/" title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-header__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios">
+    <a href=".." title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-header__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -102,26 +107,28 @@
         </div>
       </div>
     </div>
-    <div class="md-header__options">
-      
-    </div>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -138,11 +145,10 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/gss-mtig/sdis-mgeo/" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/gss-mtig/sdis-mgeo" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -151,11 +157,14 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -169,25 +178,22 @@
                     
 
 
-
-
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://gss-mtig.github.io/sdis-mgeo/" title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios">
+    <a href=".." title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     Infraestructuras de datos espaciales y estándares de geoservicios
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/gss-mtig/sdis-mgeo/" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/gss-mtig/sdis-mgeo" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -240,10 +246,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
-      <label class="md-nav__link" for="__nav_3">
-        Iniciativas
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Iniciativas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Iniciativas" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
@@ -251,8 +261,8 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
+              
   
   
   
@@ -263,6 +273,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -300,10 +311,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
-      <label class="md-nav__link" for="__nav_5">
-        Estándares OCG
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Estándares OCG
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Estándares OCG" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
@@ -311,8 +326,8 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
+              
   
   
   
@@ -323,8 +338,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -335,8 +352,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -347,8 +366,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -359,8 +380,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -371,8 +394,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -383,8 +408,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -395,8 +422,10 @@
     </li>
   
 
+            
           
             
+              
   
   
     
@@ -405,6 +434,7 @@
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
       
         
       
@@ -419,7 +449,9 @@
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
   
   
     
@@ -432,13 +464,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ogc-api-features" class="md-nav__link">
+    OGC API - Features
+  </a>
+  
+    <nav class="md-nav" aria-label="OGC API - Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#ogc-api-features-part-1-core" class="md-nav__link">
     OGC API - Features - Part 1: Core
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#ogc-api-features-part-2-coordinate-reference-systems-by-reference" class="md-nav__link">
     OGC API - Features - Part 2: Coordinate Reference Systems by Reference
   </a>
@@ -464,18 +504,23 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#ogc-api-features-part-3-filtering-and-the-common-query-language-cql" class="md-nav__link">
     OGC API - Features - Part 3: Filtering and the Common Query Language (CQL)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#ogc-api-features-part-4-simple-transactions" class="md-nav__link">
     OGC API - Features - Part 4: Simple Transactions
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -493,8 +538,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -505,6 +552,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -614,7 +662,9 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
   
   
     
@@ -627,13 +677,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ogc-api-features" class="md-nav__link">
+    OGC API - Features
+  </a>
+  
+    <nav class="md-nav" aria-label="OGC API - Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#ogc-api-features-part-1-core" class="md-nav__link">
     OGC API - Features - Part 1: Core
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#ogc-api-features-part-2-coordinate-reference-systems-by-reference" class="md-nav__link">
     OGC API - Features - Part 2: Coordinate Reference Systems by Reference
   </a>
@@ -659,18 +717,23 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#ogc-api-features-part-3-filtering-and-the-common-query-language-cql" class="md-nav__link">
     OGC API - Features - Part 3: Filtering and the Common Query Language (CQL)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#ogc-api-features-part-4-simple-transactions" class="md-nav__link">
     OGC API - Features - Part 4: Simple Transactions
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -689,21 +752,28 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <a href="https://github.com/gss-mtig/sdis-mgeo/edit/master/docs/api.md" title="Editar esta página" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
-                
-                <h1 id="ogc-api-features">OGC API - Features</h1>
+                  
+
+  <a href="https://github.com/gss-mtig/sdis-mgeo/edit/master/docs/api.md" title="Editar esta página" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="ogc-api">OGC API</h1>
+<p>La familia de estándares API de OGC se está desarrollando para facilitar que cualquier persona proporcione datos geoespaciales a la web. Estos estándares se basan en el legado de los estándares de servicios web de OGC (WMS, WFS, WCS, WPS, etc.), pero definen API centradas en recursos que aprovechan las prácticas modernas de desarrollo web.</p>
+<p>Estos estándares se están construyendo como "bloques de construcción" que se pueden usar para ensamblar nuevas API para el acceso web a contenido geoespacial.</p>
+<p><img alt="OGC API Block" src="../img/ogc-API-blocks.jpg" title="OGC API bloques de contrucción" /></p>
+<h2 id="ogc-api-features">OGC API - Features</h2>
 <p><strong>OGC API - Features</strong> es un estándar de varias partes que ofrece la capacidad de crear, modificar y consultar datos espaciales en la Web y especifica requisitos y recomendaciones para las API que desean seguir una forma estándar de compartir datos vectoriales. Mientras estaba en forma de borrador y antes de febrero de 2019 se denominó WFS3.0.</p>
 <p>La especificación es un documento de varias partes. La parte principal de la especificación describe las capacidades obligatorias que todo servicio de implementación debe admitir y está restringida al acceso de lectura a los datos espaciales.</p>
 <p>Las capacidades adicionales que abordan necesidades específicas se especificarán en partes adicionales. Las capacidades futuras previstas incluyen, por ejemplo, soporte para crear y modificar datos, modelos de datos más complejos, consultas más completas y sistemas de referencia de coordenadas adicionales.</p>
 <p>Esta nueva generación de estándares API están basados en <a href="https://github.com/OAI/OpenAPI-Specification">OpenAPI</a>, un estándar general TIC que permite que el mundo de los datos geoespaciales no se gestione como un caso aparte y pueda beneficiarse de las mejoras, posibilidades, recursos y ventajas que ofrece la evolución de las TIC. </p>
-<h2 id="ogc-api-features-part-1-core">OGC API - Features - Part 1: Core</h2>
+<h3 id="ogc-api-features-part-1-core">OGC API - Features - Part 1: Core</h3>
 <p>Esta primera parte especifica las capacidades esenciales (core) que en servcio para API de este estilo debe tener. Está restringido al Sistema de Referencia de Coordenadas (SRC) EPSG:4326 (WGS84 con orden de ejes longitud/latitud) y proporcionan acceso de solo lectura a datos espaciales. La Organización Internacional de Normalización (ISO) ha publicado la norma «ISO 19168-1:2020 Geographic information — Geospatial API for features — Part 1: Core», que es la versión ISO de «OGC API Features» - Parte 1: Core. </p>
 <p>La parte 1, <em>Core</em>, especifica las operaciones de búsqueda y descubrimiento que se implementan mediante el método HTTP GET. Por defecto, cada API que implemente este estándar proporcionará acceso a un único conjunto de datos. En lugar de compartir los datos como un conjunto de datos completo, los estándares de características de API de OGC ofrecen acceso directo y detallado a los datos a nivel de característica (objeto). </p>
 <p>El estándar WFS es más apropiado cuando se trabaja con aplicaciones cliente que solo admiten los servicios web clásicos de OGC. WFS adopta el GML como formato de datos predeterminado. Por el contrario, OGC API - Features incluye recomendaciones para admitir HTML y GeoJSON como codificaciones y también pueden admitir opcionalmente GML.</p>
@@ -771,16 +841,16 @@
 </table>
 <p>Las llamadas al recurso de elementos (/collections/{collectionId}/items) pueden recibir parámetros adicionales para filtar los elementos. Estos parámetros son:</p>
 <ul>
-<li><strong>limit</strong>: se puede usar para controlar el tamaño de la página especificando el número máximo de elementos que se deben devolver en la respuesta (por defecto es 10). Cada página puede incluir información sobre el número de elementos seleccionados y devueltos ("numberMatched" y "numberReturned"), así como enlaces para admitir la paginación (relación de enlace "next"). Un ejemplo <a href="https://services.interactive-instruments.de/t15/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2">https://services.interactive-instruments.de/t15/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2</a></li>
-<li><strong>offset</strong>: Sirve para navegar por la paginación de los resultados. <a href="https://services.interactive-instruments.de/t15/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2&amp;offset=2">https://services.interactive-instruments.de/t15/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2&amp;offset=2</a></li>
-<li><strong>bbox</strong>: selecciona solo el subconjunto de los elementos en la colección que están dentro de la caja de coordenadas especificada por el parámetro bbox. Un ejemplo <a href="https://services.interactive-instruments.de/t15/daraa/collections/VegetationSrf/items?f=json&amp;bbox=36.0832432,32.599852,36.1168237,32.6283697">https://services.interactive-instruments.de/t15/daraa/collections/VegetationSrf/items?f=json&amp;bbox=36.0832432,32.599852,36.1168237,32.6283697</a></li>
-<li><strong>datetime</strong>: selecciona solo el subconjunto de los elementos en la colección que están dentro dentro del intervalo de tiempo especificado por el parámetro datetime. Un ejemplo <a href="https://services.interactive-instruments.de/t15/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z">https://services.interactive-instruments.de/t15/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z</a> </li>
+<li><strong>limit</strong>: se puede usar para controlar el tamaño de la página especificando el número máximo de elementos que se deben devolver en la respuesta (por defecto es 10). Cada página puede incluir información sobre el número de elementos seleccionados y devueltos ("numberMatched" y "numberReturned"), así como enlaces para admitir la paginación (relación de enlace "next"). Un ejemplo <a href="https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2">https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2</a></li>
+<li><strong>offset</strong>: Sirve para navegar por la paginación de los resultados. <a href="https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2&amp;offset=2">https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2&amp;offset=2</a></li>
+<li><strong>bbox</strong>: selecciona solo el subconjunto de los elementos en la colección que están dentro de la caja de coordenadas especificada por el parámetro bbox. Un ejemplo <a href="https://demo.ldproxy.net/daraa/collections/VegetationSrf/items?f=json&amp;bbox=36.0832432,32.599852,36.1168237,32.6283697">https://demo.ldproxy.net/daraa/collections/VegetationSrf/items?f=json&amp;bbox=36.0832432,32.599852,36.1168237,32.6283697</a></li>
+<li><strong>datetime</strong>: selecciona solo el subconjunto de los elementos en la colección que están dentro dentro del intervalo de tiempo especificado por el parámetro datetime. Un ejemplo <a href="https://demo.ldproxy.net/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z">https://demo.ldproxy.net/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z</a> </li>
 </ul>
-<p>También se puede filtar por valores de las propiedades de los elementos. Un ejemplo: <a href="https://services.interactive-instruments.de/t15/daraa/collections/CulturePnt/items?F_CODE=A%2A">https://services.interactive-instruments.de/t15/daraa/collections/CulturePnt/items?F_CODE=A%2A</a></p>
-<p>Ejemplo de servicio. <a href="https://services.interactive-instruments.de/t15/daraa">https://services.interactive-instruments.de/t15/daraa</a></p>
+<p>También se puede filtar por valores de las propiedades de los elementos. Un ejemplo: <a href="https://demo.ldproxy.net/daraa/collections/CulturePnt/items?F_CODE=A%2A">https://demo.ldproxy.net/daraa/collections/CulturePnt/items?F_CODE=A%2A</a></p>
+<p>Ejemplo de servicio. <a href="https://demo.ldproxy.net/daraa">https://demo.ldproxy.net/daraa</a></p>
 <p>En las otras partes del estándar se definirán funcionalidades adicionales, como poder trabajar en otros SRC, crear y modificar objetos geográficos, consultas complejas, acceder a varios conjuntos de datos, recuperar jerarquías, etc.</p>
 <p>Se puede ver la especificación en <a href="http://docs.ogc.org/is/17-069r3/17-069r3.html">http://docs.ogc.org/is/17-069r3/17-069r3.html</a></p>
-<h2 id="ogc-api-features-part-2-coordinate-reference-systems-by-reference">OGC API - Features - Part 2: Coordinate Reference Systems by Reference</h2>
+<h3 id="ogc-api-features-part-2-coordinate-reference-systems-by-reference">OGC API - Features - Part 2: Coordinate Reference Systems by Reference</h3>
 <p>La Parte 2 amplía las capacidades especificadas en la Parte 1 con la capacidad de usar sistemas de referencia de coordenadas (CRS) distintos de WGS 84.</p>
 <p>El estándar especifica:</p>
 <ul>
@@ -789,20 +859,20 @@
 <li>Cómo se puede acceder a los objetos geográficos mediante un rectángulo envolvente especificado (BBOX). </li>
 <li>Cómo un servidor puede declarar el CRS utilizado y, opcionalmente, el orden de los ejes.</li>
 </ul>
-<h3 id="recuperar-geometrias-en-un-crs-especifico">Recuperar geometrías en un CRS específico</h3>
+<h4 id="recuperar-geometrias-en-un-crs-especifico">Recuperar geometrías en un CRS específico</h4>
 <p>En las solicitudes para obtener un o más elementos, agregue el parámetro crs con uno de los CRS admitidos. Por ejemplo, use lo siguiente para recuperar los edificios en ETRS89 UTM Zona 32 Norte (un CRS proyectado):</p>
-<div class="highlight"><pre><span></span><code>/collections/buildings/items?crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F25832
+<div class="highlight"><pre><span></span><code>https://demo.ldproxy.net/daraa/collections/SettlementSrf/items?f=json&amp;crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F3857
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Como de costumbre, no olvide codificar en porcentaje el valor del parámetro.</p>
 </div>
-<h3 id="utilice-una-caja-de-coordenadas-con-otro-crs">Utilice una caja de coordenadas con otro CRS</h3>
+<h4 id="utilice-una-caja-de-coordenadas-con-otro-crs">Utilice una caja de coordenadas con otro CRS</h4>
 <p>De forma predeterminada, el parámetro bbox especificado en la Parte 1 espera una caja de coordenadas en el CRS predeterminado, a menos que se especifique otro CRS en el parámetro bbox-crs. Por ejemplo lo siguiente solicita los edificios en Bonn, Alemania, utilizando una caja de coordenadas en ETRS89 UTM Zona 32 Norte:</p>
 <div class="highlight"><pre><span></span><code>collections/buildings/items?bbox=280375,5577680,531792,5820212&amp;bbox-crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F25832
 </code></pre></div>
 <p>Se puede ver la especificación en <a href="https://docs.ogc.org/is/18-058/18-058.html">https://docs.ogc.org/is/18-058/18-058.html</a></p>
-<h2 id="ogc-api-features-part-3-filtering-and-the-common-query-language-cql">OGC API - Features - Part 3: Filtering and the Common Query Language (CQL)</h2>
+<h3 id="ogc-api-features-part-3-filtering-and-the-common-query-language-cql">OGC API - Features - Part 3: Filtering and the Common Query Language (CQL)</h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Esta es una versión <strong>BORRADOR</strong> de la tercera parte de la API de OGC. Este borrador no está completo y hay temas abiertos que aún están en discusión.</p>
@@ -815,8 +885,13 @@
 <li>Dos codificaciones para CQL: una codificación de texto y otra JSON.</li>
 </ul>
 <p>CQL y su codificación de texto no son nuevos, pero esta es la primera vez que CQL se especifica correctamente. CQL se creó como una codificación de texto basada en las capacidades definidas en el estándar OGC Filter Encoding para su uso en el estándar OGC Catalog Service (CSW). Uno de los objetivos del diseño era mantener CQL lo más compatible posible con las implementaciones existentes. Por ejemplo, la clasificación de operadores en operadores lógicos, de comparación, espaciales y temporales, así como sus nombres y sintaxis, no se modifican con respecto a las definiciones originales en OGC Filter Encoding.</p>
-<p>Se puede ver el borrador de la especificación en <a href="http://docs.ogc.org/DRAFTS/19-079.html">http://docs.ogc.org/DRAFTS/19-079.html</a></p>
-<h2 id="ogc-api-features-part-4-simple-transactions">OGC API - Features - Part 4: Simple Transactions</h2>
+<p><strong>Ejemplo:</strong></p>
+<p>Primero vemos los attributos que son consultables
+<a href="https://demo.ldproxy.net/zoomstack/collections/roads_national/queryables">https://demo.ldproxy.net/zoomstack/collections/roads_national/queryables</a></p>
+<p>Ahora filtramos para obtener solo las carreteras de nivel 1.
+<a href="https://demo.ldproxy.net/zoomstack/collections/roads_national/items?f=json&amp;filter=level=1">https://demo.ldproxy.net/zoomstack/collections/roads_national/items?f=json&amp;filter=level=1</a></p>
+<p>Se puede ver el borrador de la especificación en <a href="http://docs.ogc.org/DRAFTS/19-079r1.html">http://docs.ogc.org/DRAFTS/19-079r1.html</a></p>
+<h3 id="ogc-api-features-part-4-simple-transactions">OGC API - Features - Part 4: Simple Transactions</h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Esta es una versión <strong>BORRADOR</strong> de la cuarta parte de la API de OGC. Este borrador no está completo y hay temas abiertos que aún están en discusión.</p>
@@ -865,27 +940,32 @@
 </table>
 <p>Se puede ver el borrador de la especificación en <a href="http://docs.ogc.org/DRAFTS/20-002.html">http://docs.ogc.org/DRAFTS/20-002.html</a></p>
 <h2 id="referencias">Referencias</h2>
-<p><a href="https://ogcapi.ogc.org/features/">https://ogcapi.ogc.org/features/</a></p>
-                
-              
-              
-                
+<p><a href="https://ogcapi.ogc.org/">https://ogcapi.ogc.org/</a>
+<a href="https://ogcapi.ogc.org/features/">https://ogcapi.ogc.org/features/</a>
+<a href="https://opengeospatial.github.io/bblocks/">https://opengeospatial.github.io/bblocks/</a></p>
 
 
-              
-            </article>
-          </div>
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Pie">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pie" >
       
-        <a href="../csw/" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="../csw/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 2.7. CSW" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -898,7 +978,8 @@
         </a>
       
       
-        <a href="../otros/" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="../otros/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 2.9. Otros" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -908,7 +989,7 @@
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -916,13 +997,15 @@
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -932,10 +1015,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta"}, "search": "../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.4e3fea51.min.js"></script>
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>
