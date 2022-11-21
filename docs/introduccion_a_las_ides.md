@@ -114,6 +114,15 @@ Para que una IDE se pueda considerar como tal, tiene que haber unos usuarios que
 
 Una comunidad IDE esta integrada por varios actores como: productores de datos, proveedores de servicios, usuarios, desarrolladores, invertigadores, etc. Cuanto más abierta y colaborativa sea la comunidad mayor calidad tendrá la IDE. La idea es que incluya organizaciones públicas, privadas, universidades y particulares. Por el momento esta comunidad está formada principalmente por administraciones públicas.
 
+##### Conclusiones
+
+Para poder poner en marcha una IDE es necesario disponer de:
+
+* **Componente político**, responsable de fomentar esta iniciativa y que determine las actuaciones legales que establezcan el marco y regulen su desarrollo.
+* **Componente tecnológico**, para que este sistema funcione a través de Internet. Para ello, es necesario que exista una comunicación efectiva entre los usuarios y los servidores por medio de una arquitectura conocida como “cliente-servidor”.
+* **Componente geográfico**, formado por los conjuntos de datos y servicios web geográficos que se proporcionan a través de una IDE, así como los registros de metadatos que los describen.
+* **Componente social**, que se corresponde con un conjunto de actores, cada uno de ellos con un rol determinado, interesados en su puesta en marcha, ya sea por el hecho de ser productor de datos, de software o por pertenecer a las comunidades de difusión responsables de formar en la filosofía IDE. Este componente es necesario para que una IDE permanezca y se consolide con el paso del tiempo y en consecuencia, consiga el éxito de esta iniciativa en la sociedad.
+
 ### Principios en que se basa el dearrollo de una IDE
 
 1. Datos recogidos una vez y mantenidos en el nivel donde se logra máxima
@@ -174,6 +183,16 @@ Hay que tener presente que una IDE no se tiene que ver sólo desde la vertiente 
 En el proceso de implantación de una IDE también hay que superar obstáculos técnicos (no disponibilidad de datos, de estándares, metadatos, redes de comunicación, banda ancha...), económicos, socio-culturales (conocimiento, educación, seguridad, libertad de acceso...), políticos-legales (datos delicados, propiedad intelectual...) y déficit de suporte (no se conoce la finalidad y el valor de las IDE).
 
 Las IDE, además de mantener vías de cooperación y relaciones con el sector público y privado de la su región, tienen que hacerlo también tanto con las IDE de su nivel como con las de otros niveles
+
+### Tareas que permite una IDE
+
+* **Buscar** la información que hay disponible ya sea por zona geográfica, formato, año de producción, quién la ha producido, si tiene servicio, etc.
+* **Visualizar** y superponer mapas, ortofotos, y datos geográficos en general de diferentes organismos, formatos, sistema de referencia, etc.
+* **Buscar** una entidad geográfica por su nombre y ver su ubicación
+* **Análisis** realizar opereaciones básicas, como cálculo de perfiles, análisis de superficies, etc.
+* **Transformar** de un modelo de datos a otro diferente, si ambos están descritos.
+* **Descargar** los datos para analizarlos con un SIG. 
+
 
 ### Niveles de desarrollo de una IDE
 

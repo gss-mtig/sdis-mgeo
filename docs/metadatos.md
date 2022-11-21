@@ -27,7 +27,15 @@ En algunos casos, incluso si carecemos de metadatos, resulta posible interpretar
 
 En otras circunstancias, los metadatos son necesarios, pues contienen información que no puede inferirse directamente desde los propios datos. Si varias capas están en sistemas de coordenadas distintos y deseamos aplicar las transformaciones correspondientes para unificarlos en uno único y procesarlas de manera conjunta, estas transformaciones no se pueden llevar a cabo si no conocemos el sistema de origen del que partimos en cada capa. En este supuesto, el trabajo con los datos viene condicionado a que existan los metadatos correspondientes.
 
-Los metadatos:
+Los metadatos sirven para describir un conjunto de datos geográficos, contestando las siguientes preguntas:
+
+* **¿Qué?**: Título y descripción de los datos
+* **¿Cuándo?**: Fecha de creación, actualización, etc.
+* **¿Quién?**: Persona o personas que han creado los datos
+* **¿Dónde?**: Extensión geográfica de los datos
+* **¿Cómo?**: Modo de obtención de la información, formato, etc.
+
+Principales beneficios de los metadatos:
 
 * *Ayudan a ordenar y a mantener la inversión en los datos*. Los usuarios potenciales de los datos podrán no utilizar los datos porque no conocen las características de los mismos.
 * *Ayudan a la transferencia de los datos*. Aportan información sobre el formato del archivo, el volumen en megabytes, la localización de los datos, etc. lo cual permite a un usuario procesar correctamente los datos.

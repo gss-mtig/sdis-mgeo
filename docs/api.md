@@ -1,4 +1,12 @@
-# OGC API - Features
+# OGC API
+
+La familia de estándares API de OGC se está desarrollando para facilitar que cualquier persona proporcione datos geoespaciales a la web. Estos estándares se basan en el legado de los estándares de servicios web de OGC (WMS, WFS, WCS, WPS, etc.), pero definen API centradas en recursos que aprovechan las prácticas modernas de desarrollo web.
+
+Estos estándares se están construyendo como "bloques de construcción" que se pueden usar para ensamblar nuevas API para el acceso web a contenido geoespacial.
+
+![OGC API Block](img/ogc-API-blocks.jpg "OGC API bloques de contrucción")
+
+## OGC API - Features
 
 **OGC API - Features** es un estándar de varias partes que ofrece la capacidad de crear, modificar y consultar datos espaciales en la Web y especifica requisitos y recomendaciones para las API que desean seguir una forma estándar de compartir datos vectoriales. Mientras estaba en forma de borrador y antes de febrero de 2019 se denominó WFS3.0.
 
@@ -8,7 +16,7 @@ Las capacidades adicionales que abordan necesidades específicas se especificar�
 
 Esta nueva generación de estándares API están basados en [OpenAPI](https://github.com/OAI/OpenAPI-Specification), un estándar general TIC que permite que el mundo de los datos geoespaciales no se gestione como un caso aparte y pueda beneficiarse de las mejoras, posibilidades, recursos y ventajas que ofrece la evolución de las TIC. 
 
-## OGC API - Features - Part 1: Core
+### OGC API - Features - Part 1: Core
 
 Esta primera parte especifica las capacidades esenciales (core) que en servcio para API de este estilo debe tener. Está restringido al Sistema de Referencia de Coordenadas (SRC) EPSG:4326 (WGS84 con orden de ejes longitud/latitud) y proporcionan acceso de solo lectura a datos espaciales. La Organización Internacional de Normalización (ISO) ha publicado la norma «ISO 19168-1:2020 Geographic information — Geospatial API for features — Part 1: Core», que es la versión ISO de «OGC API Features» - Parte 1: Core. 
 
@@ -28,20 +36,20 @@ El estándar WFS es más apropiado cuando se trabaja con aplicaciones cliente qu
 
 Las llamadas al recurso de elementos (/collections/{collectionId}/items) pueden recibir parámetros adicionales para filtar los elementos. Estos parámetros son:
 
-* **limit**: se puede usar para controlar el tamaño de la página especificando el número máximo de elementos que se deben devolver en la respuesta (por defecto es 10). Cada página puede incluir información sobre el número de elementos seleccionados y devueltos ("numberMatched" y "numberReturned"), así como enlaces para admitir la paginación (relación de enlace "next"). Un ejemplo https://services.interactive-instruments.de/t15/daraa/collections/AeronauticCrv/items?f=json&limit=2
-* **offset**: Sirve para navegar por la paginación de los resultados. https://services.interactive-instruments.de/t15/daraa/collections/AeronauticCrv/items?f=json&limit=2&offset=2
-* **bbox**: selecciona solo el subconjunto de los elementos en la colección que están dentro de la caja de coordenadas especificada por el parámetro bbox. Un ejemplo https://services.interactive-instruments.de/t15/daraa/collections/VegetationSrf/items?f=json&bbox=36.0832432,32.599852,36.1168237,32.6283697
-* **datetime**: selecciona solo el subconjunto de los elementos en la colección que están dentro dentro del intervalo de tiempo especificado por el parámetro datetime. Un ejemplo https://services.interactive-instruments.de/t15/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z 
+* **limit**: se puede usar para controlar el tamaño de la página especificando el número máximo de elementos que se deben devolver en la respuesta (por defecto es 10). Cada página puede incluir información sobre el número de elementos seleccionados y devueltos ("numberMatched" y "numberReturned"), así como enlaces para admitir la paginación (relación de enlace "next"). Un ejemplo https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&limit=2
+* **offset**: Sirve para navegar por la paginación de los resultados. https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&limit=2&offset=2
+* **bbox**: selecciona solo el subconjunto de los elementos en la colección que están dentro de la caja de coordenadas especificada por el parámetro bbox. Un ejemplo https://demo.ldproxy.net/daraa/collections/VegetationSrf/items?f=json&bbox=36.0832432,32.599852,36.1168237,32.6283697
+* **datetime**: selecciona solo el subconjunto de los elementos en la colección que están dentro dentro del intervalo de tiempo especificado por el parámetro datetime. Un ejemplo https://demo.ldproxy.net/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z 
 
-También se puede filtar por valores de las propiedades de los elementos. Un ejemplo: https://services.interactive-instruments.de/t15/daraa/collections/CulturePnt/items?F_CODE=A%2A
+También se puede filtar por valores de las propiedades de los elementos. Un ejemplo: https://demo.ldproxy.net/daraa/collections/CulturePnt/items?F_CODE=A%2A
 
-Ejemplo de servicio. https://services.interactive-instruments.de/t15/daraa
+Ejemplo de servicio. https://demo.ldproxy.net/daraa
 
 En las otras partes del estándar se definirán funcionalidades adicionales, como poder trabajar en otros SRC, crear y modificar objetos geográficos, consultas complejas, acceder a varios conjuntos de datos, recuperar jerarquías, etc.
 
 Se puede ver la especificación en http://docs.ogc.org/is/17-069r3/17-069r3.html
 
-## OGC API - Features - Part 2: Coordinate Reference Systems by Reference
+### OGC API - Features - Part 2: Coordinate Reference Systems by Reference
 
 La Parte 2 amplía las capacidades especificadas en la Parte 1 con la capacidad de usar sistemas de referencia de coordenadas (CRS) distintos de WGS 84.
 
@@ -52,17 +60,17 @@ El estándar especifica:
 * Cómo se puede acceder a los objetos geográficos mediante un rectángulo envolvente especificado (BBOX). 
 * Cómo un servidor puede declarar el CRS utilizado y, opcionalmente, el orden de los ejes.
 
-### Recuperar geometrías en un CRS específico
+#### Recuperar geometrías en un CRS específico
 En las solicitudes para obtener un o más elementos, agregue el parámetro crs con uno de los CRS admitidos. Por ejemplo, use lo siguiente para recuperar los edificios en ETRS89 UTM Zona 32 Norte (un CRS proyectado):
 
 ```
-/collections/buildings/items?crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F25832
+https://demo.ldproxy.net/daraa/collections/SettlementSrf/items?f=json&crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F3857
 ```
 
 !!! note
     Como de costumbre, no olvide codificar en porcentaje el valor del parámetro.
 
-### Utilice una caja de coordenadas con otro CRS
+#### Utilice una caja de coordenadas con otro CRS
 De forma predeterminada, el parámetro bbox especificado en la Parte 1 espera una caja de coordenadas en el CRS predeterminado, a menos que se especifique otro CRS en el parámetro bbox-crs. Por ejemplo lo siguiente solicita los edificios en Bonn, Alemania, utilizando una caja de coordenadas en ETRS89 UTM Zona 32 Norte:
 
 ```
@@ -71,7 +79,7 @@ collections/buildings/items?bbox=280375,5577680,531792,5820212&bbox-crs=http%3A%
 
 Se puede ver la especificación en https://docs.ogc.org/is/18-058/18-058.html
 
-## OGC API - Features - Part 3: Filtering and the Common Query Language (CQL)
+### OGC API - Features - Part 3: Filtering and the Common Query Language (CQL)
 
 !!! warning
     Esta es una versión **BORRADOR** de la tercera parte de la API de OGC. Este borrador no está completo y hay temas abiertos que aún están en discusión.
@@ -86,9 +94,17 @@ La Parte 3 define:
 
 CQL y su codificación de texto no son nuevos, pero esta es la primera vez que CQL se especifica correctamente. CQL se creó como una codificación de texto basada en las capacidades definidas en el estándar OGC Filter Encoding para su uso en el estándar OGC Catalog Service (CSW). Uno de los objetivos del diseño era mantener CQL lo más compatible posible con las implementaciones existentes. Por ejemplo, la clasificación de operadores en operadores lógicos, de comparación, espaciales y temporales, así como sus nombres y sintaxis, no se modifican con respecto a las definiciones originales en OGC Filter Encoding.
 
-Se puede ver el borrador de la especificación en http://docs.ogc.org/DRAFTS/19-079.html
+**Ejemplo:**
 
-## OGC API - Features - Part 4: Simple Transactions
+Primero vemos los attributos que son consultables
+https://demo.ldproxy.net/zoomstack/collections/roads_national/queryables
+
+Ahora filtramos para obtener solo las carreteras de nivel 1.
+https://demo.ldproxy.net/zoomstack/collections/roads_national/items?f=json&filter=level=1
+
+Se puede ver el borrador de la especificación en http://docs.ogc.org/DRAFTS/19-079r1.html
+
+### OGC API - Features - Part 4: Simple Transactions
 
 !!! warning
     Esta es una versión **BORRADOR** de la cuarta parte de la API de OGC. Este borrador no está completo y hay temas abiertos que aún están en discusión.
@@ -113,4 +129,6 @@ Se puede ver el borrador de la especificación en http://docs.ogc.org/DRAFTS/20-
 
 ## Referencias
 
+https://ogcapi.ogc.org/
 https://ogcapi.ogc.org/features/
+https://opengeospatial.github.io/bblocks/
