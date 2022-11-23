@@ -42,6 +42,8 @@ Para la comunidad de habla hispana y portuguesa interesada en los desarrollos y 
 ![Evolución de servicios OWS](img/ows.png)
 *Evolución de servicios OWS*
 
+[Evolución de servicios OWS](https://gss-mtig.github.io/servicios-ows/)
+
 Listado de los principales estándares OGC relacionados con las IDE's
 
 * [WMS](https://gss-mtig.github.io/sdis-mgeo/wms/)
