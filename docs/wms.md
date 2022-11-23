@@ -224,3 +224,11 @@ La solicitud equivalente WMS 1.3.0 es:
 * En software de escritorio el onlineResource (QGis tiene la opción de ignorar el onlineResource )
 * Modificar el estilo (SLD poco soportado)
 * SLD difícil de entender y hacer  
+
+!!! question "Ejercicio 2,5 pts"
+    En un documento de texto poner:
+
+    * Seleccionar un servicio WMS del catálogo de la IDE
+        * Escribir la url del getCapabilities (1 pt)
+        * Escribir la url de una petición getMap (1 pt)
+        * Captura de la imagen retornada de la petición getMap (0,5 pt)
