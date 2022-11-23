@@ -282,6 +282,13 @@ Seguramente saldrán iniciativas de usa la mineria de datos, big data, inteligen
 
 El uso del blockchain también podría cambiar a las IDEs, ya que permitiría tener el historial de la información. De hecho la filosofía del blockchain es muy parecida a la de las IDEs.  
 
+!!! question "Ejercicio 1 pts"
+    En un documento de texto poner:
+
+    * La url de una IDE (0,5 pt)
+    * Una captura de una búsqueda en el catálogo de la IDE de servicios WMS (0,5 pt)
+ 
+
 ## Referencias
 [^1]: https://github.com/volaya/libro-sig/releases/download/v2.0/Libro_SIG.pdf
 [^2]: https://www.miteco.gob.es/es/cartografia-y-sig/ide/presentacion/que-es-ide.aspx
