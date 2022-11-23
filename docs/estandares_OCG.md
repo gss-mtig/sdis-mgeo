@@ -56,17 +56,6 @@ Listado de los principales estándares OGC relacionados con las IDE's
 * [API](https://gss-mtig.github.io/sdis-mgeo/api/)
 * [Otros](https://gss-mtig.github.io/sdis-mgeo/otros/)
 
-
-!!! question "Ejercicio 3,5 pts"
-    En un documento de texto poner:
-
-    * La url de una IDE (0,5 pt)
-    * Una captura de una búsqueda en el catálogo de la IDE de servicios WMS (0,5 pt)
-    * Seleccionar un servicio WMS del catálogo de la IDE
-        * Escribir la url del getCapabilities (1 pt)
-        * Escribir la url de una petición getMap (1 pt)
-        * Captura de la imagen retornada de la petición getMap (0,5 pt)
-
 ## Recursos 
 
 https://www.ogc.org/standards/
