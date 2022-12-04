@@ -108,14 +108,14 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Visor simple con Leaflet</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <style type="text/css">
             #mapid { height: 600px; width: 600px;}
         </style>
     </head>
     <body>
         <div id="mapid"></div>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     </body>
     </html>
     ```
@@ -129,17 +129,17 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Visor simple con Leaflet</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <style type="text/css">
             #mapid { height: 600px; width: 600px;}
         </style>
     </head>
     <body>
         <div id="mapid"></div>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
             //Creamos el objeto mapa.
-            var map = L.map('mapid').setView([41.68, 1.85], 9);
+            const map = L.map('mapid').setView([41.68, 1.85], 9);
         </script>
     </body>
     </html>
@@ -154,18 +154,18 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Visor simple con Leaflet</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <style type="text/css">
             #mapid { height: 600px; width: 600px;}
         </style>
     </head>
     <body>
         <div id="mapid"></div>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
             //Creamos el objeto mapa.
-            var map = L.map('mapid').setView([41.68, 1.85], 9);
-            var wmsTopoIcgc = L.tileLayer.wms('https://geoserveis.icgc.cat/icc_mapesbase/wms/service?', {
+            const map = L.map('mapid').setView([41.68, 1.85], 9);
+            const wmsTopoIcgc = L.tileLayer.wms('https://geoserveis.icgc.cat/icc_mapesbase/wms/service?', {
             layers: 'mtc5m'
             }).addTo(map);
         </script>
@@ -190,14 +190,14 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Visor simple con Leaflet</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <style type="text/css">
             #mapid { height: 600px; width: 600px;}
         </style>
     </head>
     <body>
         <div id="mapid"></div>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     </body>
     </html>
     ```
@@ -211,17 +211,17 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Visor simple con Leaflet</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <style type="text/css">
             #mapid { height: 600px; width: 600px;}
         </style>
     </head>
     <body>
         <div id="mapid"></div>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
             //Creamos el objeto mapa.
-            var map = L.map('mapid').setView([41.68, 1.85], 9);
+            const map = L.map('mapid').setView([41.68, 1.85], 9);
         </script>
     </body>
     </html>
@@ -236,18 +236,18 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Visor simple con Leaflet</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <style type="text/css">
             #mapid { height: 600px; width: 600px;}
         </style>
     </head>
     <body>
         <div id="mapid"></div>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
             //Creamos el objeto mapa.
-            var map = L.map('mapid').setView([41.68, 1.85], 9);
-            var wmtsOpenStreetMap = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            const map = L.map('mapid').setView([41.68, 1.85], 9);
+            const wmtsOpenStreetMap = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
         </script>
