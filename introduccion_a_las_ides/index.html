@@ -14,8 +14,15 @@
       
         <link rel="canonical" href="https://gss-mtig.github.io/sdis-mgeo/introduccion_a_las_ides/">
       
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../inspire/">
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
     
     
       
@@ -23,15 +30,14 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.815d1a91.min.css">
-        
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
       
       
 
+
     
+    
+      
     
     
       
@@ -53,14 +59,11 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -80,7 +83,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href=".." title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-header__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios" data-md-component="logo">
       
@@ -89,6 +94,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -111,6 +117,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -119,12 +126,15 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
         <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -136,7 +146,7 @@
           <div class="md-search-result__meta">
             Inicializando búsqueda
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -148,7 +158,7 @@
         <a href="https://github.com/gss-mtig/sdis-mgeo" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -178,6 +188,7 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Infraestructuras de datos espaciales y estándares de geoservicios" class="md-nav__button md-logo" aria-label="Infraestructuras de datos espaciales y estándares de geoservicios" data-md-component="logo">
@@ -193,7 +204,7 @@
       <a href="https://github.com/gss-mtig/sdis-mgeo" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -205,14 +216,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        Home
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
       </a>
     </li>
   
@@ -220,8 +235,6 @@
     
       
       
-      
-
   
   
     
@@ -229,19 +242,31 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          1. Introducción a las IDE's
+          
+  
+  <span class="md-ellipsis">
+    1. Introducción a las IDE's
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        1. Introducción a las IDE's
+        
+  
+  <span class="md-ellipsis">
+    1. Introducción a las IDE's
+  </span>
+  
+
       </a>
       
         
@@ -261,22 +286,28 @@
       
         <li class="md-nav__item">
   <a href="#antecedentes" class="md-nav__link">
-    Antecedentes
+    <span class="md-ellipsis">
+      Antecedentes
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#que-es-una-ide" class="md-nav__link">
-    Qué es una IDE?
+    <span class="md-ellipsis">
+      ¿Qué es una IDE?
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="Qué es una IDE?">
+    <nav class="md-nav" aria-label="¿Qué es una IDE?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#comparacion" class="md-nav__link">
-    Comparación
+    <span class="md-ellipsis">
+      Comparación
+    </span>
   </a>
   
 </li>
@@ -288,7 +319,9 @@
       
         <li class="md-nav__item">
   <a href="#componentes-de-una-ide" class="md-nav__link">
-    Componentes de una IDE
+    <span class="md-ellipsis">
+      Componentes de una IDE
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Componentes de una IDE">
@@ -296,28 +329,36 @@
         
           <li class="md-nav__item">
   <a href="#marco-institucional" class="md-nav__link">
-    Marco institucional
+    <span class="md-ellipsis">
+      Marco institucional
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#los-datos-y-sus-descriptores" class="md-nav__link">
-    Los datos y sus descriptores
+    <span class="md-ellipsis">
+      Los datos y sus descriptores
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#la-visualizacion-y-el-acceso-a-los-datos" class="md-nav__link">
-    La visualización y el acceso a los datos
+    <span class="md-ellipsis">
+      La visualización y el acceso a los datos
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#los-usuarios-y-colaboradores" class="md-nav__link">
-    Los usuarios y colaboradores
+    <span class="md-ellipsis">
+      Los usuarios y colaboradores
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Los usuarios y colaboradores">
@@ -325,7 +366,9 @@
         
           <li class="md-nav__item">
   <a href="#conclusiones" class="md-nav__link">
-    Conclusiones
+    <span class="md-ellipsis">
+      Conclusiones
+    </span>
   </a>
   
 </li>
@@ -336,30 +379,38 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#principios-en-que-se-basa-el-dearrollo-de-una-ide" class="md-nav__link">
-    Principios en que se basa el dearrollo de una IDE
+  <a href="#principios-en-que-se-basa-el-desarrollo-de-una-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principios en que se basa el desarrollo de una IDE
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="Principios en que se basa el dearrollo de una IDE">
+    <nav class="md-nav" aria-label="Principios en que se basa el desarrollo de una IDE">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#orientar-su-arquitectura-a-servicios-soa" class="md-nav__link">
-    Orientar su arquitectura a servicios (SOA)
+    <span class="md-ellipsis">
+      Orientar su arquitectura a servicios (SOA)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#implementar-aplicaciones-que-posibiliten-descubrir-visualizar-y-procesar-informacion-geografica" class="md-nav__link">
-    Implementar aplicaciones que posibiliten descubrir, visualizar y procesar información geográfica.
+    <span class="md-ellipsis">
+      Implementar aplicaciones que posibiliten descubrir, visualizar y procesar información geográfica.
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#adoptar-los-estandares-de-interoperabilidad-geoespacial-para-facilitar-la-comunicacion-entre-componentes" class="md-nav__link">
-    Adoptar los estándares de interoperabilidad geoespacial para facilitar la comunicación entre componentes.
+    <span class="md-ellipsis">
+      Adoptar los estándares de interoperabilidad geoespacial para facilitar la comunicación entre componentes.
+    </span>
   </a>
   
 </li>
@@ -371,21 +422,27 @@
         
           <li class="md-nav__item">
   <a href="#la-utilidad-de-las-ide-y-sus-ventajas" class="md-nav__link">
-    La utilidad de las IDE y sus ventajas
+    <span class="md-ellipsis">
+      La utilidad de las IDE y sus ventajas
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#tareas-que-permite-una-ide" class="md-nav__link">
-    Tareas que permite una IDE
+    <span class="md-ellipsis">
+      Tareas que permite una IDE
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#niveles-de-desarrollo-de-una-ide" class="md-nav__link">
-    Niveles de desarrollo de una IDE
+    <span class="md-ellipsis">
+      Niveles de desarrollo de una IDE
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Niveles de desarrollo de una IDE">
@@ -393,28 +450,36 @@
         
           <li class="md-nav__item">
   <a href="#idec" class="md-nav__link">
-    IDEC
+    <span class="md-ellipsis">
+      IDEC
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#idee" class="md-nav__link">
-    IDEE
+    <span class="md-ellipsis">
+      IDEE
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#gsdi-global-spatial-data-infrastructure" class="md-nav__link">
-    GSDI (Global Spatial Data Infrastructure)
+    <span class="md-ellipsis">
+      GSDI (Global Spatial Data Infrastructure)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#ejemplos-de-otras-ides" class="md-nav__link">
-    Ejemplos de otras IDES
+    <span class="md-ellipsis">
+      Ejemplos de otras IDES
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Ejemplos de otras IDES">
@@ -422,28 +487,36 @@
         
           <li class="md-nav__item">
   <a href="#internacional" class="md-nav__link">
-    Internacional
+    <span class="md-ellipsis">
+      Internacional
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#nacional" class="md-nav__link">
-    Nacional
+    <span class="md-ellipsis">
+      Nacional
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#regional" class="md-nav__link">
-    Regional
+    <span class="md-ellipsis">
+      Regional
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#local" class="md-nav__link">
-    Local
+    <span class="md-ellipsis">
+      Local
+    </span>
   </a>
   
 </li>
@@ -460,7 +533,9 @@
         
           <li class="md-nav__item">
   <a href="#marco-legal" class="md-nav__link">
-    Marco legal
+    <span class="md-ellipsis">
+      Marco legal
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Marco legal">
@@ -468,14 +543,18 @@
         
           <li class="md-nav__item">
   <a href="#lisige" class="md-nav__link">
-    LISIGE
+    <span class="md-ellipsis">
+      LISIGE
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#inspire" class="md-nav__link">
-    INSPIRE
+    <span class="md-ellipsis">
+      INSPIRE
+    </span>
   </a>
   
 </li>
@@ -492,14 +571,18 @@
       
         <li class="md-nav__item">
   <a href="#futuro-de-las-ides" class="md-nav__link">
-    Futuro de las IDEs
+    <span class="md-ellipsis">
+      Futuro de las IDEs
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#referencias" class="md-nav__link">
-    Referencias
+    <span class="md-ellipsis">
+      Referencias
+    </span>
   </a>
   
 </li>
@@ -514,62 +597,81 @@
     
       
       
-      
-
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          Iniciativas
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Iniciativas" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Iniciativas
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
           
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Iniciativas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciativas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../inspire/" class="md-nav__link">
-        1.1. INSPIRE
+        
+  
+  <span class="md-ellipsis">
+    1.1. INSPIRE
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../estandares_OCG/" class="md-nav__link">
-        2. Estándares OCG
+        
+  
+  <span class="md-ellipsis">
+    2. Estándares OCG
+  </span>
+  
+
       </a>
     </li>
   
@@ -577,174 +679,241 @@
     
       
       
-      
-
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5">
-          Estándares OCG
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Estándares OCG" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Estándares OCG
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
           
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Estándares OCG
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Estándares OCG
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../wms/" class="md-nav__link">
-        2.1. WMS
+        
+  
+  <span class="md-ellipsis">
+    2.1. WMS
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../wmts/" class="md-nav__link">
-        2.2. WMTS
+        
+  
+  <span class="md-ellipsis">
+    2.2. WMTS
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../wfs/" class="md-nav__link">
-        2.3. WFS
+        
+  
+  <span class="md-ellipsis">
+    2.3. WFS
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../gml/" class="md-nav__link">
-        2.4. GML
+        
+  
+  <span class="md-ellipsis">
+    2.4. GML
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../sld/" class="md-nav__link">
-        2.5. SLD
+        
+  
+  <span class="md-ellipsis">
+    2.5. SLD
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../sos/" class="md-nav__link">
-        2.6. SOS
+        
+  
+  <span class="md-ellipsis">
+    2.6. SOS
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../csw/" class="md-nav__link">
-        2.7. CSW
+        
+  
+  <span class="md-ellipsis">
+    2.7. CSW
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../api/" class="md-nav__link">
-        2.8. API
+        
+  
+  <span class="md-ellipsis">
+    2.8. API
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../otros/" class="md-nav__link">
-        2.9. Otros
+        
+  
+  <span class="md-ellipsis">
+    2.9. Otros
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../instalacion_de_programas/" class="md-nav__link">
-        3. Instalación de programas
+        
+  
+  <span class="md-ellipsis">
+    3. Instalación de programas
+  </span>
+  
+
       </a>
     </li>
   
@@ -752,14 +921,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../clientes_de_mapa/" class="md-nav__link">
-        4. Clientes de mapas
+        
+  
+  <span class="md-ellipsis">
+    4. Clientes de mapas
+  </span>
+  
+
       </a>
     </li>
   
@@ -767,14 +940,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../metadatos/" class="md-nav__link">
-        5. Metadatos
+        
+  
+  <span class="md-ellipsis">
+    5. Metadatos
+  </span>
+  
+
       </a>
     </li>
   
@@ -782,14 +959,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../estandares_ISO/" class="md-nav__link">
-        6. Estándares ISO
+        
+  
+  <span class="md-ellipsis">
+    6. Estándares ISO
+  </span>
+  
+
       </a>
     </li>
   
@@ -797,14 +978,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../creacion_metadatos/" class="md-nav__link">
-        7. Creación de Metadatos
+        
+  
+  <span class="md-ellipsis">
+    7. Creación de Metadatos
+  </span>
+  
+
       </a>
     </li>
   
@@ -812,14 +997,18 @@
     
       
       
-      
-
   
   
   
     <li class="md-nav__item">
       <a href="../servidores_de_mapa/" class="md-nav__link">
-        8. Servidores de mapas
+        
+  
+  <span class="md-ellipsis">
+    8. Servidores de mapas
+  </span>
+  
+
       </a>
     </li>
   
@@ -853,22 +1042,28 @@
       
         <li class="md-nav__item">
   <a href="#antecedentes" class="md-nav__link">
-    Antecedentes
+    <span class="md-ellipsis">
+      Antecedentes
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#que-es-una-ide" class="md-nav__link">
-    Qué es una IDE?
+    <span class="md-ellipsis">
+      ¿Qué es una IDE?
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="Qué es una IDE?">
+    <nav class="md-nav" aria-label="¿Qué es una IDE?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#comparacion" class="md-nav__link">
-    Comparación
+    <span class="md-ellipsis">
+      Comparación
+    </span>
   </a>
   
 </li>
@@ -880,7 +1075,9 @@
       
         <li class="md-nav__item">
   <a href="#componentes-de-una-ide" class="md-nav__link">
-    Componentes de una IDE
+    <span class="md-ellipsis">
+      Componentes de una IDE
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Componentes de una IDE">
@@ -888,28 +1085,36 @@
         
           <li class="md-nav__item">
   <a href="#marco-institucional" class="md-nav__link">
-    Marco institucional
+    <span class="md-ellipsis">
+      Marco institucional
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#los-datos-y-sus-descriptores" class="md-nav__link">
-    Los datos y sus descriptores
+    <span class="md-ellipsis">
+      Los datos y sus descriptores
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#la-visualizacion-y-el-acceso-a-los-datos" class="md-nav__link">
-    La visualización y el acceso a los datos
+    <span class="md-ellipsis">
+      La visualización y el acceso a los datos
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#los-usuarios-y-colaboradores" class="md-nav__link">
-    Los usuarios y colaboradores
+    <span class="md-ellipsis">
+      Los usuarios y colaboradores
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Los usuarios y colaboradores">
@@ -917,7 +1122,9 @@
         
           <li class="md-nav__item">
   <a href="#conclusiones" class="md-nav__link">
-    Conclusiones
+    <span class="md-ellipsis">
+      Conclusiones
+    </span>
   </a>
   
 </li>
@@ -928,30 +1135,38 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#principios-en-que-se-basa-el-dearrollo-de-una-ide" class="md-nav__link">
-    Principios en que se basa el dearrollo de una IDE
+  <a href="#principios-en-que-se-basa-el-desarrollo-de-una-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principios en que se basa el desarrollo de una IDE
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="Principios en que se basa el dearrollo de una IDE">
+    <nav class="md-nav" aria-label="Principios en que se basa el desarrollo de una IDE">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#orientar-su-arquitectura-a-servicios-soa" class="md-nav__link">
-    Orientar su arquitectura a servicios (SOA)
+    <span class="md-ellipsis">
+      Orientar su arquitectura a servicios (SOA)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#implementar-aplicaciones-que-posibiliten-descubrir-visualizar-y-procesar-informacion-geografica" class="md-nav__link">
-    Implementar aplicaciones que posibiliten descubrir, visualizar y procesar información geográfica.
+    <span class="md-ellipsis">
+      Implementar aplicaciones que posibiliten descubrir, visualizar y procesar información geográfica.
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#adoptar-los-estandares-de-interoperabilidad-geoespacial-para-facilitar-la-comunicacion-entre-componentes" class="md-nav__link">
-    Adoptar los estándares de interoperabilidad geoespacial para facilitar la comunicación entre componentes.
+    <span class="md-ellipsis">
+      Adoptar los estándares de interoperabilidad geoespacial para facilitar la comunicación entre componentes.
+    </span>
   </a>
   
 </li>
@@ -963,21 +1178,27 @@
         
           <li class="md-nav__item">
   <a href="#la-utilidad-de-las-ide-y-sus-ventajas" class="md-nav__link">
-    La utilidad de las IDE y sus ventajas
+    <span class="md-ellipsis">
+      La utilidad de las IDE y sus ventajas
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#tareas-que-permite-una-ide" class="md-nav__link">
-    Tareas que permite una IDE
+    <span class="md-ellipsis">
+      Tareas que permite una IDE
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#niveles-de-desarrollo-de-una-ide" class="md-nav__link">
-    Niveles de desarrollo de una IDE
+    <span class="md-ellipsis">
+      Niveles de desarrollo de una IDE
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Niveles de desarrollo de una IDE">
@@ -985,28 +1206,36 @@
         
           <li class="md-nav__item">
   <a href="#idec" class="md-nav__link">
-    IDEC
+    <span class="md-ellipsis">
+      IDEC
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#idee" class="md-nav__link">
-    IDEE
+    <span class="md-ellipsis">
+      IDEE
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#gsdi-global-spatial-data-infrastructure" class="md-nav__link">
-    GSDI (Global Spatial Data Infrastructure)
+    <span class="md-ellipsis">
+      GSDI (Global Spatial Data Infrastructure)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#ejemplos-de-otras-ides" class="md-nav__link">
-    Ejemplos de otras IDES
+    <span class="md-ellipsis">
+      Ejemplos de otras IDES
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Ejemplos de otras IDES">
@@ -1014,28 +1243,36 @@
         
           <li class="md-nav__item">
   <a href="#internacional" class="md-nav__link">
-    Internacional
+    <span class="md-ellipsis">
+      Internacional
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#nacional" class="md-nav__link">
-    Nacional
+    <span class="md-ellipsis">
+      Nacional
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#regional" class="md-nav__link">
-    Regional
+    <span class="md-ellipsis">
+      Regional
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#local" class="md-nav__link">
-    Local
+    <span class="md-ellipsis">
+      Local
+    </span>
   </a>
   
 </li>
@@ -1052,7 +1289,9 @@
         
           <li class="md-nav__item">
   <a href="#marco-legal" class="md-nav__link">
-    Marco legal
+    <span class="md-ellipsis">
+      Marco legal
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Marco legal">
@@ -1060,14 +1299,18 @@
         
           <li class="md-nav__item">
   <a href="#lisige" class="md-nav__link">
-    LISIGE
+    <span class="md-ellipsis">
+      LISIGE
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#inspire" class="md-nav__link">
-    INSPIRE
+    <span class="md-ellipsis">
+      INSPIRE
+    </span>
   </a>
   
 </li>
@@ -1084,14 +1327,18 @@
       
         <li class="md-nav__item">
   <a href="#futuro-de-las-ides" class="md-nav__link">
-    Futuro de las IDEs
+    <span class="md-ellipsis">
+      Futuro de las IDEs
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#referencias" class="md-nav__link">
-    Referencias
+    <span class="md-ellipsis">
+      Referencias
+    </span>
   </a>
   
 </li>
@@ -1110,17 +1357,15 @@
                 
                   
 
-  <a href="https://github.com/gss-mtig/sdis-mgeo/edit/master/docs/introduccion_a_las_ides.md" title="Editar esta página" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
 
 
-<h1 id="introduccion-a-las-ides">Introducción a las IDE's</h1>
+<h1 id="introduccion-a-las-ides">Introducción a las IDEs</h1>
 <p>Temario</p>
 <ul>
 <li>Antecedentes</li>
-<li>Qué es una IDE?</li>
+<li>¿Qué es una IDE?</li>
 <li>Componentes de una IDE</li>
 <li>IDEC</li>
 <li>IDEE</li>
@@ -1128,7 +1373,7 @@
 <li>Otras IDES</li>
 </ul>
 <p>Tradicionalmente, la obtención de información geográfica ha estado caracterizada por una serie de dificultades (formatos, precios, dónde buscarla...), ya que está muy dispersa y en diferentes formatos.</p>
-<p>No obstante, el desarrollo de tecnologías de la información y la mejora de las comunicaciones tiene que permitir salvar todos estos obstáculos y facilitar el acceso tanto a la información del sector público como privado amparándose en unas políticas de consenso y en un marco legal establecido. Si a todo esto le sumamos el uso de herramientas desarrolladas con tecnologías estándar las posibilidades de búsqueda, acceso y intercambio de información son infinitas.</p>
+<p>No obstante, el desarrollo de tecnologías de la información y la mejora de las comunicaciones tiene que permitir salvar todos estos obstáculos y facilitar el acceso tanto a la información del sector público como privado amparándose en unas políticas de consenso y en un marco legal establecido. Si a todo esto le sumamos el uso de herramientas desarrolladas con tecnologías estándar las posibilidades de búsqueda, acceso e intercambio de información son infinitas.</p>
 <p>La información geográfica es uno de los elementos más esenciales en la toma de decisiones, así como uno de los más costosos (entre un 70 y un 80% de los costes de un proyecto SIG están destinados a la compra y/o mantenimiento de los datos). Esta información está concentrada mayoritariamente al sector público (se estima que entre un 80 y un 90% de la información geográfica es generada por administraciones públicas). El hecho de no conocer la información disponible, hace que los datos puedan ser comprados una y otra vez por diferentes administraciones, aumentando innecesariamente el coste de los proyectos.</p>
 <h2 id="antecedentes">Antecedentes</h2>
 <p>En 1987, el comité Chorley, del Departamento de Medioambiente de Estados Unidos, concluyó que <em>las barreras políticas e institucionales que restringen actualmente el uso de los SIG deben ser superadas. Esto incluye problemas de incompatibilidad por diferencias de definición y formatos, así como restricciones al acceso y adquisición de los propios datos.</em></p>
@@ -1139,10 +1384,10 @@
 <blockquote>
 <p><em>"La información geográfica es vital para a promover el desarrollo económico, aprovechar nuestros recursos naturales y proteger el medio ambiente. La tecnología moderna permite mejorar la adquisición, distribución y utilización de datos geográficos y cartográficos. La Revisión del Desarrollo Nacional, ha recomendado que la rama ejecutiva desarrolle, en cooperación con los estados, los gobiernos locales y el sector privado, una Infraestructura Nacional de Datos Espaciales para a apoyar las aplicaciones de los datos geoespaciales en el sector público y privado, en áreas como el transporte, el desarrollo comunitario, la agricultura, la atención de emergencias, la gestión ambiental y la tecnología de información".</em></p>
 </blockquote>
-<p>En 1996 se celebra la 1ª Conferencia Internacionla del GSDI (Global Spatial Data Infrastructure).</p>
+<p>En 1996 se celebra la 1ª Conferencia Internacional del GSDI (Global Spatial Data Infrastructure).</p>
 <p>Otros países iniciaron los primeros pasos con los mismos objetivos. Los países que habían implementado IDE de primera generación, se replantean la iniciativa y la van actualizando y modificando, adaptándola a las necesidades del momento (se puede situar en el año 2000). Esto trajo un rápido incremento de nuevos países que se implicaron en el proceso de creación de infraestructuras de datos (el año 2002, 120 países habían iniciado o iniciaban proyectos IDE) y la aparición de una comunidad IDE, en la cual se podían compartir e intercambiar experiencias.</p>
 <p>En 2004 se consolida tras la constitución formal de la GSDI.</p>
-<h2 id="que-es-una-ide">Qué es una IDE?</h2>
+<h2 id="que-es-una-ide">¿Qué es una IDE?</h2>
 <p>Existen varias definiciones para describir IDE, pero una de las mas utilizada y extendida es la elaborada por la Federal Geographic Data Committee (FGDC) que la define como: <em>Una Infraestructura de Datos Espaciales (IDE) se puede definir como un conjunto de tecnologías, políticas, estándares y recursos humanos necesarios para a adquirir, procesar, almacenar, distribuir y mejorar la utilización de la información geográfica - Federal Geographic Data Committee (FGDC)</em></p>
 <p>Una IDE (Infraestructura de Datos Espaciales) es un sistema informático integrado por un conjunto de recursos (catálogos, servidores, programas, datos, aplicaciones, páginas Web,...) dedicados a gestionar Información geográfica disponibles en Internet, que cumpla una serie de condiciones de interoperabilidad. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
 <p>A partir de estas definiciones podemos vislumbrar que una IDE no es solo una implementación tecnológica sino que comprende una parte muy importante de comunicación, no precisamente entre servidor-servidor, sino entre Institución—Instituciones, departamento—departamento, en definitiva persona—persona para establecer los marcos de colaboración para compartir, describir y acceder a los datos geográficos.</p>
@@ -1196,7 +1441,7 @@
 </tr>
 <tr>
 <td>Regulación tránsito</td>
-<td>Política + Lesgislación</td>
+<td>Política + Legislación</td>
 </tr>
 <tr>
 <td>Política (Centro de control de tránsito)</td>
@@ -1217,26 +1462,26 @@
 <p><img alt="componentes de una IDE" src="../img/componentes_ides.png" /></p>
 <p><em>Componentes de una IDE</em> <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
 <h4 id="marco-institucional">Marco institucional</h4>
-<p>Para que una IDE pueda prosperar tiene que contar con un suporte institucional firme que garantice su impulso inicial. Este suporte se tiene que plasmar con un marco legal adecuado, que anime a las diferentes administraciones públicas o entidades a participar en las activitades de la IDE.</p>
-<p>Por ejemplo la directiva europea INSPIRE y la ley española LISIGE se han eleborado de forma participativa. Estos marcos legales cumplen la función de consolidar las reglas acordadas por la comunidad para dar seguridad jurídica y sostenibilidad al proyecto. Debe ser un marco jurídico mínimo neceario para que se desarrollen con garantías las IDEs haciendo que no todo dependa de la buena voluntad de las partes implicadas. </p>
+<p>Para que una IDE pueda prosperar tiene que contar con un suporte institucional firme que garantice su impulso inicial. Este suporte se tiene que plasmar con un marco legal adecuado, que anime a las diferentes administraciones públicas o entidades a participar en las actividades de la IDE.</p>
+<p>Por ejemplo la directiva europea INSPIRE y la ley española LISIGE se han elaborado de forma participativa. Estos marcos legales cumplen la función de consolidar las reglas acordadas por la comunidad para dar seguridad jurídica y sostenibilidad al proyecto. Debe ser un marco jurídico mínimo necesario para que se desarrollen con garantías las IDEs haciendo que no todo dependa de la buena voluntad de las partes implicadas. </p>
 <h4 id="los-datos-y-sus-descriptores">Los datos y sus descriptores</h4>
 <p>Cualquier tipo de data que de forma directa o indirecta haga referencia a una localización se podría definir como dato geográfico.</p>
 <p>Las administraciones públicas son las propietarias de la mayoría de la información geográfica de referencia para lo cual, asegurando su implicación garantizamos una cartografía de base esencial para el desarrollo de la IDE.</p>
-<p>Los datos, por si solos, no nos aportan demasiada información. Por este motivo, es necesaria su descripción. Los <strong>metadatos</strong> describen el contenido y las características de los datos o servicios, aportando una información muy valiosa que ayuda a “contextualizar” el dato, y en ocasiones, facilitar su acceso. Estos metadatos tienen que ser: almacenados en un <em>Catálogo</em> on line, consultable para a cualquier usuario, y descritos según unos estándares que aportan las pautas de cómo y qué información hay que dar en cada caso.</p>
+<p>Los datos, por si solos, no nos aportan demasiada información. Por este motivo, es necesaria su descripción. Los <strong>metadatos</strong> describen el contenido y las características de los datos o servicios, aportando una información muy valiosa que ayuda a “contextualizar” el dato, y en ocasiones, facilitar su acceso. Estos metadatos tienen que ser: almacenados en un <em>Catálogo</em> on line, consultable para cualquier usuario, y descritos según unos estándares que aportan las pautas de cómo y qué información hay que dar en cada caso.</p>
 <h4 id="la-visualizacion-y-el-acceso-a-los-datos">La visualización y el acceso a los datos</h4>
-<p>El intercanvio de información y la interoperatividad de los sistemas son dos conceptos clave en una IDE. Ambos se pueden conseguir gracias a los estándares y los geoservicios. OGC ha desarrollado una serie de especificaciones estándar que permiten a dos sistemas diferentes, con arquitecturas y formatos de datos diversos combinar cartografía sin ningún esfuerzo por parte del usuario.</p>
-<p>Para fácilitar la visualización y el acceso a los datos los encargados del desarrollo de la IDE generalmente implementan un <em>Geoportal</em> que incluye entre otras cosas:</p>
+<p>El intercambio de información y la interoperatividad de los sistemas son dos conceptos clave en una IDE. Ambos se pueden conseguir gracias a los estándares y los geoservicios. OGC ha desarrollado una serie de especificaciones estándar que permiten a dos sistemas diferentes, con arquitecturas y formatos de datos diversos combinar cartografía sin ningún esfuerzo por parte del usuario.</p>
+<p>Para facilitar la visualización y el acceso a los datos, los encargados del desarrollo de la IDE generalmente implementan un <em>Geoportal</em> que incluye entre otras cosas:</p>
 <ul>
 <li>Metadatos (descripción del contenido, la cualidad y otras características de los datos)</li>
 <li>Catálogo (publicación en Internet de los metadatos de datos, servicios y esquemas)</li>
 <li>Servicio de acceso a datos y servicios (clientes, visores)</li>
 <li>Servidores de mapas con proveedores de información</li>
 <li>Servicios de geoprocesamiento (procesos informáticos que manipulan y transforman datos geoespaciales: transformaciones de coordenadas, de proyecciones, análisis espacial...)</li>
-<li>Conexiones a otras IDE's.</li>
+<li>Conexiones a otras IDEs.</li>
 </ul>
 <h4 id="los-usuarios-y-colaboradores">Los usuarios y colaboradores</h4>
 <p>Para que una IDE se pueda considerar como tal, tiene que haber unos usuarios que la usen, en este sentido la tarea de difusión es muy importante. A medida que se incrementa su uso, las empresas empiezan a ver las posibilidades comerciales y a implicarse en el proyecto, acelerando así el crecimiento de la IDE.</p>
-<p>Una comunidad IDE esta integrada por varios actores como: productores de datos, proveedores de servicios, usuarios, desarrolladores, invertigadores, etc. Cuanto más abierta y colaborativa sea la comunidad mayor calidad tendrá la IDE. La idea es que incluya organizaciones públicas, privadas, universidades y particulares. Por el momento esta comunidad está formada principalmente por administraciones públicas.</p>
+<p>Una comunidad IDE esta integrada por varios actores como: productores de datos, proveedores de servicios, usuarios, desarrolladores, investigadores, etc. Cuanto más abierta y colaborativa sea la comunidad mayor calidad tendrá la IDE. La idea es que incluya organizaciones públicas, privadas, universidades y particulares. Por el momento esta comunidad está formada principalmente por administraciones públicas.</p>
 <h5 id="conclusiones">Conclusiones</h5>
 <p>Para poder poner en marcha una IDE es necesario disponer de:</p>
 <ul>
@@ -1245,7 +1490,7 @@
 <li><strong>Componente geográfico</strong>, formado por los conjuntos de datos y servicios web geográficos que se proporcionan a través de una IDE, así como los registros de metadatos que los describen.</li>
 <li><strong>Componente social</strong>, que se corresponde con un conjunto de actores, cada uno de ellos con un rol determinado, interesados en su puesta en marcha, ya sea por el hecho de ser productor de datos, de software o por pertenecer a las comunidades de difusión responsables de formar en la filosofía IDE. Este componente es necesario para que una IDE permanezca y se consolide con el paso del tiempo y en consecuencia, consiga el éxito de esta iniciativa en la sociedad.</li>
 </ul>
-<h3 id="principios-en-que-se-basa-el-dearrollo-de-una-ide">Principios en que se basa el dearrollo de una IDE</h3>
+<h3 id="principios-en-que-se-basa-el-desarrollo-de-una-ide">Principios en que se basa el desarrollo de una IDE</h3>
 <ol>
 <li>
 <p>Datos recogidos una vez y mantenidos en el nivel donde se logra máxima
@@ -1296,18 +1541,18 @@ efectividad</p>
 <ul>
 <li>Facilita la toma de decisiones</li>
 <li>Reduce esfuerzos y costes</li>
-<li>Proporciona datos mejores y más actualizados</li>
+<li>Proporciona mejores datos y más actualizados</li>
 <li>Apoya la creación de nuevas oportunidades de negocio.</li>
 </ul>
 <p>Hay que tener presente que una IDE no se tiene que ver sólo desde la vertiente tecnológica sino que existe también una vertiente social, en que los usuarios (el sector público, el privado y la población) tienen que dar su opinión, a partir de la cual se podrán determinar las estrategias a seguir. </p>
 <p>En el proceso de implantación de una IDE también hay que superar obstáculos técnicos (no disponibilidad de datos, de estándares, metadatos, redes de comunicación, banda ancha...), económicos, socio-culturales (conocimiento, educación, seguridad, libertad de acceso...), políticos-legales (datos delicados, propiedad intelectual...) y déficit de suporte (no se conoce la finalidad y el valor de las IDE).</p>
-<p>Las IDE, además de mantener vías de cooperación y relaciones con el sector público y privado de la su región, tienen que hacerlo también tanto con las IDE de su nivel como con las de otros niveles</p>
+<p>Las IDE, además de mantener vías de cooperación y relaciones con el sector público y privado de su región, tienen que hacerlo también tanto con las IDE de su nivel como con las de otros niveles.</p>
 <h3 id="tareas-que-permite-una-ide">Tareas que permite una IDE</h3>
 <ul>
 <li><strong>Buscar</strong> la información que hay disponible ya sea por zona geográfica, formato, año de producción, quién la ha producido, si tiene servicio, etc.</li>
 <li><strong>Visualizar</strong> y superponer mapas, ortofotos, y datos geográficos en general de diferentes organismos, formatos, sistema de referencia, etc.</li>
 <li><strong>Buscar</strong> una entidad geográfica por su nombre y ver su ubicación</li>
-<li><strong>Análisis</strong> realizar opereaciones básicas, como cálculo de perfiles, análisis de superficies, etc.</li>
+<li><strong>Análisis</strong> realizar operaciones básicas, como cálculo de perfiles, análisis de superficies, etc.</li>
 <li><strong>Transformar</strong> de un modelo de datos a otro diferente, si ambos están descritos.</li>
 <li><strong>Descargar</strong> los datos para analizarlos con un SIG. </li>
 </ul>
@@ -1367,13 +1612,13 @@ efectividad</p>
 <p><a href="https://inspire.ec.europa.eu/">INSPIRE (INfrastructure for SPatial InfoRmation in Europe)</a> tiene por objetivo hacer disponible una información geográfica de calidad, armonizada y relevante para apoyar la formulación, la implementación, la monitorización y la evaluación de las políticas comunitarias con un impacto o dimensión territorial.</p>
 <p>INSPIRE es una iniciativa legal de la UE que dirigirá protocolos y estándares, aspectos de coordinación y organización, políticas de datos incluyendo el acceso a los datos y la creación y el mantenimiento de la información espacial.</p>
 <h2 id="futuro-de-las-ides">Futuro de las IDEs</h2>
-<p>1ª Generación de IDEs se centra en los datos espacaciales. El foco son los datos, su publicación, armonización y firma de acuerdos instucionales y definir políticas para compartir información.</p>
-<p>2ª Generación de IDEs se centra en la interoperabilidad. Una vez que los datos ya están disponibles se enfocan en las aplicaciones (geoportales, visores, etc.) y en los servicios (WMS, WFS, WPS, descarga de datos, análisis, etc).</p>
-<p>3ª Generaión de IDES desde mi punto de vista está por definirse si es que llegan a evolucionar y no mueren antes.</p>
-<p>Desde mediados de los 2000 se habla de la IDE semánticas (web semántica, linked data). Más allá del ámbito académico y algnos estudios, han pasado 15 años y no existe un implementación práctica.</p>
-<p>También se habla de incorporar la Información geográfica voluntaria (VGI) a las IDEs pero la naturaleza misma de dicha información choca con la estructura rigida que imponen las IDEs. No veo a nadie haciendo metadatos de OSM por ejemplo.</p>
+<p>1ª Generación de IDEs: se centra en los datos espaciales. El foco son los datos, su publicación, armonización y firma de acuerdos institucionales y definir políticas para compartir información.</p>
+<p>2ª Generación de IDEs: se centra en la interoperabilidad. Una vez que los datos ya están disponibles se enfocan en las aplicaciones (geoportales, visores, etc.) y en los servicios (WMS, WFS, WPS, descarga de datos, análisis, etc).</p>
+<p>3ª Generación de IDES: desde mi punto de vista está por definirse si es que llegan a evolucionar y no mueren antes.</p>
+<p>Desde mediados de los 2000 se habla de la IDE semánticas (web semántica, linked data). Más allá del ámbito académico y algunos estudios, han pasado 15 años y no existe un implementación práctica.</p>
+<p>También se habla de incorporar la Información geográfica voluntaria (VGI) a las IDEs pero la naturaleza misma de dicha información choca con la estructura rígida que imponen las IDEs. No veo a nadie haciendo metadatos de OSM por ejemplo.</p>
 <p>La creación de Información 3D, Modelos BIM, Realidad virtual también ofrecen nuevos retos para las IDEs ya que se necesitan definir nuevos esquemas para estos tipos de datos.</p>
-<p>Seguramente saldrán iniciativas de usa la mineria de datos, big data, inteligencia artificial en las IDEs. Estas técnologias pueden servir para generar metadados de forma automática. También se podrían compartir los modelos de entrenamiendo, juegos de datos, etc.</p>
+<p>Seguramente saldrán iniciativas de usa la minería de datos, big data, inteligencia artificial en las IDEs. Estas tecnologías pueden servir para generar metadados de forma automática. También se podrían compartir los modelos de entrenamiento, juegos de datos, etc.</p>
 <p>El uso del blockchain también podría cambiar a las IDEs, ya que permitiría tener el historial de la información. De hecho la filosofía del blockchain es muy parecida a la de las IDEs.  </p>
 <div class="admonition question">
 <p class="admonition-title">Ejercicio 1 pts</p>
@@ -1414,42 +1659,6 @@ efectividad</p>
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Pie" >
-      
-        
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Anterior: Home" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Anterior
-              </span>
-              Home
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../inspire/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 1.1. INSPIRE" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Siguiente
-              </span>
-              1.1. INSPIRE
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -1471,10 +1680,11 @@ efectividad</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
     
   </body>
