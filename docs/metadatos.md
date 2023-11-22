@@ -72,7 +72,7 @@ Los valores que pueden incorporarse a los metadatos son muy abundantes, tantos c
 
 Las características de los metadatos asociados a los datos dependerán directamente de estos y de algunos factores como los siguientes:
 
-* El tipo de dato y, en particular, el modelo de representación empleado. Los datos vectoriales tendrán asociados unos metadatos distintos que los correspondientes a datos ráster. 
+* El tipo de dato y, en particular, el modelo de representación empleado. Los datos vectoriales tendrán asociados unos metadatos distintos que los correspondientes a datos raster. 
 * La organización, entidad o individuo responsable de la creación de los datos y el uso que se pretende dar a estos.
 * El elemento al que se asocian los metadatos. Como veremos en el siguiente apartado, podemos asociar metadatos a un juego de capas, una capa o una entidad aislada dentro de una capa.
 * El estándar empleado para crear los metadatos.
@@ -81,8 +81,8 @@ Algunos de los elementos comunes que se incorporan a los metadatos geográficos 
 
 * **Información de identificación.** Este tipo de información permite identificar de forma única un dato geográfico y distinguirlo de otros. Esta información ayuda a catalogar los datos, e incluye el nombre, palabras claves, una descripción básica o la ya mencionada extensión geográfica de los datos. 
 * **Información sobre la calidad de los datos.** La información sobre la calidad de los datos puede incluir, entre otros elementos, aquellos relativos a la completitud de estos, los procesos que se han empleado en su creación y mantenimiento, o las operaciones de validación y verificación a las que se han sometido.
-* **Información sobre la representación del dato espacial.** Se incluyen en este grupo la precisión y exactitud de los datos, la escala de trabajo o la resolución en el caso de capas ráster. Este tipo de metadatos están también íntimamente ligados con la calidad de los datos.
-* **Información sobre la componente no espacial.** Información relacionada con los atributos que acompañan a las capas vectoriales, o bien relativas a las variables que se recogen en capas ráster. Esto incluye explicaciones sobre el significado de los nombres de cada uno de los atributos, el rango de valores válidos para cada uno de ellos o los métodos empleados para recoger estos datos.
+* **Información sobre la representación del dato espacial.** Se incluyen en este grupo la precisión y exactitud de los datos, la escala de trabajo o la resolución en el caso de capas raster. Este tipo de metadatos están también íntimamente ligados con la calidad de los datos.
+* **Información sobre la componente no espacial.** Información relacionada con los atributos que acompañan a las capas vectoriales, o bien relativas a las variables que se recogen en capas raster. Esto incluye explicaciones sobre el significado de los nombres de cada uno de los atributos, el rango de valores válidos para cada uno de ellos o los métodos empleados para recoger estos datos.
 * **Información sobre la distribución.** Esta información sirve para definir el acceso a los datos y las posibilidades de distribución de estos, especificando quiénes pueden acceder a ellos y quiénes no, o en qué condiciones pueden hacerlo. También puede recoger elementos como la fecha en que fueron publicados los datos o bien cuándo fueron puestos a disposición del público.
 
 ### Granularidad de los metadatos
@@ -143,7 +143,7 @@ Estos metadatos, que son ficheros con codificación XML que siguen el estándar 
 
 Cabe decir que la confección del metadato no es tarea fácil y que en el se describen campos como por ejemplo: creador de la cartografía, fecha de creación, fecha revisión, accesibilidad, formatos de la información, calidad, distribución o caja de coordenadas de la información descrita.
 
-Una particularidad de los catálogos de metadatos, es que permiten ser interrogados espacialmente (ej. Dime toda la información geográfica existente que intercepte con el trazado de este rio) y algunos de ellos, por ejemplo el de la IDEC, van más allá de un simple repositorio de metadatos y permiten registrar plantillas de transformación entre móldelos de datos geográficos, peticiones a objetos geográficos o estilos de representación cartográficas, todos ellos utilizados como parte de lo geoservicios distribuidos.
+Una particularidad de los catálogos de metadatos, es que permiten ser interrogados espacialmente (ej. Dime toda la información geográfica existente que intercepte con el trazado de este rio) y algunos de ellos, por ejemplo el de la IDEC, van más allá de un simple repositorio de metadatos y permiten registrar plantillas de transformación entre modelos de datos geográficos, peticiones a objetos geográficos o estilos de representación cartográficas, todos ellos utilizados como parte de lo geoservicios distribuidos.
 
 Una vez descrita e inventariada la información geográfica se les pide a los entes integrantes de la IDE que permitan la visualización, básicamente a través de un navegador web, de la información descrita. Para ello se utilizan los servidores de mapas.
 

@@ -1,12 +1,12 @@
 # Infraestructuras de datos espaciales y estándares de geoservicios
 
-Materiales para el curso sobre Infraestructuras de datos espaciales y estándares de geoservicios (SDIS) del Màster en Geoinformació de la UAB
+Materiales para el curso sobre Infraestructuras de datos espaciales y estándares de geoservicios (SDIS) del Máster en Geoinformació de la UAB
 
 Temario:
 
 # [https://gss-mtig.github.io/sdis-mgeo/](https://gss-mtig.github.io/sdis-mgeo/)
 
-* [Introducción a las IDE's](https://gss-mtig.github.io/sdis-mgeo/introduccion_a_las_ides/)
+* [Introducción a las IDEs](https://gss-mtig.github.io/sdis-mgeo/introduccion_a_las_ides/)
     * [INSPIRE](https://gss-mtig.github.io/sdis-mgeo/inspire/)
 * [Estándares OCG](https://gss-mtig.github.io/sdis-mgeo/estandares_OCG/)
     * [WMS](https://gss-mtig.github.io/sdis-mgeo/wms/)
@@ -43,6 +43,6 @@ Temario:
 
     * Reconocimiento — Debe reconocer adecuadamente la autoría, proporcionar un enlace a la licencia e indicar si se han realizado cambios. Puede hacerlo de cualquier manera razonable, pero no de una manera que sugiera que tiene el apoyo del licenciador o lo recibe por el uso que hace.
     
-    * CompartirIgual — Si remezcla, transforma o crea a partir del material, deberá difundir sus contribuciones bajo la misma licencia que el original.
+    * Compartir igual — Si remezcla, transforma o crea a partir del material, deberá difundir sus contribuciones bajo la misma licencia que el original.
     
     * No hay restricciones adicionales — No puede aplicar términos legales o medidas tecnológicas que legalmente restrinjan realizar aquello que la licencia permite.

@@ -23,7 +23,7 @@ Nos permite descubrir cuales son las capacidades del servidor. Como respuesta va
 | VERSION   | Obligatorio    | Versión de la especificación OGC (1.0.0, 1.1.0, 1.1.1, 1.3.0)          |
 | SERVICE   | Obligatorio    | Tipo de servicio al que va dirigida la petición (**WMS**)                  |
 | REQUEST   | Obligatorio    | Nombre de la operación (**GetCapabilities**)                               |
-| LANGUAGE  | Opcional       | Se obtiene el fichero de salida en el idioma solicidado                |
+| LANGUAGE  | Opcional       | Se obtiene el fichero de salida en el idioma solicitado                |
 | FORMAT    | Opcional       | Formato de salida del metadato del servicio.   (Por defecto text/xml)  |
 
 Ejemplos: 
@@ -34,9 +34,9 @@ http://geoserveis.icc.cat/icc_bt5m/wms/service?REQUEST=GetCapabilities&SERVICE=W
 
 #### Aspectos prácticos
 
-##### Tamaño máximo de la imágen
+##### Tamaño máximo de la imagen
 
-Si se pide una imagen mayor que el tamaño máximo permitodo retornará un error
+Si se pide una imagen mayor que el tamaño máximo permitido retornará un error
 
 ``` xml
 <Service>
@@ -76,7 +76,7 @@ En algunos software de escritorio utiliza esta url para hacer las peticiones de 
 
 El atributo queryable indica si la capa es consultable (1 =  consultable, 0 = no consultable)
 
-Name es indentificador de la capa. Es el valor que se debe usar en el parámetro LAYERS de las peticiones GetMap
+Name es identificador de la capa. Es el valor que se debe usar en el parámetro LAYERS de las peticiones GetMap
 
 Title es nombre descriptivo de la capa
 
@@ -143,8 +143,8 @@ Petición GetMap devolverá un mapa en formato imagen, ya sea un PNG, JPEG, GIF,
 | STYLES      | Obligatorio    | Lista de estilos separados por coma. Si no hay estilo se puede dejar en blanco                                 |
 | SRS o CRS   | Obligatorio    | Código ESPG del sistema de referencia                                                                          |
 | BBOX        | Obligatorio    | Caja de coordenadas del mapa (minx,miny,maxx,maxy)                                                             |
-| WIDTH       | Obligatorio    | Número píxeles del ancho de la imágen                                                                          |
-| HEIGHT      | Obligatorio    | Número píxeles del alto de la imágen                                                                           |
+| WIDTH       | Obligatorio    | Número píxeles del ancho de la imagen                                                                          |
+| HEIGHT      | Obligatorio    | Número píxeles del alto de la imagen                                                                           |
 | TRANSPARENT | Opcional       | Indica si el fondo del mapa debe ser transparente (true ,false)                                                |
 | BGCOLOR     | Opcional       | Color de fondo para la imagen del mapa. El valor está en la formato RRGGBB hexadecimal                         |
 | SLD         | Opcional       | Una URL que hace referencia a un archivo XML StyledLayerDescriptor que controla el estilo de las capas de mapa |
@@ -168,8 +168,8 @@ Petición GetFeatureInfo sirve para mostrar los atributos de los objetos del map
 | STYLES        | Obligatorio    | Lista de estilos separados por coma. Si no hay estilo se puede dejar en blanco |
 | SRS o CRS     | Obligatorio    | Código ESPG del sistema de referencia                                          |
 | BBOX          | Obligatorio    | Caja de coordenadas del mapa (minx,miny,maxx,maxy)                             |
-| WIDTH         | Obligatorio    | Número píxeles del ancho de la imágen                                          |
-| HEIGHT        | Obligatorio    | Número píxeles del alto de la imágen                                           |
+| WIDTH         | Obligatorio    | Número píxeles del ancho de la imagen                                          |
+| HEIGHT        | Obligatorio    | Número píxeles del alto de la imagen                                           |
 | QUERY_LAYERS  | Obligatorio    | Lista de nombres de las capas que se quieren consultar separadas por coma      |
 | X o I            | Obligatorio    | Valor del píxel a consultar                                                    |
 | Y o J           | Obligatorio    | Valor del píxel a consultar                                                    |
@@ -192,8 +192,8 @@ Petición que devuelve una imagen de la imagen de la leyenda del mapa de una cap
 | REQUEST   | Obligatorio    | Nombre de la operación (**GetLegendGraphic**)                  |
 | LAYER     | Obligatorio    | Nombre de la capa                                              |
 | FORMAT    | Obligatorio    | Formato de salida de la imagen.  (image/png, image/jpeg, ...)  |
-| WIDTH     | Opcional       | Número píxeles del ancho de la imágen                          |
-| HEIGHT    | Opcional       | Número píxeles del alto de la imágen                           |
+| WIDTH     | Opcional       | Número píxeles del ancho de la imagen                          |
+| HEIGHT    | Opcional       | Número píxeles del alto de la imagen                          |
 
 Ejemplo:
 

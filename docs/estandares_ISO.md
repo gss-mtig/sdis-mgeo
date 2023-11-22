@@ -16,7 +16,7 @@ Los servicios de catálogo que defiende OGC están basados en especificaciones e
 
 
 ![Estandares IDEs](img/estandares_ides.png "Estandares IDEs")
-*Algunos de los estandares más importantes de las IDEs (Basado en Smits et al., 2002)*
+*Algunos de los estándares más importantes de las IDEs (Basado en Smits et al., 2002)*
 ### ISO 19115 (Metadatos)
 
 Esta norma internacional proporciona un modelo y establece un conjunto común de terminología, definiciones y procedimientos de aplicación para los metadatos. Mediante la definición de elementos de metadatos se va a poder describir la información sobre la identificación, la extensión, la calidad, el modelo espacial y temporal, la referencia espacial y la distribución de los datos geográficos.
@@ -27,9 +27,9 @@ La Norma Internacional ISO 19115-1:2014 *"Geographic Information Metadata Part 1
 
 La Norma ISO 19115-2:2009 *"Información Geográfica Metadatos Extensión para imágenes y datos malla"* es un complemento de la ISO 19115-1 y define los elementos de metadatos adicionales necesarios para describir adecuadamente las imágenes geográficas y los datos malla (*raster*).
 
-Una importante fuente de información utilizada en los Sistemas de Información Geográfica son las imágenes de satélite, orto-fotografías, modelos digitales, etc. Estos datos de tipo ráster y malla poseen características intrínsecas particulares, que deben quedar reflejadas mediante los metadatos. A pesar de que la norma ISO 19115 contiene algunos elementos destinados a documentar estetipo de información, éstos resultan escasos para documentar de forma correcta y completa la información ráster y por ese motivo se creo la ISO 19115-2.
+Una importante fuente de información utilizada en los Sistemas de Información Geográfica son las imágenes de satélite, orto-fotografías, modelos digitales, etc. Estos datos de tipo raster y malla poseen características intrínsecas particulares, que deben quedar reflejadas mediante los metadatos. A pesar de que la norma ISO 19115 contiene algunos elementos destinados a documentar este tipo de información, éstos resultan escasos para documentar de forma correcta y completa la información raster y por ese motivo se creo la ISO 19115-2.
 
-El objetivo de esta norma es definir los metadatos asociados a datos ráster y malla que van a contener información sobre: 
+El objetivo de esta norma es definir los metadatos asociados a datos raster y malla que van a contener información sobre: 
 
 * Las propiedades de los equipos de medición usados para adquirir los datos. 
 * La geometría de los procesos de medición empleados por los equipo.
@@ -41,7 +41,7 @@ La Norma ISO/TS 19115-3:2016 *"Información Geográfica Metadatos Parte 3 Implem
 Se aplica a diferentes niveles de información conjuntos de datos geográficos, series de conjunto de datos, fenómenos geográficos individuales, propiedades de los fenómenos, etc
 
 ![Niveles de información](img/iso_19115.png "Niveles de información")[^2]
-*Ejemplos prácticos de elemenentos a los que se puede aplicar la norma.*
+*Ejemplos prácticos de elementos a los que se puede aplicar la norma.*
 
 Esta Norma de Metadatos es de una gran complejidad e incluye una extensa serie de elementos de metadatos, unos obligatorios y otros opcionales. El documento consta de 140 páginas, incluye un total de 409 ítems y define 27 listas controladas, mediante las que se definen los posibles valores válidos de ciertos campos.
 
@@ -92,7 +92,7 @@ La norma ISO 19115 proporciona una estructura para describir información geogr�
 
 ISO 19139 es una especificación técnica que desarrolla una implementación en XML (Esquema XML) del modelo de metadatos descrito por ISO 19115.
 
-Un archivo de intercambio de metadatos, acorde con el estándar ISO19115 y en formato XML, va a ser un documento XML que siga la sintaxis definida por la especificación técnica ISO 19139. Es decir, esta especificación técnica define un conjunto de esquemas en XML quevan a describir los metadatos asociados a cada nivel de información, permitiendo así su descripción, asegurando su validación y su posterior intercambio a través de archivos de metadatos.
+Un archivo de intercambio de metadatos, acorde con el estándar ISO19115 y en formato XML, va a ser un documento XML que siga la sintaxis definida por la especificación técnica ISO 19139. Es decir, esta especificación técnica define un conjunto de esquemas en XML que van a describir los metadatos asociados a cada nivel de información, permitiendo así su descripción, asegurando su validación y su posterior intercambio a través de archivos de metadatos.
 
 ## Referencias
 

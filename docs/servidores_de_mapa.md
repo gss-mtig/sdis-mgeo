@@ -13,13 +13,13 @@ Las capacidades fundamentales a las que responden los servidores dentro del ámb
 
 * **Servir representaciones de los datos.** Los servicios de cartografía Web, tanto en sus orígenes como en la actualidad, son eminentemente gráficos, y en última instancia lo que la aplicación Web correspondiente va a hacer es mostrarnos algún tipo de imagen con un mapa formado a partir de una serie de datos geográficos. Ejemplo WMS
 
-El servidor puede responder directamente a este tipo de necesidades, preparando una imagen a partir de los datos geográficos de los que dispone. En el caso de que estos sean ya imágenes —por ejemplo, imágenes de satélite u ortofotos—, bastará servir estas, transmitiendo una versión escalada de las dimensiones exactas que el cliente necesite para representar en pantalla. En caso de que los datos sean de tipo vectorial, o bien ráster sin una forma de representación implícita —por ejemplo, un Modelo Digital del Terreno— es necesario emplear algún método para asignarles dicha representación. Este puede ser asignado por defecto por el servidor, que establecerá una simbología fija, o bien ofrecer un servicio más complejo en el que el cliente no solo pide una representación gráfica de una serie de datos para una zona dada, sino que además puede especificar cómo crear esa representación (vía SLD).
+El servidor puede responder directamente a este tipo de necesidades, preparando una imagen a partir de los datos geográficos de los que dispone. En el caso de que estos sean ya imágenes —por ejemplo, imágenes de satélite u ortofotos, bastará servir estas, transmitiendo una versión escalada de las dimensiones exactas que el cliente necesite para representar en pantalla. En caso de que los datos sean de tipo vectorial, o bien raster sin una forma de representación implícita —por ejemplo, un Modelo Digital del Terreno— es necesario emplear algún método para asignarles dicha representación. Este puede ser asignado por defecto por el servidor, que establecerá una simbología fija, o bien ofrecer un servicio más complejo en el que el cliente no solo pide una representación gráfica de una serie de datos para una zona dada, sino que además puede especificar cómo crear esa representación (vía SLD).
 
 * **Servir los datos directamente.** Una opción más flexible que lo anterior es que el servidor provea directamente los datos geográficos y sea después el cliente quien los utilice como corresponda, bien sea simplemente representándolos —en cuyo caso debería ser el propio cliente quien establezca la simbología, ya que esta tarea ya no queda en manos del servidor— o bien trabajando con ellos de cualquier otra forma, como por ejemplo analizándolos. Ejemplo WFS, Vector Tiles
 
 Aunque las posibilidades son mayores en este caso, se requieren por parte del cliente unas capacidades mayores, ya que mientras que representar una imagen es algo sumamente sencillo desde el punto de vista técnico, crear esta a partir de los datos geográficos es más complejo.
 
-* **Servir consultas.** Un paso más allá en la funcionalidad que puede ofrecer el servidor es responder a preguntas realizadas por el cliente relativas a los datos, ya sean estas relativas a la parte espacial de dichos datos, o bien a su componente temática. El servidor puede ofrecer como respuesta conjuntos reducidos de los datos de los que dispone, o valores que describan a estos. Estas consultas pueden ser útiles, por ejemplo, para establecer filtros previos cuando se dispone de un conjunto amplio de orígenes de datos. Un cliente Web puede obtener datos de distintos servidores, y puede consultar si, para un zona dada, estos servidores disponen de información, sin más que consultar la extensión cubierta por los datos de cada uno de ellos y comprobar si se interseca con la región de interés. En función de la respuesta, puede o no realizarse posteriormente el acceso a los datos en sí. Ejemplo CSW
+* **Servir consultas.** Un paso más allá en la funcionalidad que puede ofrecer el servidor es responder a preguntas realizadas por el cliente relativas a los datos, ya sean estas relativas a la parte espacial de dichos datos, o bien a su componente temática. El servidor puede ofrecer como respuesta conjuntos reducidos de los datos de los que dispone, o valores que describan a estos. Estas consultas pueden ser útiles, por ejemplo, para establecer filtros previos cuando se dispone de un conjunto amplio de orígenes de datos. Un cliente Web puede obtener datos de distintos servidores, y puede consultar si, para un zona dada, estos servidores disponen de información, sin más que consultar la extensión cubierta por los datos de cada uno de ellos y comprobar si se intersecta con la región de interés. En función de la respuesta, puede o no realizarse posteriormente el acceso a los datos en sí. Ejemplo CSW
 
 * **Servir procesos.** Por último, un servidor puede ofrecer nuevos datos, espaciales o no espaciales, resultantes de algún tipo de proceso o cálculo a partir de datos espaciales. En este caso, el proceso constituye en sí el servicio ofrecido por el servidor, y el cliente debe definir los parámetros de entrada de este y los posibles parámetros de ajuste que resulten necesarios. Los datos con los que se trabaja pueden ser proporcionados por el cliente, incorporándolos a su propia petición, o bien pueden residir en el propio servidor. En este último caso, el servidor ofrece tanto los datos, como la posibilidad de extraer resultados a partir de ellos, es decir, los datos y una herramienta para explotarlos. También pueden emplearse datos en un servidor distinto, a los que el servidor de procesos puede acceder si estos están disponibles, convirtiéndose en cliente de ese segundo servidor. Ejemplo WPS
 
@@ -46,7 +46,7 @@ http://www.mapserver.org/
 **Principales características**
 
 * Proporciona una API (MapScript) que permite acceder a las funcionalidades de MapServer desde diferentes lenguajes de programación como PHP, Java, Python, Perl, Ruby y .NET (C#).
-* Soporta múltiples formatos de entrada (vectorial/ráster) y salida ya que usa GDAL/OGR.
+* Soporta múltiples formatos de entrada (vectorial/raster) y salida ya que usa GDAL/OGR.
 * Soporta fuentes TrueType (útil para el etiquetado de elementos).
 * Configuración “al vuelo” vía parámetros GET pasados por URL.
 * Configuración basada en el fichero mapfile .map.
@@ -85,8 +85,8 @@ MapProxy no es sólo una solución de caché de mosaico, también ofrece muchas 
 
 * Sirve como cache de teselas
 * Reprojecta WMS y teselas a otros SRS
-* Guardar teselas identicas sólo una vez (Ej. teselas del mar)
-* Permite manipular las bandas de las imagenes para crear imagenes de otros colores (Ej. escala de grises)
+* Guardar teselas idénticas sólo una vez (Ej. teselas del mar)
+* Permite manipular las bandas de las imágenes para crear imágenes de otros colores (Ej. escala de grises)
 * Permite pregenerar caches (Seeding) de areas determinadas
 * Combina múltiples capas y servicios
 
@@ -108,8 +108,8 @@ Antes de publicar la información es importante preparar la misma, ya que esto p
 
 Los principales servidores de mapas pueden consumir la información de diferentes fuentes como por ejemplo:
 
-* *Bases de datos*: cargar la información en una base de datos geográfica es muy recomendable ya sea tanto para trabajar con la misma como para su publicación. Ya que permite hacer operaciónes sobre la información y permite de una forma sencilla seleccionar que datos o atributos queremos publicar sin tener que duplicar la información
-* *RAW data*: en algunos casos queremos publicar los datos en el formato de origen y sin procesar. Por ejemplo imágenes de satelite. Se puede publicar el archivo original o se puede publicar una imágen creada a partir de una combinación de bandas.
+* *Bases de datos*: cargar la información en una base de datos geográfica es muy recomendable ya sea tanto para trabajar con la misma como para su publicación. Ya que permite hacer operaciones sobre la información y permite de una forma sencilla seleccionar que datos o atributos queremos publicar sin tener que duplicar la información
+* *RAW data*: en algunos casos queremos publicar los datos en el formato de origen y sin procesar. Por ejemplo imágenes de satélite. Se puede publicar el archivo original o se puede publicar una imagen creada a partir de una combinación de bandas.
 * *Pirámides cache*: Generar pirámides de cache permite mejorar el rendimiento de nuestro servicio ya que para cada petición no tiene que procesar la información y generar la respuesta sino que ya tiene la respuesta generada en cache y sirve directamente esta respuesta.
 * *Generalizar la información*: preparar la información para su visualización dependiendo de la escala. Por ejemplo generar los overview de imágenes (esto sirve para generar imágenes de menor resolución)
 
@@ -125,7 +125,7 @@ Imagen con overview
 
 1. Abrir un nuevo proyecto en QGIS
 
-2. Cargar la capa de municipios que nos descargarmos del ICGC.
+2. Cargar la capa de municipios que nos descargamos del ICGC.
 
 3. Generar la capa de comarcas a partir de la capa de municipios.
 
@@ -133,7 +133,7 @@ Imagen con overview
 
 5. Guardar el proyecto con el nombre mun_com.qgs
 
-6. Modificar las propiedes del proyecto. En la pestaña de Servidor de QGIS
+6. Modificar las propiedades del proyecto. En la pestaña de Servidor de QGIS
 
     * Seleccionar la casilla de Capacidades del servicio
     * Capacidades WMTS -> Seleccionar las casilla de publicado, png y jpeg para las capas

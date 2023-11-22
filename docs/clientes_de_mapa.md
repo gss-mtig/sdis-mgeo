@@ -286,7 +286,7 @@ Presionar el botón de **Obtener Capas** para cargar las capas del servicio y se
 ![ArcGis Online agregar WMS](img/aol_add_wms_icgc.png "ArcGis Online agregar WMS")
 ArcGis Online agregar WMS
 
-Finalmente presionar el botón de *Agregar capa* para ver la capa en nuetro mapa
+Finalmente presionar el botón de *Agregar capa* para ver la capa en nuestro mapa
 
 ![ArcGis Online capa WMS](img/aol_resultado_wms.png "ArcGis Online capa WMS")
 ArcGis Online capa WMS

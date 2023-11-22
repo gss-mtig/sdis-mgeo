@@ -6,13 +6,13 @@ INSPIRE es una iniciativa legal de la UE que dirigirá protocolos y estándares,
 
 El 17 de noviembre de 2003, el Parlamento Europeo aprobó la Directiva 2003/98 CE, en lo referente a la reutilización de la información del sector público. Su finalidad es fijar un marco legal que armonice el uso y la explotación de la información del sector público (condiciones de reutilización, formatos disponibles, principios de tarificación, transparencia, etc.), fomentando así un mercado interior entre todos los estados miembros.
 
-La nueva directiva se dirige claramente a facilitar información desde las Entidades Públicas hacia el sector privado, que puede darle un amplio valor añadido a. De manera especial favorecerá la difusión de información geográfica, dado que las administraciones públicas son el principal generador de este tipo de información. Lo que puede reforzar iniciativas IDE, entre muchas de otras.
+La nueva directiva se dirige claramente a facilitar información desde las Entidades Públicas hacia el sector privado, que puede darle un amplio valor añadido a. De manera especial favorecerá la difusión de información geográfica, dado que las administraciones públicas son el principal generador de este tipo de información. Lo que puede reforzar iniciativas IDE, entre muchas otras.
 
 Para asegurar que las infraestructuras de datos espaciales de los Estados miembros sean compatibles e interoperables en un contexto comunitario y transfronterizo, la Directiva exige que se adopten Normas de Ejecución comunes Implementing Rules) específicas para las siguientes áreas metadatos, conjuntos de datos, servicios de red, servicios de datos espaciales, datos y servicios de uso compartido y seguimiento e informes Estas normas son de obligado cumplimiento en cada uno de los países de la Unión
 
 La Directiva INSPIRE se aplica en diferentes etapas hasta el 2021 que deberá tener aplicación plena
 
-Es el primer paso de una amplia iniciativa multisectorial, que inicialmente se centrará en la información espacial necesaria para las políticas medio ambientales y que estará abierta a las necesidades de otras áreas políticas como la agricultura y el transporte.
+Es el primer paso de una amplia iniciativa multisectorial, que inicialmente se centrará en la información espacial necesaria para las políticas medioambientales y que estará abierta a las necesidades de otras áreas políticas como la agricultura y el transporte.
 
 La situación general respecto a la información espacial en Europa es de fragmentación de datos y fuentes. Hay lagunas en la disponibilidad de los datos, carencia de harmonización entre conjuntos de datos en las diferentes escalas y sistemas de referencia y duplicación de la información. Estos problemas hacen difícil la identificación, el acceso y el uso de los datos disponibles.
 
@@ -72,17 +72,17 @@ Conjunto de datos existentes (producidos antes del 8/12/2010)
 |------------|------------|------------|
 | 23/11/2017 | 21/10/2020 | 21/10/2020 |
 
-Como podemos ver ya los plazos límites se han terminado y todavía queda mucho por hacer por parte de las adminsitraciones para cumplir con las normativa. 
+Como podemos ver ya los plazos límites se han terminado y todavía queda mucho por hacer por parte de las administraciones para cumplir con las normativa. 
 
 Existe un procedimiento que se puede seguir en caso de incumplimiento. Para más detalles https://www.idee.es/resources/documentos/20160209INFORME_SOBRE_EL_ALCANCE_DE_LA_DIRECTIVA_INSPIRE__INCUMPLIMIENTO.pdf
 
 ## Servicio de descargas
 
-El servicio de descargas INSPIRE basado en [**ATOM**](https://es.wikipedia.org/wiki/Atom_(formato_de_redifusi%C3%B3n)) proporciona una forma simple para publicar información en la web de forma de fuentes (**feeds**). El *feed* es un documento basado en XML y permite la búsqueda de actualizaciones del contenido publicado en una web. Una fuente puede tener entradas de diversos tipos: textos, imágenes y en el caso de los servicios de descarga conjutos de datos espaciales.
+El servicio de descargas INSPIRE basado en [**ATOM**](https://es.wikipedia.org/wiki/Atom_(formato_de_redifusi%C3%B3n)) proporciona una forma simple para publicar información en la web de forma de fuentes (**feeds**). El *feed* es un documento basado en XML y permite la búsqueda de actualizaciones del contenido publicado en una web. Una fuente puede tener entradas de diversos tipos: textos, imágenes y en el caso de los servicios de descarga conjuntos de datos espaciales.
 
 La guía técnica publicada propone la utilización del estándar OpenSearch para la implementación del mecanismo de búsqueda. [Open Search](https://www.opensearch.org/) permite especificar, mediante un fichero XML, las operaciones y sus parámetros de forma estructurada e interoperable y siendo reconocido por los navegadores más importantes.
 
-Es es una práctica común que para facilitar la organización y utilización se establezcan 2 nivles de acceso a los ficheros ATOM. Un primer nivel donde se definen las entradas (*sub-feeds*) de la lista de fuentes *Dataset feed* de los distintos productos y un segundo nivel donde se encuentran los distintos enlaces de descarga de los *dataset*.
+Es es una práctica común que para facilitar la organización y utilización se establezcan 2 niveles de acceso a los ficheros ATOM. Un primer nivel donde se definen las entradas (*sub-feeds*) de la lista de fuentes *Dataset feed* de los distintos productos y un segundo nivel donde se encuentran los distintos enlaces de descarga de los *dataset*.
 
 Una ventaja que tienen los servicios de descarga ATOM sobre los basados en WFS es que es una alternativa más sencilla para conjuntos de datos predefinidos, ya que es más fácil de implementar, implica menos recursos y no necesita de software específico.
 

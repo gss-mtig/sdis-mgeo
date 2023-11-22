@@ -33,7 +33,7 @@ En estas especificaciones no se menciona ni la arquitectura, plataforma o lengua
 
 Los documentos, antes de ser consideradas como una OpenGIS Implementation Specification, son elaborados y probados por diferentes grupos de trabajo dentro de OGC y finalmente sometidas a votación.
 
-Los servicios de cartografía online o web de OGC (OWS) son estándares de OGC creados para su uso en aplicaciones de la World Wide Web (WWW). Estos permiten formular petiones al servidor para: enviar preguntas, obtener datos vectoriales o ráster, hacer geoprocesos, etc.   
+Los servicios de cartografía online o web de OGC (OWS) son estándares de OGC creados para su uso en aplicaciones de la World Wide Web (WWW). Estos permiten formular peticiones al servidor para: enviar preguntas, obtener datos vectoriales o raster, hacer geoprocesos, etc.   
 
 Todos los estándares creados por OGC se pueden consultar en [https://www.ogc.org/docs/is](https://www.ogc.org/docs/is)
 

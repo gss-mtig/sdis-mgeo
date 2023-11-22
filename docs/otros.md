@@ -16,7 +16,7 @@ Se puede ver la especificación en [https://www.ogc.org/standards/wmc](https://w
 
 Es un lenguaje XML centrado en la descripción y visualización de la geoinformación en actuales y futuras aplicaciones webs de gestión de mapas (2d y 3d). 
 
-Este lenguaje fue presentado por Google al OGC con el objetivo de incoroporarlo como un estándar. Actualmente OGC y Google trabajan en colaboración para asegurar este proceso.
+Este lenguaje fue presentado por Google al OGC con el objetivo de incorporarlo como un estándar. Actualmente OGC y Google trabajan en colaboración para asegurar este proceso.
 
 Se puede ver la especificación en [https://www.ogc.org/standards/kml](https://www.ogc.org/standards/kml)
 
@@ -28,7 +28,7 @@ La diferencia principal con el WMS es que el servicio WCS proporciona los datos 
 
 Básicamente sirve para descargar archivos raster a escala 1 a 1 y preparados para poder trabajarlos en un sig raster.
 
-Principales inerfaces:
+Principales interfaces:
 * GetCapabilities
 * DescribeCoverage
 * GetCoverage

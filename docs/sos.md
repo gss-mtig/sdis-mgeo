@@ -1,6 +1,6 @@
 ## SOS
 
-El estandar SOS (Sensor Observation Service) es un servicio de datos. Define un interface estandarizado y operaciones para el acceso a observaciones desde sensores y sistemas de sensores que es consistente con todos los sistemas, incluyendo remoto, in-situ, fijos y sensores móviles. SOS proporciona resultados de consultas en el formato estandar de observación y medida (en inglés Observation and Mesurements, O&M) para modelizar observaciones de sensores y la especificación SensorML para modelizar sensores y sistemas sensor.
+El estándar SOS (Sensor Observation Service) es un servicio de datos. Define un interface estandarizado y operaciones para el acceso a observaciones desde sensores y sistemas de sensores que es consistente con todos los sistemas, incluyendo remoto, in-situ, fijos y sensores móviles. SOS proporciona resultados de consultas en el formato estándar de observación y medida (en inglés Observation and Mesurements, O&M) para modelizar observaciones de sensores y la especificación SensorML para modelizar sensores y sistemas sensor.
 
 Una observación es un evento cuyo resultado es una estimación del valor de alguna propiedad de la característica de interés, obtenida usando un procedimiento específico. 
 
@@ -42,11 +42,11 @@ Normalmente viene descrito en el formato SensorML.
 
 Se puede considerar una Procedure como una ficha de metadatos acerca del (los) sensor(es) o proceso(s) a cargo de generar los datos que ofrece el servicio.
 
-Un Offering está relacionado con una sola Procedure, mientras que una Procedure puede ser usada en diferentes Offerings. Por ejemplo, una Procedure podría ser una “Red de Estaciones Meteorológicas”, y ésta misma red de estaciones ser usada en diferentes Offerings, por ejemplo para diferentes períodos de tiempo. El Offerinf sería “Medidas de la Red de Estaciones Meteorológicas para el año 2015”.
+Un Offering está relacionado con una sola Procedure, mientras que una Procedure puede ser usada en diferentes Offerings. Por ejemplo, una Procedure podría ser una “Red de Estaciones Meteorológicas”, y ésta misma red de estaciones ser usada en diferentes Offerings, por ejemplo para diferentes períodos de tiempo. El Offering sería “Medidas de la Red de Estaciones Meteorológicas para el año 2015”.
 
 ### Feature of Interest
 
-Cada observacion en un servicio SOS está ligada a una Feature Of Interest (FoI), que habitualmente determina el lugar donde el fenómeno observado tuvo lugar. Por ejemplo, para imágenes satélite, la FoI podría ser su footprint (polígono que determina el área fotografiada sobre la superficie de la tierra), o para una medición de temperatura, la FoI podría ser la ubicación del termómetro (punto).
+Cada observación en un servicio SOS está ligada a una Feature Of Interest (FoI), que habitualmente determina el lugar donde el fenómeno observado tuvo lugar. Por ejemplo, para imágenes satélite, la FoI podría ser su footprint (polígono que determina el área fotografiada sobre la superficie de la tierra), o para una medición de temperatura, la FoI podría ser la ubicación del termómetro (punto).
 
 Las FoI pueden considerarse como el conjunto de lugares a los que están referidos los datos.
 

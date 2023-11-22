@@ -1,9 +1,9 @@
-# Introducción a las IDE's
+# Introducción a las IDEs
 
 Temario
 
 * Antecedentes
-* Qué es una IDE?
+* ¿Qué es una IDE?
 * Componentes de una IDE
 * IDEC
 * IDEE
@@ -12,7 +12,7 @@ Temario
 
 Tradicionalmente, la obtención de información geográfica ha estado caracterizada por una serie de dificultades (formatos, precios, dónde buscarla...), ya que está muy dispersa y en diferentes formatos.
 
-No obstante, el desarrollo de tecnologías de la información y la mejora de las comunicaciones tiene que permitir salvar todos estos obstáculos y facilitar el acceso tanto a la información del sector público como privado amparándose en unas políticas de consenso y en un marco legal establecido. Si a todo esto le sumamos el uso de herramientas desarrolladas con tecnologías estándar las posibilidades de búsqueda, acceso y intercambio de información son infinitas.
+No obstante, el desarrollo de tecnologías de la información y la mejora de las comunicaciones tiene que permitir salvar todos estos obstáculos y facilitar el acceso tanto a la información del sector público como privado amparándose en unas políticas de consenso y en un marco legal establecido. Si a todo esto le sumamos el uso de herramientas desarrolladas con tecnologías estándar las posibilidades de búsqueda, acceso e intercambio de información son infinitas.
 
 La información geográfica es uno de los elementos más esenciales en la toma de decisiones, así como uno de los más costosos (entre un 70 y un 80% de los costes de un proyecto SIG están destinados a la compra y/o mantenimiento de los datos). Esta información está concentrada mayoritariamente al sector público (se estima que entre un 80 y un 90% de la información geográfica es generada por administraciones públicas). El hecho de no conocer la información disponible, hace que los datos puedan ser comprados una y otra vez por diferentes administraciones, aumentando innecesariamente el coste de los proyectos.
 
@@ -29,13 +29,13 @@ La primera IDE se implantó a mediados de los 90, cuando EEUU inició el desarro
 En 1994, Bill Clinton aprobó la Orden Ejecutiva 12906 dónde decía:
 > *"La información geográfica es vital para a promover el desarrollo económico, aprovechar nuestros recursos naturales y proteger el medio ambiente. La tecnología moderna permite mejorar la adquisición, distribución y utilización de datos geográficos y cartográficos. La Revisión del Desarrollo Nacional, ha recomendado que la rama ejecutiva desarrolle, en cooperación con los estados, los gobiernos locales y el sector privado, una Infraestructura Nacional de Datos Espaciales para a apoyar las aplicaciones de los datos geoespaciales en el sector público y privado, en áreas como el transporte, el desarrollo comunitario, la agricultura, la atención de emergencias, la gestión ambiental y la tecnología de información".*
 
-En 1996 se celebra la 1ª Conferencia Internacionla del GSDI (Global Spatial Data Infrastructure).
+En 1996 se celebra la 1ª Conferencia Internacional del GSDI (Global Spatial Data Infrastructure).
 
 Otros países iniciaron los primeros pasos con los mismos objetivos. Los países que habían implementado IDE de primera generación, se replantean la iniciativa y la van actualizando y modificando, adaptándola a las necesidades del momento (se puede situar en el año 2000). Esto trajo un rápido incremento de nuevos países que se implicaron en el proceso de creación de infraestructuras de datos (el año 2002, 120 países habían iniciado o iniciaban proyectos IDE) y la aparición de una comunidad IDE, en la cual se podían compartir e intercambiar experiencias.
 
 En 2004 se consolida tras la constitución formal de la GSDI.
 
-## Qué es una IDE?
+## ¿Qué es una IDE?
 
 Existen varias definiciones para describir IDE, pero una de las mas utilizada y extendida es la elaborada por la Federal Geographic Data Committee (FGDC) que la define como: *Una Infraestructura de Datos Espaciales (IDE) se puede definir como un conjunto de tecnologías, políticas, estándares y recursos humanos necesarios para a adquirir, procesar, almacenar, distribuir y mejorar la utilización de la información geográfica - Federal Geographic Data Committee (FGDC)*
 
@@ -62,7 +62,7 @@ Conceptualmente, las Infraestructuras de datos tienen la misma finalidad que las
 | Parking                                                         | Almacén de geodatos de los proveedores                                                       |
 | Fabricante de coches                                            | Proveedores de datos y servicios                                                             |
 | Código de circulación                                           | Estándares                                                                                   |
-| Regulación tránsito                                             | Política + Lesgislación                                                                      |
+| Regulación tránsito                                             | Política + Legislación                                                                      |
 | Política (Centro de control de tránsito)                        | Marco institucional (Centro de Geodatos)                                                     |
 
 Una buena infraestructura viaria proporciona una mejor accesibilidad, de lo que se deriva una mejor comunicación entre regiones y, por tanto, un incremento del comercio. Esta es precisamente, la finalidad de las IDE: facilitar el acceso y el uso de la información geográfica y fomentar su comercio.
@@ -83,9 +83,9 @@ Una IDE está compuesta de 5 elementos fundamentales:
 
 #### Marco institucional
 
-Para que una IDE pueda prosperar tiene que contar con un suporte institucional firme que garantice su impulso inicial. Este suporte se tiene que plasmar con un marco legal adecuado, que anime a las diferentes administraciones públicas o entidades a participar en las activitades de la IDE.
+Para que una IDE pueda prosperar tiene que contar con un suporte institucional firme que garantice su impulso inicial. Este suporte se tiene que plasmar con un marco legal adecuado, que anime a las diferentes administraciones públicas o entidades a participar en las actividades de la IDE.
 
-Por ejemplo la directiva europea INSPIRE y la ley española LISIGE se han eleborado de forma participativa. Estos marcos legales cumplen la función de consolidar las reglas acordadas por la comunidad para dar seguridad jurídica y sostenibilidad al proyecto. Debe ser un marco jurídico mínimo neceario para que se desarrollen con garantías las IDEs haciendo que no todo dependa de la buena voluntad de las partes implicadas. 
+Por ejemplo la directiva europea INSPIRE y la ley española LISIGE se han elaborado de forma participativa. Estos marcos legales cumplen la función de consolidar las reglas acordadas por la comunidad para dar seguridad jurídica y sostenibilidad al proyecto. Debe ser un marco jurídico mínimo necesario para que se desarrollen con garantías las IDEs haciendo que no todo dependa de la buena voluntad de las partes implicadas. 
 
 #### Los datos y sus descriptores
 
@@ -93,26 +93,26 @@ Cualquier tipo de data que de forma directa o indirecta haga referencia a una lo
 
 Las administraciones públicas son las propietarias de la mayoría de la información geográfica de referencia para lo cual, asegurando su implicación garantizamos una cartografía de base esencial para el desarrollo de la IDE.
 
-Los datos, por si solos, no nos aportan demasiada información. Por este motivo, es necesaria su descripción. Los **metadatos** describen el contenido y las características de los datos o servicios, aportando una información muy valiosa que ayuda a “contextualizar” el dato, y en ocasiones, facilitar su acceso. Estos metadatos tienen que ser: almacenados en un *Catálogo* on line, consultable para a cualquier usuario, y descritos según unos estándares que aportan las pautas de cómo y qué información hay que dar en cada caso.
+Los datos, por si solos, no nos aportan demasiada información. Por este motivo, es necesaria su descripción. Los **metadatos** describen el contenido y las características de los datos o servicios, aportando una información muy valiosa que ayuda a “contextualizar” el dato, y en ocasiones, facilitar su acceso. Estos metadatos tienen que ser: almacenados en un *Catálogo* on line, consultable para cualquier usuario, y descritos según unos estándares que aportan las pautas de cómo y qué información hay que dar en cada caso.
 
 #### La visualización y el acceso a los datos
 
-El intercanvio de información y la interoperatividad de los sistemas son dos conceptos clave en una IDE. Ambos se pueden conseguir gracias a los estándares y los geoservicios. OGC ha desarrollado una serie de especificaciones estándar que permiten a dos sistemas diferentes, con arquitecturas y formatos de datos diversos combinar cartografía sin ningún esfuerzo por parte del usuario.
+El intercambio de información y la interoperatividad de los sistemas son dos conceptos clave en una IDE. Ambos se pueden conseguir gracias a los estándares y los geoservicios. OGC ha desarrollado una serie de especificaciones estándar que permiten a dos sistemas diferentes, con arquitecturas y formatos de datos diversos combinar cartografía sin ningún esfuerzo por parte del usuario.
 
-Para fácilitar la visualización y el acceso a los datos los encargados del desarrollo de la IDE generalmente implementan un *Geoportal* que incluye entre otras cosas:
+Para facilitar la visualización y el acceso a los datos, los encargados del desarrollo de la IDE generalmente implementan un *Geoportal* que incluye entre otras cosas:
 
 * Metadatos (descripción del contenido, la cualidad y otras características de los datos)
 * Catálogo (publicación en Internet de los metadatos de datos, servicios y esquemas)
 * Servicio de acceso a datos y servicios (clientes, visores)
 * Servidores de mapas con proveedores de información
 * Servicios de geoprocesamiento (procesos informáticos que manipulan y transforman datos geoespaciales: transformaciones de coordenadas, de proyecciones, análisis espacial...)
-* Conexiones a otras IDE's.
+* Conexiones a otras IDEs.
 
 #### Los usuarios y colaboradores
 
 Para que una IDE se pueda considerar como tal, tiene que haber unos usuarios que la usen, en este sentido la tarea de difusión es muy importante. A medida que se incrementa su uso, las empresas empiezan a ver las posibilidades comerciales y a implicarse en el proyecto, acelerando así el crecimiento de la IDE.
 
-Una comunidad IDE esta integrada por varios actores como: productores de datos, proveedores de servicios, usuarios, desarrolladores, invertigadores, etc. Cuanto más abierta y colaborativa sea la comunidad mayor calidad tendrá la IDE. La idea es que incluya organizaciones públicas, privadas, universidades y particulares. Por el momento esta comunidad está formada principalmente por administraciones públicas.
+Una comunidad IDE esta integrada por varios actores como: productores de datos, proveedores de servicios, usuarios, desarrolladores, investigadores, etc. Cuanto más abierta y colaborativa sea la comunidad mayor calidad tendrá la IDE. La idea es que incluya organizaciones públicas, privadas, universidades y particulares. Por el momento esta comunidad está formada principalmente por administraciones públicas.
 
 ##### Conclusiones
 
@@ -123,7 +123,7 @@ Para poder poner en marcha una IDE es necesario disponer de:
 * **Componente geográfico**, formado por los conjuntos de datos y servicios web geográficos que se proporcionan a través de una IDE, así como los registros de metadatos que los describen.
 * **Componente social**, que se corresponde con un conjunto de actores, cada uno de ellos con un rol determinado, interesados en su puesta en marcha, ya sea por el hecho de ser productor de datos, de software o por pertenecer a las comunidades de difusión responsables de formar en la filosofía IDE. Este componente es necesario para que una IDE permanezca y se consolide con el paso del tiempo y en consecuencia, consiga el éxito de esta iniciativa en la sociedad.
 
-### Principios en que se basa el dearrollo de una IDE
+### Principios en que se basa el desarrollo de una IDE
 
 1. Datos recogidos una vez y mantenidos en el nivel donde se logra máxima
 efectividad
@@ -175,21 +175,21 @@ Por tanto, el uso de las IDE mejora considerablemente la dinámica del sector de
 
 * Facilita la toma de decisiones
 * Reduce esfuerzos y costes
-* Proporciona datos mejores y más actualizados
+* Proporciona mejores datos y más actualizados
 * Apoya la creación de nuevas oportunidades de negocio.
 
 Hay que tener presente que una IDE no se tiene que ver sólo desde la vertiente tecnológica sino que existe también una vertiente social, en que los usuarios (el sector público, el privado y la población) tienen que dar su opinión, a partir de la cual se podrán determinar las estrategias a seguir. 
 
 En el proceso de implantación de una IDE también hay que superar obstáculos técnicos (no disponibilidad de datos, de estándares, metadatos, redes de comunicación, banda ancha...), económicos, socio-culturales (conocimiento, educación, seguridad, libertad de acceso...), políticos-legales (datos delicados, propiedad intelectual...) y déficit de suporte (no se conoce la finalidad y el valor de las IDE).
 
-Las IDE, además de mantener vías de cooperación y relaciones con el sector público y privado de la su región, tienen que hacerlo también tanto con las IDE de su nivel como con las de otros niveles
+Las IDE, además de mantener vías de cooperación y relaciones con el sector público y privado de su región, tienen que hacerlo también tanto con las IDE de su nivel como con las de otros niveles.
 
 ### Tareas que permite una IDE
 
 * **Buscar** la información que hay disponible ya sea por zona geográfica, formato, año de producción, quién la ha producido, si tiene servicio, etc.
 * **Visualizar** y superponer mapas, ortofotos, y datos geográficos en general de diferentes organismos, formatos, sistema de referencia, etc.
 * **Buscar** una entidad geográfica por su nombre y ver su ubicación
-* **Análisis** realizar opereaciones básicas, como cálculo de perfiles, análisis de superficies, etc.
+* **Análisis** realizar operaciones básicas, como cálculo de perfiles, análisis de superficies, etc.
 * **Transformar** de un modelo de datos a otro diferente, si ambos están descritos.
 * **Descargar** los datos para analizarlos con un SIG. 
 
@@ -266,19 +266,19 @@ INSPIRE es una iniciativa legal de la UE que dirigirá protocolos y estándares,
 
 ## Futuro de las IDEs
 
-1ª Generación de IDEs se centra en los datos espacaciales. El foco son los datos, su publicación, armonización y firma de acuerdos instucionales y definir políticas para compartir información.
+1ª Generación de IDEs: se centra en los datos espaciales. El foco son los datos, su publicación, armonización y firma de acuerdos institucionales y definir políticas para compartir información.
 
-2ª Generación de IDEs se centra en la interoperabilidad. Una vez que los datos ya están disponibles se enfocan en las aplicaciones (geoportales, visores, etc.) y en los servicios (WMS, WFS, WPS, descarga de datos, análisis, etc).
+2ª Generación de IDEs: se centra en la interoperabilidad. Una vez que los datos ya están disponibles se enfocan en las aplicaciones (geoportales, visores, etc.) y en los servicios (WMS, WFS, WPS, descarga de datos, análisis, etc).
 
-3ª Generaión de IDES desde mi punto de vista está por definirse si es que llegan a evolucionar y no mueren antes.
+3ª Generación de IDES: desde mi punto de vista está por definirse si es que llegan a evolucionar y no mueren antes.
 
-Desde mediados de los 2000 se habla de la IDE semánticas (web semántica, linked data). Más allá del ámbito académico y algnos estudios, han pasado 15 años y no existe un implementación práctica.
+Desde mediados de los 2000 se habla de la IDE semánticas (web semántica, linked data). Más allá del ámbito académico y algunos estudios, han pasado 15 años y no existe un implementación práctica.
 
-También se habla de incorporar la Información geográfica voluntaria (VGI) a las IDEs pero la naturaleza misma de dicha información choca con la estructura rigida que imponen las IDEs. No veo a nadie haciendo metadatos de OSM por ejemplo.
+También se habla de incorporar la Información geográfica voluntaria (VGI) a las IDEs pero la naturaleza misma de dicha información choca con la estructura rígida que imponen las IDEs. No veo a nadie haciendo metadatos de OSM por ejemplo.
 
 La creación de Información 3D, Modelos BIM, Realidad virtual también ofrecen nuevos retos para las IDEs ya que se necesitan definir nuevos esquemas para estos tipos de datos.
 
-Seguramente saldrán iniciativas de usa la mineria de datos, big data, inteligencia artificial en las IDEs. Estas técnologias pueden servir para generar metadados de forma automática. También se podrían compartir los modelos de entrenamiendo, juegos de datos, etc.
+Seguramente saldrán iniciativas de usa la minería de datos, big data, inteligencia artificial en las IDEs. Estas tecnologías pueden servir para generar metadados de forma automática. También se podrían compartir los modelos de entrenamiento, juegos de datos, etc.
 
 El uso del blockchain también podría cambiar a las IDEs, ya que permitiría tener el historial de la información. De hecho la filosofía del blockchain es muy parecida a la de las IDEs.  
 

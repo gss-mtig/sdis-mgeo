@@ -4,7 +4,7 @@ La familia de estándares API de OGC se está desarrollando para facilitar que c
 
 Estos estándares se están construyendo como "bloques de construcción" que se pueden usar para ensamblar nuevas API para el acceso web a contenido geoespacial.
 
-![OGC API Block](img/ogc-API-blocks.jpg "OGC API bloques de contrucción")
+![OGC API Block](img/ogc-API-blocks.jpg "OGC API bloques de construcción")
 
 ## OGC API - Features
 
@@ -18,7 +18,7 @@ Esta nueva generación de estándares API están basados en [OpenAPI](https://gi
 
 ### OGC API - Features - Part 1: Core
 
-Esta primera parte especifica las capacidades esenciales (core) que en servcio para API de este estilo debe tener. Está restringido al Sistema de Referencia de Coordenadas (SRC) EPSG:4326 (WGS84 con orden de ejes longitud/latitud) y proporcionan acceso de solo lectura a datos espaciales. La Organización Internacional de Normalización (ISO) ha publicado la norma «ISO 19168-1:2020 Geographic information — Geospatial API for features — Part 1: Core», que es la versión ISO de «OGC API Features» - Parte 1: Core. 
+Esta primera parte especifica las capacidades esenciales (core) que en servicio para API de este estilo debe tener. Está restringido al Sistema de Referencia de Coordenadas (SRC) EPSG:4326 (WGS84 con orden de ejes longitud/latitud) y proporcionan acceso de solo lectura a datos espaciales. La Organización Internacional de Normalización (ISO) ha publicado la norma «ISO 19168-1:2020 Geographic information — Geospatial API for features — Part 1: Core», que es la versión ISO de «OGC API Features» - Parte 1: Core. 
 
 La parte 1, *Core*, especifica las operaciones de búsqueda y descubrimiento que se implementan mediante el método HTTP GET. Por defecto, cada API que implemente este estándar proporcionará acceso a un único conjunto de datos. En lugar de compartir los datos como un conjunto de datos completo, los estándares de características de API de OGC ofrecen acceso directo y detallado a los datos a nivel de característica (objeto). 
 
@@ -34,14 +34,14 @@ El estándar WFS es más apropiado cuando se trabaja con aplicaciones cliente qu
 | Elementos                  | /collections/{collectionId}/items             | Este recurso presenta los elementos que están contenidos en la colección.                                                                                                                               |   |   |
 | Elemento                   | /collections/{collectionId}/items/{featureId} | Este recurso presenta el elemento que se identifica en la ruta                                                                                                                                          |   |   |
 
-Las llamadas al recurso de elementos (/collections/{collectionId}/items) pueden recibir parámetros adicionales para filtar los elementos. Estos parámetros son:
+Las llamadas al recurso de elementos (/collections/{collectionId}/items) pueden recibir parámetros adicionales para filtrar los elementos. Estos parámetros son:
 
 * **limit**: se puede usar para controlar el tamaño de la página especificando el número máximo de elementos que se deben devolver en la respuesta (por defecto es 10). Cada página puede incluir información sobre el número de elementos seleccionados y devueltos ("numberMatched" y "numberReturned"), así como enlaces para admitir la paginación (relación de enlace "next"). Un ejemplo https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&limit=2
 * **offset**: Sirve para navegar por la paginación de los resultados. https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&limit=2&offset=2
 * **bbox**: selecciona solo el subconjunto de los elementos en la colección que están dentro de la caja de coordenadas especificada por el parámetro bbox. Un ejemplo https://demo.ldproxy.net/daraa/collections/VegetationSrf/items?f=json&bbox=36.0832432,32.599852,36.1168237,32.6283697
 * **datetime**: selecciona solo el subconjunto de los elementos en la colección que están dentro dentro del intervalo de tiempo especificado por el parámetro datetime. Un ejemplo https://demo.ldproxy.net/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z 
 
-También se puede filtar por valores de las propiedades de los elementos. Un ejemplo: https://demo.ldproxy.net/daraa/collections/CulturePnt/items?F_CODE=A%2A
+También se puede filtrar por valores de las propiedades de los elementos. Un ejemplo: https://demo.ldproxy.net/daraa/collections/CulturePnt/items?F_CODE=A%2A
 
 Ejemplo de servicio. https://demo.ldproxy.net/daraa
 
@@ -96,7 +96,7 @@ CQL y su codificación de texto no son nuevos, pero esta es la primera vez que C
 
 **Ejemplo:**
 
-Primero vemos los attributos que son consultables
+Primero vemos los atributos que son consultables
 https://demo.ldproxy.net/zoomstack/collections/roads_national/queryables
 
 Ahora filtramos para obtener solo las carreteras de nivel 1.
