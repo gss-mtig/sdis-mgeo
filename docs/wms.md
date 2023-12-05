@@ -179,7 +179,7 @@ Petición GetFeatureInfo sirve para mostrar los atributos de los objetos del map
 
 Ejemplo:
 
-http://geoserveis.icc.cat/icgc_bm5m/wms/service?REQUEST=GetFeatureInfo&SERVICE=WMS&VERSION=1.1.1&LAYERS=10_MUNICIPI_PC&QUERY_LAYERS=10_MUNICIPI_PC&INFO_FORMAT=text/html&STYLES=&SRS=EPSG:25831&BBOX=257904,4484796,680304,4907196&WIDTH=768&HEIGHT=768&X=295&Y=580
+https://geoserveis.icgc.cat/servei/catalunya/divisions-administratives/wms?REQUEST=GetFeatureInfo&SERVICE=WMS&VERSION=1.1.1&LAYERS=divisions_administratives_municipis_5000&QUERY_LAYERS=divisions_administratives_municipis_5000&INFO_FORMAT=text/html&STYLES=&SRS=EPSG:25831&BBOX=257904,4484796,680304,4907196&WIDTH=768&HEIGHT=768&X=295&Y=580
 
 ### GetLegendGraphic
 
