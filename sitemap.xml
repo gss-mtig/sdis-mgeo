@@ -2,97 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/api/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://gss-mtig.github.io/sdis-mgeo/catalogo_metadatos/</loc>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/clientes_de_mapa/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/creacion_metadatos/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/csw/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/estandares_ISO/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/estandares_OCG/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/gml/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://gss-mtig.github.io/sdis-mgeo/idec/</loc>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://gss-mtig.github.io/sdis-mgeo/idee/</loc>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/inspire/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/instalacion_de_programas/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/introduccion_a_las_ides/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://gss-mtig.github.io/sdis-mgeo/lisige/</loc>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/metadatos/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://gss-mtig.github.io/sdis-mgeo/ogc_api_features/</loc>
+         <lastmod>2024-11-25</lastmod>
+    </url>
+    <url>
+         <loc>https://gss-mtig.github.io/sdis-mgeo/otras_ides/</loc>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/otros/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/servidores_de_mapa/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/sld/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/sos/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/wfs/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/wms/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
     <url>
          <loc>https://gss-mtig.github.io/sdis-mgeo/wmts/</loc>
-         <lastmod>2023-11-22</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-25</lastmod>
     </url>
 </urlset>
