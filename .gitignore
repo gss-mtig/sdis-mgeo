@@ -1,3 +1,4 @@
 site/
 mtig.code-workspace
 .vscode/
+.venv

@@ -38,3 +38,7 @@ Principales interfaces:
 Servicio de publicación de procesos geoespaciales en la Web. Se entiende por procesos cualquier algoritmo, cálculo o modelo, que opere sobre datos espacialmente referenciados tanto en formato raster como vectorial, de este modo un WPS puede ofrecer cualquier tipo de funcionalidad GIS a través de una red.
 
 Se puede ver la especificación en [https://www.ogc.org/standards/wps](https://www.ogc.org/standards/wps)
+
+## Referencias
+
+[^2]: https://github.com/volaya/libro-sig/releases/download/v3.0/Sistemas.de.Informacion.Geografica.pdf

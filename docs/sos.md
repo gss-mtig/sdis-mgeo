@@ -59,3 +59,7 @@ La propiedad que se mide, tal que: Temperatura, Dirección del viento, Nubosidad
 Finalmente, una Observation es el valor que toma una Observed Property en un momento (Phenomenon Time) y un lugar (Feature Of Interest) dados. Por ejemplo: “La temperatura en Barcelona el 22/09/2015 a las 11:52 es de 23 grados centígrados”.
 
 Se puede ver la especificación en [https://www.ogc.org/standards/sos](https://www.ogc.org/standards/sos)
+
+## Referencias
+
+[^1]: https://sensor-widgets.readthedocs.io/es/latest/sos.html#

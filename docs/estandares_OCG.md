@@ -61,8 +61,3 @@ Listado de los principales estándares OGC relacionados con las IDE's
 https://www.ogc.org/standards/
 
 https://www.idee.es/web/guest/rincon-del-desarrollador
-
-## Referencias
-
-[^1]: https://sensor-widgets.readthedocs.io/es/latest/sos.html#
-[^2]: https://github.com/volaya/libro-sig/releases/download/v3.0/Sistemas.de.Informacion.Geografica.pdf

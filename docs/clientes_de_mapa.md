@@ -83,11 +83,18 @@ Utilizaremos el programa **QGIS** para visualizar servicios XYZ.
 4. En el panel explorador ahora debe aparece la conexión definida. Para agregarla al mapa hacemos doble click sobre el nombre de la conexión.
     ![Visualizar XYZ OSM](img/qgis_visualizar_wmts.png "Visualizar XYZ OSM")
     Visualizar XYZ OSM
-    
+
+### Ejercicio 
+
 !!! question "Ejercicio 0,5 pt"
+ 
     Agregar la capa WMTS de la ortofoto o topográfico del servicio WMTS del ICGC
 
     http://geoserveis.icc.cat/icc_mapesmultibase/noutm/wmts/orto/GRID3857/{z}/{x}/{y}.jpeg
+
+    En un documento de texto poner una captura de pantalla donde se vea la capa cargada en el mapa y el menu desplegado con el servicio WMTS y la capa. Ejemplo:
+
+    ![Ejemplo carga WMTS en QGIS](img/wmts_qgis_example.png "Ejemplo carga WMTS en QGIS")
 
 ## Práctica conectar servicios OGC con Leaflet
 
@@ -260,11 +267,18 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
     http://localhost/visor/xyz.html
 
 
+### Ejercicio
+
 !!! question "Ejercicio 1 pt"
+
+    * Crear un visor con Leaflet
+    * Agregar la capa de OpenStreetMap como capa base
     * Agregar sobre la capa de OpenStreetMap la capa Catastro del servicio WMS de la Dirección General del Catastro. (0,5 pt)
     * Aplicar transparencia a la capa. (0,5 pt)
 
     http://www.catastro.minhap.gob.es/esp/wms.asp
+
+    Entregar el archivo **html** con el ejercicio.
 
 ## Práctica conectar servicios OGC con ArcGIS Online
 

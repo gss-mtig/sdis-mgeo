@@ -225,6 +225,8 @@ La solicitud equivalente WMS 1.3.0 es:
 * Modificar el estilo (SLD poco soportado)
 * SLD difícil de entender y hacer  
 
+## Ejercicio
+
 !!! question "Ejercicio 2,5 pts"
     En un documento de texto poner:
 

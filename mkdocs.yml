@@ -18,26 +18,36 @@ repo_url: "https://github.com/gss-mtig/sdis-mgeo"
 
 nav:
 - Home: index.md
-- 1. Introducción a las IDE's: introduccion_a_las_ides.md
-- Iniciativas:
-  - 1.1. INSPIRE: inspire.md
-- 2. Estándares OCG: estandares_OCG.md
-- Estándares OCG:
-  - 2.1. WMS: wms.md
-  - 2.2. WMTS: wmts.md
-  - 2.3. WFS: wfs.md 
-  - 2.4. GML: gml.md
-  - 2.5. SLD: sld.md
-  - 2.6. SOS: sos.md
-  - 2.7. CSW: csw.md
-  - 2.8. API: api.md
-  - 2.9. Otros: otros.md       
-- 3. Instalación de programas: instalacion_de_programas.md
-- 4. Clientes de mapas: clientes_de_mapa.md
-- 5. Metadatos: metadatos.md
-- 6. Estándares ISO: estandares_ISO.md
-- 7. Creación de Metadatos: creacion_metadatos.md
-- 8. Servidores de mapas: servidores_de_mapa.md
+- Infraestructuras de datos espaciales (IDEs):
+  - 1. Introducción a las IDE's: introduccion_a_las_ides.md
+  - 2. Catálogo de Metadatos: catalogo_metadatos.md
+  - 3. Iniciativas:
+    - 3.1. IDEE: idee.md
+    - 3.2. IDEC: idec.md
+    - 3.3. INSPIRE: inspire.md
+    - 3.4. Otras IDEs: otras_ides.md
+  - 4. Marco legal:
+    - 4.1. LISIGE: lisige.md
+- Metadatos: 
+  - 1. Qué es un metadato: metadatos.md
+  - 2. Estándares ISO: estandares_ISO.md
+- Estándares OCG: 
+  - 1. Qué es OGC?: estandares_OCG.md
+  - 2. WMS: wms.md
+  - 3. WMTS: wmts.md
+  - 4. OGC APIs:
+    - 4.1. APIs: api.md
+    - 4.2. Features: ogc_api_features.md
+  - 5. WFS: wfs.md
+  - 6. GML: gml.md
+  - 7. SLD: sld.md
+  - 8. SOS: sos.md
+  - 9. CSW: csw.md
+  - 10. Otros: otros.md       
+- Instalación de programas: instalacion_de_programas.md
+- Clientes de mapas: clientes_de_mapa.md
+- Creación de Metadatos: creacion_metadatos.md
+- Servidores de mapas: servidores_de_mapa.md
 
 plugins:
     - search

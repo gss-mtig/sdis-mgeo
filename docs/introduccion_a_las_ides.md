@@ -41,7 +41,11 @@ Existen varias definiciones para describir IDE, pero una de las mas utilizada y 
 
 Una IDE (Infraestructura de Datos Espaciales) es un sistema informático integrado por un conjunto de recursos (catálogos, servidores, programas, datos, aplicaciones, páginas Web,...) dedicados a gestionar Información geográfica disponibles en Internet, que cumpla una serie de condiciones de interoperabilidad. [^2]
 
-A partir de estas definiciones podemos vislumbrar que una IDE no es solo una implementación tecnológica sino que comprende una parte muy importante de comunicación, no precisamente entre servidor-servidor, sino entre Institución—Instituciones, departamento—departamento, en definitiva persona—persona para establecer los marcos de colaboración para compartir, describir y acceder a los datos geográficos.
+A partir de estas definiciones podemos vislumbrar que una IDE no es solo una implementación tecnológica sino que son sistemas integrados de datos, tecnologías y políticas diseñados para facilitar el acceso, uso y gestión de la información geoespacial; comprende una parte muy importante de comunicación, entre personas, instituciones, empresas, etc. para establecer los marcos de colaboración para compartir, describir y acceder a los datos geográficos.
+
+A diferencia de un sistema de información geográfica (SIG) que se centra en la gestión de datos espaciales a nivel organizativo o local, una IDE permite compartir datos espaciales entre múltiples organismos, instituciones y el público en general, promoviendo la interoperabilidad y el acceso abierto a la información.
+
+Su **objetivo principal** es permitir que los datos espaciales estén accesibles para diferentes usuarios (gobiernos, empresas, academia, ciudadanos) de manera eficaz y eficiente.
 
 ![esquema IDE](img/esquema_ides.png)
 
@@ -163,6 +167,7 @@ Podríamos que decir que el papel que juega el consorcio W3C en cuanto a la esta
 
 ![visión global IDE](img/ides.png)
 *Visión global IDE*
+
 ### La utilidad de las IDE y sus ventajas
 
 Cuando un usuario quiere acceder a información geográfica se puede encontrar con una situación caótica, al no saber dónde ir a buscarla. A nivel de cooperación entre administraciones y empresas, la situación es también muy compleja, a causa del gran número de contactos que hay que realizar para obtener estos datos y los permisos para utilizarlos.
@@ -193,7 +198,6 @@ Las IDE, además de mantener vías de cooperación y relaciones con el sector p�
 * **Transformar** de un modelo de datos a otro diferente, si ambos están descritos.
 * **Descargar** los datos para analizarlos con un SIG. 
 
-
 ### Niveles de desarrollo de una IDE
 
 Tenemos que pensar que una IDE conlleva un factor multi-escalar en su implementación, esta puede ser implementada a nivel europeo, nivel estatal, nivel regional e incluso a nivel municipal. Cada nivel tiene la responsabilidad de interoperar con el resto de niveles
@@ -206,63 +210,6 @@ Ejemplos de niveles de desarrollo de una IDE
 http://idee.es/
 * Regional - IDEC (Infraestructura de Dades Espacials de Catalunya) http://www.ide.cat
 * Local - Barcelona http://w133.bcn.cat/geoportalbcn/GeoPortal.aspx?lang=es
-#### IDEC
-
-La [IDEC (Infraestructura de Dades Espacials de Catalunya)](https://ide.cat) es una iniciativa creada el año 2002 para desarrollar y mantener una Infraestructura de Datos Espaciales (IDE) en el territorio de Catalunya.
-
-Esta infraestructura pretende facilitar y mejorar el acceso a la información y los servicios geográficos disponibles, poniendo al alcance de los usuarios herramientas para buscar, descubrir, consultar y descargar estos recursos mediante la web, para utilizarlos y explotarlos posteriormente.
-
-El proyecto se hace posible gracias a la participación activa y colaborativa de los diferentes tipos de actores involucrados: los productores y/o proveedores de información geográfica (o espacial) y los propios usuarios. 
-
-#### IDEE
-
-La [IDEE (Infraestructura de Datos Espaciales de España)](https://www.idee.es/web/idee/inicio) tiene como objetivo integrar a través de Internet los datos, metadatos, servicios e información de tipo geográfico que se producen en España, a nivel estatal, autonómico y local, cumpliendo una serie de condiciones de interoperabilidad (normas, protocolos, especificaciones) y conforme a sus respectivos marcos legales. El fruto de este trabajo es el proyecto IDEE. La IDEE arrancó en 2002 cuando la Comisión Permanente del Consejo Superior Geográfico aprobó el 10 abril la puesta en marcha de una Infraestructura Nacional de Datos Espaciales.
-
-IDEE es el resultado de la integración, en primer lugar, de todas las IDE establecidas por los productores oficiales de datos a nivel tanto estatal como autonómico y local, y en segundo lugar, de todo tipo de infraestructuras sectoriales y privadas. En cada C.C.A.A y organismo de la Administración General del Estado (AGE) hay un representante, responsable de la implantación de la IDE en su C.C.A.A y en el organismo de la AGE.
-
-Servicios web de la IDEE https://www.ign.es/web/ign/portal/ide-area-nodo-ide-ign
-
-#### GSDI (Global Spatial Data Infrastructure)
-
-Convertida en asociación el año 2004, esta iniciativa empezó a mediados de los 90 con el objetivo de fomentar la captura, el procesamiento, la integración y la compartición de información y datos espaciales, utilizando estándares comunes y técnicas y sistemas interoperables, accesibles vía web.
-
-La [GSDI](http://gsdiassociation.org/) organiza conferencias de forma regular. La primera se celebró el año 95 en Bonn, dónde sólo fueron invitados un pequeño número de asistentes. En la conferencia del año 97, definieron la GSDI cómo: “...las políticas, misiones organizativas, datos, tecnologías, estándares, mecanismos de distribución y recursos financieros y humanos para asegurar que no se impida lograr los objetivos, a aquellos que trabajan a escala global y local”.
-
-Tiene por objetivo fomentar la captura, el procesamiento, la integración, el almacenamiento y el intercambio de datos e información espacial utilizando estándares comunes y técnicas y sistemas interoperables vía web. Para lograrlo, es necesario poner un especial énfasis en los métodos de difusión, educación, recursos, políticas y aspectos legales relacionados con su desarrollo.
-
-#### Ejemplos de otras IDES
-
-##### Internacional
-* [Geoportal ONU](https://geoportal.dfs.un.org/arcgis/home/)
-
-##### Nacional
-* [IGN France](https://www.geoportail.gouv.fr/carte)
-* [Estados Unidos](https://catalog.data.gov/dataset)
-* [Chile](http://www.geoportal.cl/geoportal)
-
-##### Regional
-* [IDE Canarias](http://www.idecanarias.es/es/)
-* [IDE Andalucía](http://www.ideandalucia.es/es/)
-
-##### Local
-* [Cáceres](http://ide.caceres.es/)
-
-### Marco legal
-
-#### LISIGE
-
-En España la [LISIGE](https://www.idee.es/espanol-lisige) se aplica a todos los datos geográficos que cumplan las siguientes condiciones
-
-* Se refieran a una zona geográfica del territorio nacional, el mar  territorial, la zona contigua, la plataforma continental y la zona exclusiva económica exclusiva, generada o bajo responsabilidad de las Administraciones públicas y sobre la que el Estado tenga jurisdicción
-* Estén en formato electrónico
-* Su producción y mantenimiento sea competencia de una Administración u organismo del sector público
-* Se refieran a Información Geográfica de Referencia o a Datos Temáticos Fundamentales o a Datos Temáticos Generales existentes, salvaguardando en este caso los intereses prioritarios de la defensa nacional
-
-#### INSPIRE
-
-[INSPIRE (INfrastructure for SPatial InfoRmation in Europe)](https://inspire.ec.europa.eu/) tiene por objetivo hacer disponible una información geográfica de calidad, armonizada y relevante para apoyar la formulación, la implementación, la monitorización y la evaluación de las políticas comunitarias con un impacto o dimensión territorial.
-
-INSPIRE es una iniciativa legal de la UE que dirigirá protocolos y estándares, aspectos de coordinación y organización, políticas de datos incluyendo el acceso a los datos y la creación y el mantenimiento de la información espacial.
 
 ## Futuro de las IDEs
 
@@ -272,22 +219,19 @@ INSPIRE es una iniciativa legal de la UE que dirigirá protocolos y estándares,
 
 3ª Generación de IDES: desde mi punto de vista está por definirse si es que llegan a evolucionar y no mueren antes.
 
-Desde mediados de los 2000 se habla de la IDE semánticas (web semántica, linked data). Más allá del ámbito académico y algunos estudios, han pasado 15 años y no existe un implementación práctica.
+Hoy en día, las IDEs están impulsadas por el movimiento de **datos abiertos** y su papel en el desarrollo de **ciudades inteligentes**. 
 
-También se habla de incorporar la Información geográfica voluntaria (VGI) a las IDEs pero la naturaleza misma de dicha información choca con la estructura rígida que imponen las IDEs. No veo a nadie haciendo metadatos de OSM por ejemplo.
+Desde mediados de los 2000 se habla de la **IDE semánticas** (web semántica, linked data). Más allá del ámbito académico y algunos estudios, han pasado 15 años y no existe un implementación práctica.
 
-La creación de Información 3D, Modelos BIM, Realidad virtual también ofrecen nuevos retos para las IDEs ya que se necesitan definir nuevos esquemas para estos tipos de datos.
+**Datos en tiempo real**, las IDEs del futuro no solo almancenarán datos estátidos, sino también datos dinámicos que reflejen cambios en tiempo real. Para soportar esos casos de uso, las IDEs si pueden integrar con sensores IoT.
 
-Seguramente saldrán iniciativas de usa la minería de datos, big data, inteligencia artificial en las IDEs. Estas tecnologías pueden servir para generar metadados de forma automática. También se podrían compartir los modelos de entrenamiento, juegos de datos, etc.
+También se habla de incorporar la **Información geográfica voluntaria** (VGI) a las IDEs pero la naturaleza misma de dicha información choca con la estructura rígida que imponen las IDEs. No veo a nadie haciendo metadatos de OSM por ejemplo.
 
-El uso del blockchain también podría cambiar a las IDEs, ya que permitiría tener el historial de la información. De hecho la filosofía del blockchain es muy parecida a la de las IDEs.  
+La creación de **Información 3D**, Modelos BIM, Realidad virtual también ofrecen nuevos retos para las IDEs ya que se necesitan definir nuevos esquemas para estos tipos de datos.
 
-!!! question "Ejercicio 1 pts"
-    En un documento de texto poner:
+Seguramente saldrán iniciativas de uso de la **inteligencia artificial (IA)**, la minería de datos, big data en las IDEs. Estas tecnologías pueden servir para generar metadatos de forma automática. También se podrían compartir los modelos de entrenamiento, juegos de datos, permitir análisis avanzados a partir de grandes cantidades de datos, etc. 
 
-    * La url de una IDE (0,5 pt)
-    * Una captura de una búsqueda en el catálogo de la IDE de servicios WMS (0,5 pt)
- 
+El uso del **blockchain** también podría cambiar a las IDEs, ya que permitiría tener el historial de la información. De hecho la filosofía del blockchain es muy parecida a la de las IDEs.
 
 ## Referencias
 [^1]: https://github.com/volaya/libro-sig/releases/download/v2.0/Libro_SIG.pdf
