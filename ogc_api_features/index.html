@@ -1306,13 +1306,13 @@
 </table>
 <p>Las llamadas al recurso de elementos (/collections/{collectionId}/items) pueden recibir parámetros adicionales para filtrar los elementos. Estos parámetros son:</p>
 <ul>
-<li><strong>limit</strong>: se puede usar para controlar el tamaño de la página especificando el número máximo de elementos que se deben devolver en la respuesta (por defecto es 10). Cada página puede incluir información sobre el número de elementos seleccionados y devueltos ("numberMatched" y "numberReturned"), así como enlaces para admitir la paginación (relación de enlace "next"). Un ejemplo <a href="https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2">https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2</a></li>
+<li><strong>limit</strong>: se puede usar para controlar el tamaño de la página especificando el número máximo de elementos que se deben devolver en la respuesta (por defecto es 10). Cada página puede incluir información sobre el número de elementos seleccionados y devueltos ("numberMatched" y "numberReturned"), así como enlaces para admitir la paginación (relación de enlace "next"). Un ejemplo  <a href="https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2">https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2</a></li>
 <li><strong>offset</strong>: Sirve para navegar por la paginación de los resultados. <a href="https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2&amp;offset=2">https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&amp;limit=2&amp;offset=2</a></li>
 <li><strong>bbox</strong>: selecciona solo el subconjunto de los elementos en la colección que están dentro de la caja de coordenadas especificada por el parámetro bbox. Un ejemplo <a href="https://demo.ldproxy.net/daraa/collections/VegetationSrf/items?f=json&amp;bbox=36.0832432,32.599852,36.1168237,32.6283697">https://demo.ldproxy.net/daraa/collections/VegetationSrf/items?f=json&amp;bbox=36.0832432,32.599852,36.1168237,32.6283697</a></li>
-<li><strong>datetime</strong>: selecciona solo el subconjunto de los elementos en la colección que están dentro dentro del intervalo de tiempo especificado por el parámetro datetime. Un ejemplo <a href="https://demo.ldproxy.net/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z">https://demo.ldproxy.net/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z</a> </li>
+<li><strong>datetime</strong>: selecciona solo el subconjunto de los elementos en la colección que están dentro dentro del intervalo de tiempo especificado por el parámetro datetime. Un ejemplo <a href="https://demo.ldproxy.net/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z">https://demo.ldproxy.net/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z</a></li>
 </ul>
-<p>También se puede filtrar por valores de las propiedades de los elementos. Un ejemplo: <a href="https://demo.ldproxy.net/daraa/collections/CulturePnt/items?F_CODE=A%2A">https://demo.ldproxy.net/daraa/collections/CulturePnt/items?F_CODE=A%2A</a></p>
-<p>Ejemplo de servicio. <a href="https://demo.ldproxy.net/daraa">https://demo.ldproxy.net/daraa</a></p>
+<p>También se puede filtrar por valores de las propiedades de los elementos. Un ejemplo: <a href="https://demo.ldproxy.net/daraa/collections/CulturePnt/items?F_CODE=AL030">https://demo.ldproxy.net/daraa/collections/CulturePnt/items?F_CODE=AL030</a></p>
+<p>Ejemplo de servicio. <a href="https://api-features.idee.es/">https://api-features.idee.es/</a></p>
 <p>En las otras partes del estándar se definirán funcionalidades adicionales, como poder trabajar en otros SRC, crear y modificar objetos geográficos, consultas complejas, acceder a varios conjuntos de datos, recuperar jerarquías, etc.</p>
 <p>Se puede ver la especificación en <a href="http://docs.ogc.org/is/17-069r3/17-069r3.html">http://docs.ogc.org/is/17-069r3/17-069r3.html</a></p>
 <h2 id="ogc-api-features-part-2-coordinate-reference-systems-by-reference">OGC API - Features - Part 2: Coordinate Reference Systems by Reference</h2>
@@ -1326,8 +1326,7 @@
 </ul>
 <h3 id="recuperar-geometrias-en-un-crs-especifico">Recuperar geometrías en un CRS específico</h3>
 <p>En las solicitudes para obtener un o más elementos, agregue el parámetro crs con uno de los CRS admitidos. Por ejemplo, use lo siguiente para recuperar los edificios en ETRS89 UTM Zona 32 Norte (un CRS proyectado):</p>
-<div class="highlight"><pre><span></span><code>https://demo.ldproxy.net/daraa/collections/SettlementSrf/items?f=json&amp;crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F3857
-</code></pre></div>
+<p><a href="https://demo.ldproxy.net/daraa/collections/SettlementSrf/items?f=json&amp;crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F3857">https://demo.ldproxy.net/daraa/collections/SettlementSrf/items?f=json&amp;crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F3857</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Como de costumbre, no olvide codificar en porcentaje el valor del parámetro.</p>
