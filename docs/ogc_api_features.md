@@ -29,14 +29,14 @@ El estándar WFS es más apropiado cuando se trabaja con aplicaciones cliente qu
 
 Las llamadas al recurso de elementos (/collections/{collectionId}/items) pueden recibir parámetros adicionales para filtrar los elementos. Estos parámetros son:
 
-* **limit**: se puede usar para controlar el tamaño de la página especificando el número máximo de elementos que se deben devolver en la respuesta (por defecto es 10). Cada página puede incluir información sobre el número de elementos seleccionados y devueltos ("numberMatched" y "numberReturned"), así como enlaces para admitir la paginación (relación de enlace "next"). Un ejemplo https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&limit=2
+* **limit**: se puede usar para controlar el tamaño de la página especificando el número máximo de elementos que se deben devolver en la respuesta (por defecto es 10). Cada página puede incluir información sobre el número de elementos seleccionados y devueltos ("numberMatched" y "numberReturned"), así como enlaces para admitir la paginación (relación de enlace "next"). Un ejemplo  https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&limit=2
 * **offset**: Sirve para navegar por la paginación de los resultados. https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&limit=2&offset=2
 * **bbox**: selecciona solo el subconjunto de los elementos en la colección que están dentro de la caja de coordenadas especificada por el parámetro bbox. Un ejemplo https://demo.ldproxy.net/daraa/collections/VegetationSrf/items?f=json&bbox=36.0832432,32.599852,36.1168237,32.6283697
-* **datetime**: selecciona solo el subconjunto de los elementos en la colección que están dentro dentro del intervalo de tiempo especificado por el parámetro datetime. Un ejemplo https://demo.ldproxy.net/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z 
+* **datetime**: selecciona solo el subconjunto de los elementos en la colección que están dentro dentro del intervalo de tiempo especificado por el parámetro datetime. Un ejemplo https://demo.ldproxy.net/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z
 
-También se puede filtrar por valores de las propiedades de los elementos. Un ejemplo: https://demo.ldproxy.net/daraa/collections/CulturePnt/items?F_CODE=A%2A
+También se puede filtrar por valores de las propiedades de los elementos. Un ejemplo: https://demo.ldproxy.net/daraa/collections/CulturePnt/items?F_CODE=AL030
 
-Ejemplo de servicio. https://demo.ldproxy.net/daraa
+Ejemplo de servicio. https://api-features.idee.es/
 
 En las otras partes del estándar se definirán funcionalidades adicionales, como poder trabajar en otros SRC, crear y modificar objetos geográficos, consultas complejas, acceder a varios conjuntos de datos, recuperar jerarquías, etc.
 
@@ -56,9 +56,7 @@ El estándar especifica:
 ### Recuperar geometrías en un CRS específico
 En las solicitudes para obtener un o más elementos, agregue el parámetro crs con uno de los CRS admitidos. Por ejemplo, use lo siguiente para recuperar los edificios en ETRS89 UTM Zona 32 Norte (un CRS proyectado):
 
-```
 https://demo.ldproxy.net/daraa/collections/SettlementSrf/items?f=json&crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F3857
-```
 
 !!! note
     Como de costumbre, no olvide codificar en porcentaje el valor del parámetro.

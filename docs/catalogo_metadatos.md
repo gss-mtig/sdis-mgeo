@@ -40,4 +40,4 @@ http://www.idee.es/csw-inspire-idee/srv/spa/catalog.search#/home
     * La url de una IDE
     * Realiza una búsqueda de datos sobre un tema específico (Ej. vegentación)
     * Realizar consultas usando filtros de atributos y/o espaciales para afinar los resultados
-    * Hacer una captura de una búsqueda en el catálogo de la IDE de servicios WMS realcionados al tema específico seleccionado.
+    * Hacer una captura de una búsqueda en el catálogo de la IDE de servicios WMS relacionados al tema específico seleccionado.

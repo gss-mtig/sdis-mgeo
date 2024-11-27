@@ -110,7 +110,7 @@ La mejor forma de entender el contenido de los metadatos es ver algunos sencillo
 
 http://www.idee.es/csw-inspire-idee/srv/spa/catalog.search#/metadata/spaJEXtmexTerminosMunicipales
 
-https://ide.cat/geonetwork/srv/cat/catalog.search#/metadata/base-municipal-5k-v2r1
+https://ide.cat/geonetwork/srv/cat/catalog.search#/metadata/inspire-unitats-administratives
 
 En ellas pueden verse verse los metadatos con un formato de página Web sencilla compuesta de una lista de apartados y campos, así como su valores correspondientes.
 
@@ -123,7 +123,7 @@ Con el objetivo de formalizar y homogeneizar los metadatos, los organismos respo
 #### Ejemplos de perfiles de metadatos
 
 ##### Perfil IDEC
-http://www.cartocat.cat/geoportal/cas/documentacio/manuals/Perfil_IDEC_v4.0_cas.pdf
+https://www.ide.cat/es/Temas-destacados/Documentacion/Guias-y-Manuales-IDEC
 
 ##### Núcleo español de metadatos (NEM)
 https://idee.es/resources/presentaciones/JIDEE05/sesion_04_02.pdf

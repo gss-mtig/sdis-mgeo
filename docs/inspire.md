@@ -92,7 +92,7 @@ INSPIRE Download Services)*[^1]
 
 Ejemplos de servicios ATOM.
 
-* https://www.catastro.minhap.es/webinspire/index.html
+* https://www.catastro.hacienda.gob.es/webinspire/index.html
 * https://inspire.larioja.org/
 * https://www.diba.cat/es/web/idebarcelona/serveis-descarrega-atom
 * https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/atom.aspx

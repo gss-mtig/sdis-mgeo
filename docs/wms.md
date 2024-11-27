@@ -30,7 +30,7 @@ Ejemplos:
 
 http://www.ign.es/wms-inspire/ign-base?VERSION=1.3.0&REQUEST=GetCapabilities&SERVICE=WMS
 
-http://geoserveis.icc.cat/icc_bt5m/wms/service?REQUEST=GetCapabilities&SERVICE=WMS
+https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wms?REQUEST=GetCapabilities&SERVICE=WMS
 
 #### Aspectos prácticos
 
