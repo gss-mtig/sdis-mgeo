@@ -54,7 +54,7 @@ Utilizaremos el programa **QGIS** para visualizar servicios WMS.
 
     En este caso utilizaremos la url del servidor WMS del ICGC.
 
-  		http://geoserveis.icgc.cat/icc_mapesbase/wms/service?
+  		https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wms?
 
 5. En el diálogo de añadir capa presionar el botón de *conectar* para cargar el listado de capas del servicio.
     ![Listado de capas ICGC](img/qgis_capas_wms_icgc.png "Listado de capas ICGC")
@@ -78,7 +78,7 @@ Utilizaremos el programa **QGIS** para visualizar servicios XYZ.
 
     En este caso utilizaremos la url del servidor de teselas de OpenStreetMap.
 
-        http://c.tile.osm.org/{z}/{x}/{y}.png
+        https://c.tile.osm.org/{z}/{x}/{y}.png
 
 4. En el panel explorador ahora debe aparece la conexión definida. Para agregarla al mapa hacemos doble click sobre el nombre de la conexión.
     ![Visualizar XYZ OSM](img/qgis_visualizar_wmts.png "Visualizar XYZ OSM")
@@ -90,7 +90,7 @@ Utilizaremos el programa **QGIS** para visualizar servicios XYZ.
  
     Agregar la capa WMTS de la ortofoto o topográfico del servicio WMTS del ICGC
 
-    http://geoserveis.icc.cat/icc_mapesmultibase/noutm/wmts/orto/GRID3857/{z}/{x}/{y}.jpeg
+    https://geoserveis.icgc.cat/icc_mapesmultibase/noutm/wmts/orto/GRID3857/{z}/{x}/{y}.jpeg
 
     En un documento de texto poner una captura de pantalla donde se vea la capa cargada en el mapa y el menu desplegado con el servicio WMTS y la capa. Ejemplo:
 
@@ -276,7 +276,7 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
     * Agregar sobre la capa de OpenStreetMap la capa Catastro del servicio WMS de la Dirección General del Catastro. (0,5 pt)
     * Aplicar transparencia a la capa. (0,5 pt)
 
-    http://www.catastro.minhap.gob.es/esp/wms.asp
+    https://www.catastro.hacienda.gob.es/esp/wms.asp
 
     Entregar el archivo **html** con el ejercicio.
 
@@ -293,7 +293,7 @@ ArcGis Online agregar desde URL
 
 En esta nueva ventana seleccionar en el desplegable la opción de *Servicio web del WMS OGC*
 
-En el campo URL copiar la url del servicio WMS del ICGC https://geoserveis.icgc.cat/icc_mapesbase/wms/service?
+En el campo URL copiar la url del servicio WMS del ICGC https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wms?
 
 Presionar el botón de **Obtener Capas** para cargar las capas del servicio y seleccionar la capa de *Ortofoto de Catalunya 1:5000 vigent*
 
