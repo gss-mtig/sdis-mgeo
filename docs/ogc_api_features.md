@@ -72,9 +72,6 @@ Se puede ver la especificación en https://docs.ogc.org/is/18-058/18-058.html
 
 ## OGC API - Features - Part 3: Filtering and the Common Query Language (CQL)
 
-!!! warning
-    Esta es una versión **BORRADOR** de la tercera parte de la API de OGC. Este borrador no está completo y hay temas abiertos que aún están en discusión.
-
 Una operación fundamental realizada en una colección de elementos es la de filtrar para obtener un subconjunto de los datos que contiene y que satisfacen algunos criterios de filtrado.
 
 La Parte 3 define:
@@ -85,7 +82,7 @@ La Parte 3 define:
 
 CQL y su codificación de texto no son nuevos, pero esta es la primera vez que CQL se especifica correctamente. CQL se creó como una codificación de texto basada en las capacidades definidas en el estándar OGC Filter Encoding para su uso en el estándar OGC Catalog Service (CSW). Uno de los objetivos del diseño era mantener CQL lo más compatible posible con las implementaciones existentes. Por ejemplo, la clasificación de operadores en operadores lógicos, de comparación, espaciales y temporales, así como sus nombres y sintaxis, no se modifican con respecto a las definiciones originales en OGC Filter Encoding.
 
-**Ejemplo:**
+**Ejemplos:**
 
 Primero vemos los atributos que son consultables
 https://demo.ldproxy.net/zoomstack/collections/roads_national/queryables
@@ -93,7 +90,12 @@ https://demo.ldproxy.net/zoomstack/collections/roads_national/queryables
 Ahora filtramos para obtener solo las carreteras de nivel 1.
 https://demo.ldproxy.net/zoomstack/collections/roads_national/items?f=json&filter=level=1
 
-Se puede ver el borrador de la especificación en http://docs.ogc.org/DRAFTS/19-079r1.html
+*API IGN.es*
+
+https://api-features.ign.es/collections/red_regente/queryables
+
+Filtramos por provincia
+https://api-features.ign.es/collections/red_regente/items?f=json&filter=cod_provincia=08
 
 ## OGC API - Features - Part 4: Simple Transactions
 

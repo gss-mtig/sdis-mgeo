@@ -48,6 +48,7 @@ nav:
 - Clientes de mapas: clientes_de_mapa.md
 - Creación de Metadatos: creacion_metadatos.md
 - Servidores de mapas: servidores_de_mapa.md
+- Publicar datos en una base de datos online: bd_online.md
 
 plugins:
     - search

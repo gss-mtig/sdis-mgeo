@@ -23,6 +23,7 @@ Temario:
 * [Estándares ISO](https://gss-mtig.github.io/sdis-mgeo/estandares_ISO/)
 * [Creación de Metadatos](https://gss-mtig.github.io/sdis-mgeo/creacion_metadatos/)
 * [Servidores de mapas](https://gss-mtig.github.io/sdis-mgeo/servidores_de_mapa/)
+* [Publicar datos en una base de datos online](https://gss-mtig.github.io/sdis-mgeo/bd_online/)
 
 ## Autores
 
