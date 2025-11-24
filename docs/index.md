@@ -17,6 +17,7 @@ Temario:
     * [SOS](https://gss-mtig.github.io/sdis-mgeo/sos/)
     * [CSW](https://gss-mtig.github.io/sdis-mgeo/csw/)
     * [API](https://gss-mtig.github.io/sdis-mgeo/api/)
+* [GeoJSON](https://gss-mtig.github.io/sdis-mgeo/geojson/)
 * [Instalación de programas](https://gss-mtig.github.io/sdis-mgeo/instalacion_de_programas/)
 * [Clientes de mapas](https://gss-mtig.github.io/sdis-mgeo/clientes_de_mapa)
 * [Metadatos](https://gss-mtig.github.io/sdis-mgeo/metadatos/)

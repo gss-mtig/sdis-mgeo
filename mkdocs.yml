@@ -43,7 +43,8 @@ nav:
   - 7. SLD: sld.md
   - 8. SOS: sos.md
   - 9. CSW: csw.md
-  - 10. Otros: otros.md       
+  - 10. Otros: otros.md
+- GeoJSON: geojson.md       
 - Instalación de programas: instalacion_de_programas.md
 - Clientes de mapas: clientes_de_mapa.md
 - Creación de Metadatos: creacion_metadatos.md

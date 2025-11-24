@@ -106,7 +106,7 @@ pip install mkdocs-material
 
 ### Comandos mkdocs
 
-* `mkdocs serve`: Arranca un servidor web con auto-recarga.
+* `mkdocs serve`: Arranca un servidor web con auto-recarga. `mkdocs serve --livereload`
 * `mkdocs build`: Compila la documentación en html.
 * `mkdocs gh-deploy`: Publica la documentación en gh-pages.
 
