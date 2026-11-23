@@ -1,0 +1,31 @@
+{
+  "version": 8,
+  "name": "10 000 puntos sintéticos de ejemplo",
+  "sources": {
+    "puntos": {
+      "type": "vector",
+      "url": "mbtiles://{puntos}"
+    }
+  },
+  "layers": [
+    {
+      "id": "fondo",
+      "type": "background",
+      "paint": {
+        "background-color": "#f2f5f7"
+      }
+    },
+    {
+      "id": "puntos",
+      "type": "circle",
+      "source": "puntos",
+      "source-layer": "puntos",
+      "paint": {
+        "circle-radius": 8,
+        "circle-color": "#c0392b",
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WMS del ICGC en Leaflet</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #mapa { height: 100%; }
+  </style>
+</head>
+<body>
+  <div id="mapa" aria-label="Mapa topográfico de Catalunya"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const mapa = L.map('mapa').setView([41.68, 1.85], 8);
+
+    L.tileLayer.wms('https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wms?', {
+      layers: 'topografic',
+      format: 'image/png',
+      transparent: true,
+      attribution: '© Institut Cartogràfic i Geològic de Catalunya'
+    }).addTo(mapa);
+  </script>
+</body>
+</html>

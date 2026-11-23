@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "name": "Geometrías incompletas para clasificar (datos sintéticos)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "caso": "A" },
+      "geometry": {
+        "type": "",
+        "coordinates": [2.1734, 41.3851]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "caso": "B" },
+      "geometry": {
+        "type": "",
+        "coordinates": [[2.17, 41.38], [2.18, 41.39], [2.19, 41.40]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "caso": "C" },
+      "geometry": {
+        "type": "",
+        "coordinates": [[2.17, 41.38], [2.18, 41.39], [2.19, 41.40]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "caso": "D" },
+      "geometry": {
+        "type": "",
+        "coordinates": [[[2.17, 41.38], [2.19, 41.38], [2.19, 41.40], [2.17, 41.40], [2.17, 41.38]]]
+      }
+    }
+  ]
+}

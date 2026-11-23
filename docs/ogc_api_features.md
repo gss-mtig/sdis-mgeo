@@ -1,137 +1,81 @@
+# OGC API – Features: acceder a entidades geográficas
 
-# OGC API - Features
+Un WMS entrega una imagen de mapa. **OGC API – Features** permite descubrir colecciones de datos vectoriales y consultar sus entidades —puntos, líneas o polígonos— junto con sus propiedades.
 
-**OGC API - Features** es un estándar de varias partes que ofrece la capacidad de crear, modificar y consultar datos espaciales en la Web y especifica requisitos y recomendaciones para las API que desean seguir una forma estándar de compartir datos vectoriales. Mientras estaba en forma de borrador y antes de febrero de 2019 se denominó WFS3.0.
+La API organiza la información como recursos relacionados. Puedes navegar desde la página de entrada a las colecciones, y desde cada colección a sus entidades. Muchos servicios muestran páginas HTML para las personas y ofrecen las mismas entidades en GeoJSON para aplicaciones.
 
-La especificación es un documento de varias partes. La parte principal de la especificación describe las capacidades obligatorias que todo servicio de implementación debe admitir y está restringida al acceso de lectura a los datos espaciales.
+## Actividad práctica en clase: rastrear una entidad — 25 minutos
 
-Las capacidades adicionales que abordan necesidades específicas se especificarán en partes adicionales. Las capacidades futuras previstas incluyen, por ejemplo, soporte para crear y modificar datos, modelos de datos más complejos, consultas más completas y sistemas de referencia de coordenadas adicionales.
+**Objetivo:** recorrer una OGC API desde su página de entrada hasta una entidad y reconocer qué aporta su representación GeoJSON.
 
-Esta nueva generación de estándares API están basados en [OpenAPI](https://github.com/OAI/OpenAPI-Specification), un estándar general TIC que permite que el mundo de los datos geoespaciales no se gestione como un caso aparte y pueda beneficiarse de las mejoras, posibilidades, recursos y ventajas que ofrece la evolución de las TIC. 
+**Materiales:** navegador web y la API de entidades del [Instituto Geográfico Nacional de España (IGN)](https://api-features.ign.es/). La página de entrada y sus colecciones respondieron en la consulta realizada el **5 de noviembre de 2026**. Al ser un servicio externo, su disponibilidad puede cambiar.
 
-## OGC API - Features - Part 1: Core
+**Pasos:**
 
-Esta primera parte especifica las capacidades esenciales (core) que en servicio para API de este estilo debe tener. Está restringido al Sistema de Referencia de Coordenadas (SRC) EPSG:4326 (WGS84 con orden de ejes longitud/latitud) y proporcionan acceso de solo lectura a datos espaciales. La Organización Internacional de Normalización (ISO) ha publicado la norma «ISO 19168-1:2020 Geographic information — Geospatial API for features — Part 1: Core», que es la versión ISO de «OGC API Features» - Parte 1: Core. 
+1. Abre la [página de entrada de la API](https://api-features.ign.es/). Identifica el proveedor y la descripción del servicio.
+2. Entra en [Collections](https://api-features.ign.es/collections). Esta página enumera los conjuntos de información disponibles.
+3. Abre la colección [AU Administrative unit](https://api-features.ign.es/collections/administrativeunit). Revisa su descripción, licencia, referencia espacial y enlaces.
+4. Sigue el enlace para explorar los elementos de la colección. Abre uno, por ejemplo el registro [Abla](https://api-features.ign.es/collections/administrativeunit/items/1166238), y revisa sus propiedades.
+5. En la página del elemento, abre el enlace de formato JSON. La representación GeoJSON permite ver la geometría y las propiedades estructuradas.
+6. En pareja, comparad la representación HTML con GeoJSON. Después decidid cuál usaríais para mostrar un mapa y cuál os permitiría inspeccionar y reutilizar las entidades y sus atributos.
 
-La parte 1, *Core*, especifica las operaciones de búsqueda y descubrimiento que se implementan mediante el método HTTP GET. Por defecto, cada API que implemente este estándar proporcionará acceso a un único conjunto de datos. En lugar de compartir los datos como un conjunto de datos completo, los estándares de características de API de OGC ofrecen acceso directo y detallado a los datos a nivel de característica (objeto). 
+**Resultado:** una captura anotada con el nombre de la colección, el ID de una entidad, dos propiedades, su tipo de geometría y el orden de coordenadas.
 
-El estándar WFS es más apropiado cuando se trabaja con aplicaciones cliente que solo admiten los servicios web clásicos de OGC. WFS adopta el GML como formato de datos predeterminado. Por el contrario, OGC API - Features incluye recomendaciones para admitir HTML y GeoJSON como codificaciones y también pueden admitir opcionalmente GML.
+**Reflexiona:** ¿por qué consultar una entidad en GeoJSON ofrece posibilidades distintas a pedir una imagen con WMS?
 
-| Recurso                    | Path                                          | Propósito                                                                                                                                                                                               |   |   |
-|----------------------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|---|
-| Página principal           | /                                             | Este es el recurso de nivel superior, que sirve como punto de entrada.                                                                                                                                  |   |   |
-| Declaración de conformidad | /conformance                                  | Este recurso presenta información sobre la funcionalidad que implementa el servidor.                                                                                                                    |   |   |
-| Definición de API          | /api                                          | Este recurso proporciona metadatos sobre la propia API. Tenga en cuenta que el uso de / api en el servidor es opcional y la definición de API puede estar alojada en un servidor completamente separado |   |   |
-| Colecciones de elementos   | /collections                                  | Este recurso enumera las colecciones de elementos que se ofrecen a través de la API.                                                                                                                    |   |   |
-| Colección de elementos     | /collections/{collectionId}                   | Este recurso describe la colección identificada en la ruta.                                                                                                                                             |   |   |
-| Elementos                  | /collections/{collectionId}/items             | Este recurso presenta los elementos que están contenidos en la colección.                                                                                                                               |   |   |
-| Elemento                   | /collections/{collectionId}/items/{featureId} | Este recurso presenta el elemento que se identifica en la ruta                                                                                                                                          |   |   |
+Si el servidor no responde, usa el [ejemplo GeoJSON local](ejemplos/ogcapi_features/feature-ejemplo.geojson) para identificar `FeatureCollection`, `Feature`, `geometry` y `properties`. El ejemplo es didáctico y no reproduce los datos del IGN; la navegación por colecciones quedará pendiente hasta recuperar la conexión.
 
-Las llamadas al recurso de elementos (/collections/{collectionId}/items) pueden recibir parámetros adicionales para filtrar los elementos. Estos parámetros son:
+## Reconocer los recursos
 
-* **limit**: se puede usar para controlar el tamaño de la página especificando el número máximo de elementos que se deben devolver en la respuesta (por defecto es 10). Cada página puede incluir información sobre el número de elementos seleccionados y devueltos ("numberMatched" y "numberReturned"), así como enlaces para admitir la paginación (relación de enlace "next"). Un ejemplo  https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&limit=2
-* **offset**: Sirve para navegar por la paginación de los resultados. https://demo.ldproxy.net/daraa/collections/AeronauticCrv/items?f=json&limit=2&offset=2
-* **bbox**: selecciona solo el subconjunto de los elementos en la colección que están dentro de la caja de coordenadas especificada por el parámetro bbox. Un ejemplo https://demo.ldproxy.net/daraa/collections/VegetationSrf/items?f=json&bbox=36.0832432,32.599852,36.1168237,32.6283697
-* **datetime**: selecciona solo el subconjunto de los elementos en la colección que están dentro dentro del intervalo de tiempo especificado por el parámetro datetime. Un ejemplo https://demo.ldproxy.net/daraa/collections/RecreationPnt/items?datetime=2011-12-26T20:55:26Z
+| Recurso | Qué puedes averiguar |
+|---|---|
+| Página de entrada | Quién ofrece la API, qué contiene y dónde seguir navegando. |
+| `/conformance` | Qué clases de conformidad declara la implementación. |
+| `/collections` | Qué colecciones ofrece el servicio. |
+| `/collections/{id}` | Qué describe una colección y qué enlaces ofrece. |
+| `/collections/{id}/items` | Qué entidades contiene, con opciones de paginación o consulta que dependen del servicio. |
+| `/collections/{id}/items/{itemId}` | Una entidad concreta, con su geometría y propiedades. |
 
-También se puede filtrar por valores de las propiedades de los elementos. Un ejemplo: https://demo.ldproxy.net/daraa/collections/CulturePnt/items?F_CODE=AL030
+Los nombres y capacidades disponibles se deben leer en la documentación del servicio. No todas las API implementan todas las partes ni todos los parámetros opcionales.
 
-Ejemplo de servicio. https://api-features.idee.es/
+## GeoJSON y sistemas de referencia
 
-En las otras partes del estándar se definirán funcionalidades adicionales, como poder trabajar en otros SRC, crear y modificar objetos geográficos, consultas complejas, acceder a varios conjuntos de datos, recuperar jerarquías, etc.
+Las entidades suelen servirse como **GeoJSON**, un formato que representa objetos con geometría y propiedades. Su estructura más común incluye:
 
-Se puede ver la especificación en http://docs.ogc.org/is/17-069r3/17-069r3.html
+- una `FeatureCollection`, que agrupa entidades;
+- cada `Feature`, con un identificador, `geometry` y `properties`;
+- una geometría (`Point`, `LineString`, `Polygon`, etc.) con sus coordenadas.
 
-## OGC API - Features - Part 2: Coordinate Reference Systems by Reference
+La parte *Core* de OGC API – Features usa por defecto coordenadas en WGS 84 con orden de ejes longitud-latitud, compatible con GeoJSON de RFC 7946. Otras referencias espaciales dependen de las partes implementadas por el servicio; comprueba la colección y los enlaces que declara antes de interpretar coordenadas.
 
-La Parte 2 amplía las capacidades especificadas en la Parte 1 con la capacidad de usar sistemas de referencia de coordenadas (CRS) distintos de WGS 84.
+## Cómo se relaciona con WFS
 
-El estándar especifica:
+**Web Feature Service (WFS)** también permite acceder a entidades geográficas. OGC API – Features ofrece una interfaz web más reciente basada en recursos y prácticas como REST, con navegación por URL y respuestas web. WFS sigue presente en muchos servicios; OGC recomienda Features para implementaciones nuevas que necesiten las funciones de acceso a entidades de WFS.
 
-* Cómo, para cada colección de objetos geográficos, un servidor muestra la lista de los identificadores de los CRS compatibles.
-* Cómo se puede acceder a las coordenadas de los objetos geográficos.
-* Cómo se puede acceder a los objetos geográficos mediante un rectángulo envolvente especificado (BBOX). 
-* Cómo un servidor puede declarar el CRS utilizado y, opcionalmente, el orden de los ejes.
+OGC API – Features se compone de partes. Part 1: Core y Part 2: CRS by Reference son estándares aprobados; Part 3: Filtering también está aprobada. Otras capacidades, como las transacciones para crear o modificar entidades, están en partes que siguen en desarrollo. Estado consultado el **5 de noviembre de 2026** en la [página oficial de OGC API – Features](https://ogcapi.ogc.org/features/).
 
-### Recuperar geometrías en un CRS específico
-En las solicitudes para obtener un o más elementos, agregue el parámetro crs con uno de los CRS admitidos. Por ejemplo, use lo siguiente para recuperar los edificios en ETRS89 UTM Zona 32 Norte (un CRS proyectado):
+## Ejercicio evaluable: explora una OGC API – Features
 
-https://demo.ldproxy.net/daraa/collections/SettlementSrf/items?f=json&crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F3857
+!!! question "Ejercicio 1 punto"
 
-!!! note
-    Como de costumbre, no olvide codificar en porcentaje el valor del parámetro.
+    Elige una **OGC API – Features publicada por cualquier IDE**. Puede ser de tu comunidad autónoma, de España, de otro país o una IDE temática. No es obligatorio usar el servicio del IGN de la práctica guiada.
 
-### Utilice una caja de coordenadas con otro CRS
-De forma predeterminada, el parámetro bbox especificado en la Parte 1 espera una caja de coordenadas en el CRS predeterminado, a menos que se especifique otro CRS en el parámetro bbox-crs. Por ejemplo lo siguiente solicita los edificios en Bonn, Alemania, utilizando una caja de coordenadas en ETRS89 UTM Zona 32 Norte:
+    En un documento breve, incluye enlaces a la página de entrada de la API, a una colección y a una entidad. Añade capturas legibles de la colección y de la entidad, y responde:
 
-```
-collections/buildings/items?bbox=280375,5577680,531792,5820212&bbox-crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F25832
-```
+    - ¿Qué IDE y organismo ofrecen la API? ¿Qué información publica?
+    - ¿Qué colección elegiste y qué representa?
+    - ¿Qué identificador tiene la entidad y qué dos propiedades puedes interpretar?
+    - ¿Qué tipo de geometría devuelve y en qué orden aparecen las coordenadas?
+    - ¿Qué diferencia principal hay entre consultar esta entidad y solicitar un mapa con WMS?
 
-Se puede ver la especificación en https://docs.ogc.org/is/18-058/18-058.html
+    Comprueba que el recurso elegido es una OGC API – Features: debe ofrecer una colección de entidades y permitir acceder a sus elementos. Si no encuentras una en la IDE elegida o el servicio no responde, prueba otra IDE. Si ninguna API elegida está disponible, usa el [ejemplo local](ejemplos/ogcapi_features/feature-ejemplo.geojson) para la parte de GeoJSON y documenta qué IDE y términos consultaste.
 
-## OGC API - Features - Part 3: Filtering and the Common Query Language (CQL)
+    **Criterios:** 0,2 puntos por identificar la IDE, el organismo y la API; 0,2 por describir la colección; 0,2 por identificar la entidad y sus propiedades; 0,2 por interpretar la geometría y las coordenadas; 0,2 por comparar el acceso con WMS y aportar evidencias claras.
 
-Una operación fundamental realizada en una colección de elementos es la de filtrar para obtener un subconjunto de los datos que contiene y que satisfacen algunos criterios de filtrado.
+## Fuentes
 
-La Parte 3 define:
+- [OGC API – Features: estándar y estado de sus partes](https://ogcapi.ogc.org/features/).
+- [API de entidades del IGN](https://api-features.ign.es/).
+- [RFC 7946: GeoJSON](https://www.rfc-editor.org/rfc/rfc7946).
 
-* Los parámetros de consulta (filter, filter-lang, filter-crs) para especificar criterios de filtrado en una solicitud a una API.
-* Una gramática de filtro llamada Common Query Language (CQL) para especificar criterios de filtrado mejorados más allá de lo que admite el Core.
-* Dos codificaciones para CQL: una codificación de texto y otra JSON.
-
-CQL y su codificación de texto no son nuevos, pero esta es la primera vez que CQL se especifica correctamente. CQL se creó como una codificación de texto basada en las capacidades definidas en el estándar OGC Filter Encoding para su uso en el estándar OGC Catalog Service (CSW). Uno de los objetivos del diseño era mantener CQL lo más compatible posible con las implementaciones existentes. Por ejemplo, la clasificación de operadores en operadores lógicos, de comparación, espaciales y temporales, así como sus nombres y sintaxis, no se modifican con respecto a las definiciones originales en OGC Filter Encoding.
-
-**Ejemplos:**
-
-Primero vemos los atributos que son consultables
-https://demo.ldproxy.net/zoomstack/collections/roads_national/queryables
-
-Ahora filtramos para obtener solo las carreteras de nivel 1.
-https://demo.ldproxy.net/zoomstack/collections/roads_national/items?f=json&filter=level=1
-
-*API IGN.es*
-
-https://api-features.ign.es/collections/red_regente/queryables
-
-Filtramos por provincia
-https://api-features.ign.es/collections/red_regente/items?f=json&filter=cod_provincia=08
-
-## OGC API - Features - Part 4: Simple Transactions
-
-!!! warning
-    Esta es una versión **BORRADOR** de la cuarta parte de la API de OGC. Este borrador no está completo y hay temas abiertos que aún están en discusión.
-
-Define el comportamiento de una API que permite agregar, reemplazar, modificar y/o eliminar elementos para una colección.
-
-La Parte 4 define:
-
-* Cómo agregar una nueva instancia de recurso a una colección (es decir, crear).
-* Cómo modificar un recurso existente de una colección; esto incluye reemplazar por completo el recurso existente (es decir, reemplazar) o simplemente modificar una o más propiedades de un recurso (es decir, actualizar).
-* Cómo eliminar un recurso existente de una colección (es decir, eliminar).
-
-La siguiente tabla cruza cada uno de las URL de recursos discutidos en este estándar con los métodos HTTP POST, PUT, PATCH y DELETE. Cada celda que se cruza en la tabla contiene el nombre de la operación para esa combinación de URL de recurso y método HTTP, o contiene la frase "n/a" que se usa para indicar que esta especificación no especifica ningún comportamiento para esa combinación de URL recurso y método HTTP.
-
-| URL de recurso                                 | Método HTTP |           |            |          |
-|------------------------------------------------|:-----------:|-----------|------------|----------|
-|                                                | **POST**        | **PUT**       | **PATCH**      | **DELETE**   |
-| /collections/{collectionId}/items              | crear       | n/a       | n/a        | n/a      |
-| /collections/{collectionId}/items/{resourceId} | n/a         | remplazar | actualizar | eliminar |
-
-Se puede ver el borrador de la especificación en http://docs.ogc.org/DRAFTS/20-002.html
-
-## Ejercicio
-
-!!! question "Ejercicio 0,5 pts"
-    En un documento de texto poner:
-
-    * Seleccionar un servicio OGC API features del catálogo de la IDE
-        * Escribir la url del servicio
-        * Escribir la url de una colección del servicio
-        * Captura de la cargar de ese servicio en QGIS (0,5 pt)
-
-## Referencias
-
-https://ogcapi.ogc.org/
-https://ogcapi.ogc.org/features/
-https://opengeospatial.github.io/bblocks/
+**Siguiente:** [Panorama de otros estándares](otros.md).

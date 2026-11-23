@@ -1,209 +1,121 @@
 # Servidores de mapas
 
-!!! note "Nota"
-    La mayorías de los conceptos son sacados del Libro libre SIG de Victor Olaya http://volaya.github.io/libro-sig/
+Una **IDE** permite encontrar y utilizar información geográfica publicada por distintas organizaciones. Para compartirla, una organización puede ofrecer archivos descargables, una API o un servicio de mapas. En esta lectura nos centramos en los servidores que responden a solicitudes de clientes y en las alternativas disponibles para publicarlos.
 
-## Qué es un geoservicio?
+## Servidor, servicio y cliente
 
-Un geoservicio es un servidor que ofrece algún servicio relacionado con el ámbito SIG, su principal función es acceder a información geoespacial existente en diferentes formatos y servir dicha información a clientes a través de protocolos estándares.
+- El **servidor** es el software o la plataforma que recibe solicitudes y prepara una respuesta.
+- El **servicio** es la forma de acceso que ofrece, definida por una interfaz o protocolo, por ejemplo WMS u OGC API – Features.
+- El **cliente** es la aplicación que realiza la solicitud y presenta o utiliza la respuesta, como QGIS o un visor web.
 
-El servidor es el elemento encargado de ofrecer el servicio como tal, respondiendo a las peticiones del cliente. A medida que los clientes se hacen más complejos y presentan mayor número de funcionalidades, también los servidores deben ser capaces de proporcionar servicios más elaborados.
+El flujo general es:
 
-Las capacidades fundamentales a las que responden los servidores dentro del ámbito SIG pueden dividirse en los siguientes grupos: [^1]
+```text
+datos de origen → servidor → servicio → cliente
+                         ↘ catálogo de metadatos
+```
 
-* **Servir representaciones de los datos.** Los servicios de cartografía Web, tanto en sus orígenes como en la actualidad, son eminentemente gráficos, y en última instancia lo que la aplicación Web correspondiente va a hacer es mostrarnos algún tipo de imagen con un mapa formado a partir de una serie de datos geográficos. Ejemplo WMS
+La ficha del catálogo describe el recurso y enlaza a su servicio o a los datos descargables. El catálogo no sustituye al servidor de mapas: ayuda a descubrir y comprender el recurso.
 
-El servidor puede responder directamente a este tipo de necesidades, preparando una imagen a partir de los datos geográficos de los que dispone. En el caso de que estos sean ya imágenes —por ejemplo, imágenes de satélite u ortofotos, bastará servir estas, transmitiendo una versión escalada de las dimensiones exactas que el cliente necesite para representar en pantalla. En caso de que los datos sean de tipo vectorial, o bien raster sin una forma de representación implícita —por ejemplo, un Modelo Digital del Terreno— es necesario emplear algún método para asignarles dicha representación. Este puede ser asignado por defecto por el servidor, que establecerá una simbología fija, o bien ofrecer un servicio más complejo en el que el cliente no solo pide una representación gráfica de una serie de datos para una zona dada, sino que además puede especificar cómo crear esa representación (vía SLD).
+## ¿Qué se puede publicar?
 
-* **Servir los datos directamente.** Una opción más flexible que lo anterior es que el servidor provea directamente los datos geográficos y sea después el cliente quien los utilice como corresponda, bien sea simplemente representándolos —en cuyo caso debería ser el propio cliente quien establezca la simbología, ya que esta tarea ya no queda en manos del servidor— o bien trabajando con ellos de cualquier otra forma, como por ejemplo analizándolos. Ejemplo WFS, Vector Tiles
+La elección depende de lo que necesite hacer quien consulta los datos:
 
-Aunque las posibilidades son mayores en este caso, se requieren por parte del cliente unas capacidades mayores, ya que mientras que representar una imagen es algo sumamente sencillo desde el punto de vista técnico, crear esta a partir de los datos geográficos es más complejo.
+- **Una imagen de mapa:** el cliente recibe una representación cartográfica. WMS es el ejemplo que ya hemos estudiado.
+- **Entidades geográficas:** el cliente puede consultar geometrías y atributos. WFS y OGC API – Features son dos interfaces con las que podemos acceder a entidades.
+- **Teselas de mapa:** el territorio se entrega en piezas pequeñas para facilitar la visualización a distintas escalas. WMTS publica teselas de mapa; las teselas vectoriales contienen datos vectoriales preparados para su representación. Las veremos en una lección posterior.
+- **Procesos geoespaciales:** un servicio puede ejecutar operaciones y devolver resultados. En esta asignatura basta con reconocer esta posibilidad.
 
-* **Servir consultas.** Un paso más allá en la funcionalidad que puede ofrecer el servidor es responder a preguntas realizadas por el cliente relativas a los datos, ya sean estas relativas a la parte espacial de dichos datos, o bien a su componente temática. El servidor puede ofrecer como respuesta conjuntos reducidos de los datos de los que dispone, o valores que describan a estos. Estas consultas pueden ser útiles, por ejemplo, para establecer filtros previos cuando se dispone de un conjunto amplio de orígenes de datos. Un cliente Web puede obtener datos de distintos servidores, y puede consultar si, para un zona dada, estos servidores disponen de información, sin más que consultar la extensión cubierta por los datos de cada uno de ellos y comprobar si se intersecta con la región de interés. En función de la respuesta, puede o no realizarse posteriormente el acceso a los datos en sí. Ejemplo CSW
+Los catálogos de metadatos cumplen otra función: describen y ayudan a descubrir recursos. Por eso CSW y OGC API – Records se estudian en el contexto de catálogos, no como alternativas a un servidor de mapas.
 
-* **Servir procesos.** Por último, un servidor puede ofrecer nuevos datos, espaciales o no espaciales, resultantes de algún tipo de proceso o cálculo a partir de datos espaciales. En este caso, el proceso constituye en sí el servicio ofrecido por el servidor, y el cliente debe definir los parámetros de entrada de este y los posibles parámetros de ajuste que resulten necesarios. Los datos con los que se trabaja pueden ser proporcionados por el cliente, incorporándolos a su propia petición, o bien pueden residir en el propio servidor. En este último caso, el servidor ofrece tanto los datos, como la posibilidad de extraer resultados a partir de ellos, es decir, los datos y una herramienta para explotarlos. También pueden emplearse datos en un servidor distinto, a los que el servidor de procesos puede acceder si estos están disponibles, convirtiéndose en cliente de ese segundo servidor. Ejemplo WPS
+## Alternativas de software
 
-Las posibilidades que estos servicios brindan son muy numerosas. Por una parte, pueden añadirse funcionalidades avanzadas a interfaces Web, llevando a estas las capacidades propias de los SIG de escritorio. Por otra, la difusión de algoritmos de análisis geográfico resulta más sencilla, pudiendo ofrecerse estos a todo tipo de usuarios sin necesidad de ningún software especializado. Y por último, en ciertos casos pueden rebajarse los tiempos de proceso, ya que, en el caso de operaciones complejas, la mayor potencia del servidor respecto al cliente puede resultar en un mayor rendimiento. El reparto de tareas entre varios servidores (computación distribuida) es otra de las posibilidades que pueden a su vez ampliar la eficiencia de los procesos.
-
-## Qué es un servidor de mapas?
-
-Es un servidor que principalmente provee cartografía a través de la red tanto en modo vectorial como en ráster.
-    
-## Servidores de mapas estándar
-
-Son servidores de mapas que cumplen los estándares OGC de WMS y/o WFS. 
-
-El listado completo de servidores de mapas que cumplen con los estándares de la OGC se puede ver en: http://www.opengeospatial.org/resource/products/compliant
-
-Algunos software de servidores de mapas son:
-
-### UMN Mapserver 
-
-Es un servidor de código abierto programado en C/C++, permite compartir y editar datos geoespaciales. Originalmente fue desarrollado por la Universidad de Minnesota (UMN) y por eso también se le conoce como Minnesota MapServer para diferenciarlo del producto comercial “map server” de Autodesk. Implementa las especificaciones Web Map Service (WMS) (cliente/servidor), Web Feature Service no-transaccional (WFS) (cliente/servidor), Web Map Context (WMC), Web Coverage Service(WCS), Filter Encoding, Styled Layer Descriptor (SLD), Geography Markup Language (GML), Sensor Observation Service (SOS), Observations and Measurements (OM).
-
-http://www.mapserver.org/
-
-**Principales características**
-
-* Proporciona una API (MapScript) que permite acceder a las funcionalidades de MapServer desde diferentes lenguajes de programación como PHP, Java, Python, Perl, Ruby y .NET (C#).
-* Soporta múltiples formatos de entrada (vectorial/raster) y salida ya que usa GDAL/OGR.
-* Soporta fuentes TrueType (útil para el etiquetado de elementos).
-* Configuración “al vuelo” vía parámetros GET pasados por URL.
-* Configuración basada en el fichero mapfile .map.
-* Incluye la posibilidad de usar una plantilla HTML MapServer para generar una página web.
-* Es multiplataforma
-* Incluye un componente de cacheado MapCache para generar pirámides de teselas (tiles) con la finalidad de acelerar y optimizar la respuesta a la hora de servir mapas. Soporta el estándar WMTS, también soporta otras salidas como TMS, VirtualEarth/Bing y peticiones Google Maps.
-* Incluye un componente TinyOWS que da soporte para edición de datos a través del protocolo WFS transactional (WFS-T).
-* Mapbox Vector Tile (MVT)
+No existe un único servidor adecuado para todas las situaciones. Estas herramientas permiten publicar datos, pero se diferencian en el tipo de configuración y en las tareas para las que suelen elegirse.
 
 ### GeoServer
 
-Es un servidor de código abierto programado en Java, permite compartir y editar datos geoespaciales. GeoServer sirve de implementación de referencia del estándar Web Feature Service (WFS) de la OGC, también implementa las especificaciones Web Map Service (WMS) y Web Coverage Service(WCS).
+Servidor de propósito general con interfaz de administración web. Puede publicar mapas y datos mediante WMS, WFS, WCS, WMTS y OGC API – Features. Puede ser una opción cuando se necesita gestionar varias capas y servicios desde una misma aplicación. La disponibilidad de cada servicio depende de la versión y de las extensiones instaladas.
 
-http://geoserver.org/
+[Documentación de GeoServer](https://docs.geoserver.org/main/en/user/introduction/overview/)
 
-**Principales características**
+### QGIS Server
 
-* Fácil utilización y administración a través de una herramienta de administración web. No es necesario tocar archivos de configuración.
-* Soporte para edición de datos a través del protocolo WFS transactional (WFS-T).
-* Al ser programado en Java está basado en servlets (JEE), puede funcionar en cualquier contenedor de servlets. Es multiplataforma.
-* Es compatible para ser usado con extensiones.
-* Incluye integrado un cliente OpenLayers que permite visualizar las capas de datos.
-* Incluye un componente de cacheado GeoWebCache para generar pirámides de teselas (tiles) con la finalidad de acelerar y optimizar la respuesta a la hora de servir mapas. Soporta los estándares WMS-C y WMTS, también soporta otras salidas como TMS, Google Maps KML, Virtual Earth.
-* Hay formatos y opciones de publicación adicionales disponibles como extensiones, incluido el Servicio de procesamiento web (WPS) y el Servicio de mosaicos de mapas web (WMTS).
-* Produce mosaicos vectoriales en tres formatos: GeoJSON, TopoJSON y MapBox Vector (MVT)
+Publica servicios a partir de proyectos de QGIS. Puede ser una opción cuando la simbología y la composición del proyecto ya se han preparado en QGIS y se quiere reutilizar esa configuración en un servicio. Su despliegue requiere configurar un entorno de servidor.
 
-### Maproxy 
+[Documentación de QGIS Server](https://docs.qgis.org/3.44/en/docs/server_manual/)
 
-Es un proxy de código abierto para datos geoespaciales. Almacena en caché, acelera y transforma los datos de los servicios de mapas existentes y sirve a cualquier cliente GIS de escritorio o web.
+### MapServer
 
-https://mapproxy.org
+Servidor de mapas de código abierto que se configura principalmente mediante archivos de configuración llamados *mapfiles*. Es una alternativa cuando se busca controlar de forma explícita la definición de capas y servicios. Su configuración suele requerir conocimientos más técnicos.
 
-MapProxy no es sólo una solución de caché de mosaico, también ofrece muchas características nuevas e innovadoras como soporte completo para clientes WMS.
+[Documentación de MapServer](https://mapserver.github.io/documentation.html)
 
-**Principales características**
+### pygeoapi
 
-* Sirve como cache de teselas
-* Reprojecta WMS y teselas a otros SRS
-* Guardar teselas idénticas sólo una vez (Ej. teselas del mar)
-* Permite manipular las bandas de las imágenes para crear imágenes de otros colores (Ej. escala de grises)
-* Permite pregenerar caches (Seeding) de areas determinadas
-* Combina múltiples capas y servicios
+Implementación de las OGC API. Puede ser una opción cuando el objetivo principal es ofrecer acceso web a colecciones de datos y procesos con interfaces REST. Requiere configurar las fuentes de datos y el servidor.
 
-### QGIS Server 
+[Documentación de pygeoapi](https://docs.pygeoapi.io/en/stable/)
 
-Es una implementación de código abierto WMS 1.3, WFS 1.0.0, WFS 1.1.0 y WCS 1.1.1 que, además, implementa características cartográficas avanzadas para mapeo temático. QGIS Server es una aplicación FastCGI / CGI (Common Gateway Interface) escrita en C ++ que funciona junto con un servidor web (por ejemplo, Apache, Nginx). Tiene compatibilidad con el complemento Python, lo que permite un desarrollo e implementación rápidos y eficientes de nuevas funciones.
+### MapProxy
 
-https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/server/index.html
+Actúa como intermediario entre servicios y clientes. Puede combinar servicios existentes, almacenar respuestas en caché o adaptar la forma en que se ofrecen. No sustituye necesariamente al servidor que mantiene y publica los datos originales.
 
-**Principales características**
+[Sitio oficial de MapProxy](https://mapproxy.org/)
 
-* QGIS Server utiliza QGIS como back-end para la lógica GIS y para la representación de mapas. Además, la biblioteca Qt se utiliza para gráficos y para programación C ++ independiente de la plataforma. A diferencia de otro software WMS, el QGIS Server utiliza reglas cartográficas como lenguaje de configuración, tanto para la configuración del servidor como para las reglas cartográficas definidas por el usuario.
-* Como QGIS Desktop y QGIS Server utilizan las mismas bibliotecas de visualización, los mapas que se publican en la web tienen el mismo aspecto que en el GIS de escritorio.
+## El software no es lo mismo que el alojamiento
 
+Además de elegir qué software utilizar, hay que decidir **dónde se ejecutará**:
 
-### Cómo preparar la geoinformación
+- En un servidor de la propia organización, que esta administra.
+- En una máquina virtual o servicio de alojamiento gestionado.
+- En una plataforma de datos que ofrece una base de datos y una API.
+- En un alojamiento estático, si basta con publicar archivos que no requieren consultas dinámicas.
 
-Antes de publicar la información es importante preparar la misma, ya que esto permitirá crear servicios de mejor calidad, ya sea mejorando su rendimiento y/o creando creando un servicio útil y atractivo para los usuarios.
+Un software de servidor no garantiza por sí mismo que el servicio vaya a estar disponible en Internet. También hacen falta una máquina accesible, configuración de red, mantenimiento, medidas de seguridad y una estrategia para actualizar los datos. Más adelante compararemos la publicación de un archivo estático y una base de datos online.
 
-Los principales servidores de mapas pueden consumir la información de diferentes fuentes como por ejemplo:
+## Antes de publicar
 
-* *Bases de datos*: cargar la información en una base de datos geográfica es muy recomendable ya sea tanto para trabajar con la misma como para su publicación. Ya que permite hacer operaciones sobre la información y permite de una forma sencilla seleccionar que datos o atributos queremos publicar sin tener que duplicar la información
-* *RAW data*: en algunos casos queremos publicar los datos en el formato de origen y sin procesar. Por ejemplo imágenes de satélite. Se puede publicar el archivo original o se puede publicar una imagen creada a partir de una combinación de bandas.
-* *Pirámides cache*: Generar pirámides de cache permite mejorar el rendimiento de nuestro servicio ya que para cada petición no tiene que procesar la información y generar la respuesta sino que ya tiene la respuesta generada en cache y sirve directamente esta respuesta.
-* *Generalizar la información*: preparar la información para su visualización dependiendo de la escala. Por ejemplo generar los overview de imágenes (esto sirve para generar imágenes de menor resolución)
+Antes de poner un recurso a disposición de otras personas, conviene comprobar:
 
-Ejemplo
+1. **Qué se ofrece:** archivo, imagen de mapa, entidades, teselas o proceso.
+2. **Quién puede acceder:** público, usuarios identificados o personal de una organización.
+3. **Qué necesita el cliente:** protocolo, formato, sistema de coordenadas y extensión geográfica.
+4. **Cómo se mantiene:** fecha de actualización, persona u organización responsable y disponibilidad esperada.
+5. **Qué condiciones se aplican:** licencia, atribución, privacidad y restricciones de uso.
+6. **Cómo se descubre:** ficha de metadatos con un enlace al servicio o a la descarga.
 
-![Imagen sin overview](img/mapaMosaico.png "Imagen sin overview")
-Imagen sin overview
+## Actividad: elegir una alternativa
 
-![Imagen con overview](img/mapaMosaicoOverview.png "Imagen con overview")
-Imagen con overview
+**Objetivo:** relacionar una necesidad de publicación con el tipo de recurso y el servidor que podría ofrecerlo.
 
-## Práctica implementar un servidor de mapas
+**Materiales:** esta lectura y las páginas enlazadas de los proyectos.
 
-1. Abrir un nuevo proyecto en QGIS
+En parejas, leed estos escenarios y para cada uno proponed:
 
-2. Cargar la capa de municipios que nos descargamos del ICGC.
+1. qué necesita recibir el usuario (imagen, entidades, teselas o archivo);
+2. una herramienta de las presentadas que investigaríais;
+3. una razón para elegirla y una cuestión que habría que resolver antes de publicarla.
 
-3. Generar la capa de comarcas a partir de la capa de municipios.
+**Escenarios:**
 
-4. Dar estilo a ambas capas.
+- Una administración quiere mostrar una cartografía temática con la simbología definida por su equipo SIG.
+- Un portal necesita que otros programas consulten las entidades y sus atributos.
+- Una IDE ya dispone de varios servicios lentos y quiere reutilizarlos mediante una caché.
+- Un equipo tiene datos en GeoJSON y quiere ofrecer colecciones mediante OGC API.
 
-5. Guardar el proyecto con el nombre mun_com.qgs
+**Resultado esperado:** una propuesta razonada para cada escenario; no hay una única respuesta correcta. La herramienta debe corresponder al tipo de recurso y a la necesidad indicada.
 
-6. Modificar las propiedades del proyecto. En la pestaña de Servidor de QGIS
+**Reflexión:** ¿qué responsabilidades tendría que asumir la organización además de instalar o contratar el software?
 
-    * Seleccionar la casilla de Capacidades del servicio
-    * Capacidades WMTS -> Seleccionar las casilla de publicado, png y jpeg para las capas
-    * Capacidades WFS -> Seleccionar las casilla de publicado para las capas
-
-    ![Propiedades del proyecto](img/qgis_server_project_properties.png "Propiedades del proyecto")
-    Propiedades del proyecto
-
-7. Arrancar el Apache desde el panel de control del XAMPP
-
-8. Comprobar que el QGIS Server está funcionando: abrir en el navegador http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
-
-9. Mirar el capabilities de nuestro servidor: abrir en el navegador http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&map=[RUTA_DE_ARCHIVO]/mun_com.qgs
-
-10. Crear un nuevo proyecto en blanco en el QGIS y cargar nuestro servicio WMS.
-
-    !!! warning
-        Al agregar el servicio WMS seleccionar la opción de invertir la orientación de los ejes
-
-    ![Qgis con nuestro WMS](img/qgis_server_wms_comarcas.png "Qgis con nuestro WMS")
-    Qgis con nuestro WMS
-
-11. Agregar el recurso a nuestro metadato
-
-    * Abrir el geonetwork
-    * Editar el metadato "municipio"
-    * Añadir una entrada en *Recursos asociados* -> *Recursos en línea*
-        * Protocolo seleccionar **OGC-WMS Servicio Web de Mapas (version 1.3.0)
-        * URL poner la url de nuestro servicio. Ejemplo: http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?VERSION=1.3.0&map=[RUTA_DE_ARCHIVO]/mun_com.qgs
-        * Seleccionar la capa de municipios
-        * Presionar el botón de Añadir recurso en línea
-
-    ![Añadir nuestro WMS al metadato](img/geonetwork_add_wms.png "Añadir nuestro WMS al metadato")
-    Añadir nuestro WMS al metadato
-
-## Práctica publicar una imagen georefenciada
-
-1. Abrir el proyecto con el nombre mun_com.qgs generado en la práctica anterior
-
-2. Abrir la Cartoteca digital del ICGC https://cartotecadigital.icgc.cat/
-
-3. Buscar **Trullás** y seleccionar el *Mapa geológico y topográfico de la provincia de Barcelona: región segunda ó del río Noya al mar detallada / geologia por el canónigo Dr. D. Jaime Almera, topografia por Eduardo Brossa, litografiado por E. Brossa y Trullás*
-
-4. Abrir el enlace de la Cartoteca y descargar la imagen en Alta resolución
-
-    ![Descarga imagen Trullás](img/cartotega_trullas_hdi.png "Descarga imagen Trullás")
-    Descarga imagen Trullás
-
-5. Georeferenciar la imagen descargada en QGIS.
-
-6. Agregar la imagen descargada al proyecto de QGIS y definir el Sistema de coordenadas de la capa como **WGS 84** *(EPSG:4326)*
-
-    ![Definir el SRS de la imagen](img/qgis_definir_srs_trullas.png "Definir el SRS de la imagen")
-    Definir el SRS de la imagen
-
-9. Guardar el proyecto
-
-## Ejercicio
-
-!!! question "Ejercicio imagen 4 pts"
-    * Crear un visor con Leaflet.js con la capa de comarcas de nuestro WMS. (2 pt)
-    * Agregar la capa de la imagen al visor creado en el ejercicio anterior. (0,5 pt)
-    * Agregar transparencia a la capa (0,5 pt)
-
-    **Extra** 
-    Agregar el control de capa de Leaflet https://leafletjs.com/reference-1.7.1.html#control-layers para poder activar y desactivar la capa de la imagen. (1 pt)
-
-    ![Ejemplo resultado ejercicio](img/resultado_ejercicio_wms.png "Ejemplo resultado ejercicio")
-    Ejemplo resultado ejercicio
+!!! note "Materiales trasladados para revisar"
+    Se han separado de esta lectura el [tutorial de QGIS Server](qgis_server.md) y la [práctica de georreferenciación](georeferenciacion.md). Sus procedimientos se revisarán más adelante.
 
 ## Referencias
 
-[^1]: http://volaya.github.io/libro-sig/
+- [GeoServer: introducción y estándares disponibles](https://docs.geoserver.org/main/en/user/introduction/overview/).
+- [QGIS Server: servicios disponibles](https://docs.qgis.org/3.44/en/docs/server_manual/services.html).
+- [MapServer: documentación oficial](https://mapserver.github.io/documentation.html).
+- [pygeoapi: servidor de las OGC API](https://pygeoapi.io/).
+- [MapProxy: proxy y caché de servicios geoespaciales](https://mapproxy.org/).
+
+**Siguiente:** [Publicar con QGIS Server](qgis_server.md).

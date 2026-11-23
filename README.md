@@ -1,136 +1,82 @@
 # SDIS-mgeo
 
-[https://gss-mtig.github.io/sdis-mgeo/](https://gss-mtig.github.io/sdis-mgeo/)
+Materiales docentes sobre infraestructuras de datos espaciales (IDEs) y estándares de geoservicios.
+
+Sitio publicado: <https://gss-mtig.github.io/sdis-mgeo/>
 
 ## Temario
 
-* Introducción a las IDE's 
-    * Antecedentes
-    * Qué es una IDE?
-    * Componentes de una IDE
-    * IDEC
-    * IDEE
-    * INSPIRE
-    * Otras IDES
+- Introducción a las IDE: antecedentes, definición, componentes, IDEC, IDEE, INSPIRE y otras IDE.
+- Estándares OGC: WMS, WMTS, WFS, GML, SLD, SOS, CSW y OGC API.
+- Instalación de programas: XAMPP, GeoNetwork y QGIS Server.
+- Clientes de mapas: clientes web y prácticas con QGIS, Leaflet y ArcGIS Online.
+- Estándares ISO y metadatos: creación, catalogación e intercambio de metadatos.
+- Servidores de mapas y publicación de datos en bases de datos en línea.
 
-* Estándares OCG
-    * Qué es OGC?
-    * Estándares OGC
-    * WMS
-    * WMTS
-    * WFS
-    * GML
-    * SLD
-    * SOS
-    * CSW
-    * API
-    * Otros estándares OGC
+## Requisitos
 
-* Instalación de programas
-    * XAMPP
-    * GeoNetwork
-    * QGIS Server
+- Python 3.11 o posterior.
+- Git para obtener el repositorio y enviar cambios a GitHub.
 
-* Clientes de mapa
-    * Clientes web
-    * Práctica conectar servicios OGC con QGIS
-    * Práctica conectar servicios OGC con Leaflet
-    * ArcGIS Online
+## Ejecutar y previsualizar en local
 
-* Estándares ISO
-    * Qué es ISO?
-    * Familia ISO19x
-    * ISO 19115
-    * ISO 19119
-    * ISO 19139
+Desde la carpeta raíz del repositorio, crea y activa un entorno virtual e instala Zensical:
 
-* Metadatos
-    * Qué es un metadato
-    * Qué es un catálogo de metadatos
-    * Herramientas para trabajar con metadatos
-    * Creación de metadatos desde ArcGIS
-    * Exportación desde ArcGIS e importación en GeoNetwork
-
-* Servidores de mapes
-    * Qué es un geoservicio?
-    * Qué es un servidor de mapas?
-    * Servidores de mapas estándar
-    * Cómo preparar la geoinformación
-    * Práctica implementar un servidor de mapas
-
-## Entorno
-
-Se puede crear un entorno para generar la documentación instalando [venv](https://docs.python.org/3/library/venv.html#)
-
-Para crear el *enviroment* abrir la consola y escribir
+**Linux o macOS**
 
 ```bash
-python3 -m venv mkdocs
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install zensical
 ```
 
-Para activar el nuevo *enviroment* escribir
+**Windows (PowerShell)**
+
+```powershell
+py -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install zensical
+```
+
+Inicia la previsualización local con recarga automática:
 
 ```bash
-source mkdocs/bin/activate
+zensical serve
 ```
 
-También se puede crear un entorno para generar la documentación instalando [Anaconda](https://www.anaconda.com/)
-
-Una vez instalado el Anaconda crear un *enviroment* donde instalar el mkdocs
-
-Para crear el *enviroment* abrir la consola de Anaconda y escribir
-```bash
-conda create --name <NOMBRE_DEL_ENVIROMENT>
-```
-
-Para activar el nuevo *enviroment* escribir
-```bash
-conda activate <NOMBRE_DEL_ENVIROMENT>
-```
-
-### Herramienta de documentación
-
-Se usa [mkdocs](http://mkdocs.org) con el tema [mkdocs-material](https://squidfunk.github.io/mkdocs-material/).
-
-Desinstalar versiones anteriores de mkdocs:
+Abre <http://localhost:8000>. Para generar el sitio estático sin iniciar el servidor:
 
 ```bash
-    sudo pip uninstall mkdocs
+zensical build
 ```
 
-E instalar con el comando:
+El sitio generado queda en `site/` (carpeta que no se versiona). Para salir del entorno virtual, ejecuta `deactivate`.
 
-```bash
-pip install mkdocs-material
+## Publicar en GitHub Pages
+
+El sitio se construye y publica con GitHub Actions al enviar cambios a la rama `master`. El flujo está en [`.github/workflows/docs.yml`](.github/workflows/docs.yml).
+
+1. En GitHub, abre **Settings → Pages** y selecciona **GitHub Actions** como fuente de publicación. Haz este cambio una vez que hayas revisado el sitio generado con Zensical.
+2. Envía los cambios a `master`:
+
+   ```bash
+   git add .
+   git commit -m "Migrar documentación a Zensical"
+   git push origin master
+   ```
+
+3. En la pestaña **Actions**, revisa la ejecución del flujo **Publicar documentación**. Al terminar, GitHub Pages actualizará <https://gss-mtig.github.io/sdis-mgeo/>.
+
+La configuración actual de `mkdocs.yml` y la estructura `docs/` se conservan para facilitar la migración gradual. Zensical utiliza esa configuración para generar el sitio; el flujo de GitHub Actions instala Zensical y publica la carpeta `site/`.
+
+## Estructura
+
+```text
+mkdocs.yml                  # Configuración del sitio y navegación
+docs/                       # Páginas Markdown e imágenes
+.github/workflows/docs.yml  # Construcción y publicación en GitHub Pages
 ```
 
-### Comandos mkdocs
+## Licencia
 
-* `mkdocs serve`: Arranca un servidor web con auto-recarga. `mkdocs serve --livereload`
-* `mkdocs build`: Compila la documentación en html.
-* `mkdocs gh-deploy`: Publica la documentación en gh-pages.
-
-#### Nota
-    
-1. git subtree split --prefix site -b gh-pages # create a local gh-pages branch containing the splitted output folder
-2. git push -f origin gh-pages:gh-pages # force the push of the gh-pages branch to the remote gh-pages branch at origin
-3. git branch -D gh-pages # delete the local gh-pages because you will need it: ref
-
-Para publicar en gh-pages
-
-1. mkdocs build
-2. ghp-import site
-3. git push origin gh-pages
-
-### Layout
-
-    mkdocs.yml    # El fichero de configuración.
-    docs/
-        index.md  # La portada.
-        ...       # Otras páginas en markdown, imágenes, etc.
-
-### Markdown
-
-* Chuleta rápida sobre links, imágenes y tablas en markdown: http://www.mkdocs.org/user-guide/writing-your-docs/#linking-documents
-* [Especificación Markdown](http://spec.commonmark.org/0.28/) completa.
-* Visual Studio Code ofrece una vista de Preview que va mostrando el resultado del markdown en tiempo real sin tener que salir del editor.
+Consulta [LICENSE](LICENSE).

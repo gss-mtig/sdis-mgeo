@@ -1,0 +1,35 @@
+{
+  "version": 8,
+  "name": "Vehículos implicados en accidentes de Barcelona (2025)",
+  "center": [2.17, 41.39],
+  "zoom": 12,
+  "sources": {
+    "accidentes": {
+      "type": "vector",
+      "url": "mbtiles://{accidentes}"
+    }
+  },
+  "layers": [
+    {
+      "id": "fondo",
+      "type": "background",
+      "paint": {
+        "background-color": "#f2f5f7"
+      }
+    },
+    {
+      "id": "vehiculos-accidentes",
+      "type": "circle",
+      "source": "accidentes",
+      "source-layer": "accidentes",
+      "minzoom": 10,
+      "paint": {
+        "circle-radius": ["interpolate", ["linear"], ["zoom"], 10, 3, 16, 7],
+        "circle-color": "#d94801",
+        "circle-opacity": 0.8,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 1
+      }
+    }
+  ]
+}

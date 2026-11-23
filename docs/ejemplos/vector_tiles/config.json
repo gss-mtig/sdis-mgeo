@@ -1,0 +1,27 @@
+{
+  "options": {
+    "paths": {
+      "root": ".",
+      "styles": ".",
+      "mbtiles": "."
+    }
+  },
+  "styles": {
+    "puntos": {
+      "style": "estilo_puntos.json",
+      "serve_rendered": false
+    },
+    "accidentes": {
+      "style": "estilo_accidentes.json",
+      "serve_rendered": false
+    }
+  },
+  "data": {
+    "puntos": {
+      "mbtiles": "puntos.mbtiles"
+    },
+    "accidentes": {
+      "mbtiles": "accidentes_barcelona.mbtiles"
+    }
+  }
+}

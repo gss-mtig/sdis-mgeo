@@ -1,310 +1,98 @@
 # Clientes de mapas
 
-!!! note "Nota"
-    La mayorías de los conceptos son sacados del Libro libre SIG de Victor Olaya http://volaya.github.io/libro-sig/
+Un **cliente de mapas** es una aplicación que permite a una persona consultar o utilizar datos geográficos. Puede mostrar un servicio remoto, abrir archivos locales o combinar ambas fuentes. El cliente transforma los datos o las respuestas de un servicio en una representación con la que podemos interactuar.
 
-Un cliente es un elemento que utiliza los datos proporcionados por un servicio. Para ello, realiza una petición a la que el servicio responde enviando dichos datos, estos datos serán los que después se emplearán para realizar cualquier otra tarea, principalmente la representación de estos para que el usuario pueda visualizarlos. El cliente es, de este modo, el intermediario entre el usuario y los servicios y datos que el servidor ofrece. [^1]
+Por ejemplo, un WMS entrega imágenes de mapa. Un cliente como QGIS o un visor web solicita esas imágenes y las muestra. El mismo servicio puede verse en clientes distintos, aunque cada uno ofrezca herramientas diferentes.
 
-El cliente debe disponer de capacidades para formular peticiones a servidores, así como para procesar las respuestas que estos devolverán. No obstante, estas capacidades pueden variar ampliamente de un cliente a otro, desde el mínimo necesario para simplemente representar los datos obtenidos del servidor hasta conjuntos de funcionalidades mucho más avanzadas pensadas para un uso intensivo de esos mismos datos.
+## ¿Qué cliente conviene usar?
 
-Distinguimos dos tipos de clientes en función de las capacidades que tengan: clientes ligeros y clientes pesados.
+La elección depende de la tarea:
 
-* **Cliente ligero.** Se denomina *ligero* por el tamaño relativamente reducido del programa en sí, lo cual va consecuentemente asociado a unas capacidades limitadas. Hablamos de clientes ligeros cuando nos referimos a *Web Mapping* y a clientes que se ejecutan sobre un navegador Web, los cuales son siempre sencillos en cuanto a sus funcionalidades. En el momento de la carga de la página Web que contiene al cliente, el navegador descarga toda la lógica del programa, lo cual hace necesario limitar el tamaño de este. No obstante, los clientes Web empiezan progresivamente a ampliar sus posibilidades, y en ello juegan un importante papel otros servicios distintos a los de mapas o los de datos, como pueden ser los de procesos. Estos permiten que las funcionalidades adicionales no se implementen en el propio cliente (y por tanto sin aumentar en exceso su tamaño y sin disminuir su «ligereza»), sino que sean accedidas también como servicios remotos. La evolución de la cartografía Web en esta dirección se dirige desde el Web Mapping al Web GIS.
+- **Visor web:** consultar un mapa sin instalar software y compartirlo mediante un enlace.
+- **SIG de escritorio, como QGIS:** combinar servicios y archivos, inspeccionar capas y atributos, cambiar simbología y realizar análisis.
+- **Visor web propio:** integrar uno o varios recursos en una página adaptada a una necesidad concreta. En esta lectura construiremos uno pequeño con Leaflet.
 
-* **Cliente pesado.** A diferencia del cliente ligero, el cliente *pesado* es una aplicación individual que no se ejecuta sobre otra aplicación soporte como puede ser un navegador Web. Al ser un programa independiente, debe ocuparse de toda la lógica del proceso y de proveer todas las funcionalidades necesarias, por lo que su tamaño es generalmente mayor. Pese a ello, un cliente pesado no ha de ser necesariamente más potente y con más funcionalidades que uno ligero (aunque habitualmente lo es), ya que existen aplicaciones muy sencillas con capacidad para conectarse a servicios de mapas, que ofrecen poco más que un visor de cartografía. La diferencia no estriba en las capacidades del programa, sino en el enfoque a la hora de implementar este y el uso o no de otra aplicación «plataforma», generalmente en forma de un navegador Web. Los clientes pesados suelen permitir el uso de datos no procedentes directamente del acceso a servicios, tales como datos en ficheros locales, y no están pensados exclusivamente como clientes, sino como aplicaciones más amplias que además disponen de capacidades para aprovechar un determinado tipo de servicios. Dicho de otro modo, un cliente pesado tal y como un SIG de escritorio tiene utilidad aunque no se emplee como cliente de ningún servicio y no se disponga de conexión a red alguna, ya que puede alimentarse con datos locales y todas sus restantes funcionalidades (análisis, preparación de cartografía, etc.) pueden aprovecharse con dichos datos.
+Un cliente no cambia el contenido ni la calidad de los datos del servicio. Para valorar si una capa sirve para nuestro problema, hay que revisar también su ficha, cobertura, fecha, escala y condiciones de uso.
 
-## Clientes web
+## Práctica: el mismo WMS en QGIS y en Leaflet
 
-Hablamos de un cliente Web cuando este se ejecuta sobre un navegador Web. Por lo tanto un cliente Web es un cliente *ligero*. En el ámbito de los SIG hablamos de *Web Mapping* o de *Web SIG*.
+**Objetivo:** comprobar cómo dos clientes distintos muestran un mismo servicio y localizar en sus capacidades el nombre de la capa que se va a pedir.
 
-La cartografía Web tiene ciertas limitaciones respecto al SIG de escritorio, ya que la Web tiene sus propias limitaciones. Un ejemplo de esto es la limitación impuesta por el propio navegador como marco de trabajo. Las propias ventajas que este aporta son también responsables de ciertas limitaciones, ya que en el desarrollo de una aplicación SIG Web no se tiene la misma libertad que al desarrollar una aplicación de escritorio.
+**Materiales:** navegador con conexión a internet, QGIS y el servicio WMS de mapa base del Institut Cartogràfic i Geològic de Catalunya (ICGC).
 
-Otro aspecto problemático es la propia red, especialmente en lo que respecta a su fiabilidad y rendimiento. Todos los datos que el cliente emplea en una aplicación de cartografía Web provienen de la red, y por tanto existe una fuerte dependencia entre la aplicación y el funcionamiento tanto de esta como del servidor que a través de ella nos proporciona esos datos. El rendimiento de la red es más importante aún si cabe en el caso de trabajar con información geográfica, ya que los datos suelen ser voluminosos.
+### 1. Explorar las capacidades del WMS
 
-### Mashup
+Abre la [respuesta `GetCapabilities` del servicio](https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities). Es un documento XML que describe, entre otras cosas, las capas disponibles, sus nombres, sistemas de coordenadas y formatos.
 
-Se conoce como *mashup* o *aplicación Web híbrida* a una aplicación que basa sus contenidos en los de otras páginas Web, integrándolos y creando una nueva página que ofrece un servicio distinto. Un mashup accede a los servicios que otras páginas proporcionan de forma pública dando un uso distinto a estos en un nuevo contexto.
+Busca la capa llamada `topografic`. Ese nombre es el identificador que el cliente debe enviar al servicio; no tiene por qué coincidir exactamente con el título legible de una capa.
 
-Los mashups existen en todos los ámbitos de las aplicaciones Web, pero es en el ámbito SIG donde han adquirido una mayor importancia y en el que proliferan en mayor medida. Es por esto que resulta de interés tratarlos con algo más de profundidad, pues el impacto que están teniendo en la popularización de las tecnologías SIG es muy elevado.
+### 2. Abrir la capa en QGIS
 
-Principales razones por las que los mashups con componente SIG son tan populares:
+Si ya has añadido WMS en la [lección sobre WMS](wms.md), reutiliza ese procedimiento. La URL de conexión es:
 
-* La mayoría de la información que encontramos en la Web puede georreferenciarse. Esto hace que una gran parte de los contenidos de una página Web puedan complementarse con algún tipo de elemento geográfico, principalmente un visor de cartografía en el que poder mostrar esa información georreferenciada con la que se trabaja.
+```text
+https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wms?
+```
 
-* La información geográfica es de difícil acceso, especialmente a gran escala y por parte de usuarios o desarrolladores no especializados. Si el interés de añadir a cualquier página Web algún elemento de tipo SIG resulta claro, también es cierto que suelen necesitarse datos adicionales con que acompañar a los propios datos de la página. Es decir, si nuestra página Web recoge información sobre restaurantes en la zona, mostrar la localización de esos restaurantes enriquecerá el contenido, aunque para que esta funcionalidad sea verdaderamente útil deberemos contar con algún tipo de mapa base (cartografía de calles, fotografía aérea, etc.) que ayude al usuario a emplazar un restaurante dado o calcular la forma óptima de llegar hasta él.
+Conecta al servicio, busca la capa `topografic` y añádela al mapa. Observa cómo QGIS presenta el servicio y permite gestionar la capa desde su panel.
 
-Esta cartografía base implica un coste elevado, normalmente no asumible para un uso como este. Sin embargo, disponer de una cartografía base ofrecida por un proveedor que permita crear algún tipo de mashup sobre ella facilita que existan este tipo de servicios, como así lo atestigua el gran número de distintas aplicaciones Web que se desarrollan de este modo.
+### 3. Abrir la capa en Leaflet
 
-Google Maps es el servicio más popular para la creación de mashups y el que ha supuesto una verdadera revolución en este sentido. Actualmente existen alternativas que le están ganando terreno a Google Maps, tales como; OpenStreetMap (OSM) como capa base y el desarrollo de librerías Web de mapas de Software Libre como OpenLayers o Leaflet.
+Leaflet es una biblioteca JavaScript para crear mapas interactivos en páginas web. En este ejemplo no instalaremos un servidor ni configuraremos XAMPP: guardaremos un archivo HTML y lo abriremos directamente con el navegador. El archivo carga Leaflet desde una red de distribución de contenidos (CDN), por lo que se necesita conexión a internet.
 
-## Práctica conectar servicios OGC con QGIS
+Descarga esta [plantilla HTML de Leaflet con el WMS](ejemplos/clientes_mapa/wms_leaflet.html), ábrela con un editor de texto y revisa las líneas indicadas. Después, abre el archivo en el navegador.
 
-### QGIS - Visualizar una capa WMS
+```html
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<div id="mapa"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const mapa = L.map('mapa').setView([41.68, 1.85], 8);
 
-Utilizaremos el programa **QGIS** para visualizar servicios WMS.
+  L.tileLayer.wms('https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wms?', {
+    layers: 'topografic',
+    format: 'image/png',
+    transparent: true
+  }).addTo(mapa);
+</script>
+```
 
-1. Abrir el *QGIS desktop* y crear un nuevo proyecto llamado *sdis_mgeo*
-2. Presionar el botón de agregar WMS/WMTS del QGIS para desplegar el diálogo de añadir capa
-    ![Add WMS](img/qgis_add_wms.png "Add WMS")
-    Add WMS
-3. En el diálogo de añadir capa presionar el botón de *nuevo* para desplegar el diálogo de crear una nueva conexión.
-4. En el diálogo de crear conexión debemos rellenar el campo nombre con el nombre que queremos dar a esta conexión y el campo URL con la dirección del servicio WMS. Una vez rellenados los campos presionar el botón de Aceptar.
-    ![WMS ICGC](img/qgis_wms_icgc.png "WMS ICGC")
-    WMS ICGC
+La plantilla completa incluye la estructura HTML y el tamaño del mapa. En el fragmento, `setView` define el centro y el zoom iniciales. `tileLayer.wms` indica la URL del servicio y las opciones de la petición. El valor de `layers` procede del nombre encontrado en `GetCapabilities`.
 
-    En este caso utilizaremos la url del servidor WMS del ICGC.
+El servicio WMS actúa como capa de mapa. No estamos descargando las entidades geográficas ni sus atributos: recibimos imágenes para la extensión y escala que solicita el cliente.
 
-  		https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wms?
+### 4. Comparar los dos clientes
 
-5. En el diálogo de añadir capa presionar el botón de *conectar* para cargar el listado de capas del servicio.
-    ![Listado de capas ICGC](img/qgis_capas_wms_icgc.png "Listado de capas ICGC")
-    Listado de capas ICGC
-6. Seleccionar la(s) capa(s) que queremos cargar en nuestro mapa y presionamos el botón de Añadir. Nos debe cargar el servicio WMS en nuestro mapa.
-    ![Visualizar WMS ICGC](img/qgis_visualizar_wms.png "Visualizar WMS ICGC")
-    Visualizar WMS ICGC
-7. Instalar el complemento **QGIS Network Logger** para ver las peticiones que hace el QGIS.
+Con la misma capa abierta en QGIS y en Leaflet, comentad en parejas:
 
-### QGIS - Visualizar una capa XYZ
+1. ¿Qué pasos son iguales en ambos casos?
+2. ¿Dónde se indica el nombre de la capa? ¿Qué ocurre si se escribe un nombre que no aparece en `GetCapabilities`?
+3. ¿Qué controles ofrece QGIS que no aparecen en el visor mínimo de Leaflet?
+4. ¿En qué situación elegiríais QGIS y en cuál un visor web propio?
 
-Utilizaremos el programa **QGIS** para visualizar servicios XYZ.
+**Resultado esperado:** la capa `topografic` se visualiza en los dos clientes, y puedes explicar que ambos solicitan un mapa al mismo WMS aunque la interfaz y las posibilidades sean diferentes.
 
-1. Abrir el *QGIS desktop* y abrir el proyecto llamado *sdis_mgeo*
-2. En el panel explorador del QGIS presionar con el botón derecho del mouse sobre *Tile Server (XYZ)* para desplegar el menú donde debemos seleccionar la opción de *New Connection...* que nos mostrará el diálogo de añadir nueva conexión.
-    ![Add XYZ](img/qgis_add_wmts.png "Add XYZ")
-    Add XYZ
-3. En el diálogo de añadir nueva conexión debemos escribir la URL de nuestro servicio y presionar el botón de Aceptar. Luego se desplegarán un dialogo donde debemos colocar el nombre que queremos dar a la conexión y presionamos Aceptar.
-    ![XYZ OSM](img/qgis_wmts_osm.png "XYZ OSM")
-    XYZ OSM
+!!! warning "Si el mapa no aparece"
+    Comprueba que tienes conexión a internet, que la URL acaba en `?` y que `layers` contiene exactamente `topografic`. Vuelve a abrir `GetCapabilities` para comprobar que el servicio y la capa están disponibles. Los servicios externos pueden cambiar o dejar de responder; si ocurre, utiliza el WMS alternativo indicado por el docente.
 
-    En este caso utilizaremos la url del servidor de teselas de OpenStreetMap.
+## Ejercicio
 
-        https://c.tile.osm.org/{z}/{x}/{y}.png
+!!! question "Ejercicio 1 punto"
 
-4. En el panel explorador ahora debe aparece la conexión definida. Para agregarla al mapa hacemos doble click sobre el nombre de la conexión.
-    ![Visualizar XYZ OSM](img/qgis_visualizar_wmts.png "Visualizar XYZ OSM")
-    Visualizar XYZ OSM
+    Modifica la plantilla de Leaflet para mostrar otra capa de un servicio WMS de una IDE.
 
-### Ejercicio 
+    1. Localiza una ficha o página oficial del servicio y copia su URL de conexión.
+    2. Abre `GetCapabilities` e identifica el nombre exacto de una capa adecuada para una pregunta geográfica que te interese.
+    3. Cambia en la plantilla la URL del servicio y el nombre de la capa. Ajusta el centro y el zoom iniciales para que el mapa muestre el territorio de interés.
+    4. Comprueba que el mapa se ve en el navegador y entrega el archivo HTML junto con un breve texto que indique la IDE, la capa elegida y cómo encontraste su nombre en las capacidades.
 
-!!! question "Ejercicio 0,5 pt"
- 
-    Agregar la capa WMTS de la ortofoto o topográfico del servicio WMTS del ICGC
+    **Criterios:** visualización funcional (0,5 puntos), identificación correcta de la capa a partir de `GetCapabilities` (0,25 puntos) y referencia a la IDE y descripción breve del proceso (0,25 puntos).
 
-    https://geoserveis.icgc.cat/icc_mapesmultibase/noutm/wmts/orto/GRID3857/{z}/{x}/{y}.jpeg
-
-    En un documento de texto poner una captura de pantalla donde se vea la capa cargada en el mapa y el menu desplegado con el servicio WMTS y la capa. Ejemplo:
-
-    ![Ejemplo carga WMTS en QGIS](img/wmts_qgis_example.png "Ejemplo carga WMTS en QGIS")
-
-## Práctica conectar servicios OGC con Leaflet
-
-### Leaflet - Visualizar una capa WMS
-
-Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde visualizar servicios WMS.
-
-1. Crear una carpeta llamada *visor* dentro del directorio htdocs del Xampp.
-
-	C:\xampp\htdocs\visor
-
-2. Crear el archivo *wms.html* dentro de la carpeta visor. En este archivo crearemos la estructura básica del nuestro html y cargaremos la librería Leaflet. Para ello escribir los siguiente:
-
-    ``` html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visor simple con Leaflet</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-        <style type="text/css">
-            #mapid { height: 600px; width: 600px;}
-        </style>
-    </head>
-    <body>
-        <div id="mapid"></div>
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    </body>
-    </html>
-    ```
-
-3. Agregar el código para crear el mapa. Debajo de donde cargamos la librería de Leaflet.
-
-    ``` html hl_lines="15 16 17 18"
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visor simple con Leaflet</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-        <style type="text/css">
-            #mapid { height: 600px; width: 600px;}
-        </style>
-    </head>
-    <body>
-        <div id="mapid"></div>
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script>
-            //Creamos el objeto mapa.
-            const map = L.map('mapid').setView([41.68, 1.85], 9);
-        </script>
-    </body>
-    </html>
-    ```
-
-4. Agregar la capa WMS.
-
-    ``` html hl_lines="18 19 20"
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visor simple con Leaflet</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-        <style type="text/css">
-            #mapid { height: 600px; width: 600px;}
-        </style>
-    </head>
-    <body>
-        <div id="mapid"></div>
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script>
-            //Creamos el objeto mapa.
-            const map = L.map('mapid').setView([41.68, 1.85], 9);
-            const wmsTopoIcgc = L.tileLayer.wms('https://geoserveis.icgc.cat/icc_mapesbase/wms/service?', {
-            layers: 'mtc5m'
-            }).addTo(map);
-        </script>
-    </body>
-    </html>
-    ```
-
-5. Abrir el navegador y ver que nuestro visor está funcionando correctamente.
-
-    http://localhost/visor/wms.html
-
-### Leaflet - Visualizar una capa XYZ
-
-Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde visualizar servicios WMS.
-
-1. Crear el archivo *xyz.html* dentro de la carpeta visor. En este archivo crearemos la estructura básica del nuestro html y cargaremos la librería Leaflet. Para ello escribir los siguiente:
-
-    ``` html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visor simple con Leaflet</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-        <style type="text/css">
-            #mapid { height: 600px; width: 600px;}
-        </style>
-    </head>
-    <body>
-        <div id="mapid"></div>
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    </body>
-    </html>
-    ```
-
-2. Agregar el código para crear el mapa. Debajo de donde cargamos la librería de Leaflet.
-
-    ``` html hl_lines="15 16 17 18"
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visor simple con Leaflet</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-        <style type="text/css">
-            #mapid { height: 600px; width: 600px;}
-        </style>
-    </head>
-    <body>
-        <div id="mapid"></div>
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script>
-            //Creamos el objeto mapa.
-            const map = L.map('mapid').setView([41.68, 1.85], 9);
-        </script>
-    </body>
-    </html>
-    ```
-
-3. Agregar la capa XYZ
-
-    ``` html hl_lines="18 19 20"
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visor simple con Leaflet</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-        <style type="text/css">
-            #mapid { height: 600px; width: 600px;}
-        </style>
-    </head>
-    <body>
-        <div id="mapid"></div>
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script>
-            //Creamos el objeto mapa.
-            const map = L.map('mapid').setView([41.68, 1.85], 9);
-            const wmtsOpenStreetMap = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-        </script>
-    </body>
-    </html>
-    ```
-
-4. Abrir el navegador y ver que nuestro visor está funcionando correctamente.
-
-    http://localhost/visor/xyz.html
-
-
-### Ejercicio
-
-!!! question "Ejercicio 1 pt"
-
-    * Crear un visor con Leaflet
-    * Agregar la capa de OpenStreetMap como capa base
-    * Agregar sobre la capa de OpenStreetMap la capa Catastro del servicio WMS de la Dirección General del Catastro. (0,5 pt)
-    * Aplicar transparencia a la capa. (0,5 pt)
-
-    https://www.catastro.hacienda.gob.es/esp/wms.asp
-
-    Entregar el archivo **html** con el ejercicio.
-
-## Práctica conectar servicios OGC con ArcGIS Online
-
-Abrimos la página de ArcGIS Online https://uab.maps.arcgis.com/home/index.html he iniciamos la sesión con nuestra cuenta.
-
-En el menú seleccionamos **Mapa** para crear un nuevo mapa
-
-Dentro del menú del mapa seleccionamos *Agregar* -> *Agregar una capa desde la web* y se nos muestra una nueva ventana
-
-![ArcGis Online agregar desde URL](img/aol_add_url.png "ArcGis Online agregar desde URL")
-ArcGis Online agregar desde URL
-
-En esta nueva ventana seleccionar en el desplegable la opción de *Servicio web del WMS OGC*
-
-En el campo URL copiar la url del servicio WMS del ICGC https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wms?
-
-Presionar el botón de **Obtener Capas** para cargar las capas del servicio y seleccionar la capa de *Ortofoto de Catalunya 1:5000 vigent*
-
-![ArcGis Online agregar WMS](img/aol_add_wms_icgc.png "ArcGis Online agregar WMS")
-ArcGis Online agregar WMS
-
-Finalmente presionar el botón de *Agregar capa* para ver la capa en nuestro mapa
-
-![ArcGis Online capa WMS](img/aol_resultado_wms.png "ArcGis Online capa WMS")
-ArcGis Online capa WMS
+    Si el servicio elegido no funciona durante la evaluación, incluye en el texto la URL de la ficha y una captura o fragmento de `GetCapabilities` donde se vea la capa seleccionada. Así se puede revisar el procedimiento aunque el servicio tenga una interrupción temporal.
 
 ## Referencias
 
-[^1]: http://volaya.github.io/libro-sig/
+- [Guía de inicio rápido de Leaflet](https://leafletjs.com/examples/quick-start/).
+- [Servicio de Mapa Base del ICGC: información técnica y capacidades](https://www.icgc.cat/es/Geoinformacion-y-mapas/Servicio-de-Mapa-Base).
+
+**Siguiente:** [Servidores de mapas: panorama y alternativas](servidores_de_mapa.md).

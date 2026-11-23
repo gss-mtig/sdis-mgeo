@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comparar GeoJSON y teselas vectoriales</title>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.18.0/dist/maplibre-gl.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      font: 14px system-ui, sans-serif;
+    }
+
+    #mapa {
+      width: 100%;
+      height: 100%;
+      background: #f2f5f7;
+    }
+
+    .panel {
+      position: absolute;
+      z-index: 1;
+      top: 12px;
+      left: 12px;
+      width: min(300px, calc(100vw - 24px));
+      max-height: calc(100vh - 24px);
+      overflow-y: auto;
+      padding: 14px 16px;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 2px 12px #0003;
+    }
+
+    h1 {
+      font-size: 17px;
+      margin: 0 0 10px;
+    }
+
+    h2 {
+      font-size: 14px;
+      margin: 14px 0 6px;
+    }
+
+    label {
+      display: block;
+      margin: 6px 0;
+    }
+
+    select {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .botones-zoom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .botones-zoom button {
+      padding: 7px 8px;
+      border: 1px solid #9ca3af;
+      border-radius: 5px;
+      background: #fff;
+      color: #111827;
+      cursor: pointer;
+    }
+
+    .nota {
+      color: #4b5563;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .estado {
+      padding: 7px;
+      background: #f3f4f6;
+      border-radius: 5px;
+      overflow-wrap: anywhere;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mapa" aria-label="Comparación de capas vectoriales"></div>
+  <aside class="panel" aria-label="Controles del mapa">
+    <h1>Capas y representación</h1>
+    <div class="botones-zoom" aria-label="Ir a una zona del mapa">
+      <button id="ir-barcelona" type="button">Zoom a Barcelona</button>
+      <button id="ir-puntos" type="button">Ver puntos sintéticos</button>
+    </div>
+    <h2>Capas visibles</h2>
+    <label><input type="checkbox" data-layer="accidentes" checked> Vehículos implicados en accidentes (teselas)</label>
+    <label><input type="checkbox" data-layer="puntos-mvt" checked> Puntos sintéticos (teselas)</label>
+    <label><input type="checkbox" data-layer="puntos-geojson" checked> Puntos sintéticos (GeoJSON completo)</label>
+
+    <h2>Filtrar puntos por tema</h2>
+    <select id="filtro-tema" aria-label="Filtrar puntos por tema">
+      <option value="todos">Todos los temas</option>
+      <option value="agua">Agua</option>
+      <option value="energia">Energía</option>
+      <option value="movilidad">Movilidad</option>
+      <option value="vegetacion">Vegetación</option>
+    </select>
+
+    <h2>Simbología de los puntos</h2>
+    <label><input type="radio" name="simbolo" value="uniforme" checked> Símbolo uniforme</label>
+    <label><input type="radio" name="simbolo" value="tema"> Color según el tema</label>
+
+    <h2>Estado del GeoJSON</h2>
+    <div id="estado-geojson" class="estado nota">Cargando el archivo GeoJSON…</div>
+    <p class="nota">La comparación usa los mismos puntos en dos formatos. Para comparar transferencia y tiempos,
+      consulta la pestaña Red / Network del navegador y recarga con la caché desactivada.</p>
+  </aside>
+
+  <script type="module">
+    import * as maplibregl from "https://unpkg.com/maplibre-gl@6.18.0/dist/maplibre-gl.mjs";
+
+    const urlGeoJSON = new URL("puntos_10000.geojson", document.baseURI).href;
+    const colores = [
+      "match", ["get", "tema"],
+      "agua", "#168aad",
+      "energia", "#f4a261",
+      "movilidad", "#7b2cbf",
+      "vegetacion", "#2a9d55",
+      "#c0392b"
+    ];
+    const filtroTema = document.querySelector("#filtro-tema");
+    const estadoGeoJSON = document.querySelector("#estado-geojson");
+    const panel = document.querySelector(".panel");
+    const mapa = new maplibregl.Map({
+      container: "mapa",
+      style: {
+        version: 8,
+        sources: {
+          puntosMVT: { type: "vector", url: "http://localhost:8081/data/puntos.json" },
+          accidentes: { type: "vector", url: "http://localhost:8081/data/accidentes.json" },
+          puntosGeoJSON: { type: "geojson", data: urlGeoJSON }
+        },
+        layers: [
+          { id: "fondo", type: "background", paint: { "background-color": "#f2f5f7" } },
+          {
+            id: "puntos-mvt", type: "circle", source: "puntosMVT", "source-layer": "puntos",
+            paint: { "circle-radius": 5, "circle-color": "#c0392b", "circle-stroke-color": "#fff", "circle-stroke-width": 1 }
+          },
+          {
+            id: "puntos-geojson", type: "circle", source: "puntosGeoJSON",
+            paint: { "circle-radius": 5, "circle-color": "#1d4ed8", "circle-stroke-color": "#fff", "circle-stroke-width": 1 }
+          },
+          {
+            id: "accidentes", type: "circle", source: "accidentes", "source-layer": "accidentes",
+            minzoom: 9,
+            paint: {
+              "circle-radius": ["interpolate", ["linear"], ["zoom"], 9, 2, 16, 5],
+              "circle-color": "#d94801", "circle-opacity": 0.65,
+              "circle-stroke-color": "#fff", "circle-stroke-width": 0.5
+            }
+          }
+        ]
+      },
+      center: [2.17, 41.39],
+      zoom: 9
+    });
+
+    function filtroActual() {
+      return filtroTema.value === "todos" ? null : ["==", ["get", "tema"], filtroTema.value];
+    }
+
+    function actualizarPuntos() {
+      const color = document.querySelector('input[name="simbolo"]:checked').value === "tema" ? colores : "#c0392b";
+      for (const id of ["puntos-mvt", "puntos-geojson"]) {
+        if (!mapa.getLayer(id)) continue;
+        mapa.setPaintProperty(id, "circle-color", color);
+        mapa.setFilter(id, filtroActual());
+      }
+    }
+
+    mapa.on("load", () => {
+      document.querySelector("#ir-barcelona").addEventListener("click", () => {
+        mapa.easeTo({ center: [2.17, 41.39], zoom: 12, duration: 900 });
+      });
+      document.querySelector("#ir-puntos").addEventListener("click", () => {
+        const margenPanel = Math.ceil(panel.getBoundingClientRect().width) + 36;
+        mapa.fitBounds([[-9.31, 36.0], [3.31, 43.77]], {
+          padding: { top: 36, right: 36, bottom: 36, left: margenPanel },
+          maxZoom: 6,
+          duration: 900
+        });
+      });
+      document.querySelectorAll("input[data-layer]").forEach((control) => {
+        mapa.setLayoutProperty(control.dataset.layer, "visibility", control.checked ? "visible" : "none");
+        control.addEventListener("change", () => {
+          mapa.setLayoutProperty(control.dataset.layer, "visibility", control.checked ? "visible" : "none");
+        });
+      });
+      filtroTema.addEventListener("change", actualizarPuntos);
+      document.querySelectorAll('input[name="simbolo"]').forEach((control) => control.addEventListener("change", actualizarPuntos));
+      actualizarPuntos();
+
+      mapa.on("click", ["puntos-mvt", "puntos-geojson", "accidentes"], (evento) => {
+        const entidad = evento.features?.[0];
+        if (!entidad) return;
+        const contenido = document.createElement("div");
+        const titulo = document.createElement("strong");
+        titulo.textContent = entidad.properties.nombre ?? entidad.properties.nom ?? "Registro de vehículo";
+        const detalle = document.createElement("div");
+        detalle.textContent = entidad.properties.tema ? `Tema: ${entidad.properties.tema}` : "Vehículo implicado en un accidente";
+        contenido.append(titulo, detalle);
+        new maplibregl.Popup().setLngLat(evento.lngLat).setDOMContent(contenido).addTo(mapa);
+      });
+
+      fetch(urlGeoJSON).then((respuesta) => {
+        if (!respuesta.ok) throw new Error(`HTTP ${respuesta.status}`);
+        return respuesta.json();
+      }).then((datos) => {
+        const bytes = new Blob([JSON.stringify(datos)]).size;
+        estadoGeoJSON.textContent = `${datos.features.length.toLocaleString("es-ES")} entidades; archivo de aproximadamente ${(bytes / 1024 / 1024).toFixed(2)} MB sin comprimir.`;
+      }).catch((error) => {
+        estadoGeoJSON.textContent = `No se pudo cargar el GeoJSON (${error.message}). Abre el ejemplo desde un servidor web, no directamente como archivo local.`;
+      });
+    });
+  </script>
+</body>
+
+</html>

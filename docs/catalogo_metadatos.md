@@ -1,43 +1,49 @@
-# Catálogo de Metadatos
+# El catálogo de metadatos
 
-Uno de los principales objetivos de las Infraestructuras de Datos Espaciales (IDEs) es facilitar la búsqueda y consulta de la información espacial existente. Para ello es necesaria la catalogación de dichos datos espaciales, y su posterior carga en un servicio de catálogo de metadatos.
+Cuando necesitas información geográfica, puedes encontrar archivos y servicios repartidos entre organismos y páginas distintas. Un **catálogo de metadatos** reúne y organiza fichas descriptivas para que puedas buscar esos recursos desde un mismo lugar.
 
-## Qué es un catálogo de metadatos
+El catálogo normalmente no almacena los datos. La ficha describe un recurso y enlaza al lugar donde se puede consultar, visualizar o descargar. Ese lugar puede estar gestionado por la misma organización que publica el catálogo o por otra entidad.
 
-El catálogo de metadatos, es quizá la pieza más importante dentro de una IDE y se trataría de un registro, que contendría el inventario de la información geográfica disponible en el territorio “administrado” por la IDE.
+## Catálogo, ficha y recurso
 
-El proceso para implementar un catálogo puede resultar tedioso y poco gratificante pero es parte importante en el éxito de una IDE.
+Estos tres elementos cumplen funciones distintas:
 
-Básicamente implica identificar y convencer a todos los posibles productores de datos cartográficos, llámese departamento, agencia, empresa o incluso universidad que haga un inventario de toda su información geográfica y la describa siguiendo una ficha estándar. Esto es lo que se llama, crear metadatos.
+- **Catálogo:** permite buscar y recorrer las fichas disponibles.
+- **Ficha o registro de metadatos:** describe un conjunto de datos, una serie de datos o un servicio.
+- **Recurso:** son los datos o el servicio al que la ficha da acceso.
 
-Estos metadatos, que son ficheros con codificación XML que siguen el estándar ISO 19115, son cargados dentro del catálogo de metadatos para poder ser interrogados por todos los usuarios.
+Por ejemplo, la ficha puede ofrecer un enlace a un visor, a una descarga o a un servicio de mapas. Ver una representación en un visor no significa que hayas descargado los datos que la generan.
 
-Cabe decir que la confección del metadato no es tarea fácil y que en el se describen campos como por ejemplo: creador de la cartografía, fecha de creación, fecha revisión, accesibilidad, formatos de la información, calidad, distribución o caja de coordenadas de la información descrita.
+## Cómo orientarte en un catálogo
 
-Una vez descrita e inventariada la información geográfica se les pide a los entes integrantes de la IDE que permitan la visualización, básicamente a través de un navegador web, de la información descrita. Para ello se utilizan los servidores de mapas.
+Aunque cada catálogo tenga una interfaz diferente, el recorrido suele ser parecido:
 
-## Funciones del Catálogo de Metadatos
+1. **Empieza con una pregunta.** Define el tema y el territorio que te interesan.
+2. **Prueba términos de búsqueda.** Combina el tema con un lugar, una organización o un sinónimo. En catálogos multilingües, prueba también otras lenguas.
+3. **Revisa la lista de resultados.** Lee los títulos y resúmenes; si hay muchos, utiliza los filtros disponibles, por ejemplo por territorio, tema, productor o tipo de recurso.
+4. **Abre una ficha prometedora.** Comprueba qué describe y quién produce o mantiene la información.
+5. **Decide si puede servirte.** Revisa cobertura, fechas, nivel de detalle, forma de acceso y condiciones de uso.
+6. **Sigue el enlace cuando sea necesario.** La ficha ayuda a valorar el recurso, pero quizá tengas que abrir el visor, la descarga o el servicio para comprobar que responde a tu pregunta.
 
-Mediante el catálogo los usuarios podrán realizar búsquedas, a través de opciones como nombre, área geográfica, coordenadas, categoría temática ó tipo de dato, ofreciendo adicionalmente un mapa de referencia para interactuar con el usuario y facilitar la búsqueda de información, además de visualizar los mapas y obtener información geográfica.
+Si no aparece lo que buscas, prueba sinónimos, nombres de lugares o de organismos; revisa los filtros y el ámbito territorial del catálogo. La ausencia de resultados en un catálogo no demuestra que los datos no existan: pueden estar descritos en otra IDE o con otros términos.
 
-Una particularidad de los catálogos de metadatos, es que permiten ser interrogados espacialmente (ej. Dime toda la información geográfica existente que intercepte con el trazado de este rio) y algunos de ellos, por ejemplo el de la IDEC, van más allá de un simple repositorio de metadatos y permiten registrar plantillas de transformación entre modelos de datos geográficos, peticiones a objetos geográficos o estilos de representación cartográficas, todos ellos utilizados como parte de lo geoservicios distribuidos.
+## Búsqueda guiada: encuentra una ficha
 
-También se puede descargar la ficha de metadatos de los distintos recursos, o descargar directamente el dato mediante un enlace. 
+1. Entra en el [catálogo de la IDEC](https://catalegs.ide.cat/geonetwork/srv/search?orgName=Infraestructura+de+Dades+Espacials+de+Catalunya).
+2. Busca un tema que te interese, añadiendo un municipio o comarca si ayuda a acotar los resultados.
+3. Elige **una** ficha cuyo título o resumen parezca pertinente. No hace falta comparar varias fichas ni resolver todavía un problema territorial.
+4. Localiza en la ficha:
+   - el nombre del recurso;
+   - el productor o responsable;
+   - el territorio y las fechas que se indiquen;
+   - el tipo de recurso y la forma de acceso;
+   - la licencia o las condiciones de uso, si aparecen.
+5. Anota una pregunta que ese recurso podría ayudarte a responder y algo que todavía necesitarías comprobar.
 
-Algunos de los datos georeferenciados se pueden consultar y visualizar mediante servicios de mapas interoperables del OGC como por ejemplo Web Map Services (WMS), Web Feature Services (WFS) y Web Coverage Services (WCS).
+**Resultado:** una ficha de análisis breve con esos datos y el enlace al registro. Si los resultados no te sirven, anota los términos que probaste y cambia la búsqueda: explicar por qué no encontraste una ficha adecuada también forma parte del proceso.
 
-### Ejemplos de catálogos de metadatos
+**Reflexiona:** ¿qué información pudiste obtener de la ficha y qué tuviste que comprobar siguiendo un enlace al recurso?
 
-https://ide.cat/geonetwork/srv/cat/catalog.search#/home
+En el [caso práctico de IDEC sobre inundaciones](caso_idec_inundaciones.md) aplicaremos este recorrido a una pregunta concreta y compararemos dos recursos que responden a necesidades distintas.
 
-http://www.idee.es/csw-inspire-idee/srv/spa/catalog.search#/home
-
-## Ejercicio
-
-!!! question "Ejercicio 0.5 pts"
-    En un documento de texto poner:
-
-    * La url de una IDE
-    * Realiza una búsqueda de datos sobre un tema específico (Ej. vegentación)
-    * Realizar consultas usando filtros de atributos y/o espaciales para afinar los resultados
-    * Hacer una captura de una búsqueda en el catálogo de la IDE de servicios WMS relacionados al tema específico seleccionado.
+Continúa con [los estándares de metadatos](estandares_ISO.md).

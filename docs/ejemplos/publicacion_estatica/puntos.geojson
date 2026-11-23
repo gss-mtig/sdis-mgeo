@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "name": "Puntos sintéticos de ejemplo",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "punto-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1734, 41.3851]
+      },
+      "properties": {
+        "nombre": "Punto de ejemplo en Barcelona",
+        "tema": "movilidad",
+        "dato_sintetico": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "punto-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.6222, 41.6167]
+      },
+      "properties": {
+        "nombre": "Punto de ejemplo en Lleida",
+        "tema": "medio ambiente",
+        "dato_sintetico": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "punto-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.8249, 41.9794]
+      },
+      "properties": {
+        "nombre": "Punto de ejemplo en Girona",
+        "tema": "equipamientos",
+        "dato_sintetico": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MD_Metadata xmlns="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<fileIdentifier>
+<gco:CharacterString>mapa-municipal-v2r0</gco:CharacterString>
+</fileIdentifier>
+<language>
+<LanguageCode codeList="http://www.loc.gov/standards/iso639-2" codeListValue="spa" codeSpace="ISO639-2">spa</LanguageCode>
+</language>
+<characterSet>
+<MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+</characterSet>
+<hierarchyLevel>
+<MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</MD_ScopeCode>
+</hierarchyLevel>
+<hierarchyLevelName>
+<gco:CharacterString>dataset</gco:CharacterString>
+</hierarchyLevelName>
+<contact>
+<CI_ResponsibleParty>
+<organisationName>
+<gco:CharacterString>Infraestructura de Dades Espacials de Catalunya</gco:CharacterString>
+</organisationName>
+<contactInfo>
+<CI_Contact>
+<address>
+<CI_Address>
+<electronicMailAddress>
+<gco:CharacterString>idec@icgc.cat</gco:CharacterString>
+</electronicMailAddress>
+</CI_Address>
+</address>
+<onlineResource>
+<CI_OnlineResource>
+<linkage>
+<URL>https://www.ide.cat</URL>
+</linkage>
+<function>
+<CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information" codeSpace="ISOTC211/19115">information</CI_OnLineFunctionCode>
+</function>
+</CI_OnlineResource>
+</onlineResource>
+</CI_Contact>
+</contactInfo>
+<role>
+<CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact" codeSpace="ISOTC211/19115">pointOfContact</CI_RoleCode>
+</role>
+</CI_ResponsibleParty>
+</contact>
+<dateStamp>
+<gco:Date>2026-11-21</gco:Date>
+</dateStamp>
+<metadataStandardName>
+<gco:CharacterString>INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN ISO 19115 and EN ISO 19119</gco:CharacterString>
+</metadataStandardName>
+<metadataStandardVersion>
+<gco:CharacterString>V. 2.0.1</gco:CharacterString>
+</metadataStandardVersion>
+<locale>
+<PT_Locale>
+<languageCode>
+<LanguageCode codeList="http://www.loc.gov/standards/iso639-2" codeListValue="cat" codeSpace="ISO639-2">cat</LanguageCode>
+</languageCode>
+<characterEncoding>
+<MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+</characterEncoding>
+</PT_Locale>
+</locale>
+<locale>
+<PT_Locale>
+<languageCode>
+<LanguageCode codeList="http://www.loc.gov/standards/iso639-2" codeListValue="spa" codeSpace="ISO639-2">spa</LanguageCode>
+</languageCode>
+<characterEncoding>
+<MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+</characterEncoding>
+</PT_Locale>
+</locale>
+<locale>
+<PT_Locale>
+<languageCode>
+<LanguageCode codeList="http://www.loc.gov/standards/iso639-2" codeListValue="eng" codeSpace="ISO639-2">eng</LanguageCode>
+</languageCode>
+<characterEncoding>
+<MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+</characterEncoding>
+</PT_Locale>
+</locale>
+<spatialRepresentationInfo>
+<MD_VectorSpatialRepresentation>
+<topologyLevel>
+<MD_TopologyLevelCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_TopologyLevelCode" codeListValue="geometryOnly" codeSpace="ISOTC211/19115">geometryOnly</MD_TopologyLevelCode>
+</topologyLevel>
+<geometricObjects>
+<MD_GeometricObjects>
+<geometricObjectType>
+<MD_GeometricObjectTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_GeometricObjectTypeCode" codeListValue="composite" codeSpace="ISOTC211/19115">composite</MD_GeometricObjectTypeCode>
+</geometricObjectType>
+<geometricObjectCount>
+<gco:Integer>610</gco:Integer>
+</geometricObjectCount>
+</MD_GeometricObjects>
+</geometricObjects>
+</MD_VectorSpatialRepresentation>
+</spatialRepresentationInfo>
+<referenceSystemInfo>
+<MD_ReferenceSystem>
+<referenceSystemIdentifier>
+<RS_Identifier>
+<code>
+<gmx:Anchor xlink:href="https://www.opengis.net/def/crs/EPSG/0/25831">ETRS89 UTM fus 31 Nord (EPSG:25831)</gmx:Anchor>
+</code>
+</RS_Identifier>
+</referenceSystemIdentifier>
+</MD_ReferenceSystem>
+</referenceSystemInfo>
+<identificationInfo>
+<MD_DataIdentification>
+<citation>
+<CI_Citation>
+<title>
+<gmx:Anchor xlink:href="https://www.instamaps.cat/visor.html?businessid=c9ad61b54360453980cb30327e98d641&amp;3D=false">Mapa municipal de Catalunya v2.0</gmx:Anchor>
+</title>
+<date>
+<CI_Date>
+<date>
+<gco:Date>2026-11-05</gco:Date>
+</date>
+<dateType>
+<CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision" codeSpace="ISOTC211/19115">revision</CI_DateTypeCode>
+</dateType>
+</CI_Date>
+</date>
+<identifier>
+<MD_Identifier>
+<code>
+<gco:CharacterString>bmv2</gco:CharacterString>
+</code>
+</MD_Identifier>
+</identifier>
+<presentationForm>
+<CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="mapDigital" codeSpace="ISOTC211/19115">mapDigital</CI_PresentationFormCode>
+</presentationForm>
+</CI_Citation>
+</citation>
+<abstract>
+<gco:CharacterString>El Mapa municipal de Catalunya (MMC) és la base geogràfica amb tots els Mapes municipals (MM) que han estat considerats per la Comissió de Delimitació Territorial (CDT) i que conté, per cada mapa, les fites de terme, dels traçats de les línies i dels polígons resultants dels límits municipals oficials del territori de Catalunya.</gco:CharacterString>
+</abstract>
+<purpose>
+<gco:CharacterString>L’objectiu d’aquesta geoinformació és: Donar compliment a l’Article 38.1 del Decret 244/2007, segons el qual la delimitació completa d'un municipi compon el seu mapa municipal, el qual ha de ser sotmès a la consideració de la Comissió de Delimitació Territorial. La direcció general competent en matèria d'Administració local ha d'inscriure el mapa municipal en el Registre del sector públic local de Catalunya i l'Institut Cartogràfic i Geològic de Catalunya l'ha d'inscriure en el Registre Cartogràfic de Catalunya. I finalment, servir de referent en tots aquells àmbits d’informació que requereixen dels mapes municipals oficials dels municipis catalans.</gco:CharacterString>
+</purpose>
+<pointOfContact>
+<CI_ResponsibleParty>
+<organisationName>
+<gco:CharacterString>Institut Cartogràfic i Geològic de Catalunya</gco:CharacterString>
+</organisationName>
+<contactInfo>
+<CI_Contact>
+<address>
+<CI_Address>
+<electronicMailAddress>
+<gco:CharacterString>icgc@icgc.cat</gco:CharacterString>
+</electronicMailAddress>
+</CI_Address>
+</address>
+<onlineResource>
+<CI_OnlineResource>
+<linkage>
+<URL>https://www.icgc.cat</URL>
+</linkage>
+<function>
+<CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information" codeSpace="ISOTC211/19115">information</CI_OnLineFunctionCode>
+</function>
+</CI_OnlineResource>
+</onlineResource>
+</CI_Contact>
+</contactInfo>
+<role>
+<CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="owner" codeSpace="ISOTC211/19115">owner</CI_RoleCode>
+</role>
+</CI_ResponsibleParty>
+</pointOfContact>
+<pointOfContact>
+<CI_ResponsibleParty>
+<organisationName>
+<gco:CharacterString>Direcció General d'Administració Local</gco:CharacterString>
+</organisationName>
+<contactInfo>
+<CI_Contact>
+<address>
+<CI_Address>
+<electronicMailAddress>
+<gco:CharacterString>dgal@gencat.cat</gco:CharacterString>
+</electronicMailAddress>
+</CI_Address>
+</address>
+<onlineResource>
+<CI_OnlineResource>
+<linkage>
+<URL>http://www.municat.gencat.cat/</URL>
+</linkage>
+<function>
+<CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information" codeSpace="ISOTC211/19115">information</CI_OnLineFunctionCode>
+</function>
+</CI_OnlineResource>
+</onlineResource>
+</CI_Contact>
+</contactInfo>
+<role>
+<CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="owner" codeSpace="ISOTC211/19115">owner</CI_RoleCode>
+</role>
+</CI_ResponsibleParty>
+</pointOfContact>
+<graphicOverview>
+<MD_BrowseGraphic>
+<fileName>
+<gco:CharacterString>https://datacloud.ide.cat/metadades/imatges/mapa-municipal-v2r0.jpg</gco:CharacterString>
+</fileName>
+</MD_BrowseGraphic>
+</graphicOverview>
+<descriptiveKeywords>
+<MD_Keywords>
+<keyword>
+<gco:CharacterString>Catalunya</gco:CharacterString>
+</keyword>
+<keyword>
+<gco:CharacterString>Espanya</gco:CharacterString>
+</keyword>
+<keyword>
+<gco:CharacterString>Europa</gco:CharacterString>
+</keyword>
+<type>
+<MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="place" codeSpace="ISOTC211/19115">place</MD_KeywordTypeCode>
+</type>
+<thesaurusName>
+<CI_Citation>
+<title>
+<gmx:Anchor xlink:href="https://catalegs.ide.cat/geonetwork/srv/eng/thesaurus.download?ref=external.place.idec-llocs">IDEC - llocs</gmx:Anchor>
+</title>
+<date>
+<CI_Date>
+<date>
+<gco:Date>2021-07-07</gco:Date>
+</date>
+<dateType>
+<CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication" codeSpace="ISOTC211/19115">publication</CI_DateTypeCode>
+</dateType>
+</CI_Date>
+</date>
+</CI_Citation>
+</thesaurusName>
+</MD_Keywords>
+</descriptiveKeywords>
+<descriptiveKeywords>
+<MD_Keywords>
+<keyword>
+<gco:CharacterString>Unidades administrativas</gco:CharacterString>
+</keyword>
+<keyword>
+<gco:CharacterString>Administrative units</gco:CharacterString>
+</keyword>
+<type>
+<MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme" codeSpace="ISOTC211/19115">theme</MD_KeywordTypeCode>
+</type>
+<thesaurusName>
+<CI_Citation>
+<title>
+<gmx:Anchor xlink:href="https://www.eionet.europa.eu/gemet/inspire_themes">GEMET - INSPIRE themes, version 1.0</gmx:Anchor>
+</title>
+<date>
+<CI_Date>
+<date>
+<gco:Date>2008-06-01</gco:Date>
+</date>
+<dateType>
+<CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication" codeSpace="ISOTC211/19115">publication</CI_DateTypeCode>
+</dateType>
+</CI_Date>
+</date>
+</CI_Citation>
+</thesaurusName>
+</MD_Keywords>
+</descriptiveKeywords>
+<descriptiveKeywords>
+<MD_Keywords>
+<keyword>
+<gco:CharacterString>Delimitació territorial</gco:CharacterString>
+</keyword>
+<keyword>
+<gco:CharacterString>Municipi</gco:CharacterString>
+</keyword>
+<keyword>
+<gco:CharacterString>Hub litoral</gco:CharacterString>
+</keyword>
+<keyword>
+<gco:CharacterString>SIDL</gco:CharacterString>
+</keyword>
+<type>
+<MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme" codeSpace="ISOTC211/19115">theme</MD_KeywordTypeCode>
+</type>
+<thesaurusName>
+<CI_Citation>
+<title>
+<gmx:Anchor xlink:href="https://catalegs.ide.cat/geonetwork/srv/eng/thesaurus.download?ref=external.theme.idec-temes">IDEC - temes</gmx:Anchor>
+</title>
+<date>
+<CI_Date>
+<date>
+<gco:Date>2021-07-07</gco:Date>
+</date>
+<dateType>
+<CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication" codeSpace="ISOTC211/19115">publication</CI_DateTypeCode>
+</dateType>
+</CI_Date>
+</date>
+</CI_Citation>
+</thesaurusName>
+</MD_Keywords>
+</descriptiveKeywords>
+<resourceConstraints>
+<MD_LegalConstraints>
+<useConstraints>
+<MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</MD_RestrictionCode>
+</useConstraints>
+<otherConstraints>
+<gco:CharacterString>CC BY v4.0</gco:CharacterString>
+</otherConstraints>
+</MD_LegalConstraints>
+</resourceConstraints>
+<resourceConstraints>
+<MD_LegalConstraints>
+<accessConstraints>
+<MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions" codeSpace="ISOTC211/19115">otherRestrictions</MD_RestrictionCode>
+</accessConstraints>
+<otherConstraints>
+<gco:CharacterString>CC BY v4.0</gco:CharacterString>
+</otherConstraints>
+</MD_LegalConstraints>
+</resourceConstraints>
+<resourceConstraints>
+<MD_LegalConstraints>
+<useConstraints>
+<MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</MD_RestrictionCode>
+</useConstraints>
+<otherConstraints>
+<gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply">no conditions to access and use</gmx:Anchor>
+</otherConstraints>
+</MD_LegalConstraints>
+</resourceConstraints>
+<resourceConstraints>
+<MD_LegalConstraints>
+<accessConstraints>
+<MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</MD_RestrictionCode>
+</accessConstraints>
+<otherConstraints>
+<gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations">no limitations to public access</gmx:Anchor>
+</otherConstraints>
+</MD_LegalConstraints>
+</resourceConstraints>
+<resourceConstraints>
+<MD_Constraints>
+<useLimitation>
+<gco:CharacterString>no conditions apply to access and use</gco:CharacterString>
+</useLimitation>
+</MD_Constraints>
+</resourceConstraints>
+<spatialRepresentationType>
+<MD_SpatialRepresentationTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_SpatialRepresentationTypeCode" codeListValue="vector" codeSpace="ISOTC211/19115">vector</MD_SpatialRepresentationTypeCode>
+</spatialRepresentationType>
+<spatialResolution>
+<MD_Resolution>
+<equivalentScale>
+<MD_RepresentativeFraction>
+<denominator>
+<gco:Integer>5000</gco:Integer>
+</denominator>
+</MD_RepresentativeFraction>
+</equivalentScale>
+</MD_Resolution>
+</spatialResolution>
+<language>
+<LanguageCode codeList="http://www.loc.gov/standards/iso639-2" codeListValue="cat" codeSpace="ISO639-2">cat</LanguageCode>
+</language>
+<characterSet>
+<MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+</characterSet>
+<topicCategory>
+<MD_TopicCategoryCode>boundaries</MD_TopicCategoryCode>
+</topicCategory>
+<environmentDescription>
+<gco:CharacterString>Microsoft Windows 10 Version 10.0 (Build 19045) ; Esri ArcGIS 13.7.0.1901</gco:CharacterString>
+</environmentDescription>
+<extent>
+<EX_Extent>
+<description>
+<gco:CharacterString>L'extensió espacial abasta tot Catalunya. L'extensió temporal es refereix a l'interval de dates de les dades [dates inicial i final de les sessions de la CDT en què s'han considerat els mapes municipals (MM)].</gco:CharacterString>
+</description>
+<geographicElement>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>
+<gco:Decimal>0.145833</gco:Decimal>
+</westBoundLongitude>
+<eastBoundLongitude>
+<gco:Decimal>3.354167</gco:Decimal>
+</eastBoundLongitude>
+<southBoundLatitude>
+<gco:Decimal>40.520833</gco:Decimal>
+</southBoundLatitude>
+<northBoundLatitude>
+<gco:Decimal>42.875</gco:Decimal>
+</northBoundLatitude>
+</EX_GeographicBoundingBox>
+</geographicElement>
+<temporalElement>
+<EX_TemporalExtent>
+<extent>
+<gml:TimePeriod gml:id="id01">
+<gml:beginPosition>2002-06-04</gml:beginPosition>
+<gml:endPosition>2026-07-20</gml:endPosition>
+</gml:TimePeriod>
+</extent>
+</EX_TemporalExtent>
+</temporalElement>
+</EX_Extent>
+</extent>
+<extent>
+<EX_Extent>
+<geographicElement>
+<EX_GeographicBoundingBox>
+<extentTypeCode>
+<gco:Boolean>true</gco:Boolean>
+</extentTypeCode>
+<westBoundLongitude>
+<gco:Decimal>0.296892</gco:Decimal>
+</westBoundLongitude>
+<eastBoundLongitude>
+<gco:Decimal>3.238168</gco:Decimal>
+</eastBoundLongitude>
+<southBoundLatitude>
+<gco:Decimal>40.622778</gco:Decimal>
+</southBoundLatitude>
+<northBoundLatitude>
+<gco:Decimal>42.87133</gco:Decimal>
+</northBoundLatitude>
+</EX_GeographicBoundingBox>
+</geographicElement>
+</EX_Extent>
+</extent>
+</MD_DataIdentification>
+</identificationInfo>
+<distributionInfo>
+<MD_Distribution>
+<distributionFormat>
+<MD_Format>
+<name>
+<gco:CharacterString>Clase de entidad de geodatabase de archivos</gco:CharacterString>
+</name>
+<version>
+<gco:CharacterString>1</gco:CharacterString>
+</version>
+</MD_Format>
+</distributionFormat>
+<distributor>
+<MD_Distributor>
+<distributorContact>
+<CI_ResponsibleParty>
+<organisationName>
+<gco:CharacterString>Institut Cartogràfic i Geològic de Catalunya</gco:CharacterString>
+</organisationName>
+<contactInfo>
+<CI_Contact>
+<address>
+<CI_Address>
+<electronicMailAddress>
+<gco:CharacterString>icgc@icgc.cat</gco:CharacterString>
+</electronicMailAddress>
+</CI_Address>
+</address>
+<onlineResource>
+<CI_OnlineResource>
+<linkage>
+<URL>https://www.icgc.cat</URL>
+</linkage>
+<function>
+<CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information" codeSpace="ISOTC211/19115">information</CI_OnLineFunctionCode>
+</function>
+</CI_OnlineResource>
+</onlineResource>
+</CI_Contact>
+</contactInfo>
+<role>
+<CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="distributor" codeSpace="ISOTC211/19115">distributor</CI_RoleCode>
+</role>
+</CI_ResponsibleParty>
+</distributorContact>
+</MD_Distributor>
+</distributor>
+<transferOptions>
+<MD_DigitalTransferOptions>
+<onLine>
+<CI_OnlineResource>
+<linkage>
+<URL>https://www.instamaps.cat/visor.html?businessid=c9ad61b54360453980cb30327e98d641&amp;3D=false</URL>
+</linkage>
+<name>
+<gco:CharacterString>Data de les dades i altra informació dels mapes municipals (MM) - consulta en línia</gco:CharacterString>
+</name>
+<description>
+<gco:CharacterString>Eina en línia que proporciona les dades variables específiques de cadascun dels municipis del Mapa municipal: codi de municipi, nom de municipi, data de les dades (data de cosideració per part de la CDT) i nom del fitxer de dades.</gco:CharacterString>
+</description>
+<function>
+<CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information" codeSpace="ISOTC211/19115">information</CI_OnLineFunctionCode>
+</function>
+</CI_OnlineResource>
+</onLine>
+</MD_DigitalTransferOptions>
+</transferOptions>
+<transferOptions>
+<MD_DigitalTransferOptions>
+<onLine>
+<CI_OnlineResource>
+<linkage>
+<URL>https://datacloud.ide.cat/metadades/mapa-municipal-v2r0-metadades.zip</URL>
+</linkage>
+<name>
+<gco:CharacterString>Data de les dades i altra informació dels mapes municipals (MM) - descàrrega de fitxer SHP</gco:CharacterString>
+</name>
+<description>
+<gco:CharacterString>Fitxer Shapefile que proporciona les dades variables específiques de cadascun dels municipis del Mapa municipal: codi de municipi, nom de municipi, data de les dades (data de consideració per part de la CDT) i nom del fitxer de dades.</gco:CharacterString>
+</description>
+<function>
+<CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="download" codeSpace="ISOTC211/19115">download</CI_OnLineFunctionCode>
+</function>
+</CI_OnlineResource>
+</onLine>
+</MD_DigitalTransferOptions>
+</transferOptions>
+<transferOptions>
+<MD_DigitalTransferOptions>
+<onLine>
+<CI_OnlineResource>
+<linkage>
+<URL>https://www.icgc.cat/ca/Geoinformacio-i-mapes/Mapes/Mapes-municipals</URL>
+</linkage>
+<name>
+<gco:CharacterString>Descàrrega de dades</gco:CharacterString>
+</name>
+<function>
+<CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="download" codeSpace="ISOTC211/19115">download</CI_OnLineFunctionCode>
+</function>
+</CI_OnlineResource>
+</onLine>
+</MD_DigitalTransferOptions>
+</transferOptions>
+<transferOptions>
+<MD_DigitalTransferOptions>
+<onLine>
+<CI_OnlineResource>
+<linkage>
+<URL>https://datacloud.ide.cat/especificacions/mapa-municipal-v2r0-20251002.pdf</URL>
+</linkage>
+<name>
+<gco:CharacterString>Especificacions tècniques del Mapa municipal v2.0</gco:CharacterString>
+</name>
+<function>
+<CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="information" codeSpace="ISOTC211/19115">information</CI_OnLineFunctionCode>
+</function>
+</CI_OnlineResource>
+</onLine>
+</MD_DigitalTransferOptions>
+</transferOptions>
+</MD_Distribution>
+</distributionInfo>
+<dataQualityInfo>
+<DQ_DataQuality>
+<scope>
+<DQ_Scope>
+<level>
+<MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</MD_ScopeCode>
+</level>
+</DQ_Scope>
+</scope>
+<report>
+<DQ_DomainConsistency>
+<nameOfMeasure>
+<gco:CharacterString>Conformitat amb el plec d'especificacions tècniques aprovat per la Comissió de Coordinació Cartogràfica de Catalunya</gco:CharacterString>
+</nameOfMeasure>
+<result>
+<DQ_ConformanceResult>
+<specification>
+<CI_Citation>
+<title>
+<gmx:Anchor xlink:href="https://datacloud.ide.cat/especificacions/mapa-municipal-v2r0-20251002.pdf">Especificacions tècniques del Mapa municipal de Catalunya v2.0</gmx:Anchor>
+</title>
+<date>
+<CI_Date>
+<date>
+<gco:Date>2025-10-02</gco:Date>
+</date>
+<dateType>
+<CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication" codeSpace="ISOTC211/19115">publication</CI_DateTypeCode>
+</dateType>
+</CI_Date>
+</date>
+</CI_Citation>
+</specification>
+<explanation>
+<gco:CharacterString>Todo correcto</gco:CharacterString>
+</explanation>
+<pass>
+<gco:Boolean>true</gco:Boolean>
+</pass>
+</DQ_ConformanceResult>
+</result>
+</DQ_DomainConsistency>
+</report>
+<report>
+<DQ_DomainConsistency>
+<nameOfMeasure>
+<gco:CharacterString>Compliment dels requisits d'INSPIRE (dades)</gco:CharacterString>
+</nameOfMeasure>
+<evaluationMethodDescription>
+<gco:CharacterString>Les dades d'aquest conjunt de dades no tenen com a objectiu assolir la conformitat amb els reglaments d'INSPIRE. Per aquest motiu no s'avalua la seva conformitat i es declara no conforme per defecte.</gco:CharacterString>
+</evaluationMethodDescription>
+<result>
+<DQ_ConformanceResult>
+<specification>
+<CI_Citation>
+<title>
+<gmx:Anchor xlink:href="https://eur-lex.europa.eu/eli/reg/2010/1089">Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services</gmx:Anchor>
+</title>
+<date>
+<CI_Date>
+<date>
+<gco:Date>2014-12-31</gco:Date>
+</date>
+<dateType>
+<CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication" codeSpace="ISOTC211/19115">publication</CI_DateTypeCode>
+</dateType>
+</CI_Date>
+</date>
+</CI_Citation>
+</specification>
+<explanation>
+<gco:CharacterString>Todo correcto</gco:CharacterString>
+</explanation>
+<pass>
+<gco:Boolean>false</gco:Boolean>
+</pass>
+</DQ_ConformanceResult>
+</result>
+</DQ_DomainConsistency>
+</report>
+<report>
+<DQ_DomainConsistency>
+<nameOfMeasure>
+<gco:CharacterString>Compliment dels requisits d'INSPIRE (metadades)</gco:CharacterString>
+</nameOfMeasure>
+<evaluationMethodDescription>
+<gco:CharacterString>S'avalua la conformitat de les metadades mitjançant l'eina web "INSPIRE Reference Validator". Es considera que la metadada és correcta quan els únics errors reportats estan relacionats amb l'idioma principal del fitxer de metadades. Aquests errors es deuen al fet de que el català no està inclòs dins de la llista d'idiomes oficials de la Unió Europea.</gco:CharacterString>
+</evaluationMethodDescription>
+<result>
+<DQ_ConformanceResult>
+<specification>
+<CI_Citation>
+<title>
+<gmx:Anchor xlink:href="https://eur-lex.europa.eu/eli/reg/2008/1205">Commission Regulation (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata</gmx:Anchor>
+</title>
+<date>
+<CI_Date>
+<date>
+<gco:Date>2008-12-04</gco:Date>
+</date>
+<dateType>
+<CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication" codeSpace="ISOTC211/19115">publication</CI_DateTypeCode>
+</dateType>
+</CI_Date>
+</date>
+</CI_Citation>
+</specification>
+<explanation>
+<gco:CharacterString>Todo correcto</gco:CharacterString>
+</explanation>
+<pass>
+<gco:Boolean>true</gco:Boolean>
+</pass>
+</DQ_ConformanceResult>
+</result>
+</DQ_DomainConsistency>
+</report>
+<lineage>
+<LI_Lineage>
+<statement>
+<gco:CharacterString>La determinació de la posició de les fites de terme i del traçat de les línies provenen de diferents fonts d’informació: Per les fites i les línies de terme municipal, de les memòries dels treballs topogràfics realitzades per l'ICGC, en base a les actes de reconeixement, les resolucions publicades al DOGC o les resolucions judicials que determinin la línia oficial vigent; Per la línia de tancament dels polígons, amb el mar i els països veïns, prové, respectivament, de la línia de costa del Referencial topogràfic territorial (anteriorment de la Base topogràfica 1:5 000) de l'ICGC i de la "Base de datos de Límites Jurisdiccionales de España" de l'Instituto Geográfico Nacional. La diferencia temporal en la incorporació a la base MMC de diferents MM juntament amb el fet que la delimitació municipal està en constant evolució i transformació per part de les administracions implicades, pot significar incongruències geomètriques o topològiques entre fites, línies o polígons de municipis veïns (p. ex. connexions en zones de juntura de tres termes que no són coincidents). Aquestes incongruències es van corregint a mesura que s’actualitzen de nou els MM al MMC.</gco:CharacterString>
+</statement>
+<source>
+<LI_Source>
+<description>
+<gco:CharacterString>Memòries dels treballs topogràfics realitzades per l'ICGC.</gco:CharacterString>
+</description>
+</LI_Source>
+</source>
+<source>
+<LI_Source>
+<description>
+<gco:CharacterString>Base topogràfica 1:5000 de l'ICGC.</gco:CharacterString>
+</description>
+</LI_Source>
+</source>
+<source>
+<LI_Source>
+<description>
+<gco:CharacterString>Referencial topogràfic territorial de l'ICGC.</gco:CharacterString>
+</description>
+</LI_Source>
+</source>
+<source>
+<LI_Source>
+<description>
+<gco:CharacterString>"Base de datos de Límites Jurisdiccionales de España" de l'IGN.</gco:CharacterString>
+</description>
+</LI_Source>
+</source>
+</LI_Lineage>
+</lineage>
+</DQ_DataQuality>
+</dataQualityInfo>
+</MD_Metadata>

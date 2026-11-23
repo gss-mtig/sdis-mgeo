@@ -17,7 +17,7 @@ En el formulario seleccionar todos los componentes
 Componentes XAMPP
 
 !!! warning
-    Debido a que en los ordenadores de la UAB no se permite instalar software de forma permanente se debe instalar el XAMPP en la unidad de trabajo.
+Debido a que en los ordenadores de la UAB no se permite instalar software de forma permanente se debe instalar el XAMPP en la unidad de trabajo.
 
 Siguiente -> Siguiente para el resto de opciones del asistente.
 
@@ -40,11 +40,11 @@ La siguiente ventana nos pide seleccionar una fuente de descarga. Lo normal es d
 A continuación se nos pide seleccionar el destino de la instalación, instalar los programas para todos los usuarios y opcionalmente crear un icono en el escritorio de nuestro PC.
 
 !!! warning
-    Debido a que en los ordenadores de la UAB no se permite instalar software de forma permanente se debe instalar el en la unidad de trabajo.
+Debido a que en los ordenadores de la UAB no se permite instalar software de forma permanente se debe instalar el en la unidad de trabajo.
 
 Siguiente -> Siguiente para el resto de opciones del asistente hasta llegar a la ventana **Select Packages**. Desde esta ventana podemos seleccionar qué programas queremos descargar e instalar:
 
-Despliega la categoría **Web** y pincha sobre *qgis-server: QGIS Server*
+Despliega la categoría **Web** y pincha sobre _qgis-server: QGIS Server_
 
 ![Selección QGIS Server](img/qgis_server_select_qgis_server.png "Selección QGIS Server")
 Selección QGIS Server
@@ -53,12 +53,12 @@ Siguiente -> Siguiente para el resto de opciones del asistente.
 
 ### Configurar el Apache
 
-Editar el archivo *httpd.conf*. En el caso del XAMPP lo hacemos desde el panel de control.
+Editar el archivo _httpd.conf_. En el caso del XAMPP lo hacemos desde el panel de control.
 
 ![Apache config file](img/xampp_config_qgis_server.png "Apache config file")
 Apache config file
 
-Se abre el archivo *httpd.conf* con el editor de texto y debemos cambiar lo siguiente
+Se abre el archivo _httpd.conf_ con el editor de texto y debemos cambiar lo siguiente
 
 **ScriptAlias**
 
@@ -129,7 +129,7 @@ Para descargar el Geonetwork abrimos la página https://geonetwork-opensource.or
 ![Descarga Geonetwork](img/geonetwork_descarga.png "Descarga Geonetwork")
 Descarga Geonetwork
 
-Lo siguiente que debemos hacer es mover el archivo descargado geonetwork.war dentro de la carpeta del tomcat. Para ello ubicamos la carpeta **tomcat/webapps** (*C:\xampp\tomcat\webapps*) dentro de la carpeta de instalación del XAMPP y copiamos el archivo geonetwork.war en esta carpeta
+Lo siguiente que debemos hacer es mover el archivo descargado geonetwork.war dentro de la carpeta del tomcat. Para ello ubicamos la carpeta **tomcat/webapps** (_C:\xampp\tomcat\webapps_) dentro de la carpeta de instalación del XAMPP y copiamos el archivo geonetwork.war en esta carpeta
 
 Abrimos el panel de control del XAMPP e iniciamos el Tomcat. Se abre una nueva ventana del terminal donde vemos el proceso de despliegue de la aplicación de Geonetwork dentro del Tomcat.
 

@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "name": "Ejemplo didáctico sintético",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "punto-demo-001",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1734, 41.3851]
+      },
+      "properties": {
+        "nombre": "Punto de referencia didáctico",
+        "tema": "Ejemplo de entidad geográfica",
+        "es_dato_real": false
+      }
+    }
+  ]
+}

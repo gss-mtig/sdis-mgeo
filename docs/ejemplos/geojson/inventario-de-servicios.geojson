@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "name": "Inventario didáctico de servicios (datos sintéticos)",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "servicio-01",
+      "properties": {
+        "nombre": "Punto de información",
+        "categoria": "informacion",
+        "abierto": true,
+        "plazas": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1734, 41.3851]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "servicio-02",
+      "properties": {
+        "nombre": "Área de descanso",
+        "categoria": "descanso",
+        "abierto": true,
+        "plazas": 12
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1810, 41.3890]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "servicio-03",
+      "properties": {
+        "nombre": "Fuente pública",
+        "categoria": "agua",
+        "abierto": null,
+        "plazas": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1650, 41.3820]
+      }
+    }
+  ]
+}

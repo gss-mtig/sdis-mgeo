@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comprobar una API de Supabase</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.5; margin: 2rem auto; max-width: 52rem; padding: 0 1rem; }
+    label { display: block; font-weight: 600; margin-top: 1rem; }
+    input { box-sizing: border-box; font: inherit; margin-top: .25rem; padding: .5rem; width: 100%; }
+    button { font: inherit; margin-top: 1rem; padding: .5rem 1rem; }
+    pre { background: #f3f4f6; overflow: auto; padding: 1rem; white-space: pre-wrap; }
+    #estado { min-height: 1.5em; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Comprobar la API de Supabase</h1>
+    <p>Introduce la URL del proyecto y su clave publicable. Los valores se utilizan solo para esta solicitud y no se guardan en esta página.</p>
+
+    <form id="formulario">
+      <label for="url">URL del proyecto</label>
+      <input id="url" name="url" type="url" placeholder="https://PROJECT_REF.supabase.co" required autocomplete="off">
+
+      <label for="clave">Clave publicable (<code>sb_publishable_…</code>)</label>
+      <input id="clave" name="clave" type="password" placeholder="Pega aquí la clave publicable" required autocomplete="off">
+
+      <button type="submit">Consultar FeatureCollection</button>
+    </form>
+
+    <p id="estado" role="status" aria-live="polite"></p>
+    <pre id="respuesta" aria-label="Respuesta de la API"></pre>
+  </main>
+
+  <script>
+    const formulario = document.querySelector('#formulario');
+    const estado = document.querySelector('#estado');
+    const respuesta = document.querySelector('#respuesta');
+
+    formulario.addEventListener('submit', async (evento) => {
+      evento.preventDefault();
+      estado.textContent = 'Consultando…';
+      respuesta.textContent = '';
+
+      try {
+        const proyecto = new URL(document.querySelector('#url').value.trim());
+        const clave = document.querySelector('#clave').value.trim();
+
+        if (proyecto.protocol !== 'https:') {
+          throw new Error('La URL del proyecto debe comenzar por https://.');
+        }
+
+        const resultado = await fetch(
+          `${proyecto.origin}/rest/v1/rpc/puntos_demo_geojson`,
+          {
+            method: 'POST',
+            headers: {
+              apikey: clave,
+              'Content-Type': 'application/json'
+            },
+            body: '{}'
+          }
+        );
+
+        const contenido = await resultado.json();
+        respuesta.textContent = JSON.stringify(contenido, null, 2);
+
+        if (!resultado.ok) {
+          estado.textContent = `La API respondió con el estado HTTP ${resultado.status}. Revisa la URL, la clave, la exposición del endpoint y los permisos.`;
+          return;
+        }
+
+        const total = Array.isArray(contenido.features) ? contenido.features.length : 0;
+        estado.textContent = `Respuesta correcta: ${contenido.type || 'respuesta JSON'}${contenido.type === 'FeatureCollection' ? ` con ${total} entidades` : ''}.`;
+      } catch (error) {
+        estado.textContent = `No se pudo consultar la API: ${error.message}`;
+      }
+    });
+  </script>
+</body>
+</html>

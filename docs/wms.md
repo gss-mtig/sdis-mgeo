@@ -1,236 +1,183 @@
-# WMS
+# WMS: publicar y consultar mapas como imágenes
 
-La intención de WMS (Web Map Service) es la de permitir la superposición visual de información geográfica compleja y distribuida en diferentes servidores. Un cliente puede hacer peticiones a otros servidores también basados en esta especificación para descubrir información geográfica deseada. Una vez encontrada el cliente puede recurrir a ella de forma simultánea y puede visualizar diferentes datos geográficos de diferentes servidores en un mismo entorno.
+El **Web Map Service (WMS)** es un estándar del Open Geospatial Consortium (OGC) para solicitar mapas georreferenciados a través de la Web. El servidor prepara una imagen del área, las capas, el tamaño y el estilo pedidos por el cliente.
 
-Cada petición está compuesta por unos parámetros concretos definidos por la especificación WMS y que es entendida por todos los servidores de mapas que cumplen con la especificación.
+Un WMS permite visualizar y superponer mapas de distintas fuentes. La respuesta de `GetMap` es una imagen —por ejemplo, PNG o JPEG—, no la capa vectorial original. Si necesitas descargar o analizar las entidades y sus atributos, tendrás que buscar otra forma de acceso. Algunos servicios permiten consultar información puntual mediante `GetFeatureInfo`, pero esa respuesta no equivale a descargar el conjunto de datos.
 
-Por lo tanto, cuando se dice que un Servidor de Mapas es estándar y cumple con WMS, significa que es capaz de dar respuesta a estas peticiones.
+## Descubrir qué ofrece un servicio: `GetCapabilities`
 
-El estándar WMS proporciona una interfaz HTTP simple para solicitar imágenes de mapas georegistrados desde una o más bases de datos geoespaciales distribuidas. 
+La operación `GetCapabilities` devuelve una descripción del servicio. Ahí puedes revisar:
 
-Se puede ver la especificación en [https://www.ogc.org/standards/wms](https://www.ogc.org/standards/wms)
+- las versiones y operaciones que admite;
+- los nombres y títulos de las capas;
+- qué capas se pueden consultar con `GetFeatureInfo`;
+- los sistemas de referencia y extensiones geográficas disponibles;
+- los formatos de imagen y de respuesta admitidos.
 
-## Tipos de peticiones WMS
+La dirección que aparece en una ficha de catálogo suele ser la URL base del servicio. Para pedir sus capacidades, se añaden los parámetros:
 
-### GetCapabilities
-
-Nos permite descubrir cuales son las capacidades del servidor. Como respuesta va a obtener un archivo en formato xml dónde podremos saber cuales son las características del servicio, las versiones de WMS soportadas por el servidor, las operaciones que soporta, cual es su sistema de referencia, sus coordenadas, que formato de imagen soporta y metadatos de las capas de información que contiene.
-
-#### Parámetros del GetCapabilities
-
-| Parámetro | Obligatoriedad | Descripción                                                            |
-|-----------|----------------|------------------------------------------------------------------------|
-| VERSION   | Obligatorio    | Versión de la especificación OGC (1.0.0, 1.1.0, 1.1.1, 1.3.0)          |
-| SERVICE   | Obligatorio    | Tipo de servicio al que va dirigida la petición (**WMS**)                  |
-| REQUEST   | Obligatorio    | Nombre de la operación (**GetCapabilities**)                               |
-| LANGUAGE  | Opcional       | Se obtiene el fichero de salida en el idioma solicitado                |
-| FORMAT    | Opcional       | Formato de salida del metadato del servicio.   (Por defecto text/xml)  |
-
-Ejemplos: 
-
-http://www.ign.es/wms-inspire/ign-base?VERSION=1.3.0&REQUEST=GetCapabilities&SERVICE=WMS
-
-https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wms?REQUEST=GetCapabilities&SERVICE=WMS
-
-#### Aspectos prácticos
-
-##### Tamaño máximo de la imagen
-
-Si se pide una imagen mayor que el tamaño máximo permitido retornará un error
-
-``` xml
-<Service>
-    <Name>icc_bt5m</Name>
-    <Title>
-    ICC - Base topogràfica de Catalunya 1:5 000 (BT-5M) - Capes WMS 96dpi (píxel 0,26458333 mm)
-    </Title>
-    ...
-    <MaxWidth>2048</MaxWidth>
-    <MaxHeight>2048</MaxHeight>
-</Service>
+```text
+?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
 ```
 
-##### OnlineResource
+El orden de los parámetros puede variar. La respuesta habitual es un documento XML; muchos programas SIG lo leen y presentan sus capas en una lista.
 
-En algunos software de escritorio utiliza esta url para hacer las peticiones de las operaciones GetMap.
+**Ejemplo:** [abrir `GetCapabilities` del WMS de divisiones administrativas del ICGC](https://geoserveis.icgc.cat/servei/catalunya/divisions-administratives/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0). En el XML, busca el nombre y el título de una capa.
 
-``` xml
-<GetMap>
-    <Format>image/jp2;subtype="gmljp2"</Format>
-    <Format>image/gif</Format>
-    <Format>image/png</Format>
-    <Format>image/bmp</Format>
-    <Format>image/jpeg</Format>
-    <Format>image/tiff</Format>
-    <DCPType>
-        <HTTP>
-            <Get>
-                <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://shagrat.icc.cat/lizardtech/iserv/ows" xlink:type="simple"/>
-            </Get>
-        </HTTP>
-    </DCPType>
-</GetMap>
+## Solicitar un mapa: `GetMap`
+
+`GetMap` pide una imagen para una selección concreta de capas y una zona del territorio. La solicitud incluye, entre otros:
+
+| Parámetro         | Para qué sirve                                                                                   |
+| ----------------- | ------------------------------------------------------------------------------------------------ |
+| `LAYERS`          | Identifica las capas que se dibujarán; usa el valor `Name` del documento de capacidades.         |
+| `STYLES`          | Indica el estilo de cada capa; puede dejarse vacío si se usa el estilo predeterminado.           |
+| `CRS` o `SRS`     | Sistema de referencia de la imagen. WMS 1.3.0 usa `CRS`; versiones anteriores suelen usar `SRS`. |
+| `BBOX`            | Extensión espacial de la imagen: coordenadas mínima y máxima.                                    |
+| `WIDTH`, `HEIGHT` | Tamaño de la imagen en píxeles.                                                                  |
+| `FORMAT`          | Formato de la imagen, como `image/png` o `image/jpeg`.                                           |
+| `TRANSPARENT`     | Solicita fondo transparente cuando el formato y el servidor lo permiten; suele usarse con PNG.   |
+
+La URL debe solicitar una combinación que el servicio realmente ofrezca. Los nombres de capa, formatos y sistemas de referencia se consultan en `GetCapabilities`.
+
+Una solicitud simplificada para WMS 1.3.0 tiene esta forma. Sustituye los valores entre llaves por los que declara el servicio:
+
+```text
+URL_BASE?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS={nombre_de_capa}&STYLES=&CRS=EPSG:25831&BBOX={minx},{miny},{maxx},{maxy}&WIDTH=800&HEIGHT=600&FORMAT=image/png&TRANSPARENT=TRUE
 ```
 
-##### Layer
+**Ejemplo:** [ver una petición `GetMap` de municipios a escala 1:100.000](https://geoserveis.icgc.cat/servei/catalunya/divisions-administratives/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=divisions_administratives_municipis_100000&STYLES=&CRS=EPSG:25831&BBOX=411321.5,4565198,434331.5,4590698&WIDTH=768&HEIGHT=850&FORMAT=image/png). El resultado es una imagen PNG. La página del [ICGC sobre divisiones administrativas](https://www.icgc.cat/ca/Geoinformacio-i-mapes/Geoinformacio-en-linia-Geoserveis/WMS-i-WFS-Limits-administratius/WMS-i-WFS-Divisions-administratives) enumera las capas y sus rangos de visualización.
 
-El atributo queryable indica si la capa es consultable (1 =  consultable, 0 = no consultable)
+### CRS y orden de coordenadas
 
-Name es identificador de la capa. Es el valor que se debe usar en el parámetro LAYERS de las peticiones GetMap
+La caja `BBOX` debe expresarse en el sistema de referencia pedido. En WMS 1.3.0, el orden de los ejes depende del CRS definido por la norma. Por ejemplo, para EPSG:4326 el orden puede ser latitud-longitud; en servicios antiguos o con otros CRS puede encontrarse otro orden. Si la imagen sale vacía o en un lugar inesperado, revisa juntos la versión WMS, el CRS y el orden de las cuatro coordenadas.
 
-Title es nombre descriptivo de la capa
+## Consultar una posición: `GetFeatureInfo`
 
-LegendURL hace referencia a una url de una imagen externa que contiene la leyenda de la capa
+`GetFeatureInfo` permite preguntar al servidor qué información tiene sobre una posición de la imagen. La petición reutiliza los parámetros de mapa —capas, CRS, BBOX, ancho y alto— e indica:
 
-Min y Max(ScaleDenominator) factor de escala. Limita la visualización de la capa a estas escalas. Si se pide una capa fuera de esa escala retorna en blanco.
+- `QUERY_LAYERS`: capa o capas consultables;
+- `I` y `J` en WMS 1.3.0, o `X` e `Y` en versiones anteriores: posición del píxel;
+- `INFO_FORMAT`: formato de respuesta que el servicio admite, por ejemplo HTML o texto.
 
-``` xml
-<Layer queryable="1">
-    <Name>02_ALTI_PA</Name>
-    <Title>[BT5M] (02) (x) ALTIMETRIA: talussos, marges (àrees)</Title>
-    <Abstract>02_ALTI_PA</Abstract>
-    <CRS>EPSG:25831</CRS>
-    <CRS>EPSG:4326</CRS>
-    <BoundingBox CRS="EPSG:25831" minx="254904.96" miny="4484796.89" maxx="530907.30" maxy="4749795.10"/>
-    ...
-    <Style>
-    ...
-    <LegendURL width="328" height="64">
-        <Format>image/png</Format>
-        <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geoserveis.icc.cat/icc_bt5m/wms/service?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=02_ALTI_PA" xlink:type="simple"/>
-    </LegendURL>
-    </Style>
-    <MinScaleDenominator>472.470238</MinScaleDenominator>
-    <MaxScaleDenominator>7087.053571</MaxScaleDenominator>
-</Layer>
+La operación solo funciona si la capa está marcada como consultable y el servidor la ofrece. Puede devolver atributos de las entidades cercanas al píxel, pero no necesariamente todos los datos ni todos sus campos.
+
+De forma simplificada, la petición vuelve a incluir los parámetros de `GetMap` y añade:
+
+```text
+&REQUEST=GetFeatureInfo&QUERY_LAYERS={nombre_de_capa}&I={columna_del_pixel}&J={fila_del_pixel}&INFO_FORMAT=text/html
 ```
 
-##### GetFeatureInfo
+Los nombres `I` y `J` corresponden a WMS 1.3.0; en versiones anteriores suelen usarse `X` e `Y`. En un cliente SIG el programa calcula la posición del píxel al hacer clic sobre el mapa.
 
-Formatos de salida de la consulta
+**Ejemplo:** [consultar información en el centro del mapa con `GetFeatureInfo`](https://geoserveis.icgc.cat/servei/catalunya/divisions-administratives/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&LAYERS=divisions_administratives_municipis_100000&QUERY_LAYERS=divisions_administratives_municipis_100000&STYLES=&CRS=EPSG:25831&BBOX=411321.5,4565198,434331.5,4590698&WIDTH=768&HEIGHT=850&FORMAT=image/png&INFO_FORMAT=text/html&I=384&J=425). La respuesta depende de que la capa sea consultable y de que haya una entidad bajo ese píxel.
 
-``` xml
-<GetFeatureInfo>
-    <Format>application/vnd.esri.wms_raw_xml</Format>
-    <Format>application/vnd.esri.wms_featureinfo_xml</Format>
-    <Format>application/vnd.ogc.wms_xml</Format>
-    <Format>text/xml</Format>
-    <Format>text/html</Format>
-    <Format>text/plain</Format>
-    <DCPType>
-        <HTTP>
-            <Get>
-                <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoserveis.icc.cat/icc_bt5m/wms/service?"/>
-            </Get>
-        </HTTP>
-    </DCPType>
-</GetFeatureInfo>
-```
+## Diagnosticar problemas frecuentes
 
-### GetMap
+- **La URL devuelve una imagen de error o XML:** comprueba el nombre de la operación, la versión y los nombres de las capas.
+- **El mapa aparece vacío:** revisa el `BBOX`, el CRS, el orden de coordenadas y los límites de escala de la capa.
+- **La petición se rechaza:** confirma que el formato, el CRS y el tamaño de imagen estén admitidos.
+- **`GetFeatureInfo` no devuelve resultados:** verifica que la capa sea consultable y que la posición del píxel caiga dentro de la imagen y de una entidad.
+- **El mapa no es transparente:** usa un formato que admita transparencia y comprueba que el servicio acepte `TRANSPARENT=TRUE`.
 
-Petición GetMap devolverá un mapa en formato imagen, ya sea un PNG, JPEG, GIF, etc.
+## Actividades prácticas en clase
 
-#### Parámetros del GetMap
+Estas actividades se realizan en parejas y no sustituyen el ejercicio evaluable de esta lección.
 
-| Parámetro   | Obligatoriedad | Descripción                                                                                                    |
-|-------------|----------------|----------------------------------------------------------------------------------------------------------------|
-| VERSION     | Obligatorio    | Versión de la especificación OGC (1.0.0, 1.1.0, 1.1.1, 1.3.0)                                                  |
-| SERVICE     | Obligatorio    | Tipo de servicio al que va dirigida la petición (**WMS**)                                                      |
-| REQUEST     | Obligatorio    | Nombre de la operación (**GetMap**)                                                                            |
-| LAYERS      | Obligatorio    | Lista de nombres de las capas separadas por coma                                                               |
-| FORMAT      | Obligatorio    | Formato de salida de la imagen.  (image/png, image/jpeg, ...)                                                  |
-| STYLES      | Obligatorio    | Lista de estilos separados por coma. Si no hay estilo se puede dejar en blanco                                 |
-| SRS o CRS   | Obligatorio    | Código ESPG del sistema de referencia                                                                          |
-| BBOX        | Obligatorio    | Caja de coordenadas del mapa (minx,miny,maxx,maxy)                                                             |
-| WIDTH       | Obligatorio    | Número píxeles del ancho de la imagen                                                                          |
-| HEIGHT      | Obligatorio    | Número píxeles del alto de la imagen                                                                           |
-| TRANSPARENT | Opcional       | Indica si el fondo del mapa debe ser transparente (true ,false)                                                |
-| BGCOLOR     | Opcional       | Color de fondo para la imagen del mapa. El valor está en la formato RRGGBB hexadecimal                         |
-| SLD         | Opcional       | Una URL que hace referencia a un archivo XML StyledLayerDescriptor que controla el estilo de las capas de mapa |
-| EXCEPTIONS  | Opcional       | Formato excepciones                                                                                            |
+### 1. Descubrir una capa en `GetCapabilities` — 15 minutos
 
-Ejemplo: http://www.ign.es/wms-inspire/ign-base?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=IGNBaseTodo&STYLES=&FORMAT=image/png&BGCOLOR=0xFFFFFF&TRANSPARENT=TRUE&SRS=EPSG:4258&BBOX=26.4764705882353,-19,44.5235294117647,5&WIDTH=1020&HEIGHT=767
+**Objetivo:** aprender a leer qué ofrece un servicio antes de conectarlo.
 
-### GetFeatureInfo
+**Materiales:** navegador o QGIS; ficha del [servicio WMS de agua de IDEC](https://catalegs.ide.cat/geonetwork/srv/api/records/aigua-wms?language=cat), que enlaza al WMS de la Generalitat y describe información hidrológica. La ficha indica WMS 1.3.0 y una revisión de metadatos del 6 de mayo de 2022; esa fecha no confirma la actualización de las capas.
 
-Petición GetFeatureInfo sirve para mostrar los atributos de los objetos del mapa, vuelve la información en formato de tabla o XML. Si una capa está marcada como “consultable” (queryable), se puede solicitar datos sobre una coordenada de la imagen del mapa.
+**Pasos:**
 
-#### Parámetros del GetFeatureInfo
+1. Desde la ficha, abre el punto de conexión del servicio o añádelo en QGIS como WMS/WMTS.
+2. Carga la lista de capas y escoge una relacionada con una pregunta concreta.
+3. Localiza en `GetCapabilities` o en la ventana del cliente el nombre técnico, el título, los CRS disponibles y si la capa es consultable.
 
-| Parámetro     | Obligatoriedad | Descripción                                                                    |
-|---------------|----------------|--------------------------------------------------------------------------------|
-| VERSION       | Obligatorio    | Versión de la especificación OGC (1.0.0, 1.1.0, 1.1.1, 1.3.0)                  |
-| SERVICE       | Obligatorio    | Tipo de servicio al que va dirigida la petición (**WMS**)                      |
-| REQUEST       | Obligatorio    | Nombre de la operación (**GetFeatureInfo**)                                    |
-| LAYERS        | Obligatorio    | Lista de nombres de las capas separadas por coma                               |
-| FORMAT        | Obligatorio    | Formato de salida de la imagen.  (image/png, image/jpeg, ...)                  |
-| STYLES        | Obligatorio    | Lista de estilos separados por coma. Si no hay estilo se puede dejar en blanco |
-| SRS o CRS     | Obligatorio    | Código ESPG del sistema de referencia                                          |
-| BBOX          | Obligatorio    | Caja de coordenadas del mapa (minx,miny,maxx,maxy)                             |
-| WIDTH         | Obligatorio    | Número píxeles del ancho de la imagen                                          |
-| HEIGHT        | Obligatorio    | Número píxeles del alto de la imagen                                           |
-| QUERY_LAYERS  | Obligatorio    | Lista de nombres de las capas que se quieren consultar separadas por coma      |
-| X o I            | Obligatorio    | Valor del píxel a consultar                                                    |
-| Y o J           | Obligatorio    | Valor del píxel a consultar                                                    |
-| INFO_FORMAT   | Opcional       | Formato de la respuesta (por defecto text/xml)                                 |
-| FEATURE_COUNT | Opcional       | Número máximo de elementos a devolver                                          |
-| EXCEPTIONS    | Opcional       | Formato excepciones                                                            |
+**Resultado:** anotad esos cuatro datos para una capa y una pregunta que podría ayudar a responder.
 
-Ejemplo:
+**Reflexiona:** ¿qué información no puedes deducir solo del nombre de la capa?
 
-https://geoserveis.icgc.cat/servei/catalunya/divisions-administratives/wms?REQUEST=GetFeatureInfo&SERVICE=WMS&VERSION=1.1.1&LAYERS=divisions_administratives_municipis_5000&QUERY_LAYERS=divisions_administratives_municipis_5000&INFO_FORMAT=text/html&STYLES=&SRS=EPSG:25831&BBOX=257904,4484796,680304,4907196&WIDTH=768&HEIGHT=768&X=295&Y=580
+### 2. Construir un mapa y corregir una petición — 25 minutos
 
-### GetLegendGraphic
+**Objetivo:** relacionar capas, extensión, CRS y transparencia con la imagen que devuelve `GetMap`.
 
-Petición que devuelve una imagen de la imagen de la leyenda del mapa de una capa, proporcionando una guía visual de los elementos del mapa.
+**Materiales:** el mismo servicio WMS y QGIS. Si no responde durante la clase, usa otro WMS de una IDE que se haya comprobado antes de la sesión.
 
-| Parámetro | Obligatoriedad | Descripción                                                    |
-|-----------|----------------|----------------------------------------------------------------|
-| VERSION   | Obligatorio    | Versión de la especificación OGC (1.0.0, 1.1.0, 1.1.1, 1.3.0)  |
-| SERVICE   | Obligatorio    | Tipo de servicio al que va dirigida la petición (**WMS**)      |
-| REQUEST   | Obligatorio    | Nombre de la operación (**GetLegendGraphic**)                  |
-| LAYER     | Obligatorio    | Nombre de la capa                                              |
-| FORMAT    | Obligatorio    | Formato de salida de la imagen.  (image/png, image/jpeg, ...)  |
-| WIDTH     | Opcional       | Número píxeles del ancho de la imagen                          |
-| HEIGHT    | Opcional       | Número píxeles del alto de la imagen                          |
+**Pasos:**
 
-Ejemplo:
+1. Añade una capa y visualízala sobre el territorio que te interesa.
+2. Añade una segunda capa y activa la transparencia cuando el formato lo permita.
+3. Cambia la extensión o el CRS del proyecto y observa qué ocurre.
+4. El docente entregará una petición `GetMap` con un error sencillo: por ejemplo, un nombre de capa incorrecto, un CRS no admitido o una extensión (`BBOX`) fuera de cobertura. En pareja, localizad el error consultando `GetCapabilities` y corregidlo.
 
-http://wms.guifi.net/cgi-bin/mapserv?map=/home/guifi/maps.guifi.net/guifimaps/GMap.map&version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Nodes&format=image/png&STYLE=default
+**Resultado:** una captura del mapa final y una frase que explique el error y cómo lo detectasteis.
 
-### Aspector prácticos WMS
+**Reflexiona:** ¿qué combinación de capas y extensión comunica mejor la información necesaria?
 
-#### Principales diferencias entre las versiones 1.1.1 y 1.3.0 
-* En la operación GetMap, el parámetro SRS se llama CRS en 1.3.0
-* En la operación GetFeatureInfo, los parámetros X e Y se llaman I y J en 1.3.0.
-* En 1.1.1, los sistemas de coordenadas geográficas especificados con el espacio de nombres EPSG se definen para tener un orden de ejes de longitud / latitud. En 1.3.0 el orden es la latitud / longitud.
+### 3. ¿Qué puede decirnos un píxel? — 15 minutos
 
-Por ejemplo, considere la solicitud WMS 1.1 utilizando el SRS WGS84 (EPSG: 4326):
-    
-    server/wms?VERSION=1.1.1&REQUEST=GetMap&SRS=epsg:4326&BBOX=-180,-90,180,90&...
-La solicitud equivalente WMS 1.3.0 es:
-    
-    server/wms?VERSION=1.3.0&REQUEST=GetMap&CRS=epsg:4326&BBOX=-90,-180,90,180&...
+**Objetivo:** distinguir la imagen de `GetMap` de la respuesta puntual de `GetFeatureInfo`.
 
-#### Problemas comunes
-* Tamaño de la imagen (pantallas grandes y/o de mucha resolución)
-* Capas no visibles por el control de escala
-* Capas no consultables
-* Formato de salida del GetFeatureInfo
-* No están pensados para peticiones teseladas (velocidad) 
-* No tienen caché. Las imágenes se generan al vuelo 
-* Lista restringida de SRS soportados
-* En software de escritorio el onlineResource (QGis tiene la opción de ignorar el onlineResource )
-* Modificar el estilo (SLD poco soportado)
-* SLD difícil de entender y hacer  
+**Materiales:** una capa consultable del servicio WMS y QGIS con la herramienta de información. Si ninguna capa lo permite, comparad la declaración `queryable` de dos capas en `GetCapabilities`.
 
-## Ejercicio
+**Pasos:**
 
-!!! question "Ejercicio 2,5 pts"
-    En un documento de texto poner:
+1. Haced clic en una entidad visible con la herramienta de información.
+2. Leed la respuesta y anotad qué atributos devuelve.
+3. Si la capa no es consultable, buscad la indicación correspondiente en las capacidades del servicio.
 
-    * Seleccionar un servicio WMS del catálogo de la IDE
-        * Escribir la url del getCapabilities (1 pt)
-        * Escribir la url de una petición getMap (1 pt)
-        * Captura de la imagen retornada de la petición getMap (0,5 pt)
+**Resultado:** una nota con un atributo obtenido y una limitación de la consulta.
+
+**Reflexiona:** ¿por qué `GetFeatureInfo` no equivale a descargar las entidades completas?
+
+## WMS y las OGC API
+
+WMS continúa siendo común en IDE y geoportales. [OGC API – Maps](https://ogcapi.ogc.org/maps/) ofrece otra manera estándar de descubrir y solicitar mapas mediante recursos web. Los dos pueden devolver una imagen cartográfica, pero organizan el acceso de forma distinta:
+
+| | WMS | OGC API – Maps |
+|---|---|---|
+| **Cómo se descubre** | Se solicita `GetCapabilities`, que describe operaciones, capas, CRS y formatos. | Se abre la página inicial de la API y se siguen sus enlaces a las colecciones y a la definición OpenAPI. |
+| **Cómo se pide un mapa** | Se envía `GetMap` con parámetros como `LAYERS`, `BBOX`, `CRS`, `WIDTH` y `HEIGHT`. | Se solicita un recurso de mapa, normalmente `/collections/{id}/map`, con parámetros como `bbox`, `width` y `height`. |
+| **Qué se recibe** | Una imagen georreferenciada, por ejemplo PNG. | También una imagen de mapa; la API puede ofrecer formatos alternativos según la implementación. |
+| **Consultar entidades** | Algunas capas permiten `GetFeatureInfo`, que devuelve información asociada a un píxel. | OGC API – Maps Core no define una operación equivalente a `GetFeatureInfo`. Para consultar entidades y sus propiedades, se necesita una API de datos, como OGC API – Features, si el proveedor publica allí el conjunto. |
+
+Por tanto, al pulsar sobre el mapa de la API de la IDEE no se obtiene automáticamente la información de la entidad situada bajo el cursor. Si los datos vectoriales están publicados también como entidades, OGC API – Features permite consultarlas por colección y zona; para ciertos datos ambientales, OGC API – EDR ofrece consultas por posición. Son otros recursos y pueden requerir que el cliente transforme la posición del clic al sistema de coordenadas que espera esa API. La especificación de [OGC API – Maps, apartado C.2.3](https://docs.ogc.org/is/20-058/20-058.html#_no_equivalent_to_getfeatureinfo_as_part_of_the_ogc_api_maps_part_1) explica esta diferencia y propone consultar otras OGC API.
+
+### Ejemplo con la API de mapas de la IDEE
+
+La [API de mapas de la Infraestructura de Datos Espaciales de España (IDEE)](https://api-maps.idee.es/) ofrece mapas base, ortoimágenes y representaciones del relieve. En la página inicial, abre **View the collections in this service** y selecciona **Street map**. Su identificador es `IGNBaseTodo`.
+
+En WMS descubrimos el servicio con `GetCapabilities` y pedimos la imagen con `GetMap`. Aquí podemos recorrer los recursos desde el navegador:
+
+1. [Abrir las colecciones de la API](https://api-maps.idee.es/collections?f=html) y localizar el mapa callejero.
+2. [Consultar la descripción de la colección `IGNBaseTodo`](https://api-maps.idee.es/collections/IGNBaseTodo?f=html).
+3. [Solicitar una imagen del mapa callejero para la España peninsular](https://api-maps.idee.es/collections/IGNBaseTodo/map?bbox=-9.3,35.8,4.5,43.9&width=1000&height=600&f=png).
+
+La última dirección sigue el patrón `/collections/IGNBaseTodo/map` y añade la extensión `bbox`, el tamaño en píxeles y el formato PNG. En este ejemplo, `bbox` utiliza el orden longitud mínima, latitud mínima, longitud máxima y latitud máxima, en el CRS84 predeterminado. Puedes cambiar el `bbox` o las dimensiones y volver a abrir el enlace para ver cómo cambia el mapa.
+
+El resultado sigue siendo una **imagen**, igual que con `GetMap`; no contiene las entidades vectoriales originales. La colección describe las fuentes y el contenido representado, y la API ofrece enlaces a formatos HTML y JSON. Para consultar objetos y atributos, continúa con [OGC API – Features](ogc_api_features.md). La [especificación de OGC API – Maps](https://ogcapi.ogc.org/maps/overview.html) describe estos recursos y parámetros.
+
+## Ejercicio: descubrir, solicitar y consultar un WMS
+
+!!! question "Ejercicio 2 puntos"
+
+    En un documento breve, selecciona un servicio WMS publicado por una IDE. Puedes partir del [catálogo de IDEC](https://catalegs.ide.cat/geonetwork/srv/search?orgName=Infraestructura+de+Dades+Espacials+de+Catalunya) o de otra IDE. Elige un servicio que responda a una pregunta geográfica que te interese.
+
+    1. Incluye el enlace a la ficha del catálogo y la URL de `GetCapabilities`. Indica quién publica el servicio y qué capas ofrece.
+    2. Prepara una solicitud `GetMap` para una de sus capas. Incluye la URL, identifica el CRS y explica qué zona define el `BBOX`. Añade una captura de la imagen recibida.
+    3. Comprueba si la capa permite `GetFeatureInfo`. Si es posible, consulta una posición y resume qué información devuelve. Si no está habilitado, indícalo y explica cómo lo comprobaste.
+    4. Explica una limitación del WMS para tu pregunta: recuerda que `GetMap` entrega una imagen y no el conjunto de entidades original.
+
+    **Entrega:** documento de texto con enlaces, respuesta breve y capturas legibles. Si un servicio no responde, vuelve a la ficha y prueba otro servicio de la misma IDE; anota el fallo si afecta a tu elección.
+
+    **Criterios:** 0,5 puntos por identificar el servicio y leer sus capacidades; 0,75 por construir y explicar `GetMap`; 0,5 por probar o comprobar `GetFeatureInfo`; 0,25 por explicar una limitación relevante.
+
+## Fuentes
+
+- [Estándar WMS de OGC](https://www.ogc.org/standards/wms/).
+- [OGC API – Maps](https://ogcapi.ogc.org/maps/).
+
+**Siguiente:** [Pirámides de teselas ráster: XYZ, WMTS y OGC API – Tiles](piramides_teselas.md).

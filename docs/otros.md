@@ -1,44 +1,20 @@
-## Otros estándares OGC
+# Panorama de otros estándares OGC
 
-### Web Map Context (WMC)
+Además de WMS y OGC API – Features, encontrarás estándares OGC para otras tareas. No hace falta estudiarlos todos con el mismo detalle: identifica qué problema resuelven y comprueba qué estándar y versión declara cada servicio.
 
-Especifica formato estandarizado para almacenar un contexto. Un contexto recoge la información necesaria para reproducir las condiciones de una determinada sesión de uso de un cliente, de tal forma que ese cliente pueda restablecerlas posteriormente. El contexto se almacena en un archivo XML. [^2]
+| Estándar o familia | Para qué sirve | Evolución o relación |
+|---|---|---|
+| **WMTS** | Entrega mapas en teselas precalculadas, normalmente para mostrarlos con rapidez. | OGC API – Tiles ofrece una evolución basada en recursos web y permite teselar diferentes tipos de información. |
+| **WCS** | Da acceso a coberturas, como datos ráster que se quieren consultar o procesar como valores. | OGC API – EDR cubre patrones de consulta útiles para datos medioambientales; no es un reemplazo universal de WCS. |
+| **WPS** | Publica procesos geoespaciales que un cliente puede solicitar al servidor. | OGC API – Processes define una interfaz web moderna para describir y ejecutar procesos. |
+| **SOS** | Facilita el acceso a observaciones de sensores mediante operaciones de servicio. | SensorThings API ofrece un modelo y una API modernos para datos de sensores; no es simplemente una nueva versión de SOS. |
+| **GML** | Codifica entidades geográficas en XML. Es un formato, no un servicio. | Puede utilizarse con WFS y otras aplicaciones que necesiten esa codificación. GeoJSON es otra opción común en servicios web actuales. |
+| **SLD / Symbology Encoding** | Describe estilos cartográficos que algunos servicios de mapas pueden aplicar. | Es una especificación de estilo; no es una API de acceso a datos ni todas las implementaciones WMS la admiten. |
+| **KML** | Codifica elementos y estilos para visualización geográfica, especialmente en globos y visores. | Es un formato de intercambio y visualización, no un servicio de mapas. |
+| **WMC** | Guardaba el contexto de un cliente de mapas: capas, vistas y servicios de una sesión. | Es una especificación heredada; no forma parte del recorrido práctico de esta asignatura. |
 
-En el contexto se almacena información sobre las capas que forman el mapa representado por el cliente y los servidores de los que estas se obtienen, la región cubierta por el mapa, así como información adicional para anotar este mapa.
+Estas relaciones no siempre son equivalencias uno a uno. Las OGC API se organizan en estándares modulares, algunas partes ya están aprobadas y otras continúan en desarrollo. Para nuevas implementaciones, OGC recomienda considerar las API modernas; los servicios clásicos siguen utilizándose y conviene poder reconocerlos.
 
-Permite:
-* Crear vistas predefinidas, mapas temáticos
-* Guardar Y/o cargar on-line estas vistas
+Para profundizar, consulta el [catálogo oficial de estándares OGC](https://www.ogc.org/standards/) y la [familia OGC API](https://ogcapi.ogc.org/).
 
-Se puede ver la especificación en [https://www.ogc.org/standards/wmc](https://www.ogc.org/standards/wmc)
-
-### Keyhole Markup Language (KML)
-
-Es un lenguaje XML centrado en la descripción y visualización de la geoinformación en actuales y futuras aplicaciones webs de gestión de mapas (2d y 3d). 
-
-Este lenguaje fue presentado por Google al OGC con el objetivo de incorporarlo como un estándar. Actualmente OGC y Google trabajan en colaboración para asegurar este proceso.
-
-Se puede ver la especificación en [https://www.ogc.org/standards/kml](https://www.ogc.org/standards/kml)
-
-### Web Coverage Service(WCS)
-
-Amplía la interfaz Web Map Server para permitir el acceso a "coberturas" geoespaciales que representen valores o propiedades de localizaciones geográficas; más que los mapas generados por WMS (imágenes). 
-
-La diferencia principal con el WMS es que el servicio WCS proporciona los datos junto con su descripción detallada, define peticiones con una sintaxis rica para obtener esos datos y devuelve la información con su semántica original, lo cual permite que puedan ser interpretados, extrapolados, etc., y no sólo representados de forma estática.
-
-Básicamente sirve para descargar archivos raster a escala 1 a 1 y preparados para poder trabajarlos en un sig raster.
-
-Principales interfaces:
-* GetCapabilities
-* DescribeCoverage
-* GetCoverage
-
-### Web Processing Service (WPS)
-
-Servicio de publicación de procesos geoespaciales en la Web. Se entiende por procesos cualquier algoritmo, cálculo o modelo, que opere sobre datos espacialmente referenciados tanto en formato raster como vectorial, de este modo un WPS puede ofrecer cualquier tipo de funcionalidad GIS a través de una red.
-
-Se puede ver la especificación en [https://www.ogc.org/standards/wps](https://www.ogc.org/standards/wps)
-
-## Referencias
-
-[^2]: https://github.com/volaya/libro-sig/releases/download/v3.0/Sistemas.de.Informacion.Geografica.pdf
+**Siguiente:** [GeoJSON: leer y usar datos geográficos en la Web](geojson.md).

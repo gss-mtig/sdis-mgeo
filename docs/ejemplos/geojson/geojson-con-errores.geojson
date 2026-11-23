@@ -1,0 +1,50 @@
+{
+  "type": "FeatureCollection",
+  "name": "Ejercicio de corrección (datos sintéticos con errores intencionados)",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "punto-barcelona",
+      "properties": {
+        "nombre": "Punto que debería estar en Barcelona"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.3851,
+          2.1734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "zona-incompleta",
+      "properties": {
+        "nombre": "Zona de ejemplo"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2.17,
+              41.38
+            ],
+            [
+              2.19,
+              41.38
+            ],
+            [
+              2.19,
+              41.40
+            ],
+            [
+              2.17,
+              41.40
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

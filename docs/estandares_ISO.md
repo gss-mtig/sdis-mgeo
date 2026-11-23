@@ -1,100 +1,61 @@
-# Estándares ISO
+# Estándares para describir recursos geográficos
 
-## Qué es ISO?
+Los metadatos permiten entender y encontrar un recurso geográfico. Para que distintas organizaciones los puedan intercambiar y comprender, conviene describirlos con una estructura compartida. Los estándares de metadatos proporcionan esa estructura común.
 
-ISO (International Organization for Standarization) es una organización internacional dedicada a la elaboración de estándares no solo en el ámbito geográfico, sino en todas las áreas. ISO es responsable, por ejemplo, de estándares bien conocidos y aplicados en la industria actual, tales como los relacionados con la gestión medioambiental en empresas o los estándares de calidad. [^1]
+No hace falta memorizar sus códigos. Lo importante es reconocer que hay normas para describir recursos, extensiones para necesidades específicas y reglas para codificar e intercambiar los registros.
 
-Existe una estrecha relación entre ISO y OCG. Estas dos organizaciones intentan armonizar su trabajo de manera que tanto las especificaciones de OGC como los estándares ISO acaben siendo iguales (en algunos casos ya lo son).
+## Una analogía
 
-## Familia ISO19x
+Imagina que cada biblioteca inventara sus propios campos para describir libros: unas usarían «autor», otras «persona autora» y otras guardarían ese dato dentro de «notas». Sería difícil buscar y comparar sus catálogos.
 
-ISO tiene el Comité Técnico TC211, que se encarga de definir una serie de estándares geográficos comparables a las especificaciones abstractas de OGC (familia de estándares 19100).
+Un estándar de metadatos funciona como un modelo compartido: establece qué tipos de información se pueden describir y cómo se relacionan. Luego, un perfil concreta qué elementos se piden en un contexto determinado. Por eso dos fichas pueden tener aspectos distintos y aun así basarse en estándares relacionados.
 
-Para la creación de metadatos (tanto de datos como de servicios), ISO ha creado los siguientes estándares: ISO 19115, ISO 19119 y ISO 19139; mientras que para el diseño de geoservicios, OGC ha diseñado los siguientes: WMS, WFS, WCS, GML. Algunos de estos han sido adoptados también por ISO, convirtiéndose así en estándares internacionales.
+## Algunas normas y para qué sirven
 
-Los servicios de catálogo que defiende OGC están basados en especificaciones estándar de implementación y en estándares internacionales (desarrollados por ISO), para garantizar las búsquedas distribuidas en diferentes bases de datos.
+La familia ISO 19100 incluye normas para información geográfica. En metadatos, estas son algunas referencias útiles para orientarse:
 
+| Norma | Idea principal | Cuándo importa |
+|---|---|---|
+| **ISO 19115-1** | Modelo general para describir recursos geográficos: identificación, extensión, calidad, referencia espacial y distribución, entre otros aspectos. | Como referencia general para describir datos geográficos. |
+| **ISO 19115-2** | Amplía el modelo para describir la adquisición y el procesamiento de información geográfica, incluidas imágenes. | Cuando se necesita documentar con más detalle imágenes, observaciones o procesos de obtención. |
+| **ISO 19119** | Trata los servicios geográficos y su arquitectura y categorización. | Cuando el recurso que se describe es un servicio y no solo un conjunto de datos. |
+| **ISO 19115-3** | Define esquemas XML para codificar e intercambiar metadatos basados en ISO 19115-1 y 19115-2. | Cuando un sistema necesita exportar, importar o validar registros en XML. |
 
-![Estandares IDEs](img/estandares_ides.png "Estandares IDEs")
-*Algunos de los estándares más importantes de las IDEs (Basado en Smits et al., 2002)*
-### ISO 19115 (Metadatos)
+Las normas fijan modelos y reglas generales; no todas las fichas tienen que mostrar exactamente los mismos campos. Un **perfil de metadatos** selecciona y concreta elementos para un contexto, una comunidad o una iniciativa. Las reglas de metadatos de INSPIRE son un ejemplo de requisitos aplicados a un marco europeo.
 
-Esta norma internacional proporciona un modelo y establece un conjunto común de terminología, definiciones y procedimientos de aplicación para los metadatos. Mediante la definición de elementos de metadatos se va a poder describir la información sobre la identificación, la extensión, la calidad, el modelo espacial y temporal, la referencia espacial y la distribución de los datos geográficos.
+## Modelo, perfil y formato
 
-El objetivo de este estándar es proporcionar un procedimiento claro para la descripción del conjunto de datos geográficos, de forma que los usuarios puedan determinar si los datos les serán útiles y como acceder a ellos.
+Este esquema resume cómo se relacionan las piezas:
 
-La Norma Internacional ISO 19115-1:2014 *"Geographic Information Metadata Part 1 Fundamentals"* tiene como objetivo proporcionar un modelo para describir información o recursos que pueden tener una extensión geográfica.
+```text
+Norma: modelo común de descripción
+          ↓
+Perfil: selección y requisitos para un contexto
+          ↓
+Registro: ficha completada para un recurso
+          ↓
+Codificación: formato para guardar o intercambiar el registro
+```
 
-La Norma ISO 19115-2:2009 *"Información Geográfica Metadatos Extensión para imágenes y datos malla"* es un complemento de la ISO 19115-1 y define los elementos de metadatos adicionales necesarios para describir adecuadamente las imágenes geográficas y los datos malla (*raster*).
+El formato de codificación no es lo mismo que el contenido de la ficha. Una persona puede leer los mismos metadatos en una página web, mientras que el catálogo los guarda o intercambia en un formato estructurado, por ejemplo XML.
 
-Una importante fuente de información utilizada en los Sistemas de Información Geográfica son las imágenes de satélite, orto-fotografías, modelos digitales, etc. Estos datos de tipo raster y malla poseen características intrínsecas particulares, que deben quedar reflejadas mediante los metadatos. A pesar de que la norma ISO 19115 contiene algunos elementos destinados a documentar este tipo de información, éstos resultan escasos para documentar de forma correcta y completa la información raster y por ese motivo se creo la ISO 19115-2.
+## ¿Qué debes recordar?
 
-El objetivo de esta norma es definir los metadatos asociados a datos raster y malla que van a contener información sobre: 
+- Los estándares ayudan a describir metadatos con una estructura común y favorecen su intercambio.
+- Algunas normas son generales y otras se centran en necesidades concretas, como servicios o imágenes.
+- Los perfiles adaptan las reglas generales a un contexto.
+- No es necesario memorizar los números: al crear una ficha, la herramienta o el catálogo suele ofrecer una plantilla basada en un perfil.
 
-* Las propiedades de los equipos de medición usados para adquirir los datos. 
-* La geometría de los procesos de medición empleados por los equipo.
-* Los procesos de producción usados para obtener los datos.
-* Los métodos numéricos y procesos informáticos usados. 
+Los estándares también evolucionan y las implementaciones pueden adoptar sus versiones en momentos distintos. Por eso todavía se pueden encontrar registros o herramientas que usan esquemas anteriores.
 
-La Norma ISO/TS 19115-3:2016 *"Información Geográfica Metadatos Parte 3 Implementación de esquemas XML para conceptos fundamentales"* establece los esquemas XML necesarios para implementar el modelo de metadatos abstracto que define ISO 19115 de modo que gracias a esta especificación técnica se pueden crear los registros de metadatos en formato XML que son interoperables a través de Internet y compatibles independientemente de la herramienta de creación que se utilice.
+## Estado de las referencias citadas
 
-Se aplica a diferentes niveles de información conjuntos de datos geográficos, series de conjunto de datos, fenómenos geográficos individuales, propiedades de los fenómenos, etc
+La información se ha revisado en las páginas oficiales de ISO el **5 de noviembre de 2026**:
 
-![Niveles de información](img/iso_19115.png "Niveles de información")[^2]
-*Ejemplos prácticos de elementos a los que se puede aplicar la norma.*
+- [ISO 19115-1:2014 — Fundamentos](https://www.iso.org/standard/53798.html): publicada y vigente; ISO indica que está en revisión.
+- [ISO 19115-2:2019 — Adquisición y procesamiento](https://www.iso.org/standard/67039.html): edición vigente; sustituye a la edición de 2009.
+- [ISO 19119:2016 — Servicios](https://www.iso.org/standard/59221.html): publicada y confirmada en 2021.
+- [ISO 19115-3:2023 — Esquemas XML](https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Astd%3Aiso%3A19115%3A-3%3Aed-1%3Av1%3Aen): proporciona esquemas integrados para ISO 19115-1 y 19115-2; reemplaza ISO/TS 19139:2007 y 19139-2:2012.
+- [Guías de metadatos de INSPIRE](https://knowledge-base.inspire.ec.europa.eu/metadata-technical-guidelines_en): explican cómo aplicar los requisitos de metadatos de esa iniciativa.
 
-Esta Norma de Metadatos es de una gran complejidad e incluye una extensa serie de elementos de metadatos, unos obligatorios y otros opcionales. El documento consta de 140 páginas, incluye un total de 409 ítems y define 27 listas controladas, mediante las que se definen los posibles valores válidos de ciertos campos.
-
-Aunque esta norma define un extenso número de elementos de metadatos, establece un “conjunto mínimo” de metadatos (el núcleo o Core), a considerar para todo el rango de aplicaciones de los metadatos (desde mapas en formato papel a datos en formato digital, como imágenes satélite, modelos digitales del terreno, etc.). Con este conjunto se pretende establecer unos mínimos para facilitar el descubrimiento, el acceso, la transferencia y la utilización de los datos. Este núcleo está formado por elementos obligatorios y otros opcionales que usados todos ellos aumenta la interoperabilidad de los datos y permite a los usuarios entenderlos sin ambigüedades. Todo perfil que se defina a partir de esta norma debe estar formado como mínimo por los elementos definidos en dicho núcleo.
-
-Principales elementos del Core de ISO 19115.
-
-* Título del Conjunto de Datos
-* Fecha de Referencia
-* Idioma del Conjunto de Datos
-* Resumen descriptivo
-* Fecha de los Metadatos
-* Categoría del tema
-* Parte responsable del Conjunto de Datos 
-* Resolución espacial del conjunto de datos
-* Formato de Distribución
-* Extensión vertical y temporal
-* Tipo de representación espacial
-* Sistema de Referencia
-* Linaje
-* Recurso en línea
-* Identificador del Fichero de Metadatos
-* Norma de Metadatos
-* Versión de la Norma de Metadatos
-* Punto de contacto para los Metadatos
-* Localización geográfica de los Datos
-
-### ISO 19119 (Servicios)
-
-El estándar internacional ISO 19115 aporta la información necesaria para describir los conjuntos de datos espaciales se completa con el estándar ISO 19119:2005 *Geographic Information -Services* para describir los servicios de datos espaciales a través de sus metadatos.
-
-La ISO 19119 proporciona un entorno de trabajo para el desarrollo de software que permite a los usuarios el acceso y procesamiento de datos geográficos procedentes de diversas fuentes, a través de interfaces genéricos dentro de un entorno tecnológico abierto.
-
-La arquitectura de servicios geográficos especificada en ISO 19119 ha sido desarrollada para conseguir los siguientes propósitos:
-
-* Proporcionar un entorno de trabajo para permitir el desarrollo coordinado de servicios específicos.
-* Permitir la interoperabilidad entre servicios a través del uso de estándares de interfaces.
-* Facilitar el desarrollo de catálogos de servicio a través de la definición de metadatos de servicio.
-* Permitir la separación de instancias de datos e instancias de servicios.
-* Permitir el uso de un servicio de un proveedor con datos de otro proveedor.
-* Definir un entorno de trabajo abstracto que pueda ser implementado de múltiples formas.
-
-### ISO 19139 (Metadatos. Especificación de Implementación)
-
-La ISO 19139 (*“ISO/TS 19139-Geographic Information-Metadata -XML schema implementation”*) está diseñada para proporcionar una especificación común para la descripción, la validación y el intercambio de conjuntos de datos geográficos, lo cual permitirá promover la interoperatividad y aprovechar las ventajas de la ISO 19115 en especificaciones de implementación concretas.
-
-La norma ISO 19115 proporciona una estructura para describir información geográfica mediante elementos de metadatos y establece una terminología común para los mismos pero no desarrolla como poder llevar a cabo su implementación [^2]. La ISO 19139 proporciona unas normas claras de implementación de metadados para los conjuntos de datos geográficos digitales.
-
-ISO 19139 es una especificación técnica que desarrolla una implementación en XML (Esquema XML) del modelo de metadatos descrito por ISO 19115.
-
-Un archivo de intercambio de metadatos, acorde con el estándar ISO19115 y en formato XML, va a ser un documento XML que siga la sintaxis definida por la especificación técnica ISO 19139. Es decir, esta especificación técnica define un conjunto de esquemas en XML que van a describir los metadatos asociados a cada nivel de información, permitiendo así su descripción, asegurando su validación y su posterior intercambio a través de archivos de metadatos.
-
-## Referencias
-
-[^1]: https://github.com/volaya/libro-sig/releases/download/v3.0/Sistemas.de.Informacion.Geografica.pdf
-[^2]: https://www.iaaa.es/curriculum/08-Publicaciones-Articulos/art_2008_Mapping_Normas.pdf
+El siguiente paso es ver cómo se aplican estas ideas en una herramienta: continúa con [la creación de metadatos](creacion_metadatos.md).

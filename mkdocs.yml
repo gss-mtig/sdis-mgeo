@@ -3,9 +3,12 @@ site_url: https://gss-mtig.github.io/sdis-mgeo/
 site_description: Infraestructuras de datos espaciales y estándares de geoservicios.
 site_author: sdis-mgeo
 theme:
-  name: 'material'
-  language: 'es'
+  name: "material"
+  variant: classic
+  language: "es"
   highlightjs: true
+  features:
+    - content.code.copy
 
 markdown_extensions:
   - codehilite:
@@ -17,39 +20,54 @@ markdown_extensions:
 repo_url: "https://github.com/gss-mtig/sdis-mgeo"
 
 nav:
-- Home: index.md
-- Infraestructuras de datos espaciales (IDEs):
-  - 1. Introducción a las IDE's: introduccion_a_las_ides.md
-  - 2. Catálogo de Metadatos: catalogo_metadatos.md
-  - 3. Iniciativas:
-    - 3.1. IDEE: idee.md
-    - 3.2. IDEC: idec.md
-    - 3.3. INSPIRE: inspire.md
-    - 3.4. Otras IDEs: otras_ides.md
-  - 4. Marco legal:
-    - 4.1. LISIGE: lisige.md
-- Metadatos: 
-  - 1. Qué es un metadato: metadatos.md
-  - 2. Estándares ISO: estandares_ISO.md
-- Estándares OCG: 
-  - 1. Qué es OGC?: estandares_OCG.md
-  - 2. WMS: wms.md
-  - 3. WMTS: wmts.md
-  - 4. OGC APIs:
-    - 4.1. APIs: api.md
-    - 4.2. Features: ogc_api_features.md
-  - 5. WFS: wfs.md
-  - 6. GML: gml.md
-  - 7. SLD: sld.md
-  - 8. SOS: sos.md
-  - 9. CSW: csw.md
-  - 10. Otros: otros.md
-- GeoJSON: geojson.md       
-- Instalación de programas: instalacion_de_programas.md
-- Clientes de mapas: clientes_de_mapa.md
-- Creación de Metadatos: creacion_metadatos.md
-- Servidores de mapas: servidores_de_mapa.md
-- Publicar datos en una base de datos online: bd_online.md
+  - Home: index.md
+  - Infraestructuras de datos espaciales (IDEs):
+      - 1. Qué es una IDE: introduccion_a_las_ides.md
+      - 2. Metadatos:
+          - 2.1. Qué son los metadatos: metadatos.md
+          - 2.2. Catálogo de metadatos: catalogo_metadatos.md
+          - 2.3. Estándares de metadatos: estandares_ISO.md
+          - 2.4. Creación de metadatos: creacion_metadatos.md
+      - 3. Iniciativas de IDE y marco legal: iniciativas_ides.md
+      - 4. Caso práctico sobre inundaciones en IDEC: caso_idec_inundaciones.md
+      - 5. Ejercicio de aplicación: ejercicio_aplicado_ide.md
+  - Estándares OGC y OGC API:
+      - 1. Interoperabilidad y estándares OGC: estandares_OCG.md
+      - 2. WMS: wms.md
+      - 3. Pirámides de teselas ráster: piramides_teselas.md
+      - 4. De los servicios clásicos a las OGC API: api.md
+      - 5. OGC API – Features: ogc_api_features.md
+      - 6. Panorama de otros estándares: otros.md
+  - GeoJSON: geojson.md
+  - Clientes de mapas: clientes_de_mapa.md
+  - Servidores de mapas:
+      - Panorama y alternativas: servidores_de_mapa.md
+      - Materiales en revisión:
+          - Publicar con QGIS Server: qgis_server.md
+          - Georreferenciación: georeferenciacion.md
+  - Publicar datos:
+      - Archivo estático en GitHub Pages: publicar_geojson_estatico.md
+      - Base de datos online con Supabase: bd_online.md
+  - Teselas vectoriales:
+      - Qué son las teselas vectoriales: teselas_vectoriales.md
+      - Crear teselas con ogr2ogr: crear_teselas_vectoriales.md
+      - Servir teselas con TileServer GL Light: servir_teselas_vectoriales.md
+      - Consumir teselas en QGIS y MapLibre: consumir_teselas_vectoriales.md
+  - Catálogos STAC:
+      - Descubrir datos con un catálogo STAC: catalogo_stac.md
+      - Explorar y consumir un catálogo Portolan: portolan.md
+  - Cloud Optimized GeoTIFF (COG):
+      - Qué es un COG: cog.md
+      - Crear un COG con GDAL: crear_cog.md
+      - Servir un COG por HTTP: servir_cog.md
+      - Consumir un COG en QGIS: consumir_cog.md
+  - GeoParquet:
+      - Qué es GeoParquet: geoparquet.md
+      - Crear GeoParquet con GDAL: crear_geoparquet.md
+      - Publicar un archivo GeoParquet: servir_geoparquet.md
+      - Consumir GeoParquet en QGIS: consumir_geoparquet.md
+  - Ejercicio final de la materia: ejercicio_final_ide.md
+  - Instalación de programas: instalacion_de_programas.md
 
 plugins:
-    - search
+  - search

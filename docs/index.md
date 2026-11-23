@@ -1,36 +1,64 @@
 # Infraestructuras de datos espaciales y estándares de geoservicios
 
-Materiales para el curso sobre Infraestructuras de datos espaciales y estándares de geoservicios (SDIS) del Máster en Geoinformació de la UAB
+Materiales para la asignatura de Infraestructuras de Datos Espaciales (IDEs) del Máster de Geoinformación de la UAB.
 
-Temario:
+## Recorrido: descubrir y evaluar recursos en una IDE
 
-# [https://gss-mtig.github.io/sdis-mgeo/](https://gss-mtig.github.io/sdis-mgeo/)
+1. [Qué es una IDE](introduccion_a_las_ides.md): sus componentes y el papel de la interoperabilidad.
+2. Metadatos, en este orden:
+   - [Qué son los metadatos](metadatos.md).
+   - [Cómo funciona un catálogo de metadatos](catalogo_metadatos.md).
+   - [Qué estándares los describen](estandares_ISO.md).
+   - [Cómo crear metadatos](creacion_metadatos.md).
+3. [Iniciativas de IDE y marco legal](iniciativas_ides.md): ejemplos de Cataluña, España y Europa.
+4. [Caso práctico](caso_idec_inundaciones.md): búsqueda y comparación de dos recursos del catálogo IDEC.
+5. [Ejercicio de aplicación](ejercicio_aplicado_ide.md): plantea un problema propio y resuélvelo usando otra IDE.
 
-* [Introducción a las IDEs](https://gss-mtig.github.io/sdis-mgeo/introduccion_a_las_ides/)
-    * [INSPIRE](https://gss-mtig.github.io/sdis-mgeo/inspire/)
-* [Estándares OCG](https://gss-mtig.github.io/sdis-mgeo/estandares_OCG/)
-    * [WMS](https://gss-mtig.github.io/sdis-mgeo/wms/)
-    * [WMTS](https://gss-mtig.github.io/sdis-mgeo/wmts/)
-    * [WFS](https://gss-mtig.github.io/sdis-mgeo/wfs/)
-    * [GML](https://gss-mtig.github.io/sdis-mgeo/gml/)
-    * [SLD](https://gss-mtig.github.io/sdis-mgeo/sld/)
-    * [SOS](https://gss-mtig.github.io/sdis-mgeo/sos/)
-    * [CSW](https://gss-mtig.github.io/sdis-mgeo/csw/)
-    * [API](https://gss-mtig.github.io/sdis-mgeo/api/)
-* [GeoJSON](https://gss-mtig.github.io/sdis-mgeo/geojson/)
-* [Instalación de programas](https://gss-mtig.github.io/sdis-mgeo/instalacion_de_programas/)
-* [Clientes de mapas](https://gss-mtig.github.io/sdis-mgeo/clientes_de_mapa)
-* [Metadatos](https://gss-mtig.github.io/sdis-mgeo/metadatos/)
-* [Estándares ISO](https://gss-mtig.github.io/sdis-mgeo/estandares_ISO/)
-* [Creación de Metadatos](https://gss-mtig.github.io/sdis-mgeo/creacion_metadatos/)
-* [Servidores de mapas](https://gss-mtig.github.io/sdis-mgeo/servidores_de_mapa/)
-* [Publicar datos en una base de datos online](https://gss-mtig.github.io/sdis-mgeo/bd_online/)
+## Recorrido: servicios OGC y OGC API
+
+1. [Interoperabilidad y estándares OGC](estandares_OCG.md): por qué se necesitan estándares compartidos.
+2. [WMS](wms.md): solicitar y consultar mapas como imágenes.
+3. [Pirámides de teselas ráster](piramides_teselas.md): comprender XYZ y compararlo con WMTS y OGC API – Tiles.
+4. [De los servicios clásicos a las OGC API](api.md): entender las correspondencias y sus límites.
+5. [OGC API – Features](ogc_api_features.md): descubrir colecciones y consultar entidades con GeoJSON.
+6. [Panorama de otros estándares](otros.md): reconocer otras familias y formatos.
+
+## Otros materiales
+
+- [GeoJSON](geojson.md)
+- [Clientes de mapas](clientes_de_mapa.md)
+- [Servidores de mapas: panorama y alternativas](servidores_de_mapa.md)
+- Materiales en revisión: [publicar con QGIS Server](qgis_server.md) y [georreferenciación](georeferenciacion.md).
+- Publicar datos:
+  - [Archivo estático en GitHub Pages](publicar_geojson_estatico.md)
+  - [Base de datos online con Supabase](bd_online.md)
+- Teselas vectoriales:
+  - [Qué son las teselas vectoriales](teselas_vectoriales.md)
+  - [Crearlas con `ogr2ogr`](crear_teselas_vectoriales.md)
+  - [Servirlas con TileServer GL Light](servir_teselas_vectoriales.md)
+  - [Consumirlas en QGIS y MapLibre GL JS](consumir_teselas_vectoriales.md)
+- Catálogos STAC:
+  - [Descubrir datos con un catálogo STAC](catalogo_stac.md)
+  - [Explorar y consumir un catálogo Portolan](portolan.md)
+- Cloud Optimized GeoTIFF (COG):
+  - [Qué es un COG](cog.md)
+  - [Crear un COG con GDAL](crear_cog.md)
+  - [Servir un COG por HTTP](servir_cog.md)
+  - [Consumir un COG en QGIS](consumir_cog.md)
+- GeoParquet:
+  - [Qué es GeoParquet](geoparquet.md)
+  - [Crear GeoParquet con GDAL](crear_geoparquet.md)
+  - [Publicar un archivo GeoParquet](servir_geoparquet.md)
+  - [Consumir GeoParquet en QGIS](consumir_geoparquet.md)
+- [Instalación de programas](instalacion_de_programas.md)
+
+## Ejercicio final
+
+[Descubre y publica datos geográficos](ejercicio_final_ide.md): integra lo aprendido para buscar datos en una IDE, evaluar su ficha, descargarlos, publicarlos y crear una visualización.
 
 ## Autores
 
-* Wladimir Szczerban (alias Bolo) *@bolosig*, [MapTiler](http://maptiler.com) (Departamento de Geografía UAB)
-* Victor Pascual Ayats  *@sfggeogis*, [geostarter](http://betaportal.icgc.cat) (ICGC)
-* Ignacio Ferrero (Departamento de Geografía UAB)
+* Wladimir Szczerban (alias Bolo), [X (@bolosig)](https://x.com/bolosig), [LinkedIn](https://www.linkedin.com/in/bolosig/), [MapTiler](http://maptiler.com) (Departamento de Geografía UAB)
 
 !!! note "Condiciones de reutilización de estos apuntes"
 
@@ -48,3 +76,5 @@ Temario:
     * Compartir igual — Si remezcla, transforma o crea a partir del material, deberá difundir sus contribuciones bajo la misma licencia que el original.
     
     * No hay restricciones adicionales — No puede aplicar términos legales o medidas tecnológicas que legalmente restrinjan realizar aquello que la licencia permite.
+
+**Empieza el recorrido:** [Qué es una IDE](introduccion_a_las_ides.md).
