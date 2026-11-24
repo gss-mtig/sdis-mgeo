@@ -31,13 +31,14 @@ nav:
       - 3. Iniciativas de IDE y marco legal: iniciativas_ides.md
       - 4. Caso práctico sobre inundaciones en IDEC: caso_idec_inundaciones.md
       - 5. Ejercicio de aplicación: ejercicio_aplicado_ide.md
-  - Estándares OGC y OGC API:
+  - Servicios interoperables y estándares geoespaciales:
       - 1. Interoperabilidad y estándares OGC: estandares_OCG.md
       - 2. WMS: wms.md
-      - 3. Pirámides de teselas ráster: piramides_teselas.md
-      - 4. De los servicios clásicos a las OGC API: api.md
-      - 5. OGC API – Features: ogc_api_features.md
-      - 6. Panorama de otros estándares: otros.md
+      - 3. Descarga ATOM: descarga_atom.md
+      - 4. Pirámides de teselas ráster: piramides_teselas.md
+      - 5. De los servicios clásicos a las OGC API: api.md
+      - 6. OGC API – Features: ogc_api_features.md
+      - 7. Panorama de otros estándares: otros.md
   - GeoJSON: geojson.md
   - Clientes de mapas: clientes_de_mapa.md
   - Servidores de mapas:

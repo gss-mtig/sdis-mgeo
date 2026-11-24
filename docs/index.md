@@ -14,14 +14,15 @@ Materiales para la asignatura de Infraestructuras de Datos Espaciales (IDEs) del
 4. [Caso práctico](caso_idec_inundaciones.md): búsqueda y comparación de dos recursos del catálogo IDEC.
 5. [Ejercicio de aplicación](ejercicio_aplicado_ide.md): plantea un problema propio y resuélvelo usando otra IDE.
 
-## Recorrido: servicios OGC y OGC API
+## Recorrido: servicios interoperables y estándares geoespaciales
 
 1. [Interoperabilidad y estándares OGC](estandares_OCG.md): por qué se necesitan estándares compartidos.
 2. [WMS](wms.md): solicitar y consultar mapas como imágenes.
-3. [Pirámides de teselas ráster](piramides_teselas.md): comprender XYZ y compararlo con WMTS y OGC API – Tiles.
-4. [De los servicios clásicos a las OGC API](api.md): entender las correspondencias y sus límites.
-5. [OGC API – Features](ogc_api_features.md): descubrir colecciones y consultar entidades con GeoJSON.
-6. [Panorama de otros estándares](otros.md): reconocer otras familias y formatos.
+3. [Descarga ATOM](descarga_atom.md): localizar y descargar conjuntos municipales INSPIRE.
+4. [Pirámides de teselas ráster](piramides_teselas.md): comprender XYZ y compararlo con WMTS y OGC API – Tiles.
+5. [De los servicios clásicos a las OGC API](api.md): entender las correspondencias y sus límites.
+6. [OGC API – Features](ogc_api_features.md): descubrir colecciones y consultar entidades con GeoJSON.
+7. [Panorama de otros estándares](otros.md): reconocer otras familias y formatos.
 
 ## Otros materiales
 

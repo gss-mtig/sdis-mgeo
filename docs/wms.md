@@ -180,4 +180,4 @@ El resultado sigue siendo una **imagen**, igual que con `GetMap`; no contiene la
 - [Estándar WMS de OGC](https://www.ogc.org/standards/wms/).
 - [OGC API – Maps](https://ogcapi.ogc.org/maps/).
 
-**Siguiente:** [Pirámides de teselas ráster: XYZ, WMTS y OGC API – Tiles](piramides_teselas.md).
+**Siguiente:** [Descargar conjuntos de datos con ATOM](descarga_atom.md).

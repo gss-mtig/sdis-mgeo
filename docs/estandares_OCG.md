@@ -19,7 +19,7 @@ En esta asignatura estudiaremos **WMS en detalle**, porque permite entender la p
 - Cada estándar sirve para una tarea concreta: mostrar mapas, consultar entidades, distribuir teselas, buscar metadatos o ejecutar procesos.
 - Antes de conectar un cliente, conviene consultar la ficha del catálogo y comprobar qué ofrece realmente el servicio.
 
-Continúa con [WMS: mapas como imágenes](wms.md), sigue con las [pirámides de teselas ráster](piramides_teselas.md) y después revisa [la transición hacia las OGC API](api.md).
+Continúa con [WMS: mapas como imágenes](wms.md), sigue con la [descarga ATOM de conjuntos predefinidos](descarga_atom.md) y las [pirámides de teselas ráster](piramides_teselas.md) y después revisa [la transición hacia las OGC API](api.md).
 
 ## Fuentes
 
