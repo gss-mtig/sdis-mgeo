@@ -77,14 +77,16 @@ Con la misma capa abierta en QGIS y en Leaflet, comentad en parejas:
 
 ## Ejercicio
 
-!!! question "Ejercicio 1 punto"
+!!! question "Visualizar una capa WMS con Leaflet — 1 punto"
 
     Modifica la plantilla de Leaflet para mostrar otra capa de un servicio WMS de una IDE.
 
     1. Localiza una ficha o página oficial del servicio y copia su URL de conexión.
     2. Abre `GetCapabilities` e identifica el nombre exacto de una capa adecuada para una pregunta geográfica que te interese.
     3. Cambia en la plantilla la URL del servicio y el nombre de la capa. Ajusta el centro y el zoom iniciales para que el mapa muestre el territorio de interés.
-    4. Comprueba que el mapa se ve en el navegador y entrega el archivo HTML junto con un breve texto que indique la IDE, la capa elegida y cómo encontraste su nombre en las capacidades.
+    4. Comprueba que el mapa se ve en el navegador.
+
+    **Entrega:** un archivo HTML funcional y un documento breve en PDF, DOCX u ODT que indique la IDE, la capa elegida y cómo encontraste su nombre en `GetCapabilities`. Incluye una captura del mapa abierto. Si el HTML usa archivos locales adicionales, inclúyelos en un ZIP junto con el HTML.
 
     **Criterios:** visualización funcional (0,5 puntos), identificación correcta de la capa a partir de `GetCapabilities` (0,25 puntos) y referencia a la IDE y descripción breve del proceso (0,25 puntos).
 

@@ -162,7 +162,7 @@ El resultado sigue siendo una **imagen**, igual que con `GetMap`; no contiene la
 
 ## Ejercicio: descubrir, solicitar y consultar un WMS
 
-!!! question "Ejercicio 2 puntos"
+!!! question "Descubrir, solicitar y consultar un WMS — 2 puntos"
 
     En un documento breve, selecciona un servicio WMS publicado por una IDE. Puedes partir del [catálogo de IDEC](https://catalegs.ide.cat/geonetwork/srv/search?orgName=Infraestructura+de+Dades+Espacials+de+Catalunya) o de otra IDE. Elige un servicio que responda a una pregunta geográfica que te interese.
 
@@ -171,7 +171,7 @@ El resultado sigue siendo una **imagen**, igual que con `GetMap`; no contiene la
     3. Comprueba si la capa permite `GetFeatureInfo`. Si es posible, consulta una posición y resume qué información devuelve. Si no está habilitado, indícalo y explica cómo lo comprobaste.
     4. Explica una limitación del WMS para tu pregunta: recuerda que `GetMap` entrega una imagen y no el conjunto de entidades original.
 
-    **Entrega:** documento de texto con enlaces, respuesta breve y capturas legibles. Si un servicio no responde, vuelve a la ficha y prueba otro servicio de la misma IDE; anota el fallo si afecta a tu elección.
+    **Entrega:** un documento de **1–2 páginas** en PDF, DOCX u ODT con enlaces, respuestas breves y capturas legibles. Incluye la fecha de consulta. Si un servicio no responde, vuelve a la ficha y prueba otro servicio de la misma IDE; anota el fallo si afecta a tu elección.
 
     **Criterios:** 0,5 puntos por identificar el servicio y leer sus capacidades; 0,75 por construir y explicar `GetMap`; 0,5 por probar o comprobar `GetFeatureInfo`; 0,25 por explicar una limitación relevante.
 

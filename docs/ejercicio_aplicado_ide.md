@@ -2,7 +2,7 @@
 
 ### Ejercicio
 
-!!! question "Ejercicio 2 pt"
+!!! question "Investigar un problema territorial en una IDE — 2 puntos"
 
     Elige una problemática territorial que te interese y simula que formas parte del equipo de una administración u organización que necesita informarse para tomar una decisión. Puedes trabajar, por ejemplo, sobre movilidad, incendios forestales, inundaciones, contaminación, acceso a equipamientos, cambios de usos del suelo o conservación de espacios naturales.
 

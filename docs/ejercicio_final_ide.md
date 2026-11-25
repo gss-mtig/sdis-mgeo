@@ -8,7 +8,7 @@ Elige una problemática que te interese: por ejemplo, movilidad, agua, incendios
 
 Debes utilizar una IDE distinta de la IDEC empleada en el [caso práctico de clase](caso_idec_inundaciones.md). Puedes escoger una IDE local, regional, estatal o europea, siempre que el catálogo permita encontrar un conjunto de datos apropiado.
 
-!!! question "Ejercicio final individual: 3 puntos"
+!!! question "Buscar, publicar y visualizar datos de una IDE — 3 puntos"
 
     Completa las fases siguientes y presenta las evidencias indicadas en la entrega.
 

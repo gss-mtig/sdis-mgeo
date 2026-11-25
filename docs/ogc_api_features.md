@@ -56,11 +56,11 @@ OGC API – Features se compone de partes. Part 1: Core y Part 2: CRS by Referen
 
 ## Ejercicio evaluable: explora una OGC API – Features
 
-!!! question "Ejercicio 1 punto"
+!!! question "Explorar una OGC API – Features — 1 punto"
 
     Elige una **OGC API – Features publicada por cualquier IDE**. Puede ser de tu comunidad autónoma, de España, de otro país o una IDE temática. No es obligatorio usar el servicio del IGN de la práctica guiada.
 
-    En un documento breve, incluye enlaces a la página de entrada de la API, a una colección y a una entidad. Añade capturas legibles de la colección y de la entidad, y responde:
+    Prepara un documento de **1–2 páginas** en PDF, DOCX u ODT. Incluye enlaces a la página de entrada de la API, a una colección y a una entidad; añade capturas legibles de la colección y de la entidad, y responde:
 
     - ¿Qué IDE y organismo ofrecen la API? ¿Qué información publica?
     - ¿Qué colección elegiste y qué representa?
@@ -69,6 +69,8 @@ OGC API – Features se compone de partes. Part 1: Core y Part 2: CRS by Referen
     - ¿Qué diferencia principal hay entre consultar esta entidad y solicitar un mapa con WMS?
 
     Comprueba que el recurso elegido es una OGC API – Features: debe ofrecer una colección de entidades y permitir acceder a sus elementos. Si no encuentras una en la IDE elegida o el servicio no responde, prueba otra IDE. Si ninguna API elegida está disponible, usa el [ejemplo local](ejemplos/ogcapi_features/feature-ejemplo.geojson) para la parte de GeoJSON y documenta qué IDE y términos consultaste.
+
+    **Entrega:** un único documento PDF, DOCX u ODT con las respuestas, los tres enlaces y las capturas solicitadas. Incluye la fecha de consulta. Si usas el ejemplo local por falta de disponibilidad, incorpora también evidencia de la búsqueda realizada en la IDE.
 
     **Criterios:** 0,2 puntos por identificar la IDE, el organismo y la API; 0,2 por describir la colección; 0,2 por identificar la entidad y sus propiedades; 0,2 por interpretar la geometría y las coordenadas; 0,2 por comparar el acceso con WMS y aportar evidencias claras.
 

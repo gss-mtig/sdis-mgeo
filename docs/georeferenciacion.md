@@ -21,7 +21,7 @@
 
 ## Ejercicio de integración
 
-!!! question "Ejercicio imagen: 4 puntos"
+!!! question "Georreferenciar e integrar una imagen histórica — 4 puntos"
     Este ejercicio combina la imagen georreferenciada con el WMS de comarcas creado en la [práctica de QGIS Server](qgis_server.md).
 
     - Crear un visor con Leaflet que muestre el WMS de comarcas. **(2 puntos)**
@@ -29,7 +29,7 @@
     - Aplicar transparencia a la capa de imagen. **(0,5 puntos)**
     - **Extra:** añadir un control de capas para activar y desactivar la imagen. **(1 punto)**
 
-    Entregar el archivo HTML. El control de capas se describe en la [documentación de Leaflet](https://leafletjs.com/reference.html#control-layers).
+    **Entrega:** un archivo ZIP con el HTML del visor, la imagen georreferenciada y cualquier archivo auxiliar que necesite para mostrarse (por ejemplo, el archivo de georreferenciación). Añade una captura del resultado abierto en el navegador. Incluye un `LEEME.txt` con instrucciones para abrirlo y las fuentes de la imagen y del WMS. El control de capas se describe en la [documentación de Leaflet](https://leafletjs.com/reference.html#control-layers).
 
     ![Ejemplo del resultado del ejercicio](img/resultado_ejercicio_wms.png "Ejemplo del resultado del ejercicio")
 

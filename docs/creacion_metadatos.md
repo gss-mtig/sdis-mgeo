@@ -92,9 +92,11 @@ Se pueden buscar los temas en [GEMET](https://www.eionet.europa.eu/gemet/es/insp
 
 ### Ejercicio
 
-!!! question "Ejercicio 1pt"
+!!! question "Completar una ficha de metadatos en ArcGIS — 1 punto"
 
-    Completar la información del resto de campos del metadato. Todos los apartados deben tener el check verde.
+    Completa en ArcGIS los campos pendientes de la ficha de municipios siguiendo las indicaciones de esta práctica. Antes de terminar, comprueba que todos los apartados obligatorios aparecen validados.
+
+    **Entrega:** un archivo ZIP con la exportación XML del registro y una captura de ArcGIS donde se vea la ficha y la validación de sus apartados.
 
 ## Exportación desde ArcGIS e importación en GeoNetwork
 
